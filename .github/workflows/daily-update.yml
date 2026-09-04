@@ -40,10 +40,14 @@ jobs:
         run: npm run fetch:nfl
         continue-on-error: true # same RapidAPI account key, separate per-API subscription/quota
 
+      - name: Fetch team badges
+        run: npm run fetch:badges
+        continue-on-error: true # cache-backed and rate-limited on its own; never block the rest of the run
+
       - name: Commit updated picks
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/picks.json data/win-draw.json data/nfl.json
+          git add data/picks.json data/win-draw.json data/nfl.json data/team-badges.json
           git diff --staged --quiet && echo "No changes to commit." || git commit -m "Update picks $(date -u +%Y-%m-%d)"
           git push

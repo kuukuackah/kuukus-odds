@@ -163,6 +163,37 @@ them call the Odds API, so none of them touch your quota. Only running
   (needs Pillow: `pip install pillow`) if you ever want to tweak the mark.
 - `manifest.json` makes the site installable to a phone home screen.
 
+## Team & league badges (TheSportsDB)
+
+Real club and competition crests, not initials-only badges. Uses
+[TheSportsDB](https://www.thesportsdb.com)'s free API (test key `123`,
+publicly documented, no signup needed for the free tier).
+
+**Licensing note, read before relying on this in production long-term:**
+TheSportsDB's own Terms of Service scope free-tier usage to "development
+projects" and explicitly restrict distributing an app built on it without
+a paid plan; the artwork itself is real trademarked club/league logos —
+their terms don't grant a sublicense over those marks, they just describe
+your relationship with TheSportsDB. This was wired in on the site owner's
+explicit, informed decision after being shown these terms, with an
+intention to move to TheSportsDB Premium ($9/mo) as the site grows. If
+you fork this project, make your own call on this rather than assuming
+it's already resolved.
+
+- `data/league-badges.json` — the 9 configured leagues' badges, fetched
+  once (leagues rarely change) via `lookupleague.php?id=...` with known
+  league IDs. Not regenerated automatically; re-run manually if you add
+  a league in `fetch-odds.js`'s `SPORTS` array.
+- `data/team-badges.json` — a persistent cache built by
+  `scripts/fetch-team-badges.js`, which runs after the odds fetches in
+  the daily workflow. It reads that day's fixtures, finds team names not
+  already in the cache, and looks up real badges for them — capped at 40
+  lookups/run, paced well under TheSportsDB's 30 requests/minute free
+  limit. Once a team is found, it's never looked up again, so this gets
+  *cheaper* over time, not more expensive. Teams not yet in the cache
+  (or not found) fall back to the initials avatar — this never blocks
+  rendering.
+
 ## Posting bet codes (dashboard)
 
 `dashboard.html` is a private page for posting booking codes (SportyBet,

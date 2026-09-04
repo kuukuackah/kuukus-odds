@@ -118,3 +118,23 @@ If asked to add more decorative photography elsewhere on the page,
 push back gently first — the hero is the one sanctioned exception, and
 scattering more photos through the dense list body would undo the
 density/restraint that made this redesign work in the first place.
+
+## Update: real crest images (reverses the "no licensed crest art" note above)
+
+The "no licensed crest art" decision above was reversed on the site
+owner's explicit request, made *after* being shown TheSportsDB's actual
+terms (free tier scoped to "development projects," real trademarked
+artwork, no sublicense granted) and choosing to proceed anyway with a
+stated intent to go Premium as the site grows. See README's "Team &
+league badges" section for the licensing detail — don't re-litigate this
+decision without re-reading that first, and don't assume a future
+"let's add real logos" request is automatically pre-authorized the same
+way; this specific authorization was for this specific source.
+
+Visual result: `.team-avatar` and the league chip both now prefer a real
+image (`teamBadges[name]` / `leagueBadges[sportKey]`) and fall back to
+the initials/colored-chip treatment when no image is cached yet. The
+fallback path is not a design regression to avoid — it's load-bearing:
+`scripts/fetch-team-badges.js` builds its cache incrementally (capped
+per run, rate-limited), so on any given day some teams legitimately
+won't have a real badge yet. Don't try to force 100% image coverage.

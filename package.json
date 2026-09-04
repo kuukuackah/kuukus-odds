@@ -8,6 +8,7 @@
     "fetch": "node fetch-odds.js",
     "fetch:1x2": "node fetch-1x2.js",
     "fetch:nfl": "node fetch-nfl.js",
+    "fetch:badges": "node scripts/fetch-team-badges.js",
     "serve": "python3 -m http.server 8080"
   },
   "dependencies": {

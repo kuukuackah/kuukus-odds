@@ -1,0 +1,38 @@
+{
+  "soccer_epl": {
+    "name": "English Premier League",
+    "badge": "https://r2.thesportsdb.com/images/media/league/badge/gasy9d1737743125.png"
+  },
+  "soccer_efl_champ": {
+    "name": "English League Championship",
+    "badge": "https://r2.thesportsdb.com/images/media/league/badge/ty5a681688770169.png"
+  },
+  "soccer_germany_bundesliga": {
+    "name": "German Bundesliga",
+    "badge": "https://r2.thesportsdb.com/images/media/league/badge/teqh1b1679952008.png"
+  },
+  "soccer_germany_bundesliga2": {
+    "name": "German 2. Bundesliga",
+    "badge": "https://r2.thesportsdb.com/images/media/league/badge/hl40981534764789.png"
+  },
+  "soccer_spain_la_liga": {
+    "name": "Spanish La Liga",
+    "badge": "https://r2.thesportsdb.com/images/media/league/badge/ja4it51687628717.png"
+  },
+  "soccer_france_ligue_one": {
+    "name": "French Ligue 1",
+    "badge": "https://r2.thesportsdb.com/images/media/league/badge/9f7z9d1742983155.png"
+  },
+  "soccer_france_ligue_two": {
+    "name": "French Ligue 2",
+    "badge": "https://r2.thesportsdb.com/images/media/league/badge/aofb771742983333.png"
+  },
+  "soccer_italy_serie_a": {
+    "name": "Italian Serie A",
+    "badge": "https://r2.thesportsdb.com/images/media/league/badge/67q3q21679951383.png"
+  },
+  "soccer_usa_mls": {
+    "name": "American Major League Soccer",
+    "badge": "https://r2.thesportsdb.com/images/media/league/badge/dqo6r91549878326.png"
+  }
+}

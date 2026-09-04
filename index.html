@@ -455,6 +455,23 @@
     background: var(--track);
     color: var(--text-muted);
   }
+  .team-avatar.has-logo {
+    background: #fff;
+    padding: 3px;
+  }
+  .team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .league-badge-img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    border-radius: 3px;
+    flex: none;
+  }
   .fixture-meta {
     display: flex;
     flex-wrap: wrap;
@@ -1228,8 +1245,9 @@
     return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
 
-  // Two-letter initials badge standing in for a team crest — no licensed
-  // crest art available, so each team gets a consistent initials avatar.
+  // Two-letter initials badge — fallback for a team with no crest found yet
+  // (new/obscure teams, or not looked up this run — the cache fills in
+  // gradually across daily runs, see scripts/fetch-team-badges.js).
   function teamInitials(name) {
     const words = String(name).split(/\s+/).filter(Boolean);
     if (words.length === 0) return '';
@@ -1237,13 +1255,21 @@
     return (words[0][0] + words[1][0]).toUpperCase();
   }
 
+  function teamBadgeInner(name) {
+    const url = teamBadges[name];
+    if (url) return `<img src="${escapeHtml(url)}" alt="" loading="lazy">`;
+    return escapeHtml(teamInitials(name));
+  }
+
   function teamAvatars(fixture) {
     const parts = String(fixture).split(' v ');
     if (parts.length !== 2) return '';
     const [home, away] = parts;
+    const homeHasLogo = !!teamBadges[home];
+    const awayHasLogo = !!teamBadges[away];
     return `<span class="team-avatars" aria-hidden="true">
-      <span class="team-avatar" title="${escapeHtml(home)}">${escapeHtml(teamInitials(home))}</span>
-      <span class="team-avatar" title="${escapeHtml(away)}">${escapeHtml(teamInitials(away))}</span>
+      <span class="team-avatar ${homeHasLogo ? 'has-logo' : ''}" title="${escapeHtml(home)}">${teamBadgeInner(home)}</span>
+      <span class="team-avatar ${awayHasLogo ? 'has-logo' : ''}" title="${escapeHtml(away)}">${teamBadgeInner(away)}</span>
     </span>`;
   }
 
@@ -1253,13 +1279,17 @@
     }
     const rows = picks.map((p, i) => {
       const league = leagueLabel(p.sport);
+      const leagueBadgeUrl = leagueBadges[p.sport];
+      const leagueBadgeHtml = leagueBadgeUrl
+        ? `<img class="league-badge-img" src="${escapeHtml(leagueBadgeUrl)}" alt="" title="${escapeHtml(league)}" loading="lazy">`
+        : `<span class="league-chip" title="${escapeHtml(league)}">${escapeHtml(leagueCode(p.sport, league))}</span>`;
       return `
       <div class="pick-row ${highlightTop && i < 3 ? 'top' : ''}" style="animation-delay:${Math.min(i, 10) * 30}ms">
         <div class="rank">${i + 1}</div>
         <div class="fixture-info">
           <p class="fixture-name">${teamAvatars(p.fixture)}<span class="fixture-name-text">${escapeHtml(p.fixture)}</span></p>
           <div class="fixture-meta">
-            <span class="league-chip" title="${escapeHtml(league)}">${escapeHtml(leagueCode(p.sport, league))}</span>
+            ${leagueBadgeHtml}
             <span>${fmtTime(p.commenceTime)} · ${fmtRelative(p.commenceTime)}</span>
           </div>
         </div>
@@ -1421,6 +1451,13 @@
     });
   }
 
+  // ---------- Badge images (TheSportsDB) ----------
+  // Real team/league crest images, used with the site owner's explicit,
+  // informed authorization (see README). Falls back to initials/colored
+  // chips for anything not yet in the cache — never blocks rendering.
+  let teamBadges = {};
+  let leagueBadges = {};
+
   // ---------- Data, search & sort ----------
   let rawData = {
     over1_5: [], over1_5_excluded: [],
@@ -1460,10 +1497,14 @@
       <button class="league-item ${!leagueFilter ? 'active' : ''}" data-league="">
         <span>All leagues</span><span class="count">${totalCount}</span>
       </button>`;
-    const items = entries.map(([sportKey, count]) => `
+    const items = entries.map(([sportKey, count]) => {
+      const badgeUrl = leagueBadges[sportKey];
+      const icon = badgeUrl ? `<img class="league-badge-img" src="${escapeHtml(badgeUrl)}" alt="" loading="lazy">` : '';
+      return `
       <button class="league-item ${leagueFilter === sportKey ? 'active' : ''}" data-league="${escapeHtml(sportKey)}">
-        <span>${escapeHtml(leagueLabel(sportKey))}</span><span class="count">${count}</span>
-      </button>`).join('');
+        <span style="display:flex;align-items:center;gap:6px">${icon}${escapeHtml(leagueLabel(sportKey))}</span><span class="count">${count}</span>
+      </button>`;
+    }).join('');
 
     listEl.innerHTML = entries.length ? allItem + items : '<p class="league-sidebar-note">No league data yet.</p>';
   }
@@ -1524,11 +1565,21 @@
   }
 
   async function load() {
-    const [picksResult, winDrawResult, nflResult] = await Promise.allSettled([
+    const [picksResult, winDrawResult, nflResult, teamBadgesResult, leagueBadgesResult] = await Promise.allSettled([
       fetch(`data/picks.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/win-draw.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/nfl.json?_=${Date.now()}`).then((r) => r.json()),
+      fetch(`data/team-badges.json?_=${Date.now()}`).then((r) => r.json()),
+      fetch(`data/league-badges.json?_=${Date.now()}`).then((r) => r.json()),
     ]);
+
+    if (teamBadgesResult.status === 'fulfilled') teamBadges = teamBadgesResult.value || {};
+    if (leagueBadgesResult.status === 'fulfilled') {
+      leagueBadges = {};
+      for (const [key, entry] of Object.entries(leagueBadgesResult.value || {})) {
+        leagueBadges[key] = entry?.badge || null;
+      }
+    }
 
     try {
       const data = picksResult.status === 'fulfilled' ? picksResult.value : {};
