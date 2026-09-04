@@ -10,6 +10,10 @@ A static site that updates once a day with soccer fixtures ranked by fair
   completely separate free API with its own account and quota (see below).
   Both come from the same single API call — Straight Win costs nothing
   extra on top of Win or Draw.
+- **NFL Moneyline** — up to 30 games, real odds from up to 10 real
+  sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET,
+  BetRivers, BallyBet), de-vigged and medianed the same way as Over 1.5.
+  Empty on non-game days — that's expected, not a bug.
 
 **The rule this project is built around:** if no bookmaker posts a usable
 line for a fixture, that fixture is left out of the list — never estimated.
@@ -100,6 +104,29 @@ so explicitly on the site, and `quotedDoubleChanceOdds` in the output can
 be `null` for a fixture even when the underlying 1/X/2 odds exist (the
 source doesn't always quote the combined price) — the fair probability is
 still computed correctly from the individual odds either way.
+
+## Getting NFL odds (same account, different subscription)
+
+`fetch-nfl.js` uses Tank01's **NFL Betting Odds** API on RapidAPI — a
+real multi-sportsbook source (up to 10 books per game), free tier 1,000
+requests/month, one bulk call per date.
+
+1. Go to [rapidapi.com/tank01/api/tank01-nfl-live-in-game-real-time-statistics-nfl/pricing](https://rapidapi.com/tank01/api/tank01-nfl-live-in-game-real-time-statistics-nfl/pricing)
+   and subscribe to the **Basic ($0.00/mo)** plan.
+2. **No new key needed** — RapidAPI keys are per-account, not per-API, so
+   the same key already in `.env` as `RAPIDAPI_FOOTBALL_PREDICTION_KEY`
+   works here too once you've subscribed. The name is a holdover from
+   when it was first added for the football prediction API; treat it as
+   your general RapidAPI account key.
+3. Test locally: `npm run fetch:nfl`. You can override the date it
+   queries with `NFL_GAME_DATE=YYYYMMDD npm run fetch:nfl` — useful since
+   the live default (today) is often empty outside game days.
+
+The fixture format is `Away Team v Home Team` (matching the rest of the
+site's convention), parsed from the API's `AWAY@HOME` game ID — team
+abbreviations are mapped to full names in `fetch-nfl.js`'s `TEAM_NAMES`
+table (verify this against real API output if any team code looks off;
+`WSH` for Washington, not `WAS`, is the one this project already caught).
 
 ## Going live on GitHub
 

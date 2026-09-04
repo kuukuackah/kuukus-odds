@@ -34,10 +34,16 @@ jobs:
         run: npm run fetch:1x2
         continue-on-error: true # separate key/quota — don't fail the whole run if this one isn't set up yet
 
+      - name: Fetch NFL moneyline
+        env:
+          RAPIDAPI_FOOTBALL_PREDICTION_KEY: ${{ secrets.RAPIDAPI_FOOTBALL_PREDICTION_KEY }}
+        run: npm run fetch:nfl
+        continue-on-error: true # same RapidAPI account key, separate per-API subscription/quota
+
       - name: Commit updated picks
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/picks.json data/win-draw.json
+          git add data/picks.json data/win-draw.json data/nfl.json
           git diff --staged --quiet && echo "No changes to commit." || git commit -m "Update picks $(date -u +%Y-%m-%d)"
           git push

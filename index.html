@@ -819,6 +819,7 @@
     <button class="tab-btn" data-panel="firstHalf">First-Half Over 0.5</button>
     <button class="tab-btn" data-panel="winDraw">Win or Draw</button>
     <button class="tab-btn" data-panel="straightWin">Straight Win</button>
+    <button class="tab-btn" data-panel="nfl">NFL Moneyline</button>
     <div class="tab-indicator" id="tab-indicator"></div>
   </nav>
 
@@ -846,6 +847,11 @@
   <section id="straightWin" class="panel">
     <p class="section-sub">Same source and fixtures as Win or Draw, but ranked on the favorite winning outright — no draw cushion, so these are naturally lower-probability picks.</p>
     <div id="straightWin-content"></div>
+  </section>
+
+  <section id="nfl" class="panel">
+    <p class="section-sub">Real moneyline odds from real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet), de-vigged and medianed — same method as Over 1.5, different sport. Empty most days: only shows on real NFL game days.</p>
+    <div id="nfl-content"></div>
   </section>
 
   <details class="methodology">
@@ -1126,6 +1132,38 @@
     return `<div class="pick-list">${rows}</div>`;
   }
 
+  function fmtDate(dateStr) {
+    if (!dateStr) return '';
+    const d = new Date(`${dateStr}T12:00:00Z`); // noon UTC avoids timezone rollover on a date-only string
+    return d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
+  }
+
+  function renderNflList(picks, { highlightTop = true, emptyMessage } = {}) {
+    if (picks.length === 0) {
+      return `<div class="empty-state">${emptyMessage || 'No NFL games with a usable moneyline price right now — check back on the next game day.'}</div>`;
+    }
+    const rows = picks.map((p, i) => `
+      <div class="pick-row ${highlightTop && i < 3 ? 'top' : ''}" style="animation-delay:${Math.min(i, 10) * 30}ms">
+        <div class="rank">${i + 1}</div>
+        <div class="fixture-info">
+          <p class="fixture-name">${teamAvatars(p.fixture)}<span class="fixture-name-text">${escapeHtml(p.fixture)}</span></p>
+          <div class="fixture-meta">
+            <span class="league-chip" title="NFL">NFL</span>
+            <span>${fmtDate(p.gameDate)}</span>
+          </div>
+          <div class="fixture-meta" style="margin-top:2px">
+            <span>Moneyline: <strong>${escapeHtml(p.favoriteTeam)}</strong></span>
+          </div>
+        </div>
+        <div class="prob-block">
+          <span class="prob-value">${fmtPct(p.fairProbability)}</span>
+          <div class="prob-bar"><div class="prob-bar-fill" data-target="${Math.round(p.fairProbability * 100)}"></div></div>
+          <span class="prob-sample">${p.bookCount} book${p.bookCount === 1 ? '' : 's'}</span>
+        </div>
+      </div>`).join('');
+    return `<div class="pick-list">${rows}</div>`;
+  }
+
   function renderExcluded(excluded) {
     if (!excluded || excluded.length === 0) return '';
     const items = excluded.map((e) => `<li>${escapeHtml(e.fixture)} — ${escapeHtml(e.reason)}</li>`).join('');
@@ -1219,6 +1257,7 @@
     firstHalfOver0_5: [], firstHalfOver0_5_excluded: [],
     winDraw: [], winDraw_excluded: [],
     straightWin: [], straightWin_excluded: [],
+    nfl: [], nfl_excluded: [],
   };
   let sortMode = 'probability';
 
@@ -1226,7 +1265,7 @@
     const term = searchInput.value.trim().toLowerCase();
     let out = term ? list.filter((p) => p.fixture.toLowerCase().includes(term)) : list.slice();
     out.sort((a, b) => sortMode === 'kickoff'
-      ? new Date(a.commenceTime) - new Date(b.commenceTime)
+      ? new Date(a.commenceTime || a.gameDate) - new Date(b.commenceTime || b.gameDate)
       : b.fairProbability - a.fairProbability);
     return out;
   }
@@ -1255,6 +1294,10 @@
         label: 'Straight win', oddsField: 'quotedOdds',
       }) + renderExcluded(rawData.straightWin_excluded);
 
+    document.getElementById('nfl-content').innerHTML =
+      renderNflList(filterAndSort(rawData.nfl), { highlightTop, emptyMessage: rawData.nfl.length ? noMatch : undefined }) +
+      renderExcluded(rawData.nfl_excluded);
+
     primeBars();
   }
 
@@ -1275,17 +1318,20 @@
   }
 
   async function load() {
-    const [picksResult, winDrawResult] = await Promise.allSettled([
+    const [picksResult, winDrawResult, nflResult] = await Promise.allSettled([
       fetch(`data/picks.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/win-draw.json?_=${Date.now()}`).then((r) => r.json()),
+      fetch(`data/nfl.json?_=${Date.now()}`).then((r) => r.json()),
     ]);
 
     try {
       const data = picksResult.status === 'fulfilled' ? picksResult.value : {};
       const winDrawData = winDrawResult.status === 'fulfilled' ? winDrawResult.value : {};
+      const nflData = nflResult.status === 'fulfilled' ? nflResult.value : {};
 
       if (picksResult.status === 'rejected') console.error('Could not load data/picks.json', picksResult.reason);
       if (winDrawResult.status === 'rejected') console.error('Could not load data/win-draw.json', winDrawResult.reason);
+      if (nflResult.status === 'rejected') console.error('Could not load data/nfl.json', nflResult.reason);
 
       rawData = {
         over1_5: data.over1_5 || [],
@@ -1296,6 +1342,8 @@
         winDraw_excluded: winDrawData.winOrDraw_excluded || [],
         straightWin: winDrawData.straightWin || [],
         straightWin_excluded: winDrawData.straightWin_excluded || [],
+        nfl: nflData.moneyline || [],
+        nfl_excluded: nflData.moneyline_excluded || [],
       };
 
       renderStats(data, rawData.winDraw.length);
