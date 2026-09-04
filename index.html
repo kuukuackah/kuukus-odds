@@ -230,11 +230,40 @@
     margin-top: 1px;
   }
 
-  /* ---------- Tabs ---------- */
+  /* ---------- Sport tabs (top-level) ---------- */
+  .sport-tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 3px;
+    margin-top: 16px;
+  }
+  .sport-tab-btn {
+    flex: 1;
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: var(--font-display);
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background 160ms var(--ease-out), color 160ms var(--ease-out);
+  }
+  .sport-tab-btn:hover { color: var(--text); }
+  .sport-tab-btn.active { background: var(--accent); color: #04140e; }
+  .sport-panel { display: none; }
+  .sport-panel.active { display: block; }
+
+  /* ---------- Tabs (market sub-tabs) ---------- */
   .tabs {
     display: flex;
     gap: 20px;
-    margin: 22px 0 14px;
+    margin: 14px 0 14px;
     border-bottom: 1px solid var(--border);
     position: relative;
     overflow-x: auto;
@@ -329,23 +358,28 @@
     display: flex;
     align-items: center;
     flex: none;
+    margin-right: 2px;
   }
   .team-avatar {
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    background: var(--track);
-    color: var(--text-muted);
+    background: var(--accent-weak);
+    color: var(--accent-strong);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.55rem;
+    font-size: 0.68rem;
     font-weight: 700;
     font-family: var(--font-display);
-    border: 1.5px solid var(--surface);
+    border: 2px solid var(--surface);
+    box-shadow: 0 0 0 1px var(--border);
   }
-  .team-avatar + .team-avatar { margin-left: -6px; }
-  .pick-row.top .team-avatar:first-child { background: var(--accent-weak); color: var(--accent-strong); }
+  .team-avatar + .team-avatar {
+    margin-left: -9px;
+    background: var(--track);
+    color: var(--text-muted);
+  }
   .fixture-meta {
     display: flex;
     flex-wrap: wrap;
@@ -814,13 +848,9 @@
 <main>
   <div class="stat-strip" id="stat-strip"></div>
 
-  <nav class="tabs" id="tabs">
-    <button class="tab-btn active" data-panel="over15">Over 1.5</button>
-    <button class="tab-btn" data-panel="firstHalf">First-Half Over 0.5</button>
-    <button class="tab-btn" data-panel="winDraw">Win or Draw</button>
-    <button class="tab-btn" data-panel="straightWin">Straight Win</button>
-    <button class="tab-btn" data-panel="nfl">NFL Moneyline</button>
-    <div class="tab-indicator" id="tab-indicator"></div>
+  <nav class="sport-tabs" id="sport-tabs">
+    <button class="sport-tab-btn active" data-sport="football">Football</button>
+    <button class="sport-tab-btn" data-sport="nfl">NFL</button>
   </nav>
 
   <div class="controls-row">
@@ -831,28 +861,38 @@
     </div>
   </div>
 
-  <section id="over15" class="panel active">
-    <div id="over15-content"></div>
-  </section>
+  <div class="sport-panel active" id="sport-football">
+    <nav class="tabs" id="tabs">
+      <button class="tab-btn active" data-panel="over15">Over 1.5</button>
+      <button class="tab-btn" data-panel="firstHalf">First-Half Over 0.5</button>
+      <button class="tab-btn" data-panel="winDraw">Win or Draw</button>
+      <button class="tab-btn" data-panel="straightWin">Straight Win</button>
+      <div class="tab-indicator" id="tab-indicator"></div>
+    </nav>
 
-  <section id="firstHalf" class="panel">
-    <div id="firstHalf-content"></div>
-  </section>
+    <section id="over15" class="panel active">
+      <div id="over15-content"></div>
+    </section>
 
-  <section id="winDraw" class="panel">
-    <p class="section-sub">Separate source from the Over 1.5 / first-half markets — a single prediction model's own odds, not a multi-bookmaker median. Treat it accordingly.</p>
-    <div id="winDraw-content"></div>
-  </section>
+    <section id="firstHalf" class="panel">
+      <div id="firstHalf-content"></div>
+    </section>
 
-  <section id="straightWin" class="panel">
-    <p class="section-sub">Same source and fixtures as Win or Draw, but ranked on the favorite winning outright — no draw cushion, so these are naturally lower-probability picks.</p>
-    <div id="straightWin-content"></div>
-  </section>
+    <section id="winDraw" class="panel">
+      <p class="section-sub">Separate source from the Over 1.5 / first-half markets — a single prediction model's own odds, not a multi-bookmaker median. Treat it accordingly.</p>
+      <div id="winDraw-content"></div>
+    </section>
 
-  <section id="nfl" class="panel">
+    <section id="straightWin" class="panel">
+      <p class="section-sub">Same source and fixtures as Win or Draw, but ranked on the favorite winning outright — no draw cushion, so these are naturally lower-probability picks.</p>
+      <div id="straightWin-content"></div>
+    </section>
+  </div>
+
+  <div class="sport-panel" id="sport-nfl">
     <p class="section-sub">Real moneyline odds from real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet), de-vigged and medianed — same method as Over 1.5, different sport. Empty most days: only shows on real NFL game days.</p>
     <div id="nfl-content"></div>
-  </section>
+  </div>
 
   <details class="methodology">
     <summary>How the ranking works</summary>
@@ -983,6 +1023,21 @@
 
     startAutoplay();
   })();
+
+  // ---------- Sport tabs (top-level: Football, NFL, ...) ----------
+  const sportTabs = document.querySelectorAll('.sport-tab-btn');
+  const sportPanels = document.querySelectorAll('.sport-panel');
+  sportTabs.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      sportTabs.forEach((b) => b.classList.remove('active'));
+      sportPanels.forEach((p) => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(`sport-${btn.dataset.sport}`).classList.add('active');
+      // Re-sync the market-tab underline in case it moved while hidden (display:none rows report 0 width)
+      const activeMarketTab = document.querySelector('.tab-btn.active');
+      if (activeMarketTab) moveIndicator(activeMarketTab);
+    });
+  });
 
   const tabs = document.querySelectorAll('.tab-btn');
   const panels = document.querySelectorAll('.panel');
