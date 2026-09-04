@@ -1,0 +1,17 @@
+{
+  "name": "kuukus-odds",
+  "version": "1.0.0",
+  "description": "Daily-updating Over 1.5 / first-half Over 0.5 goal picks, ranked by de-vigged bookmaker odds.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "fetch": "node fetch-odds.js",
+    "serve": "python3 -m http.server 8080"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

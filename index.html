@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuuku's Odds</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f7f5;
+    --surface: #ffffff;
+    --border: #e4e4e0;
+    --text: #1c1c1a;
+    --text-muted: #6b6b66;
+    --accent: #1a6b4f;
+    --accent-weak: #e6f2ee;
+    --danger-weak: #fbeceb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15151a;
+      --surface: #1c1c22;
+      --border: #2c2c33;
+      --text: #eeeeef;
+      --text-muted: #9a9aa2;
+      --accent: #4fd6a0;
+      --accent-weak: #163329;
+      --danger-weak: #2c1e1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+  }
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  header h1 {
+    font-size: 1.5rem;
+    margin: 0 0 4px;
+  }
+  header p {
+    color: var(--text-muted);
+    margin: 0 0 4px;
+    font-size: 0.9rem;
+  }
+  #generated-at {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin: 28px 0 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .tab-btn {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 10px 4px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-right: 20px;
+  }
+  .tab-btn.active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+    font-weight: 600;
+  }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  td.prob {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  td.books {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .rank {
+    color: var(--text-muted);
+    width: 2em;
+  }
+  .empty-state {
+    padding: 32px 16px;
+    text-align: center;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+  }
+  details.excluded {
+    margin-top: 20px;
+    background: var(--danger-weak);
+    border-radius: 8px;
+    padding: 4px 14px;
+  }
+  details.excluded summary {
+    cursor: pointer;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  details.excluded ul {
+    margin: 0 0 12px;
+    padding-left: 18px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  footer {
+    margin-top: 40px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Kuuku's Odds</h1>
+    <p>Ranked by fair (de-vigged) implied probability from real bookmaker odds. Nothing here is estimated — fixtures with no usable line are left out, not guessed.</p>
+    <div id="generated-at">Loading…</div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-panel="over15">Over 1.5</button>
+    <button class="tab-btn" data-panel="firstHalf">First-Half Over 0.5</button>
+  </nav>
+
+  <section id="over15" class="panel active">
+    <div id="over15-content"></div>
+  </section>
+
+  <section id="firstHalf" class="panel">
+    <div id="firstHalf-content"></div>
+  </section>
+
+  <footer>
+    Data source: bookmaker totals odds, de-vigged and medianed across books. Prices move — check the current price before staking anything.
+  </footer>
+</main>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      tabs.forEach((b) => b.classList.remove('active'));
+      panels.forEach((p) => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.panel).classList.add('active');
+    });
+  });
+
+  function fmtPct(p) {
+    return `${Math.round(p * 100)}%`;
+  }
+
+  function fmtTime(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    return d.toLocaleString(undefined, { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+  }
+
+  function renderTable(picks) {
+    if (picks.length === 0) {
+      return `<div class="empty-state">No fixtures with a usable line today. Check back after the next update, or try a different market.</div>`;
+    }
+    const rows = picks.map((p, i) => `
+      <tr>
+        <td class="rank">${i + 1}</td>
+        <td>${p.fixture}<br><span style="color:var(--text-muted);font-size:0.8rem">${fmtTime(p.commenceTime)}</span></td>
+        <td class="prob">${fmtPct(p.fairProbability)}</td>
+        <td class="books">${p.bookCount} book${p.bookCount === 1 ? '' : 's'}</td>
+      </tr>`).join('');
+    return `
+      <table>
+        <thead><tr><th>#</th><th>Fixture</th><th>Fair prob.</th><th>Sample</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  }
+
+  function renderExcluded(excluded) {
+    if (!excluded || excluded.length === 0) return '';
+    const items = excluded.map((e) => `<li>${e.fixture} — ${e.reason}</li>`).join('');
+    return `
+      <details class="excluded">
+        <summary>${excluded.length} fixture${excluded.length === 1 ? '' : 's'} left out (no usable line) — click to see which</summary>
+        <ul>${items}</ul>
+      </details>`;
+  }
+
+  async function load() {
+    try {
+      const res = await fetch(`data/picks.json?_=${Date.now()}`);
+      const data = await res.json();
+
+      const genAt = document.getElementById('generated-at');
+      genAt.textContent = data.generatedAt
+        ? `Last updated ${new Date(data.generatedAt).toLocaleString()}`
+        : 'No data yet — run the fetch script or wait for the first scheduled update.';
+
+      document.getElementById('over15-content').innerHTML =
+        renderTable(data.over1_5) + renderExcluded(data.over1_5_excluded);
+
+      document.getElementById('firstHalf-content').innerHTML =
+        renderTable(data.firstHalfOver0_5) + renderExcluded(data.firstHalfOver0_5_excluded);
+    } catch (err) {
+      document.getElementById('generated-at').textContent = 'Could not load data/picks.json.';
+      console.error(err);
+    }
+  }
+
+  load();
+</script>
+</body>
+</html>
