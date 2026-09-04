@@ -961,9 +961,48 @@
   .live-match-team + .live-match-team { margin-top: 3px; }
   .live-match-team img { width: 14px; height: 14px; object-fit: contain; flex: none; }
   .live-match-score { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
-  .live-match-meta { text-align: right; flex: none; }
-  .live-match-min { font-size: 0.68rem; font-weight: 700; color: #2fbf71; }
-  .live-match-league { font-size: 0.64rem; color: var(--text-faint); max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .live-match-min { flex: none; text-align: right; font-size: 0.68rem; font-weight: 700; color: #2fbf71; }
+
+  .live-league-group { border-top: 1px solid var(--border); }
+  .live-league-group:first-of-type { border-top: none; }
+  .live-league-summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 0;
+  }
+  .live-league-summary::-webkit-details-marker { display: none; }
+  .live-league-summary::before {
+    content: '▸';
+    font-size: 0.62rem;
+    color: var(--accent);
+    margin-right: 6px;
+    transition: transform 160ms var(--ease-out);
+    flex: none;
+  }
+  .live-league-group[open] > .live-league-summary::before { transform: rotate(90deg); }
+  .live-league-summary-left { display: flex; align-items: center; gap: 6px; min-width: 0; flex: 1; }
+  .live-league-summary-left img { width: 14px; height: 14px; object-fit: contain; flex: none; }
+  .live-league-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .live-league-count {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--text-faint);
+    font-variant-numeric: tabular-nums;
+    flex: none;
+  }
+  .live-league-matches { padding: 0 0 8px 18px; }
+  .live-league-matches .live-match:first-of-type { border-top: none; }
 
   /* ---------- Bottom nav (mobile) ---------- */
   .bottom-nav { display: none; }
@@ -2009,8 +2048,18 @@
   const bnLiveDot = document.getElementById('bn-live-dot');
   let liveScoresTimer = null;
 
+  // Maps a tracked TheSportsDB league id back to our own sport key, so a
+  // grouped league header can reuse the same real crest already fetched
+  // for `data/league-badges.json` instead of going without one.
+  const LIVE_LEAGUE_SPORT_KEY = {
+    4328: 'soccer_epl', 4329: 'soccer_efl_champ',
+    4331: 'soccer_germany_bundesliga', 4399: 'soccer_germany_bundesliga2',
+    4335: 'soccer_spain_la_liga', 4334: 'soccer_france_ligue_one',
+    4401: 'soccer_france_ligue_two', 4332: 'soccer_italy_serie_a',
+    4346: 'soccer_usa_mls',
+  };
+
   function renderLiveMatch(m) {
-    const leagueName = LIVE_LEAGUE_IDS[m.idLeague] || m.strLeague || '';
     const minuteLabel = /^\d+$/.test(m.strProgress || '') ? `${m.strProgress}'` : (m.strStatus || '');
     return `
       <div class="live-match">
@@ -2022,11 +2071,48 @@
           <div>${m.intHomeScore ?? 0}</div>
           <div>${m.intAwayScore ?? 0}</div>
         </div>
-        <div class="live-match-meta">
-          <div class="live-match-min">${minuteLabel}</div>
-          <div class="live-match-league">${leagueName}</div>
-        </div>
+        <div class="live-match-min">${minuteLabel}</div>
       </div>`;
+  }
+
+  // Groups matches by league into collapsible <details> sections instead of
+  // one long flat list — tracked leagues open by default (and listed
+  // first, in our usual order), every other league worldwide collapsed by
+  // default and sorted by how many live matches it has right now.
+  function renderLiveGroups(matches) {
+    const groups = new Map();
+    for (const m of matches) {
+      const key = m.idLeague || m.strLeague || 'unknown';
+      if (!groups.has(key)) {
+        groups.set(key, {
+          key: String(key),
+          name: LIVE_LEAGUE_IDS[m.idLeague] || m.strLeague || 'Other',
+          tracked: Boolean(LIVE_LEAGUE_IDS[m.idLeague]),
+          badge: leagueBadges[LIVE_LEAGUE_SPORT_KEY[m.idLeague]] || null,
+          matches: [],
+        });
+      }
+      groups.get(key).matches.push(m);
+    }
+
+    const trackedOrder = Object.keys(LIVE_LEAGUE_IDS);
+    const sorted = [...groups.values()].sort((a, b) => {
+      if (a.tracked !== b.tracked) return a.tracked ? -1 : 1;
+      if (a.tracked) return trackedOrder.indexOf(a.key) - trackedOrder.indexOf(b.key);
+      return b.matches.length - a.matches.length;
+    });
+
+    return sorted.map((g) => `
+      <details class="live-league-group" ${g.tracked ? 'open' : ''}>
+        <summary class="live-league-summary">
+          <span class="live-league-summary-left">
+            ${g.badge ? `<img src="${escapeHtml(g.badge)}" alt="" loading="lazy">` : ''}
+            <span class="live-league-name">${escapeHtml(g.name)}</span>
+          </span>
+          <span class="live-league-count">${g.matches.length}</span>
+        </summary>
+        <div class="live-league-matches">${g.matches.map(renderLiveMatch).join('')}</div>
+      </details>`).join('');
   }
 
   async function loadLiveScores() {
@@ -2034,17 +2120,12 @@
     try {
       const res = await fetch('https://www.thesportsdb.com/api/v1/json/123/livescore.php?s=Soccer');
       const data = await res.json();
-      // Every live soccer match worldwide, not just our 9 tracked leagues —
-      // tracked-league matches are sorted to the top since those are the
-      // ones our picks relate to, everything else follows.
-      const matches = (data?.livescore || [])
-        .slice()
-        .sort((a, b) => Number(!!LIVE_LEAGUE_IDS[b.idLeague]) - Number(!!LIVE_LEAGUE_IDS[a.idLeague]));
+      const matches = data?.livescore || [];
       const hasLive = matches.length > 0;
       if (livePulseDot) livePulseDot.hidden = !hasLive;
       if (bnLiveDot) bnLiveDot.hidden = !hasLive;
       liveScoresList.innerHTML = hasLive
-        ? matches.map(renderLiveMatch).join('')
+        ? renderLiveGroups(matches)
         : `<p class="live-empty">No live soccer matches anywhere right now.</p>`;
     } catch (err) {
       console.error('Live scores unavailable', err);

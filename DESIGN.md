@@ -244,3 +244,18 @@ real issues the site owner found by using it:
   `sortMode` back to `probability` if it was mid-sort), the same "don't
   offer what the data can't support" pattern as hiding the league filter
   on non-Over1.5/First-Half panels.
+
+## Update: live scores grouped by league (collapsible)
+
+Once live scores went from "9 tracked leagues" to "every live match
+worldwide," a flat list stopped being readable — could be 30+ leagues at
+once. Reworked into `renderLiveGroups()`: matches are grouped by
+`idLeague`, each group rendered as a native `<details>`/`<summary>`
+(same collapsible pattern as `.methodology`, for visual consistency —
+`▸` marker rotating open, no JS needed for the toggle itself). The 9
+tracked leagues are pinned to the top in their usual order and open by
+default (with their real crest via `LIVE_LEAGUE_SPORT_KEY` mapping
+TheSportsDB's numeric league id back to our own `leagueBadges` sport
+key); every other league is collapsed by default and sorted by how many
+live matches it currently has, so the card opens compact but everything
+is still one click away.
