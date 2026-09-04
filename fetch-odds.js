@@ -112,22 +112,42 @@ function summarize(perBook) {
 // Collects every upcoming event across all configured leagues (1 bulk call
 // per league, 1 quota unit each with a single region) before spending any
 // budget on the more expensive per-event lookups.
+//
+// Returned in round-robin order across leagues (one fixture from each
+// league per round, repeating) rather than league-by-league — otherwise
+// whichever league is first in SPORTS and has the most fixtures (EPL)
+// silently eats the entire MAX_EVENT_LOOKUPS_PER_RUN budget every run,
+// and every other configured league never gets a single pick.
 async function collectEvents() {
-  const events = [];
+  const byLeague = new Map();
   for (const sportKey of SPORTS) {
     try {
       const leagueEvents = await apiGet(`/sports/${sportKey}/odds`, {
         regions: REGIONS,
         markets: 'totals',
       });
-      for (const event of leagueEvents) {
-        events.push({ sportKey, event });
-      }
+      byLeague.set(sportKey, leagueEvents.map((event) => ({ sportKey, event })));
     } catch (err) {
       console.warn(`[${sportKey}] bulk fetch failed, skipping league: ${err.message}`);
+      byLeague.set(sportKey, []);
     }
   }
-  return events;
+
+  const interleaved = [];
+  let round = 0;
+  let addedThisRound = true;
+  while (addedThisRound) {
+    addedThisRound = false;
+    for (const sportKey of SPORTS) {
+      const list = byLeague.get(sportKey);
+      if (round < list.length) {
+        interleaved.push(list[round]);
+        addedThisRound = true;
+      }
+    }
+    round += 1;
+  }
+  return interleaved;
 }
 
 async function main() {
