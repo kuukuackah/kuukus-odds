@@ -138,3 +138,54 @@ fallback path is not a design regression to avoid — it's load-bearing:
 `scripts/fetch-team-badges.js` builds its cache incrementally (capped
 per run, rate-limited), so on any given day some teams legitimately
 won't have a real badge yet. Don't try to force 100% image coverage.
+
+## Update: Sportmonks-matched navy + pink palette (supersedes the green accent above)
+
+The green accent (`#22c98a` / `#14a06a`) documented above was replaced at
+the user's request to match sportmonks.com/football-api. **The color
+values in the "Colors" section above are stale — use these instead:**
+
+- Light mode: `--bg:#f5f4fa; --accent:#ff0f50; --accent-strong:#d90d44`
+- Dark mode: `--bg:#08071a; --accent:#ff0f50; --accent-strong:#ff5079`
+
+Everything else from the sports-media direction (density, one accent
+color, no gradients/glow, real crest images) still applies — this was a
+palette swap, not a direction change. If asked to "make it pop" or
+revisit colors again, this navy+pink pairing is the current baseline,
+not the old green.
+
+## Update: app-shell — install button, bottom nav, live scores
+
+Added three pieces to make the site read as an installable app rather
+than a browser tab, plus a live-scores feed:
+
+- **Install CTA**: a blinking pill button (`.install-cta`, pulsing dot
+  via `installBlink` keyframes) in the hero brand row, next to the theme
+  toggle. Opens `#install-modal-backdrop` — the same iPhone/Android
+  install steps that already lived in the page's bottom "Install as an
+  app" section, duplicated into a modal so it's reachable without
+  scrolling. The original bottom section was kept as-is for anyone who
+  scrolls that far organically.
+- **Bottom nav** (`.bottom-nav`, mobile only, `max-width: 900px` — same
+  breakpoint as the existing sidebar-reorder query): four buttons —
+  Picks, Live, Codes, Install — that scroll to or open the relevant
+  section, giving the site a native-app-style tab bar. `.tip-fab` shifts
+  up (`bottom: calc(70px + safe-area)`) on mobile so it doesn't collide
+  with the nav.
+- **Live scores**: a sidebar card (desktop, under Search) and a
+  scroll-to target (mobile, via a quick-bar button under the hero and
+  the bottom nav's Live button). Data comes directly from TheSportsDB's
+  free `livescore.php?s=Soccer` endpoint — verified live against the
+  real API before building: it returns real-time scores across *all*
+  soccer leagues globally (not gated to a paid tier), and its response
+  headers send `access-control-allow-origin: *`, so the browser fetches
+  it directly client-side every 60s — no GitHub Action, no server, zero
+  added cost. Results are filtered client-side to the same 9 league IDs
+  already verified for `data/league-badges.json` (EPL=4328,
+  Championship=4329, Bundesliga=4331, Bundesliga2=4399, La Liga=4335,
+  Ligue1=4334, Ligue2=4401, Serie A=4332, MLS=4346). Team badge images
+  come straight from the livescore response itself
+  (`strHomeTeamBadge`/`strAwayTeamBadge`) — no dependency on the
+  `team-badges.json` cache. When nothing in the tracked leagues is live,
+  the card shows an explicit empty state rather than nothing — same
+  "don't fabricate, just say there's nothing" rule as the picks lists.

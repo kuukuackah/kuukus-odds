@@ -209,6 +209,20 @@ it's already resolved.
   (or not found) fall back to the initials avatar — this never blocks
   rendering.
 
+## Live scores (zero cost, client-side)
+
+The "Live Scores" card (right sidebar on desktop; reachable via the
+"Live Scores" pill under the hero or the bottom nav's Live button on
+mobile) fetches directly from TheSportsDB's free `livescore.php?s=Soccer`
+endpoint — no API key beyond the same public test key `123` used for
+badges, no server step, no GitHub Action. The endpoint sends
+`access-control-allow-origin: *`, so the browser calls it directly and
+polls every 60 seconds while the tab is visible (paused when the tab is
+hidden). Results are filtered client-side to the same 9 leagues tracked
+elsewhere on the site, matched by TheSportsDB league ID (see the
+`LIVE_LEAGUE_IDS` map in `index.html`). If nothing in those leagues is
+live right now, the card says so explicitly rather than showing nothing.
+
 ## Posting bet codes (dashboard)
 
 `dashboard.html` is a private page for posting booking codes (SportyBet,
