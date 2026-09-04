@@ -4,155 +4,379 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kuuku's Odds</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     color-scheme: light dark;
-    --bg: #f7f7f5;
+    --bg: #f5f5f2;
     --surface: #ffffff;
-    --border: #e4e4e0;
-    --text: #1c1c1a;
-    --text-muted: #6b6b66;
-    --accent: #1a6b4f;
-    --accent-weak: #e6f2ee;
-    --danger-weak: #fbeceb;
+    --surface-hover: #fbfbf9;
+    --border: #e6e6e1;
+    --text: #171715;
+    --text-muted: #75756e;
+    --text-faint: #9d9d95;
+    --accent: #189968;
+    --accent-strong: #0f6e4b;
+    --accent-bright: #22c98a;
+    --accent-weak: #e4f4ec;
+    --track: #edede8;
+    --shadow-color: 220 20% 10%;
+    --radius: 14px;
+    --radius-sm: 8px;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #15151a;
-      --surface: #1c1c22;
-      --border: #2c2c33;
-      --text: #eeeeef;
-      --text-muted: #9a9aa2;
-      --accent: #4fd6a0;
-      --accent-weak: #163329;
-      --danger-weak: #2c1e1e;
+      --bg: #101012;
+      --surface: #19191d;
+      --surface-hover: #1f1f24;
+      --border: #29292f;
+      --text: #f1f1f2;
+      --text-muted: #9c9ca4;
+      --text-faint: #6f6f77;
+      --accent: #33dd9a;
+      --accent-strong: #57e8ae;
+      --accent-bright: #6ef4bf;
+      --accent-weak: #16332a;
+      --track: #232328;
+      --shadow-color: 0 0% 0%;
     }
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: var(--font-body);
     line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
+
+  .top-glow {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent) 30%, var(--accent-bright) 50%, var(--accent) 70%, transparent);
+    background-size: 200% 100%;
+    animation: shimmer 6s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { .top-glow { animation: none; } }
+  @keyframes shimmer { to { background-position: -200% 0; } }
+
   main {
-    max-width: 880px;
+    max-width: 780px;
     margin: 0 auto;
-    padding: 40px 20px 80px;
+    padding: 56px 20px 90px;
+    position: relative;
+  }
+
+  /* ---------- Header ---------- */
+  header { position: relative; }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -80px;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 68%);
+    opacity: 0.14;
+    filter: blur(10px);
+    pointer-events: none;
+    z-index: -1;
   }
   header h1 {
-    font-size: 1.5rem;
-    margin: 0 0 4px;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 6vw, 2.7rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin: 0 0 8px;
+    background: linear-gradient(120deg, var(--text) 40%, var(--accent-strong) 130%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--text);
   }
-  header p {
+  header p.tagline {
     color: var(--text-muted);
-    margin: 0 0 4px;
-    font-size: 0.9rem;
+    margin: 0 0 28px;
+    font-size: 0.96rem;
+    max-width: 50ch;
   }
-  #generated-at {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
   }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 1px 2px hsl(var(--shadow-color) / 0.04);
+    transition: transform 200ms var(--ease-out), border-color 200ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .stat:hover { transform: translateY(-2px); border-color: var(--accent); }
+  }
+  .stat svg { flex: none; color: var(--accent); }
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    margin-top: 1px;
+  }
+
+  /* ---------- Tabs ---------- */
   .tabs {
     display: flex;
-    gap: 8px;
-    margin: 28px 0 16px;
+    gap: 28px;
+    margin: 36px 0 20px;
     border-bottom: 1px solid var(--border);
+    position: relative;
   }
   .tab-btn {
     appearance: none;
     background: none;
     border: none;
-    padding: 10px 4px;
-    font-size: 0.95rem;
+    padding: 12px 2px;
+    font-size: 0.96rem;
+    font-family: var(--font-body);
+    font-weight: 500;
     color: var(--text-muted);
     cursor: pointer;
-    border-bottom: 2px solid transparent;
-    margin-right: 20px;
+    position: relative;
+    transition: color 180ms var(--ease-out);
   }
-  .tab-btn.active {
-    color: var(--text);
-    border-bottom-color: var(--accent);
-    font-weight: 600;
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--text); font-weight: 600; }
+  .tab-indicator {
+    position: absolute;
+    bottom: -1px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-strong), var(--accent-bright));
+    border-radius: 2px;
+    transition: left 260ms var(--ease-in-out), width 260ms var(--ease-in-out);
   }
+
   .panel { display: none; }
   .panel.active { display: block; }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.92rem;
+
+  /* ---------- Ranked list ---------- */
+  .pick-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
-  th, td {
-    text-align: left;
-    padding: 10px 8px;
-    border-bottom: 1px solid var(--border);
+  .pick-row {
+    display: grid;
+    grid-template-columns: 38px 1fr auto;
+    gap: 14px;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    opacity: 0;
+    transform: translateY(8px);
+    animation: rowIn 360ms var(--ease-out) forwards;
+    box-shadow: 0 1px 2px hsl(var(--shadow-color) / 0.03);
   }
-  th {
-    color: var(--text-muted);
-    font-weight: 500;
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+  @media (hover: hover) and (pointer: fine) {
+    .pick-row {
+      transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out), border-color 200ms var(--ease-out);
+    }
+    .pick-row:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 24px -14px hsl(var(--shadow-color) / 0.25);
+    }
   }
-  td.prob {
-    font-variant-numeric: tabular-nums;
-    font-weight: 600;
-    color: var(--accent);
+  @keyframes rowIn {
+    to { opacity: 1; transform: translateY(0); }
   }
-  td.books {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    white-space: nowrap;
+  @media (prefers-reduced-motion: reduce) {
+    .pick-row { animation: none; opacity: 1; transform: none; }
+    .pick-row:hover { transform: none; }
   }
+
+  .pick-row.top {
+    border-color: var(--accent);
+    background: linear-gradient(135deg, var(--accent-weak) 0%, var(--surface) 45%);
+    box-shadow: 0 0 0 1px var(--accent) inset, 0 10px 28px -18px var(--accent);
+  }
+
   .rank {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--track);
     color: var(--text-muted);
-    width: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
   }
+  .pick-row.top .rank {
+    background: linear-gradient(150deg, var(--accent-strong), var(--accent-bright));
+    color: #06251a;
+  }
+
+  .fixture-info { min-width: 0; }
+  .fixture-name {
+    font-weight: 600;
+    font-size: 0.97rem;
+    margin: 0 0 4px;
+    overflow-wrap: break-word;
+  }
+  .fixture-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    font-size: 0.78rem;
+    color: var(--text-faint);
+  }
+  .league-tag {
+    background: var(--track);
+    color: var(--text-muted);
+    border-radius: var(--radius-sm);
+    padding: 1px 7px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .prob-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    min-width: 88px;
+  }
+  .prob-value {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    background: linear-gradient(120deg, var(--accent-strong), var(--accent-bright));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .prob-bar {
+    width: 88px;
+    height: 5px;
+    border-radius: 3px;
+    background: var(--track);
+    overflow: hidden;
+  }
+  .prob-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent-strong), var(--accent-bright));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 700ms var(--ease-out);
+  }
+  .prob-sample {
+    font-size: 0.7rem;
+    color: var(--text-faint);
+  }
+
+  /* ---------- Empty state ---------- */
   .empty-state {
-    padding: 32px 16px;
+    padding: 44px 20px;
     text-align: center;
     color: var(--text-muted);
     background: var(--surface);
     border: 1px dashed var(--border);
-    border-radius: 8px;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
   }
+
+  /* ---------- Excluded disclosure ---------- */
   details.excluded {
-    margin-top: 20px;
-    background: var(--danger-weak);
-    border-radius: 8px;
-    padding: 4px 14px;
+    margin-top: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2px 16px;
   }
   details.excluded summary {
     cursor: pointer;
-    padding: 10px 0;
-    font-size: 0.85rem;
+    padding: 12px 0;
+    font-size: 0.82rem;
     color: var(--text-muted);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
+  details.excluded summary::-webkit-details-marker { display: none; }
+  details.excluded summary::before {
+    content: '▸';
+    display: inline-block;
+    font-size: 0.7rem;
+    color: var(--accent);
+    transition: transform 180ms var(--ease-out);
+  }
+  details.excluded[open] summary::before { transform: rotate(90deg); }
   details.excluded ul {
-    margin: 0 0 12px;
+    margin: 0 0 14px;
     padding-left: 18px;
-    font-size: 0.85rem;
-    color: var(--text-muted);
+    font-size: 0.82rem;
+    color: var(--text-faint);
   }
+  details.excluded li { margin-bottom: 4px; }
+
   footer {
-    margin-top: 40px;
+    margin-top: 48px;
     font-size: 0.78rem;
-    color: var(--text-muted);
+    color: var(--text-faint);
+    max-width: 60ch;
+  }
+
+  @media (max-width: 480px) {
+    main { padding: 40px 16px 70px; }
+    .pick-row { grid-template-columns: 32px 1fr; grid-template-areas: "rank info" "rank prob"; row-gap: 10px; }
+    .rank { grid-area: rank; width: 32px; height: 32px; font-size: 0.8rem; }
+    .fixture-info { grid-area: info; }
+    .prob-block { grid-area: prob; align-items: flex-start; flex-direction: row; gap: 10px; }
+    .prob-bar { width: 60px; }
   }
 </style>
 </head>
 <body>
+<div class="top-glow"></div>
 <main>
   <header>
     <h1>Kuuku's Odds</h1>
-    <p>Ranked by fair (de-vigged) implied probability from real bookmaker odds. Nothing here is estimated — fixtures with no usable line are left out, not guessed.</p>
-    <div id="generated-at">Loading…</div>
+    <p class="tagline">Ranked by fair (de-vigged) implied probability from real bookmaker odds. Fixtures with no usable line are left out, never estimated.</p>
+    <div class="stat-strip" id="stat-strip"></div>
   </header>
 
-  <nav class="tabs">
+  <nav class="tabs" id="tabs">
     <button class="tab-btn active" data-panel="over15">Over 1.5</button>
     <button class="tab-btn" data-panel="firstHalf">First-Half Over 0.5</button>
+    <div class="tab-indicator" id="tab-indicator"></div>
   </nav>
 
   <section id="over15" class="panel active">
@@ -171,14 +395,36 @@
 <script>
   const tabs = document.querySelectorAll('.tab-btn');
   const panels = document.querySelectorAll('.panel');
+  const indicator = document.getElementById('tab-indicator');
+
+  function moveIndicator(btn) {
+    indicator.style.left = `${btn.offsetLeft}px`;
+    indicator.style.width = `${btn.offsetWidth}px`;
+  }
+
   tabs.forEach((btn) => {
     btn.addEventListener('click', () => {
       tabs.forEach((b) => b.classList.remove('active'));
       panels.forEach((p) => p.classList.remove('active'));
       btn.classList.add('active');
       document.getElementById(btn.dataset.panel).classList.add('active');
+      moveIndicator(btn);
     });
   });
+  window.addEventListener('load', () => moveIndicator(document.querySelector('.tab-btn.active')));
+  window.addEventListener('resize', () => moveIndicator(document.querySelector('.tab-btn.active')));
+
+  const LEAGUE_NAMES = {
+    soccer_epl: 'EPL', soccer_efl_champ: 'Championship',
+    soccer_germany_bundesliga: 'Bundesliga', soccer_germany_bundesliga2: 'Bundesliga 2',
+    soccer_spain_la_liga: 'La Liga', soccer_france_ligue_one: 'Ligue 1',
+    soccer_france_ligue_two: 'Ligue 2', soccer_italy_serie_a: 'Serie A',
+    soccer_usa_mls: 'MLS',
+  };
+
+  function leagueLabel(key) {
+    return LEAGUE_NAMES[key] || key.replace('soccer_', '').replace(/_/g, ' ');
+  }
 
   function fmtPct(p) {
     return `${Math.round(p * 100)}%`;
@@ -190,32 +436,107 @@
     return d.toLocaleString(undefined, { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
   }
 
-  function renderTable(picks) {
+  function fmtRelative(iso) {
+    if (!iso) return '';
+    const diffMs = new Date(iso) - Date.now();
+    const hours = Math.round(diffMs / 3_600_000);
+    if (Math.abs(hours) < 1) return 'kicking off soon';
+    if (hours < 0) return 'in progress or finished';
+    if (hours < 24) return `in ${hours}h`;
+    return `in ${Math.round(hours / 24)}d`;
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  function renderList(picks) {
     if (picks.length === 0) {
-      return `<div class="empty-state">No fixtures with a usable line today. Check back after the next update, or try a different market.</div>`;
+      return `<div class="empty-state">No fixtures with a usable line right now. Check back after the next update.</div>`;
     }
     const rows = picks.map((p, i) => `
-      <tr>
-        <td class="rank">${i + 1}</td>
-        <td>${p.fixture}<br><span style="color:var(--text-muted);font-size:0.8rem">${fmtTime(p.commenceTime)}</span></td>
-        <td class="prob">${fmtPct(p.fairProbability)}</td>
-        <td class="books">${p.bookCount} book${p.bookCount === 1 ? '' : 's'}</td>
-      </tr>`).join('');
-    return `
-      <table>
-        <thead><tr><th>#</th><th>Fixture</th><th>Fair prob.</th><th>Sample</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>`;
+      <div class="pick-row ${i < 3 ? 'top' : ''}" style="animation-delay:${Math.min(i, 10) * 40}ms">
+        <div class="rank">${i + 1}</div>
+        <div class="fixture-info">
+          <p class="fixture-name">${escapeHtml(p.fixture)}</p>
+          <div class="fixture-meta">
+            <span class="league-tag">${escapeHtml(leagueLabel(p.sport))}</span>
+            <span>${fmtTime(p.commenceTime)} · ${fmtRelative(p.commenceTime)}</span>
+          </div>
+        </div>
+        <div class="prob-block">
+          <span class="prob-value">${fmtPct(p.fairProbability)}</span>
+          <div class="prob-bar"><div class="prob-bar-fill" data-target="${Math.round(p.fairProbability * 100)}"></div></div>
+          <span class="prob-sample">${p.bookCount} book${p.bookCount === 1 ? '' : 's'}</span>
+        </div>
+      </div>`).join('');
+    return `<div class="pick-list">${rows}</div>`;
   }
 
   function renderExcluded(excluded) {
     if (!excluded || excluded.length === 0) return '';
-    const items = excluded.map((e) => `<li>${e.fixture} — ${e.reason}</li>`).join('');
+    const items = excluded.map((e) => `<li>${escapeHtml(e.fixture)} — ${escapeHtml(e.reason)}</li>`).join('');
     return `
       <details class="excluded">
-        <summary>${excluded.length} fixture${excluded.length === 1 ? '' : 's'} left out (no usable line) — click to see which</summary>
+        <summary>${excluded.length} fixture${excluded.length === 1 ? '' : 's'} left out (no usable line)</summary>
         <ul>${items}</ul>
       </details>`;
+  }
+
+  function statIcon(name) {
+    const icons = {
+      clock: '<path d="M10 5v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="10" cy="10" r="7.3" stroke="currentColor" stroke-width="1.6" fill="none"/>',
+      list: '<path d="M7 6h9M7 10h9M7 14h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="10" r="1" fill="currentColor"/><circle cx="4" cy="14" r="1" fill="currentColor"/>',
+      target: '<circle cx="10" cy="10" r="7.3" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="10" cy="10" r="3.6" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="10" cy="10" r="0.8" fill="currentColor"/>',
+      bolt: '<path d="M11 3 5 11h4l-1 6 6-9h-4l1-5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" fill="none"/>',
+    };
+    return `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">${icons[name] || ''}</svg>`;
+  }
+
+  function animateCount(el, target) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = target;
+      return;
+    }
+    const start = performance.now();
+    const duration = 700;
+    function tick(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(target * eased);
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function renderStats(data) {
+    const strip = document.getElementById('stat-strip');
+    const updatedLabel = data.generatedAt
+      ? new Date(data.generatedAt).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+      : '—';
+    strip.innerHTML = `
+      <div class="stat">${statIcon('clock')}<div><div class="stat-value" style="font-size:0.95rem">${updatedLabel}</div><div class="stat-label">Last updated</div></div></div>
+      <div class="stat">${statIcon('target')}<div><div class="stat-value" id="stat-over15">0</div><div class="stat-label">Over 1.5 picks</div></div></div>
+      <div class="stat">${statIcon('list')}<div><div class="stat-value" id="stat-fh">0</div><div class="stat-label">First-half picks</div></div></div>
+      <div class="stat">${statIcon('bolt')}<div><div class="stat-value" id="stat-quota">0</div><div class="stat-label">API calls left</div></div></div>
+    `;
+    if (data.over1_5) animateCount(document.getElementById('stat-over15'), data.over1_5.length);
+    if (data.firstHalfOver0_5) animateCount(document.getElementById('stat-fh'), data.firstHalfOver0_5.length);
+    if (data.apiQuotaRemaining !== undefined && data.apiQuotaRemaining !== null) {
+      animateCount(document.getElementById('stat-quota'), data.apiQuotaRemaining);
+    } else {
+      document.getElementById('stat-quota').textContent = '—';
+    }
+  }
+
+  function primeBars() {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.querySelectorAll('.prob-bar-fill').forEach((el) => {
+          el.style.transform = `scaleX(${Number(el.dataset.target) / 100})`;
+        });
+      });
+    });
   }
 
   async function load() {
@@ -223,18 +544,17 @@
       const res = await fetch(`data/picks.json?_=${Date.now()}`);
       const data = await res.json();
 
-      const genAt = document.getElementById('generated-at');
-      genAt.textContent = data.generatedAt
-        ? `Last updated ${new Date(data.generatedAt).toLocaleString()}`
-        : 'No data yet — run the fetch script or wait for the first scheduled update.';
+      renderStats(data);
 
       document.getElementById('over15-content').innerHTML =
-        renderTable(data.over1_5) + renderExcluded(data.over1_5_excluded);
+        renderList(data.over1_5) + renderExcluded(data.over1_5_excluded);
 
       document.getElementById('firstHalf-content').innerHTML =
-        renderTable(data.firstHalfOver0_5) + renderExcluded(data.firstHalfOver0_5_excluded);
+        renderList(data.firstHalfOver0_5) + renderExcluded(data.firstHalfOver0_5_excluded);
+
+      primeBars();
     } catch (err) {
-      document.getElementById('generated-at').textContent = 'Could not load data/picks.json.';
+      document.getElementById('stat-strip').innerHTML = `<div class="stat">Could not load data/picks.json</div>`;
       console.error(err);
     }
   }
