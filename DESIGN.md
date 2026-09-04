@@ -87,3 +87,34 @@ was reading as generic-AI-premium rather than sports-data-premium.
   use the original accent gradient treatment from the fintech-pass
   branding work. That's a deliberately separate asset, not part of the
   in-page redesign.
+
+## Update: hero photography + team badges (deliberate hybrid)
+
+After shipping the restrained sports-media redesign above, the user
+explicitly asked for photography/imagery back in, having been told the
+tradeoff first. This is a **deliberate, scoped exception**, not a
+reversal of the whole direction:
+
+- Added a `.hero` carousel (4 rotating real photos, dot navigation,
+  autoplay respecting `prefers-reduced-motion`) at the very top of the
+  page only. Everything below it — the dense rows, flat cards, league
+  chips, no-gradient rule — is untouched.
+- Images are real, verified-generic football photography (empty
+  pitches, aerial shots, floodlights) from Unsplash, hotlinked from
+  `images.unsplash.com` (free under the Unsplash License). **Every
+  candidate image was visually inspected before use** — Unsplash alt
+  text is not reliable for this: 3 of the first 4 candidates picked
+  by alt-text search turned out to show identifiable real club stadiums
+  with visible branding (PSG's "Paris est magique" banner, a Camp
+  Nou-style bowl with Nike ads, a Barcelona scoreboard) despite
+  generic-sounding alt text like "soccer stadium at night." Always
+  open the actual image and look before adding one here.
+- Added per-team initials badges (`.team-avatar`, two overlapping
+  circles, derived from the fixture string) in every pick row — same
+  "no licensed crest art" logic as the league chips, just applied per
+  team instead of per competition.
+
+If asked to add more decorative photography elsewhere on the page,
+push back gently first — the hero is the one sanctioned exception, and
+scattering more photos through the dense list body would undo the
+density/restraint that made this redesign work in the first place.

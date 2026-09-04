@@ -76,10 +76,78 @@
   main {
     max-width: 760px;
     margin: 0 auto;
-    padding: 32px 18px 80px;
+    padding: 20px 18px 80px;
   }
 
-  /* ---------- Header ---------- */
+  /* ---------- Hero carousel ---------- */
+  /* Deliberate exception to the "no decoration" rule elsewhere on this
+     page (see DESIGN.md) — real match/stadium photography, contained to
+     this one hero moment, with the dense flat-color body below untouched. */
+  .hero {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    color: #fff;
+  }
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 900ms ease;
+  }
+  .hero-slide.active { opacity: 1; }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(3,5,7,0.35) 0%, rgba(3,5,7,0.6) 55%, var(--bg) 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 16px 18px 0;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: #fff;
+  }
+  .hero p.tagline {
+    color: rgba(255,255,255,0.82);
+    margin: 0;
+    font-size: 0.86rem;
+    max-width: 46ch;
+  }
+  .hero-dots {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    padding-top: 14px;
+  }
+  .hero-dot {
+    appearance: none;
+    border: none;
+    background: rgba(255,255,255,0.35);
+    width: 16px;
+    height: 3px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0;
+    transition: background 160ms var(--ease-out), width 160ms var(--ease-out);
+  }
+  .hero-dot.active { background: var(--accent); width: 22px; }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-slide { transition: none; }
+  }
+
   .brand-row {
     display: flex;
     align-items: center;
@@ -103,24 +171,11 @@
     flex: none;
   }
   .brand-mark svg { width: 18px; height: 18px; }
-  header h1 {
-    font-family: var(--font-display);
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin: 0;
-  }
-  header p.tagline {
-    color: var(--text-muted);
-    margin: 0 0 18px;
-    font-size: 0.86rem;
-    max-width: 54ch;
-  }
 
   .theme-toggle {
     appearance: none;
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -128,11 +183,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: var(--text-muted);
+    color: #fff;
     flex: none;
-    transition: border-color 160ms var(--ease-out), color 160ms var(--ease-out);
+    transition: background 160ms var(--ease-out);
   }
-  .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+  .theme-toggle:hover { background: rgba(255,255,255,0.22); }
   .theme-toggle:active { transform: scale(0.94); }
   .theme-toggle svg { width: 15px; height: 15px; }
   .theme-toggle .icon-sun { display: none; }
@@ -261,11 +316,36 @@
 
   .fixture-info { min-width: 0; }
   .fixture-name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-weight: 600;
     font-size: 0.88rem;
     margin: 0 0 3px;
     overflow-wrap: break-word;
   }
+  .fixture-name-text { min-width: 0; }
+  .team-avatars {
+    display: flex;
+    align-items: center;
+    flex: none;
+  }
+  .team-avatar {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--track);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    border: 1.5px solid var(--surface);
+  }
+  .team-avatar + .team-avatar { margin-left: -6px; }
+  .pick-row.top .team-avatar:first-child { background: var(--accent-weak); color: var(--accent-strong); }
   .fixture-meta {
     display: flex;
     flex-wrap: wrap;
@@ -697,8 +777,13 @@
   <p>Loading today's picks…</p>
 </div>
 
-<main>
-  <header>
+<section class="hero" id="hero">
+  <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1652190364244-96ad73c21c4c?auto=format&amp;fit=crop&amp;w=1600&amp;q=70')"></div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1546717003-caee5f93a9db?auto=format&amp;fit=crop&amp;w=1600&amp;q=70')"></div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1517747614396-d21a78b850e8?auto=format&amp;fit=crop&amp;w=1600&amp;q=70')"></div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1487466365202-1afdb86c764e?auto=format&amp;fit=crop&amp;w=1600&amp;q=70')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
     <div class="brand-row">
       <div class="brand">
         <div class="brand-mark">
@@ -717,8 +802,17 @@
       </button>
     </div>
     <p class="tagline">Ranked by fair (de-vigged) implied probability from real bookmaker odds. Fixtures with no usable line are left out, never estimated.</p>
-    <div class="stat-strip" id="stat-strip"></div>
-  </header>
+  </div>
+  <div class="hero-dots" id="hero-dots">
+    <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+    <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+    <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+    <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+  </div>
+</section>
+
+<main>
+  <div class="stat-strip" id="stat-strip"></div>
 
   <nav class="tabs" id="tabs">
     <button class="tab-btn active" data-panel="over15">Over 1.5</button>
@@ -849,6 +943,41 @@
     setTheme(currentEffectiveTheme() === 'dark' ? 'light' : 'dark');
   });
 
+  // ---------- Hero carousel ----------
+  (function initHero() {
+    const hero = document.getElementById('hero');
+    if (!hero) return;
+    const slides = [...hero.querySelectorAll('.hero-slide')];
+    const dots = [...document.querySelectorAll('.hero-dot')];
+    let current = 0;
+    let timer = null;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = index;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function next() { goTo((current + 1) % slides.length); }
+
+    function startAutoplay() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      stopAutoplay();
+      timer = setInterval(next, 5500);
+    }
+    function stopAutoplay() { if (timer) clearInterval(timer); }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => { goTo(i); startAutoplay(); });
+    });
+    hero.addEventListener('mouseenter', stopAutoplay);
+    hero.addEventListener('mouseleave', startAutoplay);
+
+    startAutoplay();
+  })();
+
   const tabs = document.querySelectorAll('.tab-btn');
   const panels = document.querySelectorAll('.panel');
   const indicator = document.getElementById('tab-indicator');
@@ -923,6 +1052,25 @@
     return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
 
+  // Two-letter initials badge standing in for a team crest — no licensed
+  // crest art available, so each team gets a consistent initials avatar.
+  function teamInitials(name) {
+    const words = String(name).split(/\s+/).filter(Boolean);
+    if (words.length === 0) return '';
+    if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+    return (words[0][0] + words[1][0]).toUpperCase();
+  }
+
+  function teamAvatars(fixture) {
+    const parts = String(fixture).split(' v ');
+    if (parts.length !== 2) return '';
+    const [home, away] = parts;
+    return `<span class="team-avatars" aria-hidden="true">
+      <span class="team-avatar" title="${escapeHtml(home)}">${escapeHtml(teamInitials(home))}</span>
+      <span class="team-avatar" title="${escapeHtml(away)}">${escapeHtml(teamInitials(away))}</span>
+    </span>`;
+  }
+
   function renderList(picks, { highlightTop = true, emptyMessage } = {}) {
     if (picks.length === 0) {
       return `<div class="empty-state">${emptyMessage || 'No fixtures with a usable line right now. Check back after the next update.'}</div>`;
@@ -933,7 +1081,7 @@
       <div class="pick-row ${highlightTop && i < 3 ? 'top' : ''}" style="animation-delay:${Math.min(i, 10) * 30}ms">
         <div class="rank">${i + 1}</div>
         <div class="fixture-info">
-          <p class="fixture-name">${escapeHtml(p.fixture)}</p>
+          <p class="fixture-name">${teamAvatars(p.fixture)}<span class="fixture-name-text">${escapeHtml(p.fixture)}</span></p>
           <div class="fixture-meta">
             <span class="league-chip" title="${escapeHtml(league)}">${escapeHtml(leagueCode(p.sport, league))}</span>
             <span>${fmtTime(p.commenceTime)} · ${fmtRelative(p.commenceTime)}</span>
@@ -959,7 +1107,7 @@
       <div class="pick-row ${highlightTop && i < 3 ? 'top' : ''}" style="animation-delay:${Math.min(i, 10) * 30}ms">
         <div class="rank">${i + 1}</div>
         <div class="fixture-info">
-          <p class="fixture-name">${escapeHtml(p.fixture)}</p>
+          <p class="fixture-name">${teamAvatars(p.fixture)}<span class="fixture-name-text">${escapeHtml(p.fixture)}</span></p>
           <div class="fixture-meta">
             ${league ? `<span class="league-tag">${escapeHtml(league)}</span>` : ''}
             <span>${fmtTime(p.commenceTime)} · ${fmtRelative(p.commenceTime)}</span>
