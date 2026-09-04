@@ -6,6 +6,8 @@ A static site that updates once a day with soccer fixtures ranked by fair
 - **Over 1.5 goals** — up to 30 fixtures
 - **First-half Over 0.5 goals** — best-effort; many books don't post this
   line until close to kickoff, so it can be thin or empty on any given day
+- **Win or Draw** — up to 30 fixtures, from a completely separate free API
+  with its own account and quota (see below)
 
 **The rule this project is built around:** if no bookmaker posts a usable
 line for a fixture, that fixture is left out of the list — never estimated.
@@ -73,20 +75,46 @@ dashboard if the script logs warnings about a league failing to fetch.
 The script degrades gracefully (skips the league, keeps going) rather than
 crashing.
 
+## Getting a Win/Draw API key (separate from the above)
+
+`fetch-1x2.js` uses the **Football Prediction API** (boggio-analytics, via
+RapidAPI) — a completely different account, key, and quota from The Odds
+API. It provides its own 1X2 (Win/Draw/Win) odds per fixture in a single
+bulk call, so even the free tier's 100 calls/month comfortably covers one
+call a day.
+
+1. Go to [rapidapi.com/boggio-analytics/api/football-prediction/pricing](https://rapidapi.com/boggio-analytics/api/football-prediction/pricing)
+   and subscribe to the **Basic ($0.00/mo)** plan. RapidAPI may ask for a
+   card on file even for the free tier (anti-abuse measure) — you
+   shouldn't be charged unless you exceed the limits.
+2. Grab your key from the **Endpoints** tab (shown in the code snippets as
+   `x-rapidapi-key`).
+3. Copy it into `.env` as `RAPIDAPI_FOOTBALL_PREDICTION_KEY=...` for local
+   runs: `npm run fetch:1x2`.
+
+This source returns **one prediction service's own model odds**, not a
+multi-bookmaker median like `fetch-odds.js` — the "Win or Draw" tab says
+so explicitly on the site, and `quotedDoubleChanceOdds` in the output can
+be `null` for a fixture even when the underlying 1/X/2 odds exist (the
+source doesn't always quote the combined price) — the fair probability is
+still computed correctly from the individual odds either way.
+
 ## Going live on GitHub
 
 Only do this once you're happy with the local output.
 
 1. Create a new GitHub repo and push this folder to it.
 2. In the repo, go to **Settings → Secrets and variables → Actions** and
-   add a repository secret named `ODDS_API_KEY` with your key.
+   add two repository secrets: `ODDS_API_KEY` and
+   `RAPIDAPI_FOOTBALL_PREDICTION_KEY`.
 3. Go to **Settings → Pages**, set source to **Deploy from a branch**,
    branch `main`, folder `/ (root)`.
 4. Go to the **Actions** tab, select **Daily Odds Update**, and click
    **Run workflow** to test it manually before trusting the 06:00 UTC
-   cron.
-5. Once it runs green and commits a fresh `data/picks.json`, your Pages
-   URL will show live picks.
+   cron. The Win/Draw fetch step is set to `continue-on-error`, so it
+   won't break the Over 1.5 update even if that secret isn't set yet.
+5. Once it runs green and commits fresh `data/picks.json` and
+   `data/win-draw.json`, your Pages URL will show live picks.
 
 ## Adjusting leagues
 

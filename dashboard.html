@@ -99,6 +99,11 @@
       <div class="quota-stat"><div class="v">—</div><div class="l">Calls used</div></div>
       <div class="quota-stat"><div class="v">—</div><div class="l">Calls remaining</div></div>
     </div>
+    <p class="hint" style="margin-top:16px">Win/Draw prediction API (separate account, separate quota).</p>
+    <div class="quota-grid" id="quota-grid-1x2">
+      <div class="quota-stat"><div class="v">—</div><div class="l">Calls used (month)</div></div>
+      <div class="quota-stat"><div class="v">—</div><div class="l">Calls remaining (month)</div></div>
+    </div>
   </div>
 
   <div class="card">
@@ -296,6 +301,15 @@
       grid.innerHTML = `
         <div class="quota-stat"><div class="v">${data.apiQuotaUsed ?? '—'}</div><div class="l">Calls used</div></div>
         <div class="quota-stat"><div class="v">${data.apiQuotaRemaining ?? '—'}</div><div class="l">Calls remaining</div></div>
+      `;
+    } catch {}
+    try {
+      const res = await fetch(`data/win-draw.json?_=${Date.now()}`);
+      const data = await res.json();
+      const grid = document.getElementById('quota-grid-1x2');
+      grid.innerHTML = `
+        <div class="quota-stat"><div class="v">${data.quotaUsed ?? '—'}</div><div class="l">Calls used (month)</div></div>
+        <div class="quota-stat"><div class="v">${data.quotaRemaining ?? '—'}</div><div class="l">Calls remaining (month)</div></div>
       `;
     } catch {}
   }
