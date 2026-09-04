@@ -74,9 +74,79 @@
   }
 
   main {
-    max-width: 760px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 20px 18px 80px;
+  }
+  .narrow-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Sidebar layout ---------- */
+  .content-layout {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr) 220px;
+    gap: 20px;
+    align-items: start;
+  }
+  .sidebar-left, .sidebar-right { min-width: 0; }
+  .main-col { min-width: 0; }
+  .sidebar-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    position: sticky;
+    top: 16px;
+  }
+  .sidebar-title {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-faint);
+    margin: 0 0 10px;
+  }
+  .league-list { display: flex; flex-direction: column; gap: 2px; }
+  .league-item {
+    appearance: none;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    text-align: left;
+    padding: 7px 8px;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background 140ms var(--ease-out), color 140ms var(--ease-out);
+  }
+  .league-item:hover { background: var(--surface-alt); color: var(--text); }
+  .league-item.active { background: var(--accent-weak); color: var(--accent-strong); font-weight: 600; }
+  .league-item .count {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.72rem;
+    color: var(--text-faint);
+  }
+  .league-item.active .count { color: var(--accent-strong); }
+  .league-sidebar-note {
+    font-size: 0.76rem;
+    color: var(--text-faint);
+    line-height: 1.5;
+  }
+  @media (max-width: 900px) {
+    .content-layout { grid-template-columns: 1fr; gap: 14px; }
+    .main-col { order: 1; }
+    .sidebar-left { order: 2; }
+    .sidebar-right { order: 3; }
+    .sidebar-card { position: static; }
   }
 
   /* ---------- Hero carousel ---------- */
@@ -554,6 +624,7 @@
   .search-input {
     flex: 1;
     min-width: 150px;
+    width: 100%;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
@@ -846,54 +917,72 @@
 </section>
 
 <main>
-  <div class="stat-strip" id="stat-strip"></div>
+  <div class="content-layout">
+    <aside class="sidebar-left">
+      <div class="sidebar-card" id="league-sidebar">
+        <h3 class="sidebar-title">Leagues</h3>
+        <div class="league-list" id="league-list"></div>
+      </div>
+    </aside>
 
-  <nav class="sport-tabs" id="sport-tabs">
-    <button class="sport-tab-btn active" data-sport="football">Football</button>
-    <button class="sport-tab-btn" data-sport="nfl">NFL</button>
-  </nav>
+    <div class="main-col">
+      <div class="stat-strip" id="stat-strip"></div>
 
-  <div class="controls-row">
-    <input class="search-input" id="search-input" type="text" placeholder="Search team…">
-    <div class="sort-toggle" id="sort-toggle">
-      <button class="sort-btn active" data-sort="probability">Probability</button>
-      <button class="sort-btn" data-sort="kickoff">Kickoff</button>
+      <nav class="sport-tabs" id="sport-tabs">
+        <button class="sport-tab-btn active" data-sport="football">Football</button>
+        <button class="sport-tab-btn" data-sport="nfl">NFL</button>
+      </nav>
+
+      <div class="controls-row">
+        <div class="sort-toggle" id="sort-toggle">
+          <button class="sort-btn active" data-sort="probability">Probability</button>
+          <button class="sort-btn" data-sort="kickoff">Kickoff</button>
+        </div>
+      </div>
+
+      <div class="sport-panel active" id="sport-football">
+        <nav class="tabs" id="tabs">
+          <button class="tab-btn active" data-panel="over15">Over 1.5</button>
+          <button class="tab-btn" data-panel="firstHalf">First-Half Over 0.5</button>
+          <button class="tab-btn" data-panel="winDraw">Win or Draw</button>
+          <button class="tab-btn" data-panel="straightWin">Straight Win</button>
+          <div class="tab-indicator" id="tab-indicator"></div>
+        </nav>
+
+        <section id="over15" class="panel active">
+          <div id="over15-content"></div>
+        </section>
+
+        <section id="firstHalf" class="panel">
+          <div id="firstHalf-content"></div>
+        </section>
+
+        <section id="winDraw" class="panel">
+          <p class="section-sub">Separate source from the Over 1.5 / first-half markets — a single prediction model's own odds, not a multi-bookmaker median. Treat it accordingly.</p>
+          <div id="winDraw-content"></div>
+        </section>
+
+        <section id="straightWin" class="panel">
+          <p class="section-sub">Same source and fixtures as Win or Draw, but ranked on the favorite winning outright — no draw cushion, so these are naturally lower-probability picks.</p>
+          <div id="straightWin-content"></div>
+        </section>
+      </div>
+
+      <div class="sport-panel" id="sport-nfl">
+        <p class="section-sub">Real moneyline odds from real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet), de-vigged and medianed — same method as Over 1.5, different sport. Empty most days: only shows on real NFL game days.</p>
+        <div id="nfl-content"></div>
+      </div>
     </div>
+
+    <aside class="sidebar-right">
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">Search</h3>
+        <input class="search-input" id="search-input" type="text" placeholder="Search team…">
+      </div>
+    </aside>
   </div>
 
-  <div class="sport-panel active" id="sport-football">
-    <nav class="tabs" id="tabs">
-      <button class="tab-btn active" data-panel="over15">Over 1.5</button>
-      <button class="tab-btn" data-panel="firstHalf">First-Half Over 0.5</button>
-      <button class="tab-btn" data-panel="winDraw">Win or Draw</button>
-      <button class="tab-btn" data-panel="straightWin">Straight Win</button>
-      <div class="tab-indicator" id="tab-indicator"></div>
-    </nav>
-
-    <section id="over15" class="panel active">
-      <div id="over15-content"></div>
-    </section>
-
-    <section id="firstHalf" class="panel">
-      <div id="firstHalf-content"></div>
-    </section>
-
-    <section id="winDraw" class="panel">
-      <p class="section-sub">Separate source from the Over 1.5 / first-half markets — a single prediction model's own odds, not a multi-bookmaker median. Treat it accordingly.</p>
-      <div id="winDraw-content"></div>
-    </section>
-
-    <section id="straightWin" class="panel">
-      <p class="section-sub">Same source and fixtures as Win or Draw, but ranked on the favorite winning outright — no draw cushion, so these are naturally lower-probability picks.</p>
-      <div id="straightWin-content"></div>
-    </section>
-  </div>
-
-  <div class="sport-panel" id="sport-nfl">
-    <p class="section-sub">Real moneyline odds from real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet), de-vigged and medianed — same method as Over 1.5, different sport. Empty most days: only shows on real NFL game days.</p>
-    <div id="nfl-content"></div>
-  </div>
-
+  <div class="narrow-wrap">
   <details class="methodology">
     <summary>How the ranking works</summary>
     <p>Each fixture's probability comes from real bookmaker odds, de-vigged (the bookmaker's margin removed) by dividing the Over side's implied probability by the combined Over + Under implied probability, then taking the median across every book that posts a price. Fixtures with no usable line for that market are left out entirely — never estimated or guessed.</p>
@@ -938,6 +1027,7 @@
   <footer>
     Data source: bookmaker totals odds, de-vigged and medianed across books. Prices move — check the current price before staking anything.
   </footer>
+  </div>
 </main>
 
 <button class="tip-fab" id="tip-fab" hidden>
@@ -1024,6 +1114,18 @@
     startAutoplay();
   })();
 
+  // League sidebar only makes sense for markets that use our fixed 9-league
+  // taxonomy (Over 1.5 / First-Half). Win/Draw, Straight Win, and NFL use
+  // different (or no) league groupings, so the filter doesn't apply there.
+  const LEAGUE_FILTERABLE_PANELS = new Set(['over15', 'firstHalf']);
+  function updateLeagueSidebarVisibility() {
+    const sidebar = document.getElementById('league-sidebar');
+    const activeSport = document.querySelector('.sport-tab-btn.active')?.dataset.sport;
+    const activeMarket = document.querySelector('.tab-btn.active')?.dataset.panel;
+    const shouldShow = activeSport === 'football' && LEAGUE_FILTERABLE_PANELS.has(activeMarket);
+    sidebar.closest('.sidebar-left').style.display = shouldShow ? '' : 'none';
+  }
+
   // ---------- Sport tabs (top-level: Football, NFL, ...) ----------
   const sportTabs = document.querySelectorAll('.sport-tab-btn');
   const sportPanels = document.querySelectorAll('.sport-panel');
@@ -1036,6 +1138,7 @@
       // Re-sync the market-tab underline in case it moved while hidden (display:none rows report 0 width)
       const activeMarketTab = document.querySelector('.tab-btn.active');
       if (activeMarketTab) moveIndicator(activeMarketTab);
+      updateLeagueSidebarVisibility();
     });
   });
 
@@ -1055,6 +1158,7 @@
       btn.classList.add('active');
       document.getElementById(btn.dataset.panel).classList.add('active');
       moveIndicator(btn);
+      updateLeagueSidebarVisibility();
     });
   });
   window.addEventListener('load', () => moveIndicator(document.querySelector('.tab-btn.active')));
@@ -1315,15 +1419,51 @@
     nfl: [], nfl_excluded: [],
   };
   let sortMode = 'probability';
+  let leagueFilter = null; // a sport key (e.g. 'soccer_epl'), or null for all leagues
 
   function filterAndSort(list) {
     const term = searchInput.value.trim().toLowerCase();
-    let out = term ? list.filter((p) => p.fixture.toLowerCase().includes(term)) : list.slice();
+    let out = list.slice();
+    if (leagueFilter) {
+      // Only applies to items that carry a `sport` key (Over 1.5 / First-Half) —
+      // Win/Draw, Straight Win, and NFL don't use this taxonomy, so leave them untouched.
+      out = out.filter((p) => !('sport' in p) || p.sport === leagueFilter);
+    }
+    if (term) out = out.filter((p) => p.fixture.toLowerCase().includes(term));
     out.sort((a, b) => sortMode === 'kickoff'
       ? new Date(a.commenceTime || a.gameDate) - new Date(b.commenceTime || b.gameDate)
       : b.fairProbability - a.fairProbability);
     return out;
   }
+
+  function renderLeagueSidebar() {
+    const listEl = document.getElementById('league-list');
+    const counts = new Map();
+    for (const p of [...rawData.over1_5, ...rawData.firstHalfOver0_5]) {
+      counts.set(p.sport, (counts.get(p.sport) || 0) + 1);
+    }
+    const entries = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+    const totalCount = rawData.over1_5.length + rawData.firstHalfOver0_5.length;
+
+    const allItem = `
+      <button class="league-item ${!leagueFilter ? 'active' : ''}" data-league="">
+        <span>All leagues</span><span class="count">${totalCount}</span>
+      </button>`;
+    const items = entries.map(([sportKey, count]) => `
+      <button class="league-item ${leagueFilter === sportKey ? 'active' : ''}" data-league="${escapeHtml(sportKey)}">
+        <span>${escapeHtml(leagueLabel(sportKey))}</span><span class="count">${count}</span>
+      </button>`).join('');
+
+    listEl.innerHTML = entries.length ? allItem + items : '<p class="league-sidebar-note">No league data yet.</p>';
+  }
+
+  document.getElementById('league-list').addEventListener('click', (e) => {
+    const btn = e.target.closest('.league-item');
+    if (!btn) return;
+    leagueFilter = btn.dataset.league || null;
+    renderLeagueSidebar();
+    renderPanels();
+  });
 
   function renderPanels() {
     const highlightTop = sortMode === 'probability';
@@ -1402,6 +1542,8 @@
       };
 
       renderStats(data, rawData.winDraw.length);
+      renderLeagueSidebar();
+      updateLeagueSidebarVisibility();
       renderPanels();
     } catch (err) {
       document.getElementById('stat-strip').innerHTML = `<div class="stat">Could not load site data</div>`;
