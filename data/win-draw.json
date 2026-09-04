@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-04T13:16:47.630Z",
+  "generatedAt": "2026-09-04T13:31:51.586Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 6,
-  "quotaRemaining": 94,
+  "quotaUsed": 7,
+  "quotaRemaining": 93,
   "winOrDraw": [
     {
       "fixture": "SC Faetano v SP Tre Fiori",
