@@ -6,7 +6,18 @@
 // Hard rule: if no bookmaker posts a usable line for a fixture, that
 // fixture is EXCLUDED, never estimated. See the `excluded` arrays in
 // the output — that's the whole point of this script.
-
+//
+// Quota notes (measured against the live API):
+//   - a bulk /odds call costs 1 unit per region per market requested
+//   - a per-event /events/{id}/odds call costs 1 unit per market requested,
+//     regardless of region count
+//   - the main /odds `totals` market only carries the book's default line
+//     (usually 2.5) — the 1.5 line lives under `alternate_totals`, and the
+//     first-half 0.5 line under `alternate_totals_h1` (the plain `totals_h1`
+//     market only carries the 1.5 first-half line, not 0.5); both alternate
+//     markets are per-event-only (the bulk endpoint rejects them outright)
+//   - so getting Over 1.5 + first-half Over 0.5 for a fixture costs 2 units
+//     via one combined per-event call — see MAX_EVENT_LOOKUPS_PER_RUN below
 import 'dotenv/config';
 import { writeFile, mkdir } from 'node:fs/promises';
 
@@ -17,15 +28,15 @@ if (!API_KEY) {
 }
 
 const BASE_URL = 'https://api.the-odds-api.com/v4';
-const REGIONS = 'uk,us,eu';
-const MAX_ALTERNATE_CALLS_PER_RUN = 40; // guardrail against burning the monthly quota
+const REGIONS = 'uk'; // single region: each extra region multiplies bulk-call cost
+const MAX_EVENT_LOOKUPS_PER_RUN = 20; // 20 events * 2 units = 40 units, plus ~9 bulk units = ~49/run
 const MAX_PICKS_PER_MARKET = 30;
 
 // Soccer leagues covering the fixture set discussed — trim or extend as needed.
 // Full list of valid sport keys: GET {BASE_URL}/sports?apiKey=...
 const SPORTS = [
   'soccer_epl',
-  'soccer_england_championship',
+  'soccer_efl_champ',
   'soccer_germany_bundesliga',
   'soccer_germany_bundesliga2',
   'soccer_spain_la_liga',
@@ -36,6 +47,8 @@ const SPORTS = [
 ];
 
 let apiCallCount = 0;
+let lastQuotaRemaining = null;
+let lastQuotaUsed = null;
 
 async function apiGet(path, params) {
   const url = new URL(`${BASE_URL}${path}`);
@@ -47,6 +60,10 @@ async function apiGet(path, params) {
   }
   apiCallCount += 1;
   const res = await fetch(url);
+  const remaining = res.headers.get('x-requests-remaining');
+  const used = res.headers.get('x-requests-used');
+  if (remaining !== null) lastQuotaRemaining = remaining;
+  if (used !== null) lastQuotaUsed = used;
   if (!res.ok) {
     const body = await res.text().catch(() => '');
     throw new Error(`${res.status} ${res.statusText} — ${url.pathname}${url.search} — ${body.slice(0, 200)}`);
@@ -69,8 +86,7 @@ function median(numbers) {
 }
 
 // Extract fair probabilities for a specific total point (e.g. 1.5) from a
-// bookmakers array shaped like the Odds API's `totals` / `alternate_totals`
-// / `h1_totals` markets.
+// bookmakers array shaped like the Odds API's totals-style markets.
 function fairProbsAtPoint(bookmakers, marketKey, point) {
   const perBook = [];
   for (const book of bookmakers ?? []) {
@@ -93,73 +109,84 @@ function summarize(perBook) {
   };
 }
 
-async function fetchLeague(sportKey) {
-  let events;
-  try {
-    events = await apiGet(`/sports/${sportKey}/odds`, {
-      regions: REGIONS,
-      markets: 'totals,h1_totals',
-    });
-  } catch (err) {
-    console.warn(`[${sportKey}] bulk fetch failed, skipping league: ${err.message}`);
-    return { over15: [], firstHalfOver05: [] };
+// Collects every upcoming event across all configured leagues (1 bulk call
+// per league, 1 quota unit each with a single region) before spending any
+// budget on the more expensive per-event lookups.
+async function collectEvents() {
+  const events = [];
+  for (const sportKey of SPORTS) {
+    try {
+      const leagueEvents = await apiGet(`/sports/${sportKey}/odds`, {
+        regions: REGIONS,
+        markets: 'totals',
+      });
+      for (const event of leagueEvents) {
+        events.push({ sportKey, event });
+      }
+    } catch (err) {
+      console.warn(`[${sportKey}] bulk fetch failed, skipping league: ${err.message}`);
+    }
   }
+  return events;
+}
+
+async function main() {
+  const entries = await collectEvents();
+  console.log(`Found ${entries.length} upcoming fixtures across ${SPORTS.length} leagues.`);
 
   const over15 = [];
   const firstHalfOver05 = [];
-  const needsAlternate = [];
 
-  for (const event of events) {
-    const fixture = `${event.home_team} v ${event.away_team}`;
-    const base = {
-      fixture,
-      sport: sportKey,
-      commenceTime: event.commence_time,
-    };
-
-    const mainLine15 = summarize(fairProbsAtPoint(event.bookmakers, 'totals', 1.5));
-    if (mainLine15) {
-      over15.push({ ...base, ...mainLine15 });
-    } else {
-      needsAlternate.push(event);
-    }
-
-    const halfLine05 = summarize(fairProbsAtPoint(event.bookmakers, 'h1_totals', 0.5));
-    if (halfLine05) {
-      firstHalfOver05.push({ ...base, ...halfLine05 });
-    } else {
-      firstHalfOver05.push({ ...base, excluded: true, reason: 'no first-half 0.5 line available' });
-    }
-  }
-
-  // Fixtures with no 1.5 line in the bulk response: try a per-event
-  // alternate_totals call, capped so a bad day doesn't burn the quota.
-  for (const event of needsAlternate) {
+  for (const [index, { sportKey, event }] of entries.entries()) {
     const fixture = `${event.home_team} v ${event.away_team}`;
     const base = { fixture, sport: sportKey, commenceTime: event.commence_time };
 
-    if (apiCallCount >= MAX_ALTERNATE_CALLS_PER_RUN) {
-      over15.push({ ...base, excluded: true, reason: 'no 1.5 line available (alternate-lines call budget exhausted for this run)' });
+    if (index >= MAX_EVENT_LOOKUPS_PER_RUN) {
+      over15.push({ ...base, excluded: true, reason: 'lookup budget exhausted for this run' });
+      firstHalfOver05.push({ ...base, excluded: true, reason: 'lookup budget exhausted for this run' });
       continue;
     }
 
     try {
       const eventOdds = await apiGet(`/sports/${sportKey}/events/${event.id}/odds`, {
         regions: REGIONS,
-        markets: 'alternate_totals',
+        markets: 'alternate_totals,alternate_totals_h1',
       });
-      const altLine15 = summarize(fairProbsAtPoint(eventOdds.bookmakers, 'alternate_totals', 1.5));
-      if (altLine15) {
-        over15.push({ ...base, ...altLine15 });
-      } else {
-        over15.push({ ...base, excluded: true, reason: 'no 1.5 line available' });
-      }
+
+      const line15 = summarize(fairProbsAtPoint(eventOdds.bookmakers, 'alternate_totals', 1.5));
+      over15.push(line15 ? { ...base, ...line15 } : { ...base, excluded: true, reason: 'no 1.5 line available' });
+
+      const halfLine05 = summarize(fairProbsAtPoint(eventOdds.bookmakers, 'alternate_totals_h1', 0.5));
+      firstHalfOver05.push(
+        halfLine05 ? { ...base, ...halfLine05 } : { ...base, excluded: true, reason: 'no first-half 0.5 line available' }
+      );
     } catch (err) {
-      over15.push({ ...base, excluded: true, reason: `no 1.5 line available (lookup failed: ${err.message})` });
+      const reason = `lookup failed: ${err.message}`;
+      over15.push({ ...base, excluded: true, reason });
+      firstHalfOver05.push({ ...base, excluded: true, reason });
     }
   }
 
-  return { over15, firstHalfOver05 };
+  const over15Ranked = rank(over15, MAX_PICKS_PER_MARKET);
+  const firstHalfRanked = rank(firstHalfOver05, MAX_PICKS_PER_MARKET);
+
+  const output = {
+    generatedAt: new Date().toISOString(),
+    apiCallsUsed: apiCallCount,
+    apiQuotaUsed: lastQuotaUsed !== null ? Number(lastQuotaUsed) : null,
+    apiQuotaRemaining: lastQuotaRemaining !== null ? Number(lastQuotaRemaining) : null,
+    over1_5: over15Ranked.picks,
+    over1_5_excluded: over15Ranked.excluded,
+    firstHalfOver0_5: firstHalfRanked.picks,
+    firstHalfOver0_5_excluded: firstHalfRanked.excluded,
+  };
+
+  await mkdir('data', { recursive: true });
+  await writeFile('data/picks.json', JSON.stringify(output, null, 2));
+  console.log(
+    `Wrote data/picks.json — ${over15Ranked.picks.length} Over 1.5 picks, ${firstHalfRanked.picks.length} first-half picks, ` +
+    `${apiCallCount} calls this run (quota: ${lastQuotaUsed ?? '?'} used / ${lastQuotaRemaining ?? '?'} remaining).`
+  );
 }
 
 function rank(picks, cap) {
@@ -169,34 +196,6 @@ function rank(picks, cap) {
     picks: withProb.slice(0, cap),
     excluded,
   };
-}
-
-async function main() {
-  const allOver15 = [];
-  const allFirstHalf = [];
-
-  for (const sportKey of SPORTS) {
-    console.log(`Fetching ${sportKey}...`);
-    const { over15, firstHalfOver05 } = await fetchLeague(sportKey);
-    allOver15.push(...over15);
-    allFirstHalf.push(...firstHalfOver05);
-  }
-
-  const over15Ranked = rank(allOver15, MAX_PICKS_PER_MARKET);
-  const firstHalfRanked = rank(allFirstHalf, MAX_PICKS_PER_MARKET);
-
-  const output = {
-    generatedAt: new Date().toISOString(),
-    apiCallsUsed: apiCallCount,
-    over1_5: over15Ranked.picks,
-    over1_5_excluded: over15Ranked.excluded,
-    firstHalfOver0_5: firstHalfRanked.picks,
-    firstHalfOver0_5_excluded: firstHalfRanked.excluded,
-  };
-
-  await mkdir('data', { recursive: true });
-  await writeFile('data/picks.json', JSON.stringify(output, null, 2));
-  console.log(`Wrote data/picks.json — ${over15Ranked.picks.length} Over 1.5 picks, ${firstHalfRanked.picks.length} first-half picks, ${apiCallCount} API calls used.`);
 }
 
 main().catch((err) => {
