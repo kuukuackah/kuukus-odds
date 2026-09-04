@@ -49,6 +49,11 @@ async function collectTeamNames() {
     extractTeams(p.fixture).forEach((t) => names.add(t));
   }
 
+  const mlb = await readJsonSafe('data/mlb.json');
+  for (const p of mlb?.moneyline || []) {
+    extractTeams(p.fixture).forEach((t) => names.add(t));
+  }
+
   return [...names];
 }
 

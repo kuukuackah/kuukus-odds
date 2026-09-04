@@ -128,6 +128,21 @@ abbreviations are mapped to full names in `fetch-nfl.js`'s `TEAM_NAMES`
 table (verify this against real API output if any team code looks off;
 `WSH` for Washington, not `WAS`, is the one this project already caught).
 
+## Getting MLB odds (same pattern as NFL)
+
+`fetch-mlb.js` uses Tank01's **MLB Betting Odds** API — same provider,
+same account key, its own subscription. Free tier 1,000 requests/month.
+MLB plays daily during the season, so this market tends to have real
+picks most days (unlike NFL's weekly cadence).
+
+1. Go to [rapidapi.com/tank01/api/tank01-mlb-live-in-game-real-time-statistics/pricing](https://rapidapi.com/tank01/api/tank01-mlb-live-in-game-real-time-statistics/pricing)
+   and subscribe to the **Basic ($0.00/mo)** plan. Same key, no new secret.
+2. Test locally: `npm run fetch:mlb` (or `MLB_GAME_DATE=YYYYMMDD npm run fetch:mlb`).
+
+Field names differ slightly from the NFL endpoint (`homeTeamML` vs
+`homeTeamMLOdds`, and `"even"` as a literal odds string for +100) —
+verified against the live API rather than assumed.
+
 ## Going live on GitHub
 
 Only do this once you're happy with the local output.

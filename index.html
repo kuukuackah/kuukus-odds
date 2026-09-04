@@ -143,8 +143,8 @@
   }
   @media (max-width: 900px) {
     .content-layout { grid-template-columns: 1fr; gap: 14px; }
-    .main-col { order: 1; }
-    .sidebar-left { order: 2; }
+    .sidebar-left { order: 1; }
+    .main-col { order: 2; }
     .sidebar-right { order: 3; }
     .sidebar-card { position: static; }
   }
@@ -959,6 +959,10 @@
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><ellipse cx="10" cy="10" rx="7.3" ry="4.6" transform="rotate(-40 10 10)" stroke="currentColor" stroke-width="1.4"/><path d="M6.3 13.7 13.7 6.3M8 12l1-1M9.5 10.5l1-1M11 9l1-1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
           NFL
         </button>
+        <button class="sport-tab-btn" data-sport="mlb">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.4"/><path d="M4 6.5c2.8 1.6 2.8 5.4 0 7M16 6.5c-2.8 1.6-2.8 5.4 0 7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+          MLB
+        </button>
       </nav>
 
       <div class="controls-row">
@@ -999,6 +1003,11 @@
       <div class="sport-panel" id="sport-nfl">
         <p class="section-sub">Real moneyline odds from real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet), de-vigged and medianed — same method as Over 1.5, different sport. Empty most days: only shows on real NFL game days.</p>
         <div id="nfl-content"></div>
+      </div>
+
+      <div class="sport-panel" id="sport-mlb">
+        <p class="section-sub">Real moneyline odds from real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, Fanatics, Hard Rock, Rivers Casino), de-vigged and medianed — same method as Over 1.5, different sport. MLB plays daily during the season, so this tends to have picks most days.</p>
+        <div id="mlb-content"></div>
       </div>
     </div>
 
@@ -1338,9 +1347,9 @@
     return d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
   }
 
-  function renderNflList(picks, { highlightTop = true, emptyMessage } = {}) {
+  function renderMoneylineList(picks, { highlightTop = true, emptyMessage, league = 'NFL' } = {}) {
     if (picks.length === 0) {
-      return `<div class="empty-state">${emptyMessage || 'No NFL games with a usable moneyline price right now — check back on the next game day.'}</div>`;
+      return `<div class="empty-state">${emptyMessage || `No ${league} games with a usable moneyline price right now — check back on the next game day.`}</div>`;
     }
     const rows = picks.map((p, i) => `
       <div class="pick-row ${highlightTop && i < 3 ? 'top' : ''}" style="animation-delay:${Math.min(i, 10) * 30}ms">
@@ -1348,7 +1357,7 @@
         <div class="fixture-info">
           <p class="fixture-name">${teamAvatars(p.fixture)}<span class="fixture-name-text">${escapeHtml(p.fixture)}</span></p>
           <div class="fixture-meta">
-            <span class="league-chip" title="NFL">NFL</span>
+            <span class="league-chip" title="${escapeHtml(league)}">${escapeHtml(league)}</span>
             <span>${fmtDate(p.gameDate)}</span>
           </div>
           <div class="fixture-meta" style="margin-top:2px">
@@ -1465,6 +1474,7 @@
     winDraw: [], winDraw_excluded: [],
     straightWin: [], straightWin_excluded: [],
     nfl: [], nfl_excluded: [],
+    mlb: [], mlb_excluded: [],
   };
   let sortMode = 'probability';
   let leagueFilter = null; // a sport key (e.g. 'soccer_epl'), or null for all leagues
@@ -1542,8 +1552,12 @@
       }) + renderExcluded(rawData.straightWin_excluded);
 
     document.getElementById('nfl-content').innerHTML =
-      renderNflList(filterAndSort(rawData.nfl), { highlightTop, emptyMessage: rawData.nfl.length ? noMatch : undefined }) +
+      renderMoneylineList(filterAndSort(rawData.nfl), { highlightTop, emptyMessage: rawData.nfl.length ? noMatch : undefined, league: 'NFL' }) +
       renderExcluded(rawData.nfl_excluded);
+
+    document.getElementById('mlb-content').innerHTML =
+      renderMoneylineList(filterAndSort(rawData.mlb), { highlightTop, emptyMessage: rawData.mlb.length ? noMatch : undefined, league: 'MLB' }) +
+      renderExcluded(rawData.mlb_excluded);
 
     primeBars();
   }
@@ -1565,10 +1579,11 @@
   }
 
   async function load() {
-    const [picksResult, winDrawResult, nflResult, teamBadgesResult, leagueBadgesResult] = await Promise.allSettled([
+    const [picksResult, winDrawResult, nflResult, mlbResult, teamBadgesResult, leagueBadgesResult] = await Promise.allSettled([
       fetch(`data/picks.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/win-draw.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/nfl.json?_=${Date.now()}`).then((r) => r.json()),
+      fetch(`data/mlb.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/team-badges.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/league-badges.json?_=${Date.now()}`).then((r) => r.json()),
     ]);
@@ -1585,10 +1600,12 @@
       const data = picksResult.status === 'fulfilled' ? picksResult.value : {};
       const winDrawData = winDrawResult.status === 'fulfilled' ? winDrawResult.value : {};
       const nflData = nflResult.status === 'fulfilled' ? nflResult.value : {};
+      const mlbData = mlbResult.status === 'fulfilled' ? mlbResult.value : {};
 
       if (picksResult.status === 'rejected') console.error('Could not load data/picks.json', picksResult.reason);
       if (winDrawResult.status === 'rejected') console.error('Could not load data/win-draw.json', winDrawResult.reason);
       if (nflResult.status === 'rejected') console.error('Could not load data/nfl.json', nflResult.reason);
+      if (mlbResult.status === 'rejected') console.error('Could not load data/mlb.json', mlbResult.reason);
 
       rawData = {
         over1_5: data.over1_5 || [],
@@ -1601,6 +1618,8 @@
         straightWin_excluded: winDrawData.straightWin_excluded || [],
         nfl: nflData.moneyline || [],
         nfl_excluded: nflData.moneyline_excluded || [],
+        mlb: mlbData.moneyline || [],
+        mlb_excluded: mlbData.moneyline_excluded || [],
       };
 
       renderStats(data, rawData.winDraw.length);

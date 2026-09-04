@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-09-04T18:43:53.001Z",
+  "gameDate": "20260904",
+  "source": "Tank01 MLB Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, Fanatics, Hard Rock, Rivers Casino, and others)",
+  "quotaUsed": 4,
+  "quotaRemaining": 996,
+  "moneyline": [
+    {
+      "fixture": "Washington Nationals v Los Angeles Dodgers",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Los Angeles Dodgers",
+      "fairProbability": 0.718,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Athletics v Seattle Mariners",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Seattle Mariners",
+      "fairProbability": 0.665,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Los Angeles Angels v Pittsburgh Pirates",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Pittsburgh Pirates",
+      "fairProbability": 0.636,
+      "bookCount": 8
+    },
+    {
+      "fixture": "San Francisco Giants v New York Mets",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "New York Mets",
+      "fairProbability": 0.63,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Chicago Cubs v Miami Marlins",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Chicago Cubs",
+      "fairProbability": 0.593,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Milwaukee Brewers v Cincinnati Reds",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Milwaukee Brewers",
+      "fairProbability": 0.593,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Detroit Tigers v Cleveland Guardians",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Cleveland Guardians",
+      "fairProbability": 0.561,
+      "bookCount": 7
+    },
+    {
+      "fixture": "Arizona Diamondbacks v Houston Astros",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Houston Astros",
+      "fairProbability": 0.547,
+      "bookCount": 8
+    },
+    {
+      "fixture": "St. Louis Cardinals v Colorado Rockies",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "St. Louis Cardinals",
+      "fairProbability": 0.542,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Detroit Tigers v Cleveland Guardians",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Cleveland Guardians",
+      "fairProbability": 0.54,
+      "bookCount": 7
+    },
+    {
+      "fixture": "Boston Red Sox v Baltimore Orioles",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Boston Red Sox",
+      "fairProbability": 0.522,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Toronto Blue Jays v Kansas City Royals",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Kansas City Royals",
+      "fairProbability": 0.522,
+      "bookCount": 8
+    },
+    {
+      "fixture": "New York Yankees v San Diego Padres",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "New York Yankees",
+      "fairProbability": 0.521,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Minnesota Twins v Chicago White Sox",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Chicago White Sox",
+      "fairProbability": 0.515,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Atlanta Braves v Philadelphia Phillies",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Philadelphia Phillies",
+      "fairProbability": 0.511,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Tampa Bay Rays v Texas Rangers",
+      "gameDate": "2026-09-04",
+      "favoriteTeam": "Texas Rangers",
+      "fairProbability": 0.502,
+      "bookCount": 8
+    }
+  ],
+  "moneyline_excluded": []
+}
