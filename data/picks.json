@@ -1,20 +1,21 @@
 {
-  "generatedAt": "2026-09-04T08:45:35.470Z",
+  "generatedAt": "2026-09-04T11:50:20.577Z",
   "apiCallsUsed": 29,
-  "apiQuotaUsed": 232,
-  "apiQuotaRemaining": 268,
+  "apiQuotaUsed": 281,
+  "apiQuotaRemaining": 219,
   "over1_5": [
     {
       "fixture": "Manchester City v Coventry City",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-05T14:00:00Z",
-      "fairProbability": 0.864,
-      "bookCount": 7,
+      "fairProbability": 0.866,
+      "bookCount": 8,
       "books": [
         "LeoVegas",
         "Paddy Power",
         "Betfair",
         "William Hill",
+        "Virgin Bet",
         "LiveScore Bet",
         "Coral",
         "Ladbrokes"
@@ -24,13 +25,14 @@
       "fixture": "Ipswich Town v Liverpool",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-04T19:00:00Z",
-      "fairProbability": 0.845,
-      "bookCount": 7,
+      "fairProbability": 0.846,
+      "bookCount": 8,
       "books": [
         "LeoVegas",
         "Paddy Power",
         "Betfair",
         "William Hill",
+        "Virgin Bet",
         "LiveScore Bet",
         "Coral",
         "Ladbrokes"
@@ -79,13 +81,15 @@
       "fixture": "Newcastle United v Bournemouth",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-05T11:30:00Z",
-      "fairProbability": 0.805,
-      "bookCount": 6,
+      "fairProbability": 0.802,
+      "bookCount": 8,
       "books": [
         "LeoVegas",
         "Paddy Power",
         "Betfair",
         "William Hill",
+        "LiveScore Bet",
+        "Virgin Bet",
         "Coral",
         "Ladbrokes"
       ]
@@ -152,7 +156,7 @@
       "fixture": "Arsenal v Chelsea",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-06T15:30:00Z",
-      "fairProbability": 0.761,
+      "fairProbability": 0.766,
       "bookCount": 7,
       "books": [
         "Paddy Power",
@@ -161,7 +165,7 @@
         "William Hill",
         "Coral",
         "Ladbrokes",
-        "LiveScore Bet"
+        "Virgin Bet"
       ]
     },
     {
@@ -259,6 +263,23 @@
       ]
     },
     {
+      "fixture": "Nottingham Forest v Tottenham Hotspur",
+      "sport": "soccer_epl",
+      "commenceTime": "2026-09-05T14:00:00Z",
+      "fairProbability": 0.734,
+      "bookCount": 8,
+      "books": [
+        "LeoVegas",
+        "Paddy Power",
+        "Betfair",
+        "William Hill",
+        "Virgin Bet",
+        "LiveScore Bet",
+        "Coral",
+        "Ladbrokes"
+      ]
+    },
+    {
       "fixture": "Crystal Palace v Ipswich Town",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-12T14:00:00Z",
@@ -270,22 +291,6 @@
         "William Hill",
         "Virgin Bet",
         "LiveScore Bet"
-      ]
-    },
-    {
-      "fixture": "Nottingham Forest v Tottenham Hotspur",
-      "sport": "soccer_epl",
-      "commenceTime": "2026-09-05T14:00:00Z",
-      "fairProbability": 0.731,
-      "bookCount": 7,
-      "books": [
-        "LeoVegas",
-        "Paddy Power",
-        "Betfair",
-        "William Hill",
-        "Virgin Bet",
-        "Coral",
-        "Ladbrokes"
       ]
     },
     {
@@ -1451,7 +1456,7 @@
       "fixture": "Manchester City v Coventry City",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-05T14:00:00Z",
-      "fairProbability": 0.799,
+      "fairProbability": 0.795,
       "bookCount": 5,
       "books": [
         "LeoVegas",
@@ -1465,7 +1470,7 @@
       "fixture": "Ipswich Town v Liverpool",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-04T19:00:00Z",
-      "fairProbability": 0.775,
+      "fairProbability": 0.777,
       "bookCount": 5,
       "books": [
         "LeoVegas",
@@ -1479,7 +1484,7 @@
       "fixture": "Newcastle United v Bournemouth",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-05T11:30:00Z",
-      "fairProbability": 0.74,
+      "fairProbability": 0.73,
       "bookCount": 5,
       "books": [
         "LeoVegas",
@@ -1493,7 +1498,7 @@
       "fixture": "Everton v Manchester United",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-06T13:00:00Z",
-      "fairProbability": 0.713,
+      "fairProbability": 0.715,
       "bookCount": 2,
       "books": [
         "LeoVegas",
@@ -1504,18 +1509,18 @@
       "fixture": "Arsenal v Chelsea",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-06T15:30:00Z",
-      "fairProbability": 0.704,
+      "fairProbability": 0.713,
       "bookCount": 2,
       "books": [
         "LeoVegas",
-        "LiveScore Bet"
+        "Virgin Bet"
       ]
     },
     {
       "fixture": "Brentford v Sunderland",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-05T14:00:00Z",
-      "fairProbability": 0.698,
+      "fairProbability": 0.7,
       "bookCount": 4,
       "books": [
         "LeoVegas",
@@ -1567,26 +1572,26 @@
       ]
     },
     {
+      "fixture": "Nottingham Forest v Tottenham Hotspur",
+      "sport": "soccer_epl",
+      "commenceTime": "2026-09-05T14:00:00Z",
+      "fairProbability": 0.688,
+      "bookCount": 5,
+      "books": [
+        "LeoVegas",
+        "Paddy Power",
+        "Betfair",
+        "Virgin Bet",
+        "LiveScore Bet"
+      ]
+    },
+    {
       "fixture": "Crystal Palace v Ipswich Town",
       "sport": "soccer_epl",
       "commenceTime": "2026-09-12T14:00:00Z",
       "fairProbability": 0.681,
       "bookCount": 2,
       "books": [
-        "Virgin Bet",
-        "LiveScore Bet"
-      ]
-    },
-    {
-      "fixture": "Nottingham Forest v Tottenham Hotspur",
-      "sport": "soccer_epl",
-      "commenceTime": "2026-09-05T14:00:00Z",
-      "fairProbability": 0.673,
-      "bookCount": 5,
-      "books": [
-        "LeoVegas",
-        "Paddy Power",
-        "Betfair",
         "Virgin Bet",
         "LiveScore Bet"
       ]
