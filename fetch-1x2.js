@@ -1,4 +1,4 @@
-// Kuuku's Odds — Win/Draw (1X2 double chance) fetch script
+// Kuuku's Odds — Win/Draw and Straight Win (1X2) fetch script
 //
 // Uses a completely separate, free API (Football Prediction API on
 // RapidAPI) with its own key and its own quota — none of this touches
@@ -47,8 +47,10 @@ async function main() {
 
   const { data: fixtures } = await res.json();
 
-  const picks = [];
-  const excluded = [];
+  const winOrDraw = [];
+  const winOrDraw_excluded = [];
+  const straightWin = [];
+  const straightWin_excluded = [];
 
   for (const f of fixtures) {
     const fixtureLabel = `${f.home_team} v ${f.away_team}`;
@@ -63,40 +65,50 @@ async function main() {
     const oX = f.odds?.['X'];
     const o2 = f.odds?.['2'];
     if (f.status !== 'pending' || f.is_expired || !o1 || !oX || !o2) {
-      excluded.push({ ...base, reason: 'no usable 1X2 odds' });
+      const reason = 'no usable 1X2 odds';
+      winOrDraw_excluded.push({ ...base, reason });
+      straightWin_excluded.push({ ...base, reason });
       continue;
     }
 
     const { fair1, fairX, fair2 } = devig3(o1, oX, o2);
     const favoriteIsHome = fair1 >= fair2;
     const favoriteTeam = favoriteIsHome ? f.home_team : f.away_team;
-    const fairProbability = Math.round((favoriteIsHome ? fair1 + fairX : fair2 + fairX) * 1000) / 1000;
-    const quotedDoubleChanceOdds = favoriteIsHome ? f.odds['1X'] : f.odds['X2'];
 
-    picks.push({
+    winOrDraw.push({
       ...base,
       favoriteTeam,
-      fairProbability,
-      quotedDoubleChanceOdds,
+      fairProbability: Math.round((favoriteIsHome ? fair1 + fairX : fair2 + fairX) * 1000) / 1000,
+      quotedDoubleChanceOdds: favoriteIsHome ? f.odds['1X'] : f.odds['X2'],
+    });
+
+    straightWin.push({
+      ...base,
+      favoriteTeam,
+      fairProbability: Math.round((favoriteIsHome ? fair1 : fair2) * 1000) / 1000,
+      quotedOdds: favoriteIsHome ? o1 : o2,
     });
   }
 
-  picks.sort((a, b) => b.fairProbability - a.fairProbability);
+  winOrDraw.sort((a, b) => b.fairProbability - a.fairProbability);
+  straightWin.sort((a, b) => b.fairProbability - a.fairProbability);
 
   const output = {
     generatedAt: new Date().toISOString(),
     source: 'Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median',
     quotaUsed: quotaLimit !== null && quotaRemaining !== null ? Number(quotaLimit) - Number(quotaRemaining) : null,
     quotaRemaining: quotaRemaining !== null ? Number(quotaRemaining) : null,
-    winOrDraw: picks.slice(0, MAX_PICKS),
-    winOrDraw_excluded: excluded,
+    winOrDraw: winOrDraw.slice(0, MAX_PICKS),
+    winOrDraw_excluded,
+    straightWin: straightWin.slice(0, MAX_PICKS),
+    straightWin_excluded,
   };
 
   await mkdir('data', { recursive: true });
   await writeFile('data/win-draw.json', JSON.stringify(output, null, 2));
   console.log(
-    `Wrote data/win-draw.json — ${output.winOrDraw.length} Win/Draw picks, ${excluded.length} excluded, ` +
-    `quota: ${output.quotaUsed ?? '?'} used / ${output.quotaRemaining ?? '?'} remaining this month.`
+    `Wrote data/win-draw.json — ${output.winOrDraw.length} Win/Draw picks, ${output.straightWin.length} Straight Win picks — ` +
+    `quota: ${output.quotaUsed ?? '?'} used / ${output.quotaRemaining ?? '?'} remaining this month (1 call/run).`
   );
 }
 

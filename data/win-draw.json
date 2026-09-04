@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-04T13:11:25.267Z",
+  "generatedAt": "2026-09-04T13:16:47.630Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 4,
-  "quotaRemaining": 96,
+  "quotaUsed": 6,
+  "quotaRemaining": 94,
   "winOrDraw": [
     {
       "fixture": "SC Faetano v SP Tre Fiori",
@@ -275,5 +275,278 @@
       "quotedDoubleChanceOdds": 1.108
     }
   ],
-  "winOrDraw_excluded": []
+  "winOrDraw_excluded": [],
+  "straightWin": [
+    {
+      "fixture": "SC Faetano v SP Tre Fiori",
+      "competition": "San Marino — Campionato Sammarinese",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T20:15:00",
+      "favoriteTeam": "SP Tre Fiori",
+      "fairProbability": 0.866,
+      "quotedOdds": 1.035
+    },
+    {
+      "fixture": "Noah v Gandzasar",
+      "competition": "Armenia — Premier League",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T17:00:00",
+      "favoriteTeam": "Noah",
+      "fairProbability": 0.846,
+      "quotedOdds": 1.08
+    },
+    {
+      "fixture": "Porto v Moreirense",
+      "competition": "Portugal — Primeira Liga",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T20:15:00",
+      "favoriteTeam": "Porto",
+      "fairProbability": 0.808,
+      "quotedOdds": 1.18
+    },
+    {
+      "fixture": "Al Arabi SC Kuwait v Al Salibikhaet SC",
+      "competition": "Kuwait — Premier League",
+      "federation": "AFC",
+      "commenceTime": "2026-09-04T18:50:00",
+      "favoriteTeam": "Al Arabi SC Kuwait",
+      "fairProbability": 0.789,
+      "quotedOdds": 1.148
+    },
+    {
+      "fixture": "Al Ittihad Kalba v Al-Ain FC",
+      "competition": "UAE — Pro-League",
+      "federation": "AFC",
+      "commenceTime": "2026-09-04T14:45:00",
+      "favoriteTeam": "Al-Ain FC",
+      "fairProbability": 0.786,
+      "quotedOdds": 1.148
+    },
+    {
+      "fixture": "Al-Khalidiya v A'Ali CSC",
+      "competition": "Bahrain — Premier League",
+      "federation": "AFC",
+      "commenceTime": "2026-09-04T17:00:00",
+      "favoriteTeam": "Al-Khalidiya",
+      "fairProbability": 0.768,
+      "quotedOdds": 1.177
+    },
+    {
+      "fixture": "Polissya Zhytomyr v FC Kudrivka",
+      "competition": "Ukraine — Premier League",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T16:00:00",
+      "favoriteTeam": "Polissya Zhytomyr",
+      "fairProbability": 0.76,
+      "quotedOdds": 1.217
+    },
+    {
+      "fixture": "Fredrikstad v Bodo Glimt",
+      "competition": "Norway — Eliteserien",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T18:00:00",
+      "favoriteTeam": "Bodo Glimt",
+      "fairProbability": 0.735,
+      "quotedOdds": 1.274
+    },
+    {
+      "fixture": "FC Fiorentino v SS Virtus",
+      "competition": "San Marino — Campionato Sammarinese",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T20:15:00",
+      "favoriteTeam": "SS Virtus",
+      "fairProbability": 0.731,
+      "quotedOdds": 1.23
+    },
+    {
+      "fixture": "Al-Shabab Riyadh v Al-Hilal Riyadh",
+      "competition": "Saudi Arabia — Professional League",
+      "federation": "AFC",
+      "commenceTime": "2026-09-04T19:00:00",
+      "favoriteTeam": "Al-Hilal Riyadh",
+      "fairProbability": 0.718,
+      "quotedOdds": 1.293
+    },
+    {
+      "fixture": "SP Tre Penne v SS Cosmos",
+      "competition": "San Marino — Campionato Sammarinese",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T20:15:00",
+      "favoriteTeam": "SP Tre Penne",
+      "fairProbability": 0.717,
+      "quotedOdds": 1.25
+    },
+    {
+      "fixture": "Al-Wasl Dubai v Khor Fakkan Club",
+      "competition": "UAE — Pro-League",
+      "federation": "AFC",
+      "commenceTime": "2026-09-04T17:15:00",
+      "favoriteTeam": "Al-Wasl Dubai",
+      "fairProbability": 0.708,
+      "quotedOdds": 1.273
+    },
+    {
+      "fixture": "Al-Ahli Jeddah v Al-Riyadh",
+      "competition": "Saudi Arabia — Professional League",
+      "federation": "AFC",
+      "commenceTime": "2026-09-04T19:00:00",
+      "favoriteTeam": "Al-Ahli Jeddah",
+      "fairProbability": 0.702,
+      "quotedOdds": 1.32
+    },
+    {
+      "fixture": "Paris Saint Germain v Monaco",
+      "competition": "France — Ligue 1",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T20:05:00",
+      "favoriteTeam": "Paris Saint Germain",
+      "fairProbability": 0.685,
+      "quotedOdds": 1.39
+    },
+    {
+      "fixture": "Karvina v SK Kladno",
+      "competition": "Czech Republic — National League",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T17:00:00",
+      "favoriteTeam": "Karvina",
+      "fairProbability": 0.677,
+      "quotedOdds": 1.326
+    },
+    {
+      "fixture": "Real Betis v Real Madrid",
+      "competition": "Spain — Primera Division",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T20:00:00",
+      "favoriteTeam": "Real Madrid",
+      "fairProbability": 0.677,
+      "quotedOdds": 1.412
+    },
+    {
+      "fixture": "Connah's Quay Nomads v Haverfordwest County",
+      "competition": "Wales — Premier League",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T19:45:00",
+      "favoriteTeam": "Connah's Quay Nomads",
+      "fairProbability": 0.673,
+      "quotedOdds": 1.347
+    },
+    {
+      "fixture": "Antigua GFC v Aurora Guatemala",
+      "competition": "Guatemala — Liga Nacional",
+      "federation": "CONCACAF",
+      "commenceTime": "2026-09-05T02:00:00",
+      "favoriteTeam": "Antigua GFC",
+      "fairProbability": 0.67,
+      "quotedOdds": 1.342
+    },
+    {
+      "fixture": "Heracles Almelo v De Graafschap",
+      "competition": "Netherlands — Eerste Divisie",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T19:00:00",
+      "favoriteTeam": "Heracles Almelo",
+      "fairProbability": 0.662,
+      "quotedOdds": 1.382
+    },
+    {
+      "fixture": "Almere City FC v Jong Ajax",
+      "competition": "Netherlands — Eerste Divisie",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T19:00:00",
+      "favoriteTeam": "Almere City FC",
+      "fairProbability": 0.647,
+      "quotedOdds": 1.408
+    },
+    {
+      "fixture": "Lyonnais v Auxerre",
+      "competition": "France — Ligue 1",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T18:00:00",
+      "favoriteTeam": "Lyonnais",
+      "fairProbability": 0.634,
+      "quotedOdds": 1.504
+    },
+    {
+      "fixture": "Stuttgart v FC Koln",
+      "competition": "Germany — Bundesliga",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T19:30:00",
+      "favoriteTeam": "Stuttgart",
+      "fairProbability": 0.634,
+      "quotedOdds": 1.506
+    },
+    {
+      "fixture": "Ipswich v Liverpool",
+      "competition": "England — Premier League",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T20:00:00",
+      "favoriteTeam": "Liverpool",
+      "fairProbability": 0.632,
+      "quotedOdds": 1.512
+    },
+    {
+      "fixture": "Norrkoping v Ljungskile",
+      "competition": "Sweden — Superettan",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T18:00:00",
+      "favoriteTeam": "Norrkoping",
+      "fairProbability": 0.63,
+      "quotedOdds": 1.45
+    },
+    {
+      "fixture": "Vejle v Vendsyssel FF",
+      "competition": "Denmark — 1st Division",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T17:00:00",
+      "favoriteTeam": "Vejle",
+      "fairProbability": 0.625,
+      "quotedOdds": 1.464
+    },
+    {
+      "fixture": "CRB AL v America MG",
+      "competition": "Brazil — Serie B",
+      "federation": "CONMEBOL",
+      "commenceTime": "2026-09-05T01:30:00",
+      "favoriteTeam": "CRB AL",
+      "fairProbability": 0.618,
+      "quotedOdds": 1.49
+    },
+    {
+      "fixture": "Caernarfon Town v Flint Town United",
+      "competition": "Wales — Premier League",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T19:45:00",
+      "favoriteTeam": "Caernarfon Town",
+      "fairProbability": 0.617,
+      "quotedOdds": 1.467
+    },
+    {
+      "fixture": "Rosengard 1917 v Laholms",
+      "competition": "Sweden — Division 1",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T18:00:00",
+      "favoriteTeam": "Rosengard 1917",
+      "fairProbability": 0.613,
+      "quotedOdds": 1.464
+    },
+    {
+      "fixture": "Egnatia Rrogozhine v Skenderbeu Korce",
+      "competition": "Albania — Superliga",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-04T17:30:00",
+      "favoriteTeam": "Egnatia Rrogozhine",
+      "fairProbability": 0.612,
+      "quotedOdds": 1.47
+    },
+    {
+      "fixture": "JS Kabylie v MB Rouissat",
+      "competition": "Algeria — Championnat National",
+      "federation": "CAF",
+      "commenceTime": "2026-09-04T21:00:00",
+      "favoriteTeam": "JS Kabylie",
+      "fairProbability": 0.61,
+      "quotedOdds": 1.477
+    }
+  ],
+  "straightWin_excluded": []
 }

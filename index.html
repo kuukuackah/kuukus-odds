@@ -795,6 +795,7 @@
     <button class="tab-btn active" data-panel="over15">Over 1.5</button>
     <button class="tab-btn" data-panel="firstHalf">First-Half Over 0.5</button>
     <button class="tab-btn" data-panel="winDraw">Win or Draw</button>
+    <button class="tab-btn" data-panel="straightWin">Straight Win</button>
     <div class="tab-indicator" id="tab-indicator"></div>
   </nav>
 
@@ -817,6 +818,11 @@
   <section id="winDraw" class="panel">
     <p class="section-sub" style="margin-top:-6px">Separate source from the Over 1.5 / first-half markets — a single prediction model's own odds, not a multi-bookmaker median. Treat it accordingly.</p>
     <div id="winDraw-content"></div>
+  </section>
+
+  <section id="straightWin" class="panel">
+    <p class="section-sub" style="margin-top:-6px">Same source and fixtures as Win or Draw, but ranked on the favorite winning outright — no draw cushion, so these are naturally lower-probability picks.</p>
+    <div id="straightWin-content"></div>
   </section>
 
   <details class="methodology">
@@ -994,7 +1000,7 @@
     return `<div class="pick-list">${rows}</div>`;
   }
 
-  function renderWinDrawList(picks, { highlightTop = true, emptyMessage } = {}) {
+  function renderPredictionList(picks, { highlightTop = true, emptyMessage, label, oddsField } = {}) {
     if (picks.length === 0) {
       return `<div class="empty-state">${emptyMessage || 'No fixtures with a usable 1X2 price right now. Check back after the next update.'}</div>`;
     }
@@ -1008,7 +1014,7 @@
             <span>${fmtTime(p.commenceTime)} · ${fmtRelative(p.commenceTime)}</span>
           </div>
           <div class="fixture-meta" style="margin-top:3px">
-            <span>Win/Draw: <strong>${escapeHtml(p.favoriteTeam)}</strong>${p.quotedDoubleChanceOdds ? ` @ ${p.quotedDoubleChanceOdds}` : ''}</span>
+            <span>${label}: <strong>${escapeHtml(p.favoriteTeam)}</strong>${p[oddsField] ? ` @ ${p[oddsField]}` : ''}</span>
           </div>
         </div>
         <div class="prob-block">
@@ -1112,6 +1118,7 @@
     over1_5: [], over1_5_excluded: [],
     firstHalfOver0_5: [], firstHalfOver0_5_excluded: [],
     winDraw: [], winDraw_excluded: [],
+    straightWin: [], straightWin_excluded: [],
   };
   let sortMode = 'probability';
 
@@ -1137,8 +1144,16 @@
       renderExcluded(rawData.firstHalfOver0_5_excluded);
 
     document.getElementById('winDraw-content').innerHTML =
-      renderWinDrawList(filterAndSort(rawData.winDraw), { highlightTop, emptyMessage: rawData.winDraw.length ? noMatch : undefined }) +
-      renderExcluded(rawData.winDraw_excluded);
+      renderPredictionList(filterAndSort(rawData.winDraw), {
+        highlightTop, emptyMessage: rawData.winDraw.length ? noMatch : undefined,
+        label: 'Win/Draw', oddsField: 'quotedDoubleChanceOdds',
+      }) + renderExcluded(rawData.winDraw_excluded);
+
+    document.getElementById('straightWin-content').innerHTML =
+      renderPredictionList(filterAndSort(rawData.straightWin), {
+        highlightTop, emptyMessage: rawData.straightWin.length ? noMatch : undefined,
+        label: 'Straight win', oddsField: 'quotedOdds',
+      }) + renderExcluded(rawData.straightWin_excluded);
 
     primeBars();
   }
@@ -1179,6 +1194,8 @@
         firstHalfOver0_5_excluded: data.firstHalfOver0_5_excluded || [],
         winDraw: winDrawData.winOrDraw || [],
         winDraw_excluded: winDrawData.winOrDraw_excluded || [],
+        straightWin: winDrawData.straightWin || [],
+        straightWin_excluded: winDrawData.straightWin_excluded || [],
       };
 
       renderStats(data, rawData.winDraw.length);

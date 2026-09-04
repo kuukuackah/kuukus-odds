@@ -6,8 +6,10 @@ A static site that updates once a day with soccer fixtures ranked by fair
 - **Over 1.5 goals** — up to 30 fixtures
 - **First-half Over 0.5 goals** — best-effort; many books don't post this
   line until close to kickoff, so it can be thin or empty on any given day
-- **Win or Draw** — up to 30 fixtures, from a completely separate free API
-  with its own account and quota (see below)
+- **Win or Draw** and **Straight Win** — up to 30 fixtures each, from a
+  completely separate free API with its own account and quota (see below).
+  Both come from the same single API call — Straight Win costs nothing
+  extra on top of Win or Draw.
 
 **The rule this project is built around:** if no bookmaker posts a usable
 line for a fixture, that fixture is left out of the list — never estimated.
