@@ -106,6 +106,53 @@ them call the Odds API, so none of them touch your quota. Only running
   (needs Pillow: `pip install pillow`) if you ever want to tweak the mark.
 - `manifest.json` makes the site installable to a phone home screen.
 
+## Posting bet codes (dashboard)
+
+`dashboard.html` is a private page for posting booking codes (SportyBet,
+Betway, 1xBet) that show up in the public "My betting codes" tabs on the
+main site. It's not linked from the public nav — bookmark the URL
+directly (e.g. `https://kuukuackah.github.io/kuukus-odds/dashboard.html`).
+
+There's no server, so there's no login system either — instead, the
+dashboard uses a **GitHub personal access token** you create yourself:
+
+1. Go to [github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new).
+2. Scope it to **only** the `kuukuackah/kuukus-odds` repository, with
+   **Contents: Read and write** permission and nothing else.
+3. Paste the token into the dashboard's "Connect" card. It's saved only in
+   that browser's `localStorage` and sent only to `api.github.com` — never
+   to me, never to any third party.
+4. Post a code and it commits straight to `data/bet-codes.json`; the public
+   site picks it up within about a minute (same as the daily odds update).
+
+Anyone can *open* `dashboard.html`, but nobody can post or delete anything
+without a valid token scoped to your repo — so the page itself doesn't
+need to be secret, just the token does. Don't paste the token anywhere
+else, and revoke it from GitHub's settings if you ever suspect it leaked.
+
+The dashboard also shows your current Odds API quota usage (`apiQuotaUsed`
+/ `apiQuotaRemaining` from `data/picks.json`) — this replaced the public
+"API calls left" stat on the main site, which now shows leagues tracked
+instead.
+
+## Tip button (MoMo)
+
+The "Buy me a coffee" button is config-gated and hidden by default. To
+enable it, fill in the `TIP_INFO` object near the bottom of the `<script>`
+in `index.html`:
+
+```js
+const TIP_INFO = {
+  network: 'MTN MoMo',
+  momoNumber: '0XX XXX XXXX',
+  registeredName: 'Your Name',
+};
+```
+
+Leave `momoNumber` empty to keep the button hidden. This is a static
+display only — it doesn't process payments, it just shows your details
+in a modal so visitors can send MoMo manually.
+
 ## What this is (and isn't)
 
 This surfaces what bookmakers already think, cleanly and without the

@@ -554,6 +554,204 @@
     margin: 0 0 16px;
     line-height: 1.6;
   }
+
+  /* ---------- Section heading ---------- */
+  .section-block { margin-top: 44px; }
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  .section-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0 0 18px;
+  }
+
+  /* ---------- Bet codes ---------- */
+  .book-tabs {
+    display: flex;
+    gap: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 4px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+  }
+  .book-tab {
+    appearance: none;
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex: 1;
+    transition: background 160ms var(--ease-out), color 160ms var(--ease-out);
+  }
+  .book-tab.active { background: var(--accent-weak); color: var(--accent-strong); }
+  .book-panel { display: none; }
+  .book-panel.active { display: block; }
+
+  .code-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 8px;
+  }
+  .code-main { min-width: 0; }
+  .code-value {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .code-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .code-meta {
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    margin-top: 2px;
+  }
+  .copy-btn {
+    appearance: none;
+    background: var(--track);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    cursor: pointer;
+    flex: none;
+    transition: background 160ms var(--ease-out), transform 160ms var(--ease-out);
+  }
+  .copy-btn:hover { background: var(--accent-weak); color: var(--accent-strong); }
+  .copy-btn:active { transform: scale(0.95); }
+
+  /* ---------- Install as app ---------- */
+  .install-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 560px) { .install-grid { grid-template-columns: 1fr; } }
+  .install-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 18px 6px;
+  }
+  .install-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    margin: 0 0 10px;
+  }
+  .install-card ol {
+    margin: 0 0 14px;
+    padding-left: 18px;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ---------- Tip / coffee button ---------- */
+  .tip-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(150deg, var(--accent-strong), var(--accent-bright));
+    color: #06251a;
+    border: none;
+    border-radius: 999px;
+    padding: 13px 18px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 10px 24px -10px var(--accent);
+    transition: transform 180ms var(--ease-out);
+  }
+  .tip-fab:hover { transform: translateY(-2px); }
+  .tip-fab:active { transform: scale(0.96); }
+  .tip-fab[hidden] { display: none; }
+
+  .tip-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 60;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 220ms var(--ease-out), visibility 220ms var(--ease-out);
+  }
+  .tip-modal-backdrop.open { opacity: 1; visibility: visible; }
+  .tip-modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    max-width: 340px;
+    width: 100%;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 220ms var(--ease-out), opacity 220ms var(--ease-out);
+  }
+  .tip-modal-backdrop.open .tip-modal { transform: scale(1); opacity: 1; }
+  .tip-modal h3 {
+    font-family: var(--font-display);
+    margin: 0 0 6px;
+  }
+  .tip-modal p { font-size: 0.86rem; color: var(--text-muted); margin: 0 0 16px; }
+  .tip-detail {
+    background: var(--track);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+  .tip-detail-label { font-size: 0.72rem; color: var(--text-faint); }
+  .tip-detail-value { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; }
+  .tip-modal-close {
+    appearance: none;
+    background: var(--track);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 9px;
+    width: 100%;
+    font-family: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text);
+  }
 </style>
 </head>
 <body>
@@ -620,10 +818,70 @@
     <p>Each fixture's probability comes from real bookmaker odds, de-vigged (the bookmaker's margin removed) by dividing the Over side's implied probability by the combined Over + Under implied probability, then taking the median across every book that posts a price. Fixtures with no usable line for that market are left out entirely — never estimated or guessed.</p>
   </details>
 
+  <div class="section-block">
+    <h2 class="section-heading">My betting codes</h2>
+    <p class="section-sub">Booking codes for slips I've staked — paste the code into the matching bookmaker's app to load the same selections.</p>
+    <div class="book-tabs" id="book-tabs">
+      <button class="book-tab active" data-book="sportybet">SportyBet</button>
+      <button class="book-tab" data-book="betway">Betway</button>
+      <button class="book-tab" data-book="onexbet">1xBet</button>
+    </div>
+    <div id="book-sportybet" class="book-panel active"></div>
+    <div id="book-betway" class="book-panel"></div>
+    <div id="book-onexbet" class="book-panel"></div>
+  </div>
+
+  <div class="section-block">
+    <h2 class="section-heading">Install as an app</h2>
+    <p class="section-sub">Add Kuuku's Odds to your home screen for one-tap access, no browser tabs.</p>
+    <div class="install-grid">
+      <div class="install-card">
+        <h3>iPhone / iPad (Safari)</h3>
+        <ol>
+          <li>Tap the <strong>Share</strong> icon in the toolbar</li>
+          <li>Scroll down and tap <strong>Add to Home Screen</strong></li>
+          <li>Tap <strong>Add</strong> in the top-right corner</li>
+        </ol>
+      </div>
+      <div class="install-card">
+        <h3>Android (Chrome)</h3>
+        <ol>
+          <li>Tap the <strong>⋮</strong> menu in the top-right</li>
+          <li>Tap <strong>Install app</strong> (or <strong>Add to Home screen</strong>)</li>
+          <li>Confirm by tapping <strong>Install</strong></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
   <footer>
     Data source: bookmaker totals odds, de-vigged and medianed across books. Prices move — check the current price before staking anything.
   </footer>
 </main>
+
+<button class="tip-fab" id="tip-fab" hidden>
+  <span id="tip-fab-icon"></span> Buy me a coffee
+</button>
+
+<div class="tip-modal-backdrop" id="tip-modal-backdrop">
+  <div class="tip-modal">
+    <h3 id="tip-modal-title">Send some MoMo</h3>
+    <p>If a pick worked out for you, a small tip is always appreciated — send via Mobile Money.</p>
+    <div class="tip-detail">
+      <div class="tip-detail-label" id="tip-network-label">Network</div>
+      <div class="tip-detail-value" id="tip-network-value"></div>
+    </div>
+    <div class="tip-detail">
+      <div class="tip-detail-label">Number</div>
+      <div class="tip-detail-value" id="tip-number-value"></div>
+    </div>
+    <div class="tip-detail" id="tip-name-row">
+      <div class="tip-detail-label">Registered name</div>
+      <div class="tip-detail-value" id="tip-name-value"></div>
+    </div>
+    <button class="tip-modal-close" id="tip-modal-close">Close</button>
+  </div>
+</div>
 
 <script>
   // ---------- Theme toggle ----------
@@ -747,6 +1005,10 @@
       target: '<circle cx="10" cy="10" r="7.3" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="10" cy="10" r="3.6" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="10" cy="10" r="0.8" fill="currentColor"/>',
       bolt: '<path d="M11 3 5 11h4l-1 6 6-9h-4l1-5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" fill="none"/>',
       refresh: '<path d="M15.8 5.7A6.5 6.5 0 1 0 16.9 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/><path d="M16.3 3.2v4.3H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>',
+      globe: '<circle cx="10" cy="10" r="7.3" stroke="currentColor" stroke-width="1.6" fill="none"/><ellipse cx="10" cy="10" rx="3.1" ry="7.3" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3 10h14" stroke="currentColor" stroke-width="1.6"/>',
+      coffee: '<path d="M5 8h9v5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8Z" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M14 9.5h1.2a2 2 0 0 1 0 4H14" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M7 5.5c0-.8.6-1 .6-1.8M10 5.5c0-.8.6-1 .6-1.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>',
+      phone: '<rect x="6" y="2.5" width="8" height="15" rx="1.6" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M9 15.2h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
+      code: '<path d="M7 6 3 10l4 4M13 6l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>',
     };
     return `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">${icons[name] || ''}</svg>`;
   }
@@ -772,20 +1034,17 @@
     const updatedLabel = data.generatedAt
       ? new Date(data.generatedAt).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
       : '—';
+    const leagueCount = new Set([...(data.over1_5 || []), ...(data.firstHalfOver0_5 || [])].map((p) => p.sport)).size;
     strip.innerHTML = `
       <div class="stat">${statIcon('clock')}<div><div class="stat-value" style="font-size:0.95rem">${updatedLabel}</div><div class="stat-label">Last updated</div></div></div>
       <div class="stat">${statIcon('target')}<div><div class="stat-value" id="stat-over15">0</div><div class="stat-label">Over 1.5 picks</div></div></div>
       <div class="stat">${statIcon('list')}<div><div class="stat-value" id="stat-fh">0</div><div class="stat-label">First-half picks</div></div></div>
-      <div class="stat">${statIcon('bolt')}<div><div class="stat-value" id="stat-quota">0</div><div class="stat-label">API calls left</div></div></div>
+      <div class="stat">${statIcon('globe')}<div><div class="stat-value" id="stat-leagues">0</div><div class="stat-label">Leagues tracked</div></div></div>
       <div class="stat">${statIcon('refresh')}<div><div class="stat-value" id="stat-next-update" style="font-size:0.95rem">—</div><div class="stat-label">Next update</div></div></div>
     `;
     if (data.over1_5) animateCount(document.getElementById('stat-over15'), data.over1_5.length);
     if (data.firstHalfOver0_5) animateCount(document.getElementById('stat-fh'), data.firstHalfOver0_5.length);
-    if (data.apiQuotaRemaining !== undefined && data.apiQuotaRemaining !== null) {
-      animateCount(document.getElementById('stat-quota'), data.apiQuotaRemaining);
-    } else {
-      document.getElementById('stat-quota').textContent = '—';
-    }
+    animateCount(document.getElementById('stat-leagues'), leagueCount);
     updateNextUpdateLabel();
   }
 
@@ -881,6 +1140,95 @@
   }
 
   load();
+
+  // ---------- Betting codes ----------
+  const BOOK_NAMES = { sportybet: 'SportyBet', betway: 'Betway', onexbet: '1xBet' };
+
+  function fmtPostedAgo(iso) {
+    if (!iso) return '';
+    const hours = Math.round((Date.now() - new Date(iso)) / 3_600_000);
+    if (hours < 1) return 'just now';
+    if (hours < 24) return `${hours}h ago`;
+    return `${Math.round(hours / 24)}d ago`;
+  }
+
+  function renderCodeList(entries) {
+    if (!entries || entries.length === 0) {
+      return `<div class="empty-state">No codes posted yet — check back later.</div>`;
+    }
+    return entries.map((e) => `
+      <div class="code-row">
+        <div class="code-main">
+          <div class="code-value">${escapeHtml(e.code)}</div>
+          ${e.note ? `<div class="code-note">${escapeHtml(e.note)}</div>` : ''}
+          <div class="code-meta">Posted ${fmtPostedAgo(e.postedAt)}</div>
+        </div>
+        <button class="copy-btn" data-code="${escapeHtml(e.code)}">Copy</button>
+      </div>`).join('');
+  }
+
+  document.getElementById('book-tabs').addEventListener('click', (e) => {
+    const btn = e.target.closest('.book-tab');
+    if (!btn) return;
+    document.querySelectorAll('.book-tab').forEach((b) => b.classList.remove('active'));
+    document.querySelectorAll('.book-panel').forEach((p) => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(`book-${btn.dataset.book}`).classList.add('active');
+  });
+
+  document.querySelectorAll('.book-panel').forEach((panel) => {
+    panel.addEventListener('click', async (e) => {
+      const btn = e.target.closest('.copy-btn');
+      if (!btn) return;
+      try {
+        await navigator.clipboard.writeText(btn.dataset.code);
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = original; }, 1400);
+      } catch {
+        /* clipboard unavailable — code is still visible to copy manually */
+      }
+    });
+  });
+
+  async function loadBetCodes() {
+    try {
+      const res = await fetch(`data/bet-codes.json?_=${Date.now()}`);
+      const data = await res.json();
+      Object.keys(BOOK_NAMES).forEach((key) => {
+        const el = document.getElementById(`book-${key}`);
+        if (el) el.innerHTML = renderCodeList(data[key]);
+      });
+    } catch (err) {
+      console.error('Could not load bet codes', err);
+    }
+  }
+  loadBetCodes();
+
+  // ---------- Tip / Buy me a coffee ----------
+  // Fill these in to enable the tip button. Leave momoNumber empty to keep it hidden.
+  const TIP_INFO = {
+    network: '',
+    momoNumber: '',
+    registeredName: '',
+  };
+
+  const tipFab = document.getElementById('tip-fab');
+  const tipBackdrop = document.getElementById('tip-modal-backdrop');
+  if (TIP_INFO.momoNumber) {
+    tipFab.hidden = false;
+    document.getElementById('tip-fab-icon').innerHTML = statIcon('coffee');
+    document.getElementById('tip-network-value').textContent = TIP_INFO.network;
+    document.getElementById('tip-number-value').textContent = TIP_INFO.momoNumber;
+    if (TIP_INFO.registeredName) {
+      document.getElementById('tip-name-value').textContent = TIP_INFO.registeredName;
+    } else {
+      document.getElementById('tip-name-row').style.display = 'none';
+    }
+    tipFab.addEventListener('click', () => tipBackdrop.classList.add('open'));
+    document.getElementById('tip-modal-close').addEventListener('click', () => tipBackdrop.classList.remove('open'));
+    tipBackdrop.addEventListener('click', (e) => { if (e.target === tipBackdrop) tipBackdrop.classList.remove('open'); });
+  }
 </script>
 </body>
 </html>

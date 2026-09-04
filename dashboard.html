@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuuku's Odds — Dashboard</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f5f5f2; --surface: #ffffff; --border: #e6e6e1;
+    --text: #171715; --text-muted: #75756e; --text-faint: #9d9d95;
+    --accent: #189968; --accent-strong: #0f6e4b; --accent-bright: #22c98a; --accent-weak: #e4f4ec;
+    --track: #edede8; --danger: #b3261e; --danger-weak: #fbeceb;
+    --radius: 14px; --radius-sm: 8px;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101012; --surface: #19191d; --border: #29292f;
+      --text: #f1f1f2; --text-muted: #9c9ca4; --text-faint: #6f6f77;
+      --accent: #33dd9a; --accent-strong: #57e8ae; --accent-bright: #6ef4bf; --accent-weak: #16332a;
+      --track: #232328; --danger: #ff6b61; --danger-weak: #2c1a19;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: var(--font-body); line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 560px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1 { font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 4px; }
+  p.lead { color: var(--text-muted); font-size: 0.88rem; margin: 0 0 28px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 20px; margin-bottom: 20px;
+  }
+  .card h2 { font-family: var(--font-display); font-size: 1rem; margin: 0 0 4px; }
+  .card p.hint { font-size: 0.8rem; color: var(--text-muted); margin: 0 0 14px; }
+  label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-muted); margin: 12px 0 6px; }
+  input, select, textarea {
+    width: 100%; background: var(--track); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 10px 12px; font-family: var(--font-body); font-size: 0.9rem; color: var(--text);
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); }
+  button {
+    appearance: none; border: none; border-radius: var(--radius-sm); padding: 10px 18px;
+    font-family: var(--font-body); font-weight: 600; font-size: 0.86rem; cursor: pointer;
+    margin-top: 14px; transition: transform 160ms var(--ease-out), opacity 160ms var(--ease-out);
+  }
+  button:active { transform: scale(0.97); }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-primary { background: linear-gradient(150deg, var(--accent-strong), var(--accent-bright)); color: #06251a; }
+  .btn-secondary { background: var(--track); color: var(--text); }
+  .btn-danger { background: var(--danger-weak); color: var(--danger); padding: 6px 12px; font-size: 0.78rem; margin-top: 0; }
+  .status { font-size: 0.82rem; margin-top: 10px; padding: 10px 12px; border-radius: var(--radius-sm); display: none; }
+  .status.ok { display: block; background: var(--accent-weak); color: var(--accent-strong); }
+  .status.err { display: block; background: var(--danger-weak); color: var(--danger); }
+  .status.pending { display: block; background: var(--track); color: var(--text-muted); }
+  .quota-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .quota-stat { background: var(--track); border-radius: var(--radius-sm); padding: 10px 12px; }
+  .quota-stat .v { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; }
+  .quota-stat .l { font-size: 0.72rem; color: var(--text-faint); }
+  .code-row {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    border-top: 1px solid var(--border); padding: 10px 0;
+  }
+  .code-row:first-of-type { border-top: none; }
+  .code-row .code { font-family: var(--font-display); font-weight: 700; }
+  .code-row .note { font-size: 0.78rem; color: var(--text-muted); }
+  details summary { cursor: pointer; font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; }
+  a { color: var(--accent-strong); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Kuuku's Odds — Dashboard</h1>
+  <p class="lead">Private posting tool. Not linked from the public site — bookmark this page. Nothing here works without your own GitHub token, entered below and stored only in this browser.</p>
+
+  <div class="card">
+    <h2>1. Connect</h2>
+    <p class="hint">Create a <strong>fine-grained personal access token</strong> at
+      <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a>
+      scoped to only the <code>kuukuackah/kuukus-odds</code> repository, with <strong>Contents: Read and write</strong> permission and nothing else. Paste it here — it's saved only in this browser's local storage and sent only to api.github.com.</p>
+    <label for="token-input">GitHub token</label>
+    <input type="password" id="token-input" placeholder="github_pat_...">
+    <button class="btn-primary" id="save-token-btn">Save & connect</button>
+    <button class="btn-secondary" id="clear-token-btn">Forget token</button>
+    <div class="status" id="token-status"></div>
+  </div>
+
+  <div class="card">
+    <h2>2. API quota</h2>
+    <p class="hint">Odds API usage from the last scheduled fetch (public visitors no longer see this).</p>
+    <div class="quota-grid" id="quota-grid">
+      <div class="quota-stat"><div class="v">—</div><div class="l">Calls used</div></div>
+      <div class="quota-stat"><div class="v">—</div><div class="l">Calls remaining</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>3. Post a bet code</h2>
+    <label for="book-select">Bookmaker</label>
+    <select id="book-select">
+      <option value="sportybet">SportyBet</option>
+      <option value="betway">Betway</option>
+      <option value="onexbet">1xBet</option>
+    </select>
+    <label for="code-input">Booking code</label>
+    <input type="text" id="code-input" placeholder="e.g. AB12CD">
+    <label for="note-input">Note (optional)</label>
+    <input type="text" id="note-input" placeholder="e.g. 5-fold, Over 1.5 accumulator">
+    <button class="btn-primary" id="post-code-btn" disabled>Post code</button>
+    <div class="status" id="post-status"></div>
+  </div>
+
+  <div class="card">
+    <h2>4. Existing codes</h2>
+    <div id="existing-codes">Loading…</div>
+  </div>
+</main>
+
+<script>
+  const REPO_OWNER = 'kuukuackah';
+  const REPO_NAME = 'kuukus-odds';
+  const FILE_PATH = 'data/bet-codes.json';
+  const BRANCH = 'main';
+  const BOOK_NAMES = { sportybet: 'SportyBet', betway: 'Betway', onexbet: '1xBet' };
+  const TOKEN_KEY = 'kuukus-odds-gh-token';
+
+  function getToken() { try { return localStorage.getItem(TOKEN_KEY); } catch { return null; } }
+  function setToken(t) { try { t ? localStorage.setItem(TOKEN_KEY, t) : localStorage.removeItem(TOKEN_KEY); } catch {} }
+
+  function setStatus(el, kind, msg) {
+    el.className = `status ${kind}`;
+    el.textContent = msg;
+  }
+
+  function b64EncodeUtf8(obj) {
+    const bytes = new TextEncoder().encode(JSON.stringify(obj, null, 2));
+    let binary = '';
+    bytes.forEach((b) => { binary += String.fromCharCode(b); });
+    return btoa(binary);
+  }
+  function b64DecodeUtf8(b64) {
+    const binary = atob(b64.replace(/\n/g, ''));
+    const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+    return JSON.parse(new TextDecoder().decode(bytes));
+  }
+
+  async function githubGetFile(token) {
+    const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}?ref=${BRANCH}`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
+    });
+    if (!res.ok) throw new Error(`GitHub GET ${res.status}`);
+    const json = await res.json();
+    return { data: b64DecodeUtf8(json.content), sha: json.sha };
+  }
+
+  async function githubPutFile(token, dataObj, sha, message) {
+    const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`, {
+      method: 'PUT',
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, content: b64EncodeUtf8(dataObj), sha, branch: BRANCH }),
+    });
+    if (!res.ok) {
+      const body = await res.text().catch(() => '');
+      throw new Error(`GitHub PUT ${res.status}: ${body.slice(0, 200)}`);
+    }
+    return res.json();
+  }
+
+  const tokenInput = document.getElementById('token-input');
+  const tokenStatus = document.getElementById('token-status');
+  const postBtn = document.getElementById('post-code-btn');
+
+  async function testConnection(token) {
+    setStatus(tokenStatus, 'pending', 'Checking token…');
+    try {
+      await githubGetFile(token);
+      setStatus(tokenStatus, 'ok', 'Connected — this browser can post codes.');
+      postBtn.disabled = false;
+      return true;
+    } catch (err) {
+      setStatus(tokenStatus, 'err', `Could not connect: ${err.message}. Check the token has Contents: Read and write on this repo.`);
+      postBtn.disabled = true;
+      return false;
+    }
+  }
+
+  document.getElementById('save-token-btn').addEventListener('click', async () => {
+    const t = tokenInput.value.trim();
+    if (!t) return;
+    setToken(t);
+    await testConnection(t);
+    tokenInput.value = '';
+    tokenInput.placeholder = 'Token saved (hidden)';
+  });
+
+  document.getElementById('clear-token-btn').addEventListener('click', () => {
+    setToken(null);
+    tokenInput.placeholder = 'github_pat_...';
+    setStatus(tokenStatus, 'pending', 'Token forgotten. Enter a new one to reconnect.');
+    postBtn.disabled = true;
+  });
+
+  function renderExistingCodes(data) {
+    const el = document.getElementById('existing-codes');
+    const rows = [];
+    Object.keys(BOOK_NAMES).forEach((key) => {
+      (data[key] || []).forEach((entry) => {
+        rows.push({ book: key, ...entry });
+      });
+    });
+    if (rows.length === 0) {
+      el.innerHTML = '<p class="hint">No codes posted yet.</p>';
+      return;
+    }
+    rows.sort((a, b) => new Date(b.postedAt) - new Date(a.postedAt));
+    el.innerHTML = rows.map((r) => `
+      <div class="code-row">
+        <div>
+          <div class="code">[${BOOK_NAMES[r.book]}] ${r.code}</div>
+          ${r.note ? `<div class="note">${r.note}</div>` : ''}
+        </div>
+        <button class="btn-danger" data-id="${r.id}" data-book="${r.book}">Delete</button>
+      </div>`).join('');
+  }
+
+  async function refreshExistingCodes() {
+    try {
+      const res = await fetch(`data/bet-codes.json?_=${Date.now()}`);
+      const data = await res.json();
+      renderExistingCodes(data);
+    } catch {
+      document.getElementById('existing-codes').innerHTML = '<p class="hint">Could not load codes.</p>';
+    }
+  }
+
+  document.getElementById('existing-codes').addEventListener('click', async (e) => {
+    const btn = e.target.closest('.btn-danger');
+    if (!btn) return;
+    const token = getToken();
+    if (!token) return;
+    btn.disabled = true;
+    try {
+      const { data, sha } = await githubGetFile(token);
+      data[btn.dataset.book] = (data[btn.dataset.book] || []).filter((entry) => entry.id !== btn.dataset.id);
+      await githubPutFile(token, data, sha, `Remove ${BOOK_NAMES[btn.dataset.book]} code`);
+      await refreshExistingCodes();
+    } catch (err) {
+      alert(`Could not delete: ${err.message}`);
+      btn.disabled = false;
+    }
+  });
+
+  postBtn.addEventListener('click', async () => {
+    const token = getToken();
+    const book = document.getElementById('book-select').value;
+    const code = document.getElementById('code-input').value.trim();
+    const note = document.getElementById('note-input').value.trim();
+    const statusEl = document.getElementById('post-status');
+    if (!token || !code) return;
+
+    postBtn.disabled = true;
+    setStatus(statusEl, 'pending', 'Posting…');
+    try {
+      const { data, sha } = await githubGetFile(token);
+      if (!data[book]) data[book] = [];
+      data[book].unshift({
+        id: (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`),
+        code,
+        note,
+        postedAt: new Date().toISOString(),
+      });
+      await githubPutFile(token, data, sha, `Add ${BOOK_NAMES[book]} code`);
+      setStatus(statusEl, 'ok', 'Posted! Live on the site within about a minute.');
+      document.getElementById('code-input').value = '';
+      document.getElementById('note-input').value = '';
+      await refreshExistingCodes();
+    } catch (err) {
+      setStatus(statusEl, 'err', `Failed: ${err.message}`);
+    } finally {
+      postBtn.disabled = false;
+    }
+  });
+
+  async function loadQuota() {
+    try {
+      const res = await fetch(`data/picks.json?_=${Date.now()}`);
+      const data = await res.json();
+      const grid = document.getElementById('quota-grid');
+      grid.innerHTML = `
+        <div class="quota-stat"><div class="v">${data.apiQuotaUsed ?? '—'}</div><div class="l">Calls used</div></div>
+        <div class="quota-stat"><div class="v">${data.apiQuotaRemaining ?? '—'}</div><div class="l">Calls remaining</div></div>
+      `;
+    } catch {}
+  }
+
+  const savedToken = getToken();
+  if (savedToken) {
+    tokenInput.placeholder = 'Token saved (hidden)';
+    testConnection(savedToken);
+  }
+  loadQuota();
+  refreshExistingCodes();
+</script>
+</body>
+</html>
