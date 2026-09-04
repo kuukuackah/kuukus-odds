@@ -218,10 +218,13 @@ endpoint — no API key beyond the same public test key `123` used for
 badges, no server step, no GitHub Action. The endpoint sends
 `access-control-allow-origin: *`, so the browser calls it directly and
 polls every 60 seconds while the tab is visible (paused when the tab is
-hidden). Results are filtered client-side to the same 9 leagues tracked
-elsewhere on the site, matched by TheSportsDB league ID (see the
-`LIVE_LEAGUE_IDS` map in `index.html`). If nothing in those leagues is
-live right now, the card says so explicitly rather than showing nothing.
+hidden). Shows every live soccer match TheSportsDB returns, worldwide —
+not just the 9 leagues tracked elsewhere on the site — with those 9
+sorted to the top (matched by TheSportsDB league ID, see the
+`LIVE_LEAGUE_IDS` map in `index.html`) since they're the ones our picks
+relate to. The list scrolls internally past 420px so a busy match day
+doesn't blow out the sidebar. If nothing is live anywhere right now, the
+card says so explicitly rather than showing nothing.
 
 ## Posting bet codes (dashboard)
 

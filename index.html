@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kuuku's Odds</title>
 <meta name="description" content="Soccer fixtures ranked by fair, de-vigged bookmaker probability for Over 1.5 and first-half Over 0.5 goals.">
-<meta name="theme-color" content="#05070a">
+<meta name="theme-color" content="#ff0f50">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
@@ -109,7 +109,46 @@
     color: var(--text-faint);
     margin: 0 0 10px;
   }
-  .league-list { display: flex; flex-direction: column; gap: 2px; }
+  .league-dropdown-trigger {
+    appearance: none;
+    background: none;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+  }
+  .league-dropdown-eyebrow {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-faint);
+  }
+  .league-dropdown-current {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 2px;
+  }
+  .league-dropdown-chevron {
+    width: 14px;
+    height: 14px;
+    color: var(--text-faint);
+    flex: none;
+    transition: transform 200ms var(--ease-out);
+  }
+  #league-sidebar.open .league-dropdown-chevron { transform: rotate(180deg); }
+  .league-list { display: none; flex-direction: column; gap: 2px; margin-top: 12px; }
+  #league-sidebar.open .league-list { display: flex; }
   .league-item {
     appearance: none;
     background: none;
@@ -143,9 +182,19 @@
   }
   @media (max-width: 900px) {
     .content-layout { grid-template-columns: 1fr; gap: 14px; }
-    .sidebar-left { order: 1; }
-    .main-col { order: 2; }
-    .sidebar-right { order: 3; }
+    /* main-col's own box disappears so its children (stat-strip, sport-tabs,
+       controls-row, sport-panels) become direct grid items here, sitting
+       alongside sidebar-left/right — that lets `order` interleave the
+       leagues dropdown between the sort controls and the picks list below,
+       instead of only being able to place it above or below the whole
+       main column. */
+    .main-col { display: contents; }
+    #stat-strip { order: 1; }
+    #sport-tabs { order: 2; }
+    .controls-row { order: 3; }
+    .sidebar-left { order: 4; }
+    .sport-panel { order: 5; }
+    .sidebar-right { order: 6; }
     .sidebar-card { position: static; }
   }
 
@@ -897,6 +946,7 @@
   @media (prefers-reduced-motion: reduce) { .live-pulse-dot { animation: none; } }
   .live-card.flash { animation: liveFlash 900ms var(--ease-out); }
   @keyframes liveFlash { 0% { box-shadow: 0 0 0 2px var(--accent); } 100% { box-shadow: none; } }
+  #live-scores-list { max-height: 420px; overflow-y: auto; }
   .live-empty { font-size: 0.78rem; color: var(--text-faint); padding: 6px 0 2px; }
   .live-match {
     display: flex;
@@ -959,7 +1009,6 @@
       border-radius: 50%;
       background: #2fbf71;
     }
-    .tip-fab { bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
   }
 
   /* ---------- Install modal ---------- */
@@ -1030,6 +1079,12 @@
   .tip-fab:hover { transform: translateY(-2px); }
   .tip-fab:active { transform: scale(0.96); }
   .tip-fab[hidden] { display: none; }
+  @media (max-width: 900px) {
+    /* Placed after the base .tip-fab rule (same specificity, later wins)
+       so it actually overrides bottom:18px instead of being shadowed by it —
+       clears the fixed bottom nav bar on mobile. */
+    .tip-fab { bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
+  }
 
   .tip-modal-backdrop {
     position: fixed;
@@ -1145,7 +1200,13 @@
   <div class="content-layout">
     <aside class="sidebar-left">
       <div class="sidebar-card" id="league-sidebar">
-        <h3 class="sidebar-title">Leagues</h3>
+        <button class="league-dropdown-trigger" id="league-dropdown-trigger" aria-expanded="false">
+          <span class="league-dropdown-text">
+            <span class="league-dropdown-eyebrow">Leagues</span>
+            <span class="league-dropdown-current" id="league-dropdown-current">All leagues</span>
+          </span>
+          <svg class="league-dropdown-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5 10 12.5 15 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
         <div class="league-list" id="league-list"></div>
       </div>
     </aside>
@@ -1419,6 +1480,24 @@
     sidebar.closest('.sidebar-left').style.display = shouldShow ? '' : 'none';
   }
 
+  // NFL and MLB odds only carry a game *date* from their source API, not a
+  // kickoff time — sorting by "Kickoff" there would silently do nothing
+  // (every game that day compares equal), so the control is hidden rather
+  // than offering a sort that can't actually work.
+  const KICKOFF_SORTABLE_SPORTS = new Set(['football']);
+  function updateSortToggleAvailability() {
+    const activeSport = document.querySelector('.sport-tab-btn.active')?.dataset.sport;
+    const kickoffBtn = document.querySelector('.sort-btn[data-sort="kickoff"]');
+    const canSortByKickoff = KICKOFF_SORTABLE_SPORTS.has(activeSport);
+    if (kickoffBtn) kickoffBtn.hidden = !canSortByKickoff;
+    if (!canSortByKickoff && sortMode === 'kickoff') {
+      sortMode = 'probability';
+      document.querySelectorAll('.sort-btn').forEach((b) => b.classList.remove('active'));
+      document.querySelector('.sort-btn[data-sort="probability"]')?.classList.add('active');
+      renderPanels();
+    }
+  }
+
   // ---------- Sport tabs (top-level: Football, NFL, ...) ----------
   const sportTabs = document.querySelectorAll('.sport-tab-btn');
   const sportPanels = document.querySelectorAll('.sport-panel');
@@ -1432,6 +1511,7 @@
       const activeMarketTab = document.querySelector('.tab-btn.active');
       if (activeMarketTab) moveIndicator(activeMarketTab);
       updateLeagueSidebarVisibility();
+      updateSortToggleAvailability();
     });
   });
 
@@ -1773,7 +1853,26 @@
     }).join('');
 
     listEl.innerHTML = entries.length ? allItem + items : '<p class="league-sidebar-note">No league data yet.</p>';
+
+    const currentLabel = document.getElementById('league-dropdown-current');
+    if (currentLabel) currentLabel.textContent = leagueFilter ? leagueLabel(leagueFilter) : 'All leagues';
   }
+
+  // ---------- Leagues dropdown (collapsed by default, opens on click) ----------
+  const leagueSidebarCard = document.getElementById('league-sidebar');
+  const leagueDropdownTrigger = document.getElementById('league-dropdown-trigger');
+  function setLeagueDropdownOpen(open) {
+    leagueSidebarCard.classList.toggle('open', open);
+    leagueDropdownTrigger.setAttribute('aria-expanded', String(open));
+  }
+  leagueDropdownTrigger.addEventListener('click', () => {
+    setLeagueDropdownOpen(!leagueSidebarCard.classList.contains('open'));
+  });
+  document.addEventListener('click', (e) => {
+    if (leagueSidebarCard.classList.contains('open') && !leagueSidebarCard.contains(e.target)) {
+      setLeagueDropdownOpen(false);
+    }
+  });
 
   document.getElementById('league-list').addEventListener('click', (e) => {
     const btn = e.target.closest('.league-item');
@@ -1781,6 +1880,7 @@
     leagueFilter = btn.dataset.league || null;
     renderLeagueSidebar();
     renderPanels();
+    setLeagueDropdownOpen(false);
   });
 
   function renderPanels() {
@@ -1934,13 +2034,18 @@
     try {
       const res = await fetch('https://www.thesportsdb.com/api/v1/json/123/livescore.php?s=Soccer');
       const data = await res.json();
-      const matches = (data?.livescore || []).filter((m) => LIVE_LEAGUE_IDS[m.idLeague]);
+      // Every live soccer match worldwide, not just our 9 tracked leagues —
+      // tracked-league matches are sorted to the top since those are the
+      // ones our picks relate to, everything else follows.
+      const matches = (data?.livescore || [])
+        .slice()
+        .sort((a, b) => Number(!!LIVE_LEAGUE_IDS[b.idLeague]) - Number(!!LIVE_LEAGUE_IDS[a.idLeague]));
       const hasLive = matches.length > 0;
       if (livePulseDot) livePulseDot.hidden = !hasLive;
       if (bnLiveDot) bnLiveDot.hidden = !hasLive;
       liveScoresList.innerHTML = hasLive
         ? matches.map(renderLiveMatch).join('')
-        : `<p class="live-empty">No live matches right now in the leagues we track.</p>`;
+        : `<p class="live-empty">No live soccer matches anywhere right now.</p>`;
     } catch (err) {
       console.error('Live scores unavailable', err);
       liveScoresList.innerHTML = `<p class="live-empty">Live scores unavailable right now.</p>`;

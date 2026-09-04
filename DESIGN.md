@@ -189,3 +189,58 @@ than a browser tab, plus a live-scores feed:
   `team-badges.json` cache. When nothing in the tracked leagues is live,
   the card shows an explicit empty state rather than nothing — same
   "don't fabricate, just say there's nothing" rule as the picks lists.
+
+## Update: post-launch fixes (leagues dropdown, live scores unfiltered, icons, kickoff sort)
+
+Follow-up round after the app-shell update above shipped, fixing four
+real issues the site owner found by using it:
+
+- **Leagues → dropdown, repositioned**: the leagues card was originally
+  placed above the sort toggle on mobile via `order` on `.sidebar-left`.
+  That's not enough control once you want something positioned *between*
+  two children of a different grid item (`.controls-row` and the picks
+  panel both live inside `.main-col`, a sibling of `.sidebar-left`).
+  Fixed with `.main-col { display: contents; }` under the existing
+  `max-width: 900px` query — this drops main-col's own box so its
+  children (`#stat-strip`, `#sport-tabs`, `.controls-row`,
+  `.sport-panel`) become direct grid items alongside `.sidebar-left` /
+  `.sidebar-right`, letting `order` interleave them precisely: leagues
+  now sits right below Probability/Kickoff, above the picks list. The
+  card itself became a collapsed-by-default dropdown (`#league-sidebar`
+  + `.open` class, closes on selection or an outside click) — showing
+  "All leagues" as the default label rather than the full list eating
+  vertical space before the user reaches any actual picks.
+- **Live scores now genuinely global**: the original build filtered
+  `livescore.php` results to just the 9 tracked leagues. Reversed on
+  request — it now shows every live soccer match TheSportsDB returns,
+  with tracked-league matches sorted first (since those are the ones
+  our picks relate to) and everything else following. `#live-scores-list`
+  got a `max-height: 420px; overflow-y: auto` since global live counts
+  can run into the dozens.
+- **PWA install icon**: `assets/icon-192.png`, `icon-512.png`, and
+  `apple-touch-icon.png` still had the pre-rebrand green mark, and
+  `icon-192`/`icon-512` had *transparent* corners while
+  `apple-touch-icon` had an opaque near-black square baked in — both
+  read as "a black box around the logo" once installed, since Android
+  fills transparent icon padding with `manifest.json`'s
+  `background_color` (which was also still the old `#101012` black).
+  Regenerated all icon/logo assets as a full-bleed `#ff0f50` (current
+  accent) square with the same glyph used in the on-page brand mark, no
+  transparency anywhere in the app-icon set. `manifest.json`'s
+  `background_color`/`theme_color` and the page's `<meta name="theme-
+  color">` were stale green too (`#0f6e4b` / `#05070a`) — updated to
+  `#ff0f50` to match.
+- **"Kickoff" sort silently broken on NFL/MLB**: `fetch-nfl.js` /
+  `fetch-mlb.js` only ever captured `gameDate` (a date, e.g.
+  `"2026-09-04"`) from Tank01's odds endpoints — verified live against
+  the raw API response that no time-of-day field exists there at all: the
+  book objects carry `homeTeamML`/`awayTeamML`/etc., and the only
+  non-book keys are `awayTeam`, `homeTeam`, `gameDate`, `gameID`,
+  `teamIDAway`, `teamIDHome`, `last_updated_e_time` — nothing usable as a
+  kickoff time. So sorting by "Kickoff" compared every same-day game as
+  equal and did nothing, silently. Rather than fabricate a time or leave
+  a sort control that doesn't work, `updateSortToggleAvailability()`
+  hides the Kickoff button whenever the NFL or MLB tab is active (forcing
+  `sortMode` back to `probability` if it was mid-sort), the same "don't
+  offer what the data can't support" pattern as hiding the league filter
+  on non-Over1.5/First-Half panels.
