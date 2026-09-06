@@ -1,9 +1,85 @@
 {
-  "generatedAt": "2026-09-05T09:49:59.085Z",
-  "gameDate": "20260905",
+  "generatedAt": "2026-09-06T10:06:20.695Z",
+  "gameDate": "20260906",
   "source": "Tank01 MLB Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, Fanatics, Hard Rock, Rivers Casino, and others)",
   "quotaUsed": 2,
   "quotaRemaining": 998,
   "moneyline": [],
-  "moneyline_excluded": []
+  "moneyline_excluded": [
+    {
+      "fixture": "Arizona Diamondbacks v Houston Astros",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Atlanta Braves v Philadelphia Phillies",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Boston Red Sox v Baltimore Orioles",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Chicago Cubs v Miami Marlins",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Detroit Tigers v Cleveland Guardians",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Los Angeles Angels v Pittsburgh Pirates",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Milwaukee Brewers v Cincinnati Reds",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Minnesota Twins v Chicago White Sox",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "New York Yankees v San Diego Padres",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Athletics v Seattle Mariners",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "San Francisco Giants v New York Mets",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "St. Louis Cardinals v Colorado Rockies",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Tampa Bay Rays v Texas Rangers",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Toronto Blue Jays v Kansas City Royals",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Washington Nationals v Los Angeles Dodgers",
+      "gameDate": "2026-09-06",
+      "reason": "no usable moneyline price"
+    }
+  ]
 }
