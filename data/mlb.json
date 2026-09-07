@@ -1,85 +1,87 @@
 {
-  "generatedAt": "2026-09-06T10:06:20.695Z",
-  "gameDate": "20260906",
+  "generatedAt": "2026-09-07T11:20:37.996Z",
+  "gameDate": "20260907",
   "source": "Tank01 MLB Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, Fanatics, Hard Rock, Rivers Casino, and others)",
-  "quotaUsed": 2,
-  "quotaRemaining": 998,
-  "moneyline": [],
-  "moneyline_excluded": [
+  "quotaUsed": 3,
+  "quotaRemaining": 997,
+  "moneyline": [
     {
-      "fixture": "Arizona Diamondbacks v Houston Astros",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
+      "fixture": "Toronto Blue Jays v Athletics",
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "Toronto Blue Jays",
+      "fairProbability": 0.647,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Washington Nationals v San Diego Padres",
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "San Diego Padres",
+      "fairProbability": 0.646,
+      "bookCount": 8
+    },
+    {
+      "fixture": "Los Angeles Angels v Boston Red Sox",
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "Boston Red Sox",
+      "fairProbability": 0.613,
+      "bookCount": 8
     },
     {
       "fixture": "Atlanta Braves v Philadelphia Phillies",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "Philadelphia Phillies",
+      "fairProbability": 0.602,
+      "bookCount": 8
     },
     {
-      "fixture": "Boston Red Sox v Baltimore Orioles",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
+      "fixture": "Cincinnati Reds v Los Angeles Dodgers",
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "Los Angeles Dodgers",
+      "fairProbability": 0.583,
+      "bookCount": 8
     },
     {
-      "fixture": "Chicago Cubs v Miami Marlins",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
+      "fixture": "St. Louis Cardinals v San Francisco Giants",
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "San Francisco Giants",
+      "fairProbability": 0.546,
+      "bookCount": 8
     },
     {
-      "fixture": "Detroit Tigers v Cleveland Guardians",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
+      "fixture": "Cleveland Guardians v Baltimore Orioles",
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "Baltimore Orioles",
+      "fairProbability": 0.533,
+      "bookCount": 8
     },
     {
-      "fixture": "Los Angeles Angels v Pittsburgh Pirates",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
+      "fixture": "Chicago Cubs v Milwaukee Brewers",
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "Milwaukee Brewers",
+      "fairProbability": 0.532,
+      "bookCount": 8
     },
     {
-      "fixture": "Milwaukee Brewers v Cincinnati Reds",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
+      "fixture": "Minnesota Twins v Detroit Tigers",
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "Detroit Tigers",
+      "fairProbability": 0.532,
+      "bookCount": 7
     },
     {
-      "fixture": "Minnesota Twins v Chicago White Sox",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
+      "fixture": "New York Mets v Miami Marlins",
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "Miami Marlins",
+      "fairProbability": 0.519,
+      "bookCount": 8
     },
     {
-      "fixture": "New York Yankees v San Diego Padres",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Athletics v Seattle Mariners",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "San Francisco Giants v New York Mets",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "St. Louis Cardinals v Colorado Rockies",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Tampa Bay Rays v Texas Rangers",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Toronto Blue Jays v Kansas City Royals",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Washington Nationals v Los Angeles Dodgers",
-      "gameDate": "2026-09-06",
-      "reason": "no usable moneyline price"
+      "fixture": "Arizona Diamondbacks v Kansas City Royals",
+      "gameDate": "2026-09-07",
+      "favoriteTeam": "Kansas City Royals",
+      "fairProbability": 0.511,
+      "bookCount": 7
     }
-  ]
+  ],
+  "moneyline_excluded": []
 }
