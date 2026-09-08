@@ -90,6 +90,19 @@
     gap: 20px;
     align-items: start;
   }
+  /* Pin each column explicitly. Without this, hiding .sidebar-left via
+     display:none (done whenever the league filter doesn't apply to the
+     active tab) makes CSS Grid's auto-placement slide .main-col and
+     .sidebar-right one track to the left, squeezing the picks list into
+     the 190px sidebar column — a real bug, not hypothetical. */
+  .sidebar-left { grid-column: 1; }
+  .main-col { grid-column: 2; }
+  .sidebar-right { grid-column: 3; }
+  /* When the league filter is hidden, reclaim its column instead of
+     leaving a dead 190px gutter — toggled by updateLeagueSidebarVisibility(). */
+  .content-layout.no-league-filter { grid-template-columns: minmax(0, 1fr) 220px; }
+  .content-layout.no-league-filter .main-col { grid-column: 1; }
+  .content-layout.no-league-filter .sidebar-right { grid-column: 2; }
   .sidebar-left, .sidebar-right { min-width: 0; }
   .main-col { min-width: 0; }
   .sidebar-card {
@@ -181,7 +194,11 @@
     line-height: 1.5;
   }
   @media (max-width: 900px) {
-    .content-layout { grid-template-columns: 1fr; gap: 14px; }
+    .content-layout, .content-layout.no-league-filter { grid-template-columns: 1fr; gap: 14px; }
+    .sidebar-left, .main-col, .sidebar-right,
+    .content-layout.no-league-filter .main-col, .content-layout.no-league-filter .sidebar-right {
+      grid-column: auto;
+    }
     /* main-col's own box disappears so its children (stat-strip, sport-tabs,
        controls-row, sport-panels) become direct grid items here, sitting
        alongside sidebar-left/right — that lets `order` interleave the
@@ -1270,8 +1287,8 @@
 
       <div class="controls-row">
         <div class="sort-toggle" id="sort-toggle">
-          <button class="sort-btn active" data-sort="probability">Probability</button>
-          <button class="sort-btn" data-sort="kickoff">Kickoff</button>
+          <button class="sort-btn" data-sort="probability">Probability</button>
+          <button class="sort-btn active" data-sort="kickoff">Kickoff</button>
         </div>
       </div>
 
@@ -1517,6 +1534,7 @@
     const activeMarket = document.querySelector('.tab-btn.active')?.dataset.panel;
     const shouldShow = activeSport === 'football' && LEAGUE_FILTERABLE_PANELS.has(activeMarket);
     sidebar.closest('.sidebar-left').style.display = shouldShow ? '' : 'none';
+    document.querySelector('.content-layout')?.classList.toggle('no-league-filter', !shouldShow);
   }
 
   // NFL and MLB odds only carry a game *date* from their source API, not a
@@ -1851,7 +1869,11 @@
     nfl: [], nfl_excluded: [],
     mlb: [], mlb_excluded: [],
   };
-  let sortMode = 'probability';
+  // Default to chronological order — seeing a later kickoff ranked above an
+  // earlier one (because it happened to score higher) reads as broken to
+  // someone scanning "what's on today," even though it's intentional under
+  // Probability sort. Probability stays one tap away.
+  let sortMode = 'kickoff';
   let leagueFilter = null; // a sport key (e.g. 'soccer_epl'), or null for all leagues
 
   function filterAndSort(list) {
