@@ -209,13 +209,29 @@
        instead of only being able to place it above or below the whole
        main column. */
     .main-col { display: contents; }
-    #stat-strip { order: 1; }
-    #sport-tabs { order: 2; }
-    .controls-row { order: 3; }
-    .sidebar-left { order: 4; }
-    .sport-panel { order: 5; }
-    .sidebar-right { order: 6; }
+    /* .sidebar-right splits the same way, so Search can sit up near the
+       top of the page instead of after the whole picks list — on a phone
+       that meant scrolling ~80% of the page to find it. Live Scores stays
+       down with the picks; it already has its own quick-access button. */
+    .sidebar-right { display: contents; }
+    #search-card { order: 1; }
+    #stat-strip { order: 2; }
+    #sport-tabs { order: 3; }
+    .controls-row { order: 4; }
+    .sidebar-left { order: 5; }
+    .sport-panel { order: 6; }
+    #live-scores-card { order: 7; }
     .sidebar-card { position: static; }
+    .hero { height: 210px; }
+    .stat-strip {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(112px, auto);
+      overflow-x: auto;
+      padding-bottom: 2px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .stat { flex: none; }
   }
 
   /* ---------- Hero carousel ---------- */
@@ -1448,7 +1464,7 @@
     </div>
 
     <aside class="sidebar-right">
-      <div class="sidebar-card">
+      <div class="sidebar-card" id="search-card">
         <h3 class="sidebar-title">Search</h3>
         <input class="search-input" id="search-input" type="text" placeholder="Search team…">
       </div>
@@ -1929,7 +1945,11 @@
     const updatedLabel = data.generatedAt
       ? new Date(data.generatedAt).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
       : '—';
-    const leagueCount = new Set([...(data.over1_5 || []), ...(data.firstHalfOver0_5 || [])].map((p) => p.sport)).size;
+    // The configured league list (data/league-badges.json), not how many
+    // show up in today's picks — that count is data-dependent and can
+    // legitimately hit 0 on a day the picks feed comes back empty, which
+    // reads as "this site is broken" rather than "no fixtures qualified."
+    const leagueCount = Object.keys(leagueBadges).length;
     strip.innerHTML = `
       <div class="stat">${statIcon('clock')}<div><div class="stat-value" style="font-size:0.85rem">${updatedLabel}</div><div class="stat-label">Last updated</div></div></div>
       <div class="stat">${statIcon('target')}<div><div class="stat-value" id="stat-over15">0</div><div class="stat-label">Over 1.5 picks</div></div></div>
