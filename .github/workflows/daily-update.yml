@@ -26,6 +26,7 @@ jobs:
       - name: Fetch odds
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_KEY_FH05: ${{ secrets.ODDS_API_KEY_FH05 }}
         run: npm run fetch
 
       - name: Fetch Win/Draw predictions

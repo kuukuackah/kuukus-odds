@@ -27,26 +27,34 @@ reads that JSON.
 
 1. `fetch-odds.js` calls [The Odds API](https://the-odds-api.com/) for a
    set of soccer leagues: one bulk call per league to list fixtures (1
-   quota unit each, single region), then one combined per-event call per
-   fixture for `alternate_totals` (the 1.5 goals line) and
-   `alternate_totals_h1` (the first-half 0.5 line) — 2 quota units per
-   fixture looked up, capped at `MAX_EVENT_LOOKUPS_PER_RUN` (20 by default)
-   to protect your monthly quota. Each book's Over/Under pair is de-vigged,
-   then the **median** fair probability across books is used per fixture.
-2. Results are written to `data/picks.json`, including how much of your
-   monthly quota is left (`apiQuotaRemaining`), straight from the API's own
-   response headers.
+   quota unit each, single region), then one per-event call per fixture for
+   `alternate_totals` (the 1.5 goals line) and a separate per-event call for
+   `alternate_totals_h1` (the first-half 0.5 line) — 1 quota unit each,
+   capped at `MAX_EVENT_LOOKUPS_PER_RUN` (20 by default) fixtures per run.
+   The two markets run on **two separate Odds API accounts**
+   (`ODDS_API_KEY` and `ODDS_API_KEY_FH05`) so each has its own 500/month
+   quota instead of sharing one account's. `ODDS_API_KEY_FH05` is optional —
+   if unset, first-half picks are just excluded, never estimated. Each
+   book's Over/Under pair is de-vigged, then the **median** fair probability
+   across books is used per fixture.
+2. Results are written to `data/picks.json`, including how much of each
+   account's monthly quota is left (`apiQuotaRemaining` /
+   `fh05ApiQuotaRemaining`), straight from the API's own response headers.
 3. `index.html` fetches that JSON and renders it client-side — no build
    step, no framework.
 4. A GitHub Actions workflow (`.github/workflows/daily-update.yml`) runs
-   the script every day at 06:00 UTC and commits the updated JSON.
+   the script every day, scheduled for ~06:00 UTC/Ghana time (offset off
+   the round hour since GitHub queues scheduled jobs and round-hour cron
+   times see the worst delays), and commits the updated JSON.
 
-**Quota budget:** a full run costs roughly `(leagues × 1) + (events looked
-up × 2)` quota units — around 49 units/day at the defaults (9 leagues, 20
-event lookups), comfortably inside the free 500/month tier for daily runs.
-Lower `MAX_EVENT_LOOKUPS_PER_RUN` or trim the `SPORTS` list in
-`fetch-odds.js` if you add features that call the API more (nothing in the
-front end does — see below).
+**Quota budget:** each account's cost is roughly `events looked up × 1`
+quota unit per run, with the `ODDS_API_KEY` account also carrying the
+`leagues × 1` bulk discovery cost. At the default `MAX_EVENT_LOOKUPS_PER_RUN`
+of 20, that's ~29 units/day on the main account and ~20/day on the FH05
+account — both still exceed the free 500/month tier for a full month of
+daily runs (500/30 ≈ 16.7 units/day is the real sustainable ceiling), so
+expect the free tier to run dry before a month is up unless you lower
+`MAX_EVENT_LOOKUPS_PER_RUN`, trim the `SPORTS` list, or upgrade your plan.
 
 ## Run it locally first
 
@@ -74,6 +82,10 @@ via `file://` also mostly works, but some browsers block `fetch()` on
 1. Sign up free at [the-odds-api.com](https://the-odds-api.com/) — 500
    requests/month on the free tier.
 2. Copy your key into `.env` as `ODDS_API_KEY=...` for local runs.
+3. Optional — for first-half Over 0.5 to run on its own quota instead of
+   sharing the account above, sign up for a second free account and add its
+   key as `ODDS_API_KEY_FH05=...` (and as a second `ODDS_API_KEY_FH05` repo
+   secret for the GitHub Action). Leave it unset to skip first-half picks.
 
 **Note:** `alternate_totals` and `h1_totals` are separate markets and may
 have different quota costs or plan requirements — check your Odds API

@@ -99,6 +99,11 @@
       <div class="quota-stat"><div class="v">—</div><div class="l">Calls used</div></div>
       <div class="quota-stat"><div class="v">—</div><div class="l">Calls remaining</div></div>
     </div>
+    <p class="hint" style="margin-top:16px">First-half Over 0.5 (separate Odds API account, separate quota).</p>
+    <div class="quota-grid" id="quota-grid-fh05">
+      <div class="quota-stat"><div class="v">—</div><div class="l">Calls used</div></div>
+      <div class="quota-stat"><div class="v">—</div><div class="l">Calls remaining</div></div>
+    </div>
     <p class="hint" style="margin-top:16px">Win/Draw prediction API (separate account, separate quota).</p>
     <div class="quota-grid" id="quota-grid-1x2">
       <div class="quota-stat"><div class="v">—</div><div class="l">Calls used (month)</div></div>
@@ -306,6 +311,11 @@
       grid.innerHTML = `
         <div class="quota-stat"><div class="v">${data.apiQuotaUsed ?? '—'}</div><div class="l">Calls used</div></div>
         <div class="quota-stat"><div class="v">${data.apiQuotaRemaining ?? '—'}</div><div class="l">Calls remaining</div></div>
+      `;
+      const fh05Grid = document.getElementById('quota-grid-fh05');
+      fh05Grid.innerHTML = `
+        <div class="quota-stat"><div class="v">${data.fh05ApiQuotaUsed ?? '—'}</div><div class="l">Calls used</div></div>
+        <div class="quota-stat"><div class="v">${data.fh05ApiQuotaRemaining ?? '—'}</div><div class="l">Calls remaining</div></div>
       `;
     } catch {}
     try {

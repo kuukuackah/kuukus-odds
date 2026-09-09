@@ -16,8 +16,10 @@
 //     first-half 0.5 line under `alternate_totals_h1` (the plain `totals_h1`
 //     market only carries the 1.5 first-half line, not 0.5); both alternate
 //     markets are per-event-only (the bulk endpoint rejects them outright)
-//   - so getting Over 1.5 + first-half Over 0.5 for a fixture costs 2 units
-//     via one combined per-event call — see MAX_EVENT_LOOKUPS_PER_RUN below
+//   - Over 1.5 and first-half Over 0.5 are fetched as two separate per-event
+//     calls (1 unit each) on two separate Odds API accounts (ODDS_API_KEY and
+//     ODDS_API_KEY_FH05), so each market has its own 500/month quota instead
+//     of sharing one account's quota — see MAX_EVENT_LOOKUPS_PER_RUN below
 import 'dotenv/config';
 import { writeFile, mkdir } from 'node:fs/promises';
 
@@ -27,9 +29,17 @@ if (!API_KEY) {
   process.exit(1);
 }
 
+// Separate Odds API account for the first-half Over 0.5 market, so it has its
+// own 500/month quota instead of sharing one account's quota with Over 1.5.
+// Optional: if unset, first-half picks are just excluded (never estimated).
+const FH05_API_KEY = process.env.ODDS_API_KEY_FH05;
+if (!FH05_API_KEY) {
+  console.warn('ODDS_API_KEY_FH05 not set — first-half Over 0.5 will be skipped this run.');
+}
+
 const BASE_URL = 'https://api.the-odds-api.com/v4';
 const REGIONS = 'uk'; // single region: each extra region multiplies bulk-call cost
-const MAX_EVENT_LOOKUPS_PER_RUN = 20; // 20 events * 2 units = 40 units, plus ~9 bulk units = ~49/run
+const MAX_EVENT_LOOKUPS_PER_RUN = 20; // 20 events * 1 unit = 20 units on each account (main account also carries the ~9 bulk units)
 const MAX_PICKS_PER_MARKET = 30;
 
 // Soccer leagues covering the fixture set discussed — trim or extend as needed.
@@ -46,24 +56,27 @@ const SPORTS = [
   'soccer_usa_mls',
 ];
 
-let apiCallCount = 0;
-let lastQuotaRemaining = null;
-let lastQuotaUsed = null;
+// Two independent quota trackers — one per Odds API account.
+const quota = {
+  main: { apiCallCount: 0, lastQuotaRemaining: null, lastQuotaUsed: null },
+  fh05: { apiCallCount: 0, lastQuotaRemaining: null, lastQuotaUsed: null },
+};
 
-async function apiGet(path, params) {
+async function apiGet(path, params, { apiKey = API_KEY, account = 'main' } = {}) {
   const url = new URL(`${BASE_URL}${path}`);
-  url.searchParams.set('apiKey', API_KEY);
+  url.searchParams.set('apiKey', apiKey);
   url.searchParams.set('oddsFormat', 'decimal');
   url.searchParams.set('dateFormat', 'iso');
   for (const [key, value] of Object.entries(params ?? {})) {
     url.searchParams.set(key, value);
   }
-  apiCallCount += 1;
+  const tracker = quota[account];
+  tracker.apiCallCount += 1;
   const res = await fetch(url);
   const remaining = res.headers.get('x-requests-remaining');
   const used = res.headers.get('x-requests-used');
-  if (remaining !== null) lastQuotaRemaining = remaining;
-  if (used !== null) lastQuotaUsed = used;
+  if (remaining !== null) tracker.lastQuotaRemaining = remaining;
+  if (used !== null) tracker.lastQuotaUsed = used;
   if (!res.ok) {
     const body = await res.text().catch(() => '');
     throw new Error(`${res.status} ${res.statusText} — ${url.pathname}${url.search} — ${body.slice(0, 200)}`);
@@ -168,22 +181,33 @@ async function main() {
     }
 
     try {
-      const eventOdds = await apiGet(`/sports/${sportKey}/events/${event.id}/odds`, {
+      const over15Odds = await apiGet(`/sports/${sportKey}/events/${event.id}/odds`, {
         regions: REGIONS,
-        markets: 'alternate_totals,alternate_totals_h1',
+        markets: 'alternate_totals',
       });
-
-      const line15 = summarize(fairProbsAtPoint(eventOdds.bookmakers, 'alternate_totals', 1.5));
+      const line15 = summarize(fairProbsAtPoint(over15Odds.bookmakers, 'alternate_totals', 1.5));
       over15.push(line15 ? { ...base, ...line15 } : { ...base, excluded: true, reason: 'no 1.5 line available' });
+    } catch (err) {
+      over15.push({ ...base, excluded: true, reason: `lookup failed: ${err.message}` });
+    }
 
-      const halfLine05 = summarize(fairProbsAtPoint(eventOdds.bookmakers, 'alternate_totals_h1', 0.5));
+    if (!FH05_API_KEY) {
+      firstHalfOver05.push({ ...base, excluded: true, reason: 'first-half API key not configured' });
+      continue;
+    }
+
+    try {
+      const fh05Odds = await apiGet(
+        `/sports/${sportKey}/events/${event.id}/odds`,
+        { regions: REGIONS, markets: 'alternate_totals_h1' },
+        { apiKey: FH05_API_KEY, account: 'fh05' }
+      );
+      const halfLine05 = summarize(fairProbsAtPoint(fh05Odds.bookmakers, 'alternate_totals_h1', 0.5));
       firstHalfOver05.push(
         halfLine05 ? { ...base, ...halfLine05 } : { ...base, excluded: true, reason: 'no first-half 0.5 line available' }
       );
     } catch (err) {
-      const reason = `lookup failed: ${err.message}`;
-      over15.push({ ...base, excluded: true, reason });
-      firstHalfOver05.push({ ...base, excluded: true, reason });
+      firstHalfOver05.push({ ...base, excluded: true, reason: `lookup failed: ${err.message}` });
     }
   }
 
@@ -192,9 +216,12 @@ async function main() {
 
   const output = {
     generatedAt: new Date().toISOString(),
-    apiCallsUsed: apiCallCount,
-    apiQuotaUsed: lastQuotaUsed !== null ? Number(lastQuotaUsed) : null,
-    apiQuotaRemaining: lastQuotaRemaining !== null ? Number(lastQuotaRemaining) : null,
+    apiCallsUsed: quota.main.apiCallCount,
+    apiQuotaUsed: quota.main.lastQuotaUsed !== null ? Number(quota.main.lastQuotaUsed) : null,
+    apiQuotaRemaining: quota.main.lastQuotaRemaining !== null ? Number(quota.main.lastQuotaRemaining) : null,
+    fh05ApiCallsUsed: quota.fh05.apiCallCount,
+    fh05ApiQuotaUsed: quota.fh05.lastQuotaUsed !== null ? Number(quota.fh05.lastQuotaUsed) : null,
+    fh05ApiQuotaRemaining: quota.fh05.lastQuotaRemaining !== null ? Number(quota.fh05.lastQuotaRemaining) : null,
     over1_5: over15Ranked.picks,
     over1_5_excluded: over15Ranked.excluded,
     firstHalfOver0_5: firstHalfRanked.picks,
@@ -204,8 +231,10 @@ async function main() {
   await mkdir('data', { recursive: true });
   await writeFile('data/picks.json', JSON.stringify(output, null, 2));
   console.log(
-    `Wrote data/picks.json — ${over15Ranked.picks.length} Over 1.5 picks, ${firstHalfRanked.picks.length} first-half picks, ` +
-    `${apiCallCount} calls this run (quota: ${lastQuotaUsed ?? '?'} used / ${lastQuotaRemaining ?? '?'} remaining).`
+    `Wrote data/picks.json — ${over15Ranked.picks.length} Over 1.5 picks (${quota.main.apiCallCount} calls, ` +
+    `${quota.main.lastQuotaUsed ?? '?'} used / ${quota.main.lastQuotaRemaining ?? '?'} remaining), ` +
+    `${firstHalfRanked.picks.length} first-half picks (${quota.fh05.apiCallCount} calls, ` +
+    `${quota.fh05.lastQuotaUsed ?? '?'} used / ${quota.fh05.lastQuotaRemaining ?? '?'} remaining).`
   );
 }
 
