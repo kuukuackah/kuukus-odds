@@ -14,6 +14,10 @@ A static site that updates once a day with soccer fixtures ranked by fair
   sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET,
   BetRivers, BallyBet), de-vigged and medianed the same way as Over 1.5.
   Empty on non-game days — that's expected, not a bug.
+- **Track record** — a running hit-rate for Over 1.5, Straight Win, and Win
+  or Draw, checked against real final scores from TheSportsDB (free,
+  separate from every other quota in this project). First-half Over 0.5
+  isn't tracked — no free source exposes half-time scores.
 
 **The rule this project is built around:** if no bookmaker posts a usable
 line for a fixture, that fixture is left out of the list — never estimated.
@@ -46,6 +50,13 @@ reads that JSON.
    the script every day, scheduled for ~06:00 UTC/Ghana time (offset off
    the round hour since GitHub queues scheduled jobs and round-hour cron
    times see the worst delays), and commits the updated JSON.
+5. Before any of that, `scripts/fetch-results.js` checks the *previous*
+   day's committed picks against real final scores from TheSportsDB (free,
+   one call per fixture date, no Odds API/RapidAPI quota spent) and updates
+   the running tally in `data/track-record.json`. It only scores a fixture
+   once it's confident it found the right match by team name — anything it
+   can't confidently match is skipped, never guessed, and picked up again
+   on a later run.
 
 **Quota budget:** each account's cost is roughly `events looked up × 1`
 quota unit per run, with the `ODDS_API_KEY` account also carrying the

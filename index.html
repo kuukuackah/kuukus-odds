@@ -1269,6 +1269,7 @@
 
     <div class="main-col">
       <div class="stat-strip" id="stat-strip"></div>
+      <div class="stat-strip" id="track-record-strip" style="margin-top:8px"></div>
 
       <nav class="sport-tabs" id="sport-tabs">
         <button class="sport-tab-btn active" data-sport="football">
@@ -1787,6 +1788,7 @@
       coffee: '<path d="M5 8h9v5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8Z" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M14 9.5h1.2a2 2 0 0 1 0 4H14" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M7 5.5c0-.8.6-1 .6-1.8M10 5.5c0-.8.6-1 .6-1.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>',
       phone: '<rect x="6" y="2.5" width="8" height="15" rx="1.6" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M9 15.2h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
       code: '<path d="M7 6 3 10l4 4M13 6l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>',
+      check: '<path d="M4 10.5 8 14.5 16 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>',
     };
     return `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">${icons[name] || ''}</svg>`;
   }
@@ -1826,6 +1828,28 @@
     animateCount(document.getElementById('stat-winDraw'), winDrawCount || 0);
     animateCount(document.getElementById('stat-leagues'), leagueCount);
     updateNextUpdateLabel();
+  }
+
+  // Track record covers Over 1.5, Straight Win, and Win or Draw — all
+  // checkable from free final-score data. First-half Over 0.5 has no free
+  // source for half-time scores, so it's left out rather than guessed at.
+  function renderTrackRecord(record) {
+    const strip = document.getElementById('track-record-strip');
+    if (!record) { strip.innerHTML = ''; return; }
+    const entries = [
+      ['over1_5', 'Over 1.5 record'],
+      ['straightWin', 'Straight Win record'],
+      ['winOrDraw', 'Win/Draw record'],
+    ];
+    const cards = entries
+      .map(([key, label]) => {
+        const m = record.markets?.[key];
+        if (!m || m.total === 0) return null;
+        const pct = Math.round((m.hits / m.total) * 100);
+        return `<div class="stat">${statIcon('check')}<div><div class="stat-value">${pct}% <span style="font-size:0.7em;font-weight:500;color:var(--text-faint)">(${m.hits}/${m.total})</span></div><div class="stat-label">${label}</div></div></div>`;
+      })
+      .filter(Boolean);
+    strip.innerHTML = cards.join('');
   }
 
   function nextUpdateLabel() {
@@ -1996,14 +2020,17 @@
   }
 
   async function load() {
-    const [picksResult, winDrawResult, nflResult, mlbResult, teamBadgesResult, leagueBadgesResult] = await Promise.allSettled([
+    const [picksResult, winDrawResult, nflResult, mlbResult, teamBadgesResult, leagueBadgesResult, trackRecordResult] = await Promise.allSettled([
       fetch(`data/picks.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/win-draw.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/nfl.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/mlb.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/team-badges.json?_=${Date.now()}`).then((r) => r.json()),
       fetch(`data/league-badges.json?_=${Date.now()}`).then((r) => r.json()),
+      fetch(`data/track-record.json?_=${Date.now()}`).then((r) => r.json()),
     ]);
+
+    renderTrackRecord(trackRecordResult.status === 'fulfilled' ? trackRecordResult.value : null);
 
     if (teamBadgesResult.status === 'fulfilled') teamBadges = teamBadgesResult.value || {};
     if (leagueBadgesResult.status === 'fulfilled') {

@@ -23,6 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Score yesterday's picks against real results
+        run: npm run fetch:results
+        continue-on-error: true # free TheSportsDB lookup — never block the rest of the run
+        # must run before the fetch steps below overwrite picks.json / win-draw.json
+
       - name: Fetch odds
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
@@ -55,6 +60,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/picks.json data/win-draw.json data/nfl.json data/mlb.json data/team-badges.json
+          git add data/picks.json data/win-draw.json data/nfl.json data/mlb.json data/team-badges.json data/track-record.json
           git diff --staged --quiet && echo "No changes to commit." || git commit -m "Update picks $(date -u +%Y-%m-%d)"
           git push

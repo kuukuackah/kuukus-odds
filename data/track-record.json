@@ -1,0 +1,18 @@
+{
+  "updatedAt": null,
+  "markets": {
+    "over1_5": {
+      "hits": 0,
+      "total": 0
+    },
+    "straightWin": {
+      "hits": 0,
+      "total": 0
+    },
+    "winOrDraw": {
+      "hits": 0,
+      "total": 0
+    }
+  },
+  "scoredFixtureKeys": []
+}

@@ -10,6 +10,7 @@
     "fetch:nfl": "node fetch-nfl.js",
     "fetch:mlb": "node fetch-mlb.js",
     "fetch:badges": "node scripts/fetch-team-badges.js",
+    "fetch:results": "node scripts/fetch-results.js",
     "serve": "python3 -m http.server 8080"
   },
   "dependencies": {
