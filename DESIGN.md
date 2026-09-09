@@ -259,3 +259,53 @@ TheSportsDB's numeric league id back to our own `leagueBadges` sport
 key); every other league is collapsed by default and sorted by how many
 live matches it currently has, so the card opens compact but everything
 is still one click away.
+
+## Update: track record — a second, deliberate semantic accent (green)
+
+The single-accent lock above is about decorative/branding color (no
+per-team random colors, no second brand hue) — it was never meant to ban
+genuine semantic state color. The site already has one precedent:
+`.live-pulse-dot` is a hardcoded `#e5484d` red, completely separate from
+the pink `--accent`, because "live" is a status, not a brand choice.
+
+Track record's `--won` green (`#1a9c5c` light / `#3ddc84` dark) follows
+that same precedent for the same reason: "this pick hit" is a status,
+and green-for-win / strikethrough-for-loss is a near-universal convention
+that a pink accent can't substitute for without hurting legibility. It's
+a token like every other color here (defined in all three `:root` /
+`prefers-color-scheme` / `[data-theme]` blocks), not a one-off literal,
+and it's used in exactly one place: the hit/miss state of a fixture name
+in the "Recent results" list. Don't expand it into a second decorative
+accent elsewhere on the page — the same restraint rule still applies to
+everything that isn't reporting a real win/loss state.
+
+Also fixed in this pass: `--text-faint` was failing WCAG AA contrast
+(3.45:1 dark, 3.56:1 light) against `--surface` despite being used for
+real content (timestamps, exclusion reasons, tab labels), not just
+decoration. Both values were raised to clear 4.5:1 while staying in the
+same muted purple-grey family (dark: `#6b6690` → `#8580b0`; light:
+`#8b849e` → `#6f6886`) — check contrast before reusing `--text-faint` on
+a background other than `--surface`/`--bg`, since headroom is thinner
+than `--text-muted`'s.
+
+**Tab hierarchy fixed to match the page's existing convention:** the
+page has one rule for tab depth — filled pill = top-level switch
+(`.sport-tab-btn`, Football/NFL/MLB), underline = a filter nested inside
+it (`.tab-btn`, Over 1.5/First-Half/etc). Track record's day-tabs
+(top-level: pick a day) and market-tabs (nested: pick a market within
+that day) originally shipped backwards — underline on the outer day
+picker, filled pill on the inner market picker. Swapped so day-tabs are
+now filled pills and market-tabs are underlined, matching the rest of
+the page. Keep this precedent for any future nested-tab UI.
+
+**Dashboard (`dashboard.html`) was still on the pre-rebrand green
+palette** (`#189968` etc.) with a gradient primary button — both
+predate this doc's palette/no-gradient decisions above and were never
+migrated when the public site moved to pink/navy. Brought in sync:
+same token values as `index.html`'s light/dark blocks, gradient button
+replaced with solid `var(--accent)` + `#04140e` text (the same
+solid-accent-button pattern already used everywhere on the public
+site, e.g. `.tip-fab`, `.sport-tab-btn.active`). `--danger`/
+`--danger-weak` were left as they were — a separate red for error
+states is the same kind of legitimate semantic exception as `--won`
+and the live-red dot, not a second brand accent.

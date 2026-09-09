@@ -10,20 +10,20 @@
 <style>
   :root {
     color-scheme: light dark;
-    --bg: #f5f5f2; --surface: #ffffff; --border: #e6e6e1;
-    --text: #171715; --text-muted: #75756e; --text-faint: #9d9d95;
-    --accent: #189968; --accent-strong: #0f6e4b; --accent-bright: #22c98a; --accent-weak: #e4f4ec;
-    --track: #edede8; --danger: #b3261e; --danger-weak: #fbeceb;
+    --bg: #f5f4fa; --surface: #ffffff; --border: #ddd9ec;
+    --text: #14101f; --text-muted: #5c5670; --text-faint: #6f6886;
+    --accent: #ff0f50; --accent-strong: #d90d44; --accent-weak: #ffe0e8;
+    --track: #e6e2f0; --danger: #b3261e; --danger-weak: #fbeceb;
     --radius: 14px; --radius-sm: 8px;
     --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
     --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #101012; --surface: #19191d; --border: #29292f;
-      --text: #f1f1f2; --text-muted: #9c9ca4; --text-faint: #6f6f77;
-      --accent: #33dd9a; --accent-strong: #57e8ae; --accent-bright: #6ef4bf; --accent-weak: #16332a;
-      --track: #232328; --danger: #ff6b61; --danger-weak: #2c1a19;
+      --bg: #08071a; --surface: #12112a; --border: #29274a;
+      --text: #f1eff8; --text-muted: #a29ec2; --text-faint: #8580b0;
+      --accent: #ff0f50; --accent-strong: #ff5079; --accent-weak: #3a0f22;
+      --track: #201f3d; --danger: #ff6b61; --danger-weak: #2c1a19;
     }
   }
   * { box-sizing: border-box; }
@@ -53,7 +53,7 @@
   }
   button:active { transform: scale(0.97); }
   button:disabled { opacity: 0.5; cursor: not-allowed; }
-  .btn-primary { background: linear-gradient(150deg, var(--accent-strong), var(--accent-bright)); color: #06251a; }
+  .btn-primary { background: var(--accent); color: #04140e; }
   .btn-secondary { background: var(--track); color: var(--text); }
   .btn-danger { background: var(--danger-weak); color: var(--danger); padding: 6px 12px; font-size: 0.78rem; margin-top: 0; }
   .status { font-size: 0.82rem; margin-top: 10px; padding: 10px 12px; border-radius: var(--radius-sm); display: none; }
