@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-09T10:36:46.636Z",
+  "generatedAt": "2026-09-09T13:08:24.677Z",
   "gameDate": "20260909",
   "source": "Tank01 MLB Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, Fanatics, Hard Rock, Rivers Casino, and others)",
-  "quotaUsed": 3,
-  "quotaRemaining": 997,
+  "quotaUsed": 4,
+  "quotaRemaining": 996,
   "moneyline": [
     {
       "fixture": "Cincinnati Reds v Los Angeles Dodgers",
       "gameDate": "2026-09-09",
       "favoriteTeam": "Los Angeles Dodgers",
-      "fairProbability": 0.713,
+      "fairProbability": 0.714,
       "bookCount": 8
     },
     {
@@ -37,7 +37,7 @@
       "fixture": "Toronto Blue Jays v Athletics",
       "gameDate": "2026-09-09",
       "favoriteTeam": "Toronto Blue Jays",
-      "fairProbability": 0.625,
+      "fairProbability": 0.623,
       "bookCount": 8
     },
     {
@@ -79,21 +79,21 @@
       "fixture": "St. Louis Cardinals v San Francisco Giants",
       "gameDate": "2026-09-09",
       "favoriteTeam": "St. Louis Cardinals",
-      "fairProbability": 0.532,
+      "fairProbability": 0.537,
       "bookCount": 8
     },
     {
       "fixture": "New York Mets v Miami Marlins",
       "gameDate": "2026-09-09",
       "favoriteTeam": "Miami Marlins",
-      "fairProbability": 0.528,
+      "fairProbability": 0.532,
       "bookCount": 8
     },
     {
       "fixture": "Tampa Bay Rays v Atlanta Braves",
       "gameDate": "2026-09-09",
       "favoriteTeam": "Atlanta Braves",
-      "fairProbability": 0.526,
+      "fairProbability": 0.531,
       "bookCount": 8
     },
     {
@@ -106,8 +106,8 @@
     {
       "fixture": "Cleveland Guardians v Baltimore Orioles",
       "gameDate": "2026-09-09",
-      "favoriteTeam": "Baltimore Orioles",
-      "fairProbability": 0.5,
+      "favoriteTeam": "Cleveland Guardians",
+      "fairProbability": 0.511,
       "bookCount": 8
     }
   ],

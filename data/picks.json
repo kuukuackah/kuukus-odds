@@ -1,8 +1,11 @@
 {
-  "generatedAt": "2026-09-09T10:36:41.981Z",
+  "generatedAt": "2026-09-09T13:08:21.190Z",
   "apiCallsUsed": 9,
   "apiQuotaUsed": 500,
   "apiQuotaRemaining": 0,
+  "fh05ApiCallsUsed": 0,
+  "fh05ApiQuotaUsed": null,
+  "fh05ApiQuotaRemaining": null,
   "over1_5": [],
   "over1_5_excluded": [],
   "firstHalfOver0_5": [],
