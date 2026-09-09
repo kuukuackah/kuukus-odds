@@ -2,7 +2,7 @@ name: Daily Odds Update
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # 06:00 UTC daily
+    - cron: '13 4 * * *'  # targets ~06:00 UTC/Ghana time; scheduled off the hour and ~2hr early since GitHub queues jobs on round hours (06:00 was consistently starting 4-5hrs late)
   workflow_dispatch: {}   # lets you click "Run workflow" to test manually
 
 permissions:
