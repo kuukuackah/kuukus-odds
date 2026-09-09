@@ -20,6 +20,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 
 const API_BASE = 'https://www.thesportsdb.com/api/v1/json/123';
 const MAX_SCORED_KEYS = 2000; // dedup safety net against unbounded growth
+const HISTORY_DAYS = 14; // how many days of the results list the front end shows
 const FINISH_BUFFER_MS = 3 * 60 * 60 * 1000; // don't look up a fixture until 3hrs after kickoff
 
 function normalizeTeam(name) {
@@ -112,6 +113,7 @@ function emptyRecord() {
       winOrDraw: { hits: 0, total: 0 },
     },
     scoredFixtureKeys: [],
+    history: [],
   };
 }
 
@@ -122,6 +124,7 @@ async function main() {
   for (const market of ['over1_5', 'straightWin', 'winOrDraw']) {
     record.markets[market] ||= { hits: 0, total: 0 };
   }
+  record.history ||= [];
 
   const scoredKeys = new Set(record.scoredFixtureKeys || []);
   const now = new Date();
@@ -167,9 +170,15 @@ async function main() {
 
     record.markets[c.market].total += 1;
     if (hit) record.markets[c.market].hits += 1;
+    record.history.push({ date: c.date, market: c.market, fixture: `${c.home} v ${c.away}`, hit });
     scoredKeys.add(c.key);
     scoredCount += 1;
   }
+
+  const historyCutoff = new Date(now.getTime() - HISTORY_DAYS * 24 * 60 * 60 * 1000);
+  record.history = record.history
+    .filter((h) => new Date(h.date) >= historyCutoff)
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 
   record.scoredFixtureKeys = [...scoredKeys].slice(-MAX_SCORED_KEYS);
   record.updatedAt = now.toISOString();

@@ -16,8 +16,10 @@ A static site that updates once a day with soccer fixtures ranked by fair
   Empty on non-game days — that's expected, not a bug.
 - **Track record** — a running hit-rate for Over 1.5, Straight Win, and Win
   or Draw, checked against real final scores from TheSportsDB (free,
-  separate from every other quota in this project). First-half Over 0.5
-  isn't tracked — no free source exposes half-time scores.
+  separate from every other quota in this project), plus a day-by-day list
+  of the actual fixtures (won ones in green, lost ones crossed out).
+  First-half Over 0.5 isn't tracked — no free source exposes half-time
+  scores.
 
 **The rule this project is built around:** if no bookmaker posts a usable
 line for a fixture, that fixture is left out of the list — never estimated.

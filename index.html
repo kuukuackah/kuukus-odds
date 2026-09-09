@@ -27,6 +27,7 @@
     --accent-strong: #d90d44;
     --accent-weak: #ffe0e8;
     --track: #e6e2f0;
+    --won: #1a9c5c;
     --radius: 12px;
     --radius-sm: 8px;
     --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
@@ -47,6 +48,7 @@
       --accent-strong: #ff5079;
       --accent-weak: #3a0f22;
       --track: #201f3d;
+      --won: #3ddc84;
     }
   }
   :root[data-theme="dark"] {
@@ -61,6 +63,7 @@
     --accent-strong: #ff5079;
     --accent-weak: #3a0f22;
     --track: #201f3d;
+    --won: #3ddc84;
   }
   * { box-sizing: border-box; }
   body {
@@ -843,6 +846,65 @@
     line-height: 1.6;
   }
 
+  .track-history {
+    margin-top: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 2px 16px;
+  }
+  .track-history summary {
+    cursor: pointer;
+    padding: 12px 0;
+    font-size: 0.84rem;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .track-history summary::-webkit-details-marker { display: none; }
+  .track-history summary::before {
+    content: '▸';
+    font-size: 0.65rem;
+    color: var(--accent);
+    transition: transform 160ms var(--ease-out);
+  }
+  .track-history[open] summary::before { transform: rotate(90deg); }
+  .track-history-day { padding: 4px 0 14px; }
+  .track-history-day-label {
+    font-family: var(--font-display);
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 6px;
+  }
+  .track-history-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 0.84rem;
+    border-top: 1px solid var(--border);
+  }
+  .track-history-day .track-history-row:first-of-type { border-top: none; }
+  .track-history-market {
+    flex: none;
+    font-size: 0.66rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--text-faint);
+    background: var(--track);
+    border-radius: 999px;
+    padding: 3px 8px;
+  }
+  .track-history-fixture { min-width: 0; overflow-wrap: break-word; }
+  .track-history-row.hit .track-history-fixture { color: var(--won); font-weight: 600; }
+  .track-history-row.miss .track-history-fixture { color: var(--text-faint); text-decoration: line-through; }
+
   /* ---------- Section heading ---------- */
   .section-block { margin-top: 36px; }
   .section-heading {
@@ -1270,6 +1332,10 @@
     <div class="main-col">
       <div class="stat-strip" id="stat-strip"></div>
       <div class="stat-strip" id="track-record-strip" style="margin-top:8px"></div>
+      <details class="track-history" id="track-history" hidden>
+        <summary>Recent results</summary>
+        <div id="track-history-content"></div>
+      </details>
 
       <nav class="sport-tabs" id="sport-tabs">
         <button class="sport-tab-btn active" data-sport="football">
@@ -1852,6 +1918,38 @@
     strip.innerHTML = cards.join('');
   }
 
+  const MARKET_LABELS = { over1_5: 'Over 1.5', straightWin: 'Straight Win', winOrDraw: 'Win/Draw' };
+
+  function renderTrackHistory(record) {
+    const container = document.getElementById('track-history');
+    const content = document.getElementById('track-history-content');
+    const history = record?.history || [];
+    if (history.length === 0) { container.hidden = true; return; }
+    container.hidden = false;
+
+    const byDate = new Map();
+    for (const h of history) {
+      if (!byDate.has(h.date)) byDate.set(h.date, []);
+      byDate.get(h.date).push(h);
+    }
+    const dates = [...byDate.keys()].sort((a, b) => (a < b ? 1 : -1));
+
+    content.innerHTML = dates
+      .map((date) => {
+        const dayLabel = new Date(`${date}T12:00:00Z`).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
+        const rows = byDate.get(date)
+          .map((h) => `
+            <div class="track-history-row ${h.hit ? 'hit' : 'miss'}">
+              <span class="track-history-market">${MARKET_LABELS[h.market] || h.market}</span>
+              <span class="track-history-fixture">${escapeHtml(h.fixture)}</span>
+            </div>
+          `)
+          .join('');
+        return `<div class="track-history-day"><p class="track-history-day-label">${dayLabel}</p>${rows}</div>`;
+      })
+      .join('');
+  }
+
   function nextUpdateLabel() {
     const now = new Date();
     const next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 6, 0, 0));
@@ -2030,7 +2128,9 @@
       fetch(`data/track-record.json?_=${Date.now()}`).then((r) => r.json()),
     ]);
 
-    renderTrackRecord(trackRecordResult.status === 'fulfilled' ? trackRecordResult.value : null);
+    const trackRecordData = trackRecordResult.status === 'fulfilled' ? trackRecordResult.value : null;
+    renderTrackRecord(trackRecordData);
+    renderTrackHistory(trackRecordData);
 
     if (teamBadgesResult.status === 'fulfilled') teamBadges = teamBadgesResult.value || {};
     if (leagueBadgesResult.status === 'fulfilled') {
