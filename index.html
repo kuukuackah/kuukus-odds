@@ -871,36 +871,71 @@
     transition: transform 160ms var(--ease-out);
   }
   .track-history[open] summary::before { transform: rotate(90deg); }
-  .track-history-day { padding: 4px 0 14px; }
-  .track-history-day-label {
-    font-family: var(--font-display);
-    font-size: 0.74rem;
+
+  .day-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 2px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .day-tabs::-webkit-scrollbar { display: none; }
+  .day-tab {
+    flex: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 6px 10px 8px;
+    text-align: center;
+    cursor: pointer;
+    font-family: var(--font-body);
+    color: var(--text);
+  }
+  .day-tab-label {
+    display: block;
+    font-size: 0.68rem;
     font-weight: 700;
-    color: var(--text-faint);
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
+    color: var(--text-faint);
+  }
+  .day-tab-date {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .day-tab.is-today .day-tab-label,
+  .day-tab.is-today .day-tab-date { color: var(--accent-strong); }
+  .day-tab.active { border-bottom-color: var(--accent); }
+
+  .market-section { margin-bottom: 18px; }
+  .market-section:last-child { margin-bottom: 0; }
+  .market-section-heading {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
     margin: 0 0 6px;
+  }
+  .market-section-empty {
+    font-size: 0.8rem;
+    color: var(--text-faint);
+    font-style: italic;
+    padding: 4px 0;
   }
   .track-history-row {
     display: flex;
     align-items: center;
-    gap: 8px;
     padding: 6px 0;
     font-size: 0.84rem;
     border-top: 1px solid var(--border);
   }
-  .track-history-day .track-history-row:first-of-type { border-top: none; }
-  .track-history-market {
-    flex: none;
-    font-size: 0.66rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    color: var(--text-faint);
-    background: var(--track);
-    border-radius: 999px;
-    padding: 3px 8px;
-  }
+  .market-section .track-history-row:first-of-type { border-top: none; }
   .track-history-fixture { min-width: 0; overflow-wrap: break-word; }
   .track-history-row.hit .track-history-fixture { color: var(--won); font-weight: 600; }
   .track-history-row.miss .track-history-fixture { color: var(--text-faint); text-decoration: line-through; }
@@ -1334,6 +1369,7 @@
       <div class="stat-strip" id="track-record-strip" style="margin-top:8px"></div>
       <details class="track-history" id="track-history" hidden>
         <summary>Recent results</summary>
+        <div class="day-tabs" id="day-tabs"></div>
         <div id="track-history-content"></div>
       </details>
 
@@ -1918,36 +1954,102 @@
     strip.innerHTML = cards.join('');
   }
 
-  const MARKET_LABELS = { over1_5: 'Over 1.5', straightWin: 'Straight Win', winOrDraw: 'Win/Draw' };
+  // Only markets with a free, real results source ever populate here —
+  // first-half Over 0.5 is left out entirely (see fetch-results.js), not
+  // shown as an empty placeholder.
+  const MARKET_ORDER = ['over1_5', 'winOrDraw', 'straightWin'];
+  const MARKET_LABELS = { over1_5: 'Over 1.5', straightWin: 'Straight Win', winOrDraw: 'Win or Draw' };
 
-  function renderTrackHistory(record) {
-    const container = document.getElementById('track-history');
-    const content = document.getElementById('track-history-content');
-    const history = record?.history || [];
-    if (history.length === 0) { container.hidden = true; return; }
-    container.hidden = false;
+  let historyByDate = new Map();
+  let selectedHistoryDate = null;
 
-    const byDate = new Map();
-    for (const h of history) {
-      if (!byDate.has(h.date)) byDate.set(h.date, []);
-      byDate.get(h.date).push(h);
+  function last7Days() {
+    const days = [];
+    const today = new Date();
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      days.push(d.toISOString().slice(0, 10));
     }
-    const dates = [...byDate.keys()].sort((a, b) => (a < b ? 1 : -1));
+    return days;
+  }
 
-    content.innerHTML = dates
+  function renderDayTabs() {
+    const tabs = document.getElementById('day-tabs');
+    const days = last7Days();
+    const todayStr = days[days.length - 1];
+    tabs.innerHTML = days
       .map((date) => {
-        const dayLabel = new Date(`${date}T12:00:00Z`).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
-        const rows = byDate.get(date)
+        const d = new Date(`${date}T12:00:00Z`);
+        const isToday = date === todayStr;
+        const label = isToday ? 'Today' : d.toLocaleDateString(undefined, { weekday: 'short' });
+        const dateLabel = d.toLocaleDateString(undefined, { day: '2-digit', month: '2-digit' });
+        const active = date === selectedHistoryDate;
+        return `
+          <button type="button" class="day-tab ${isToday ? 'is-today' : ''} ${active ? 'active' : ''}" data-date="${date}">
+            <span class="day-tab-label">${label}</span>
+            <span class="day-tab-date">${dateLabel}</span>
+          </button>
+        `;
+      })
+      .join('');
+  }
+
+  function renderSelectedDay() {
+    const content = document.getElementById('track-history-content');
+    const entries = historyByDate.get(selectedHistoryDate) || [];
+
+    if (entries.length === 0) {
+      content.innerHTML = `<p class="market-section-empty">No settled fixtures for this day.</p>`;
+      return;
+    }
+
+    const byMarket = new Map();
+    for (const h of entries) {
+      if (!byMarket.has(h.market)) byMarket.set(h.market, []);
+      byMarket.get(h.market).push(h);
+    }
+
+    content.innerHTML = MARKET_ORDER.filter((market) => byMarket.has(market))
+      .map((market) => {
+        const rows = byMarket.get(market)
           .map((h) => `
             <div class="track-history-row ${h.hit ? 'hit' : 'miss'}">
-              <span class="track-history-market">${MARKET_LABELS[h.market] || h.market}</span>
               <span class="track-history-fixture">${escapeHtml(h.fixture)}</span>
             </div>
           `)
           .join('');
-        return `<div class="track-history-day"><p class="track-history-day-label">${dayLabel}</p>${rows}</div>`;
+        return `<div class="market-section"><p class="market-section-heading">${MARKET_LABELS[market]}</p>${rows}</div>`;
       })
       .join('');
+  }
+
+  document.getElementById('day-tabs').addEventListener('click', (e) => {
+    const btn = e.target.closest('.day-tab');
+    if (!btn) return;
+    selectedHistoryDate = btn.dataset.date;
+    renderDayTabs();
+    renderSelectedDay();
+  });
+
+  function renderTrackHistory(record) {
+    const container = document.getElementById('track-history');
+    const history = record?.history || [];
+    if (history.length === 0) { container.hidden = true; return; }
+    container.hidden = false;
+
+    historyByDate = new Map();
+    for (const h of history) {
+      if (!historyByDate.has(h.date)) historyByDate.set(h.date, []);
+      historyByDate.get(h.date).push(h);
+    }
+
+    const days = last7Days();
+    const mostRecentWithData = [...historyByDate.keys()].sort((a, b) => (a < b ? 1 : -1))[0];
+    selectedHistoryDate = days.includes(mostRecentWithData) ? mostRecentWithData : days[days.length - 1];
+
+    renderDayTabs();
+    renderSelectedDay();
   }
 
   function nextUpdateLabel() {
