@@ -1,5 +1,5 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-09-10T07:16:38.520Z",
   "markets": {
     "over1_5": {
       "hits": 0,
@@ -7,13 +7,29 @@
     },
     "straightWin": {
       "hits": 0,
-      "total": 0
+      "total": 1
     },
     "winOrDraw": {
-      "hits": 0,
-      "total": 0
+      "hits": 1,
+      "total": 1
     }
   },
-  "scoredFixtureKeys": [],
-  "history": []
+  "scoredFixtureKeys": [
+    "straightWin|2026-09-09|defensores de belgrano|los andes",
+    "winOrDraw|2026-09-09|defensores de belgrano|los andes"
+  ],
+  "history": [
+    {
+      "date": "2026-09-09",
+      "market": "straightWin",
+      "fixture": "Defensores de Belgrano v Los Andes",
+      "hit": false
+    },
+    {
+      "date": "2026-09-09",
+      "market": "winOrDraw",
+      "fixture": "Defensores de Belgrano v Los Andes",
+      "hit": true
+    }
+  ]
 }

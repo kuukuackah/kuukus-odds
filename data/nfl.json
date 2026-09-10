@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-09T13:08:23.905Z",
-  "gameDate": "20260909",
+  "generatedAt": "2026-09-10T07:16:41.936Z",
+  "gameDate": "20260910",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 13,
-  "quotaRemaining": 987,
+  "quotaUsed": 14,
+  "quotaRemaining": 986,
   "moneyline": [],
   "moneyline_excluded": [
     {
-      "fixture": "New England Patriots v Seattle Seahawks",
-      "gameDate": "2026-09-09",
+      "fixture": "San Francisco 49ers v Los Angeles Rams",
+      "gameDate": "2026-09-10",
       "reason": "no usable moneyline price"
     }
   ]
