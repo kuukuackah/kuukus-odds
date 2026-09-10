@@ -31,5 +31,8 @@
       "fixture": "Defensores de Belgrano v Los Andes",
       "hit": true
     }
-  ]
+  ],
+  "apiFootballCallsUsed": 0,
+  "apiFootballQuotaUsed": null,
+  "apiFootballQuotaRemaining": null
 }

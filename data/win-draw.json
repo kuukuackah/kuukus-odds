@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-10T07:16:41.381Z",
+  "generatedAt": "2026-09-10T08:41:36.167Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 14,
-  "quotaRemaining": 86,
+  "quotaUsed": 15,
+  "quotaRemaining": 85,
   "winOrDraw": [
     {
       "fixture": "Nyva Vinnytsia v Dinamo Kiev",
