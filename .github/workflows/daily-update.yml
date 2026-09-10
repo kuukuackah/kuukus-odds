@@ -24,8 +24,10 @@ jobs:
         run: npm install
 
       - name: Score yesterday's picks against real results
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: npm run fetch:results
-        continue-on-error: true # free TheSportsDB lookup — never block the rest of the run
+        continue-on-error: true # separate account/quota — never block the rest of the run
         # must run before the fetch steps below overwrite picks.json / win-draw.json
 
       - name: Fetch odds

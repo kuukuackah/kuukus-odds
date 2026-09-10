@@ -114,6 +114,11 @@
       <div class="quota-stat"><div class="v">—</div><div class="l">Calls used (month)</div></div>
       <div class="quota-stat"><div class="v">—</div><div class="l">Calls remaining (month)</div></div>
     </div>
+    <p class="hint" style="margin-top:16px">Track record scoring — API-Football (separate account, resets daily not monthly).</p>
+    <div class="quota-grid" id="quota-grid-apifootball">
+      <div class="quota-stat"><div class="v">—</div><div class="l">Calls used (today)</div></div>
+      <div class="quota-stat"><div class="v">—</div><div class="l">Calls remaining (today)</div></div>
+    </div>
   </div>
 
   <div class="card">
@@ -334,6 +339,15 @@
       grid.innerHTML = `
         <div class="quota-stat"><div class="v">${data.quotaUsed ?? '—'}</div><div class="l">Calls used (month)</div></div>
         <div class="quota-stat"><div class="v">${data.quotaRemaining ?? '—'}</div><div class="l">Calls remaining (month)</div></div>
+      `;
+    } catch {}
+    try {
+      const res = await fetch(`data/track-record.json?_=${Date.now()}`);
+      const data = await res.json();
+      const grid = document.getElementById('quota-grid-apifootball');
+      grid.innerHTML = `
+        <div class="quota-stat"><div class="v">${data.apiFootballQuotaUsed ?? '—'}</div><div class="l">Calls used (today)</div></div>
+        <div class="quota-stat"><div class="v">${data.apiFootballQuotaRemaining ?? '—'}</div><div class="l">Calls remaining (today)</div></div>
       `;
     } catch {}
   }

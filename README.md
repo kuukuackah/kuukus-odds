@@ -15,11 +15,11 @@ A static site that updates once a day with soccer fixtures ranked by fair
   BetRivers, BallyBet), de-vigged and medianed the same way as Over 1.5.
   Empty on non-game days — that's expected, not a bug.
 - **Track record** — a running hit-rate for Over 1.5, Straight Win, and Win
-  or Draw, checked against real final scores from TheSportsDB (free,
-  separate from every other quota in this project), plus a day-by-day list
-  of the actual fixtures (won ones in green, lost ones crossed out).
-  First-half Over 0.5 isn't tracked — no free source exposes half-time
-  scores.
+  or Draw, checked against real final scores from API-Football (free tier,
+  100 requests/day, separate account from every other quota in this
+  project), plus a day-by-day list of the actual fixtures (won ones in
+  green, lost ones crossed out). First-half Over 0.5 isn't tracked — no
+  free source exposes half-time scores.
 
 **The rule this project is built around:** if no bookmaker posts a usable
 line for a fixture, that fixture is left out of the list — never estimated.
@@ -53,10 +53,18 @@ reads that JSON.
    the round hour since GitHub queues scheduled jobs and round-hour cron
    times see the worst delays), and commits the updated JSON.
 5. Before any of that, `scripts/fetch-results.js` checks the *previous*
-   day's committed picks against real final scores from TheSportsDB (free,
-   one call per fixture date, no Odds API/RapidAPI quota spent) and updates
-   the running tally in `data/track-record.json`. It only scores a fixture
-   once it's confident it found the right match by team name — anything it
+   day's committed picks against real final scores from
+   [API-Football](https://www.api-football.com/) (free tier, own account,
+   no Odds API/RapidAPI quota spent) and updates the running tally in
+   `data/track-record.json`. One call per fixture date returns every match
+   worldwide unpaginated — a previous version of this script used
+   TheSportsDB's free tier instead, which turned out to cap results at
+   exactly 3 events/day regardless of date (undocumented, found by
+   testing), making it unusable for this. It only scores a fixture once
+   it's confident it found the right match by team name (checking the
+   pick's date and the day after, since the two sources occasionally
+   bucket a late-night kickoff on different calendar days, and excluding
+   youth/reserve fixtures that share a parent club's name) — anything it
    can't confidently match is skipped, never guessed, and picked up again
    on a later run.
 
@@ -167,6 +175,22 @@ picks most days (unlike NFL's weekly cadence).
 Field names differ slightly from the NFL endpoint (`homeTeamML` vs
 `homeTeamMLOdds`, and `"even"` as a literal odds string for +100) —
 verified against the live API rather than assumed.
+
+## Getting an API-Football key (for track record scoring)
+
+`scripts/fetch-results.js` uses [API-Football](https://www.api-football.com/)
+to check final scores — a separate account from everything else above.
+
+1. Sign up free at [dashboard.api-football.com/register](https://dashboard.api-football.com/register)
+   — 100 requests/day on the free tier, resets daily at 00:00 UTC. Your
+   key covers every sport api-sports.io offers (basketball, baseball,
+   hockey, NFL, rugby, volleyball, handball, Formula 1, MMA — same key,
+   separate 100/day quota per sport, verified live), in case any of those
+   are worth adding later.
+2. Copy your key into `.env` as `API_FOOTBALL_KEY=...` for local runs (and
+   as a repo secret for the GitHub Action).
+3. This script only needs the base `fixtures` endpoint — no subscription
+   tiers or add-ons to pick, unlike the RapidAPI products above.
 
 ## Going live on GitHub
 
