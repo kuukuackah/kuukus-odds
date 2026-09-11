@@ -1699,13 +1699,22 @@
     const canSortByKickoff = KICKOFF_SORTABLE_SPORTS.has(activeSport);
     if (kickoffBtn) kickoffBtn.hidden = !canSortByKickoff;
     if (!canSortByKickoff && sortMode === 'kickoff') {
+      // Forced fallback, not a real choice — leaves userSortMode alone so
+      // it can be restored below once a kickoff-sortable sport is active again.
       sortMode = 'probability';
-      document.querySelectorAll('.sort-btn').forEach((b) => { b.classList.remove('active'); b.setAttribute('aria-checked', 'false'); });
-      const probabilityBtn = document.querySelector('.sort-btn[data-sort="probability"]');
-      probabilityBtn?.classList.add('active');
-      probabilityBtn?.setAttribute('aria-checked', 'true');
+      setActiveSortBtn('probability');
+      renderPanels();
+    } else if (canSortByKickoff && sortMode !== userSortMode) {
+      sortMode = userSortMode;
+      setActiveSortBtn(userSortMode);
       renderPanels();
     }
+  }
+  function setActiveSortBtn(mode) {
+    document.querySelectorAll('.sort-btn').forEach((b) => { b.classList.remove('active'); b.setAttribute('aria-checked', 'false'); });
+    const btn = document.querySelector(`.sort-btn[data-sort="${mode}"]`);
+    btn?.classList.add('active');
+    btn?.setAttribute('aria-checked', 'true');
   }
 
   // ---------- Sport tabs (top-level: Football, NFL, ...) ----------
@@ -2171,6 +2180,12 @@
   // someone scanning "what's on today," even though it's intentional under
   // Probability sort. Probability stays one tap away.
   let sortMode = 'kickoff';
+  // The user's actual preference, as opposed to `sortMode` above, which
+  // updateSortToggleAvailability() temporarily overrides to 'probability'
+  // on NFL/MLB (no intraday kickoff data there). Only a real click on a
+  // sort button changes this — switching back to Football restores it,
+  // instead of leaving the forced fallback in place as if it were chosen.
+  let userSortMode = 'kickoff';
   let leagueFilter = null; // a sport key (e.g. 'soccer_epl'), or null for all leagues
 
   function filterAndSort(list) {
@@ -2282,10 +2297,9 @@
   document.getElementById('sort-toggle').addEventListener('click', (e) => {
     const btn = e.target.closest('.sort-btn');
     if (!btn) return;
-    document.querySelectorAll('.sort-btn').forEach((b) => { b.classList.remove('active'); b.setAttribute('aria-checked', 'false'); });
-    btn.classList.add('active');
-    btn.setAttribute('aria-checked', 'true');
+    setActiveSortBtn(btn.dataset.sort);
     sortMode = btn.dataset.sort;
+    userSortMode = btn.dataset.sort;
     renderPanels();
   });
 
