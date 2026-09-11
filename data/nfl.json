@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-09-10T08:56:19.567Z",
-  "gameDate": "20260910",
+  "generatedAt": "2026-09-11T05:39:42.292Z",
+  "gameDate": "20260911",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 14,
-  "quotaRemaining": 986,
+  "quotaUsed": 15,
+  "quotaRemaining": 985,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "San Francisco 49ers v Los Angeles Rams",
-      "gameDate": "2026-09-10",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }

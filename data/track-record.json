@@ -1,24 +1,388 @@
 {
-  "updatedAt": "2026-09-10T07:16:38.520Z",
+  "updatedAt": "2026-09-11T05:39:36.266Z",
   "markets": {
     "over1_5": {
       "hits": 0,
       "total": 0
     },
     "straightWin": {
-      "hits": 0,
-      "total": 1
+      "hits": 13,
+      "total": 27
     },
     "winOrDraw": {
-      "hits": 1,
-      "total": 1
+      "hits": 23,
+      "total": 27
     }
   },
   "scoredFixtureKeys": [
     "straightWin|2026-09-09|defensores de belgrano|los andes",
-    "winOrDraw|2026-09-09|defensores de belgrano|los andes"
+    "winOrDraw|2026-09-09|defensores de belgrano|los andes",
+    "straightWin|2026-09-10|ifk haninge|djurgardens",
+    "straightWin|2026-09-10|sailiya doha|sadd doha",
+    "straightWin|2026-09-10|panathinaikos|kifisia",
+    "straightWin|2026-09-10|muharraq|manama club",
+    "straightWin|2026-09-10|dinamo tbilisi|meshakhte tkibuli",
+    "straightWin|2026-09-10|psv eindhoven|shakhtar donetsk",
+    "straightWin|2026-09-10|jazira abu dhabi|nasr dubai",
+    "straightWin|2026-09-10|estrela da amadora|braga",
+    "straightWin|2026-09-10|dinamo samarqand|pfk qizilqum",
+    "straightWin|2026-09-10|ostersunds|brage",
+    "straightWin|2026-09-10|ironi modi in|bnei yehuda",
+    "straightWin|2026-09-10|ain|wasl dubai",
+    "straightWin|2026-09-10|hapoel kfar shalem|maccabi ahi nazareth",
+    "straightWin|2026-09-10|falkenbergs|osters",
+    "straightWin|2026-09-10|sundsvall|orebro",
+    "straightWin|2026-09-10|es ben aknoun|us biskra",
+    "straightWin|2026-09-10|buducnost podgorica|jezero plav",
+    "straightWin|2026-09-10|gagra|torpedo kutaisi",
+    "straightWin|2026-09-10|pfk andijan|kokand 1912",
+    "straightWin|2026-09-10|varbergs bois|norrkoping",
+    "straightWin|2026-09-10|super nova riga|fk tukums 2000",
+    "straightWin|2026-09-10|shamal|wakrah",
+    "straightWin|2026-09-10|xorazm urganch|sogdiana jizzakh",
+    "straightWin|2026-09-10|shinnik yaroslavl|torpedo moskva",
+    "straightWin|2026-09-10|stevenage|luton",
+    "straightWin|2026-09-10|hapoel kfar saba|maccabi kiryat gat",
+    "winOrDraw|2026-09-10|ifk haninge|djurgardens",
+    "winOrDraw|2026-09-10|sailiya doha|sadd doha",
+    "winOrDraw|2026-09-10|panathinaikos|kifisia",
+    "winOrDraw|2026-09-10|muharraq|manama club",
+    "winOrDraw|2026-09-10|dinamo tbilisi|meshakhte tkibuli",
+    "winOrDraw|2026-09-10|psv eindhoven|shakhtar donetsk",
+    "winOrDraw|2026-09-10|jazira abu dhabi|nasr dubai",
+    "winOrDraw|2026-09-10|estrela da amadora|braga",
+    "winOrDraw|2026-09-10|dinamo samarqand|pfk qizilqum",
+    "winOrDraw|2026-09-10|ironi modi in|bnei yehuda",
+    "winOrDraw|2026-09-10|ostersunds|brage",
+    "winOrDraw|2026-09-10|ain|wasl dubai",
+    "winOrDraw|2026-09-10|buducnost podgorica|jezero plav",
+    "winOrDraw|2026-09-10|hapoel kfar shalem|maccabi ahi nazareth",
+    "winOrDraw|2026-09-10|pfk andijan|kokand 1912",
+    "winOrDraw|2026-09-10|es ben aknoun|us biskra",
+    "winOrDraw|2026-09-10|sundsvall|orebro",
+    "winOrDraw|2026-09-10|falkenbergs|osters",
+    "winOrDraw|2026-09-10|gagra|torpedo kutaisi",
+    "winOrDraw|2026-09-10|super nova riga|fk tukums 2000",
+    "winOrDraw|2026-09-10|shinnik yaroslavl|torpedo moskva",
+    "winOrDraw|2026-09-10|varbergs bois|norrkoping",
+    "winOrDraw|2026-09-10|asteras tripolis|aris thessaloniki",
+    "winOrDraw|2026-09-10|stevenage|luton",
+    "winOrDraw|2026-09-10|hapoel kfar saba|maccabi kiryat gat",
+    "winOrDraw|2026-09-10|bokelj kotor|otrant olympic ulcinj"
   ],
   "history": [
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "IFK Haninge v Djurgardens",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Al-Sailiya SC Doha v Al-Sadd SC Doha",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Panathinaikos v Kifisia",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Al-Muharraq v Manama Club",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Dinamo Tbilisi v Meshakhte Tkibuli",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "PSV Eindhoven v Shakhtar Donetsk",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Al-Jazira Abu Dhabi v Al-Nasr Dubai",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Estrela da Amadora v SC Braga",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Dinamo Samarqand v PFK Qizilqum",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Ostersunds v Brage",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Ironi Modi'in v Bnei Yehuda",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Al-Ain FC v Al-Wasl Dubai",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Hapoel Kfar Shalem v Maccabi Ahi Nazareth",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Falkenbergs v Osters",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Sundsvall v Orebro",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "ES Ben Aknoun v US Biskra",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Buducnost Podgorica v Jezero Plav",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Gagra v Torpedo Kutaisi",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "PFK Andijan v Kokand 1912",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Varbergs BoIS v Norrkoping",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Super Nova Riga v FK Tukums 2000",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Al-Shamal SC v Al-Wakrah SC",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Xorazm Urganch v Sogdiana Jizzakh",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Shinnik Yaroslavl v Torpedo Moskva",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Stevenage v Luton",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "straightWin",
+      "fixture": "Hapoel Kfar Saba v Maccabi Kiryat Gat",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "IFK Haninge v Djurgardens",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Al-Sailiya SC Doha v Al-Sadd SC Doha",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Panathinaikos v Kifisia",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Al-Muharraq v Manama Club",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Dinamo Tbilisi v Meshakhte Tkibuli",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "PSV Eindhoven v Shakhtar Donetsk",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Al-Jazira Abu Dhabi v Al-Nasr Dubai",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Estrela da Amadora v SC Braga",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Dinamo Samarqand v PFK Qizilqum",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Ironi Modi'in v Bnei Yehuda",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Ostersunds v Brage",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Al-Ain FC v Al-Wasl Dubai",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Buducnost Podgorica v Jezero Plav",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Hapoel Kfar Shalem v Maccabi Ahi Nazareth",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "PFK Andijan v Kokand 1912",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "ES Ben Aknoun v US Biskra",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Sundsvall v Orebro",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Falkenbergs v Osters",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Gagra v Torpedo Kutaisi",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Super Nova Riga v FK Tukums 2000",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Shinnik Yaroslavl v Torpedo Moskva",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Varbergs BoIS v Norrkoping",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Asteras Tripolis v Aris Thessaloniki",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Stevenage v Luton",
+      "hit": false
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Hapoel Kfar Saba v Maccabi Kiryat Gat",
+      "hit": true
+    },
+    {
+      "date": "2026-09-10",
+      "market": "winOrDraw",
+      "fixture": "Bokelj Kotor v Otrant-Olympic Ulcinj",
+      "hit": false
+    },
     {
       "date": "2026-09-09",
       "market": "straightWin",
@@ -32,7 +396,7 @@
       "hit": true
     }
   ],
-  "apiFootballCallsUsed": 0,
-  "apiFootballQuotaUsed": null,
-  "apiFootballQuotaRemaining": null
+  "apiFootballCallsUsed": 2,
+  "apiFootballQuotaUsed": 2,
+  "apiFootballQuotaRemaining": 98
 }
