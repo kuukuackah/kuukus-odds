@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-11T05:39:36.266Z",
+  "updatedAt": "2026-09-12T04:27:40.093Z",
   "markets": {
     "over1_5": {
       "hits": 0,
       "total": 0
     },
     "straightWin": {
-      "hits": 13,
-      "total": 27
+      "hits": 28,
+      "total": 52
     },
     "winOrDraw": {
-      "hits": 23,
-      "total": 27
+      "hits": 46,
+      "total": 52
     }
   },
   "scoredFixtureKeys": [
@@ -68,9 +68,359 @@
     "winOrDraw|2026-09-10|asteras tripolis|aris thessaloniki",
     "winOrDraw|2026-09-10|stevenage|luton",
     "winOrDraw|2026-09-10|hapoel kfar saba|maccabi kiryat gat",
-    "winOrDraw|2026-09-10|bokelj kotor|otrant olympic ulcinj"
+    "winOrDraw|2026-09-10|bokelj kotor|otrant olympic ulcinj",
+    "straightWin|2026-09-11|johor darul takzim|negeri sembilan",
+    "straightWin|2026-09-11|buriram united|chiangrai united",
+    "straightWin|2026-09-11|lokomotiv tashkent|mash mubarek",
+    "straightWin|2026-09-11|copenhagen|horsens",
+    "straightWin|2026-09-11|tampines rovers|balestier khalsa",
+    "straightWin|2026-09-11|port bangkok|lamphun warriors",
+    "straightWin|2026-09-11|riga|auda kekava",
+    "straightWin|2026-09-11|trollhattans|utsiktens",
+    "straightWin|2026-09-11|zeleznicar pancevo|macva sabac",
+    "straightWin|2026-09-11|imishli fk|neftchi baku",
+    "straightWin|2026-09-11|lausanne ouchy|wil",
+    "straightWin|2026-09-11|sv ried|red bull salzburg",
+    "straightWin|2026-09-11|ogre united|fk liepaja",
+    "straightWin|2026-09-11|hacken|mjallby",
+    "straightWin|2026-09-11|fotbal trinec|karvina",
+    "straightWin|2026-09-11|shb da nang|nam dinh",
+    "straightWin|2026-09-11|faisaly harmah|ittihad jeddah",
+    "straightWin|2026-09-11|taborsko|kladno",
+    "straightWin|2026-09-11|admira wacker modling|kapfenberg",
+    "straightWin|2026-09-11|rayyan|ahli doha",
+    "straightWin|2026-09-11|dewa united banten|bhayangkara presisi lampung",
+    "straightWin|2026-09-11|rakow czestochowa|motor lublin",
+    "straightWin|2026-09-11|hobro ik|vejle",
+    "straightWin|2026-09-11|kyoto sanga|kashiwa reysol",
+    "straightWin|2026-09-11|buxoro fk|navbahor namangan",
+    "winOrDraw|2026-09-11|johor darul takzim|negeri sembilan",
+    "winOrDraw|2026-09-11|buriram united|chiangrai united",
+    "winOrDraw|2026-09-11|lokomotiv tashkent|mash mubarek",
+    "winOrDraw|2026-09-11|copenhagen|horsens",
+    "winOrDraw|2026-09-11|port bangkok|lamphun warriors",
+    "winOrDraw|2026-09-11|tampines rovers|balestier khalsa",
+    "winOrDraw|2026-09-11|riga|auda kekava",
+    "winOrDraw|2026-09-11|zeleznicar pancevo|macva sabac",
+    "winOrDraw|2026-09-11|imishli fk|neftchi baku",
+    "winOrDraw|2026-09-11|trollhattans|utsiktens",
+    "winOrDraw|2026-09-11|lausanne ouchy|wil",
+    "winOrDraw|2026-09-11|sv ried|red bull salzburg",
+    "winOrDraw|2026-09-11|shb da nang|nam dinh",
+    "winOrDraw|2026-09-11|hacken|mjallby",
+    "winOrDraw|2026-09-11|ogre united|fk liepaja",
+    "winOrDraw|2026-09-11|fotbal trinec|karvina",
+    "winOrDraw|2026-09-11|dewa united banten|bhayangkara presisi lampung",
+    "winOrDraw|2026-09-11|taborsko|kladno",
+    "winOrDraw|2026-09-11|faisaly harmah|ittihad jeddah",
+    "winOrDraw|2026-09-11|buxoro fk|navbahor namangan",
+    "winOrDraw|2026-09-11|admira wacker modling|kapfenberg",
+    "winOrDraw|2026-09-11|rayyan|ahli doha",
+    "winOrDraw|2026-09-11|rakow czestochowa|motor lublin",
+    "winOrDraw|2026-09-11|kyoto sanga|kashiwa reysol",
+    "winOrDraw|2026-09-11|hobro ik|vejle"
   ],
   "history": [
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Johor Darul Takzim v Negeri Sembilan FC",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Buriram United v Chiangrai United FC",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Lokomotiv Tashkent v Mash'al Mubarek",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "FC Copenhagen v Horsens",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Tampines Rovers v Balestier Khalsa",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Port Bangkok v Lamphun Warriors",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Riga FC v Auda Kekava",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Trollhattans v Utsiktens",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Zeleznicar Pancevo v Macva Sabac",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Imishli FK v Neftchi Baku",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Lausanne-Ouchy v Wil",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "SV Ried v Red Bull Salzburg",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Ogre United v FK Liepaja",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Hacken v Mjallby",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Fotbal Trinec v Karvina",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "SHB Da Nang v Nam Dinh FC",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Al-Faisaly Harmah v Al-Ittihad Jeddah",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Taborsko v SK Kladno",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Admira Wacker Modling v Kapfenberg",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Al-Rayyan SC v Al-Ahli SC Doha",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Dewa United Banten v Bhayangkara Presisi Lampung",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Rakow Czestochowa v Motor Lublin",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Hobro IK v Vejle",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Kyoto Sanga FC v Kashiwa Reysol",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "straightWin",
+      "fixture": "Buxoro FK v Navbahor Namangan",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Johor Darul Takzim v Negeri Sembilan FC",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Buriram United v Chiangrai United FC",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Lokomotiv Tashkent v Mash'al Mubarek",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "FC Copenhagen v Horsens",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Port Bangkok v Lamphun Warriors",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Tampines Rovers v Balestier Khalsa",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Riga FC v Auda Kekava",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Zeleznicar Pancevo v Macva Sabac",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Imishli FK v Neftchi Baku",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Trollhattans v Utsiktens",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Lausanne-Ouchy v Wil",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "SV Ried v Red Bull Salzburg",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "SHB Da Nang v Nam Dinh FC",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Hacken v Mjallby",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Ogre United v FK Liepaja",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Fotbal Trinec v Karvina",
+      "hit": false
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Dewa United Banten v Bhayangkara Presisi Lampung",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Taborsko v SK Kladno",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Al-Faisaly Harmah v Al-Ittihad Jeddah",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Buxoro FK v Navbahor Namangan",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Admira Wacker Modling v Kapfenberg",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Al-Rayyan SC v Al-Ahli SC Doha",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Rakow Czestochowa v Motor Lublin",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Kyoto Sanga FC v Kashiwa Reysol",
+      "hit": true
+    },
+    {
+      "date": "2026-09-11",
+      "market": "winOrDraw",
+      "fixture": "Hobro IK v Vejle",
+      "hit": true
+    },
     {
       "date": "2026-09-10",
       "market": "straightWin",
