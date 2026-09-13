@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-12T04:27:40.093Z",
+  "updatedAt": "2026-09-13T04:40:03.959Z",
   "markets": {
     "over1_5": {
       "hits": 0,
       "total": 0
     },
     "straightWin": {
-      "hits": 28,
-      "total": 52
+      "hits": 42,
+      "total": 74
     },
     "winOrDraw": {
-      "hits": 46,
-      "total": 52
+      "hits": 64,
+      "total": 73
     }
   },
   "scoredFixtureKeys": [
@@ -118,9 +118,310 @@
     "winOrDraw|2026-09-11|rayyan|ahli doha",
     "winOrDraw|2026-09-11|rakow czestochowa|motor lublin",
     "winOrDraw|2026-09-11|kyoto sanga|kashiwa reysol",
-    "winOrDraw|2026-09-11|hobro ik|vejle"
+    "winOrDraw|2026-09-11|hobro ik|vejle",
+    "straightWin|2026-09-12|differdange|etzella ettelbruck",
+    "straightWin|2026-09-12|fci levadia tallinn|parnu vaprus",
+    "straightWin|2026-09-12|olympiacos piraeus|ofi crete",
+    "straightWin|2026-09-12|chelsea|hull city",
+    "straightWin|2026-09-12|glentoran|bangor",
+    "straightWin|2026-09-12|twente|ado den haag",
+    "straightWin|2026-09-12|borussia dortmund|paderborn",
+    "straightWin|2026-09-12|levanger fk|follo",
+    "straightWin|2026-09-12|chippa united|mamelodi sundowns",
+    "straightWin|2026-09-12|hammarby talang ff|sollentuna fk",
+    "straightWin|2026-09-12|sotra|il sandviken",
+    "straightWin|2026-09-12|portadown|larne",
+    "straightWin|2026-09-12|cska 1948 sofia|dunav ruse",
+    "straightWin|2026-09-12|zenit sankt peterburg|lokomotiv moskva",
+    "straightWin|2026-09-12|boluspor|pendikspor",
+    "straightWin|2026-09-12|ha noi|song lam nghe an",
+    "straightWin|2026-09-12|liverpool|fulham",
+    "straightWin|2026-09-12|ifk goteborg|halmstads",
+    "straightWin|2026-09-12|nk osijek|dinamo zagreb",
+    "straightWin|2026-09-12|ross county|hibernian",
+    "straightWin|2026-09-12|dunfermline athletic|queen s park",
+    "straightWin|2026-09-12|forest green|gateshead",
+    "winOrDraw|2026-09-12|differdange|etzella ettelbruck",
+    "winOrDraw|2026-09-12|fci levadia tallinn|parnu vaprus",
+    "winOrDraw|2026-09-12|olympiacos piraeus|ofi crete",
+    "winOrDraw|2026-09-12|chelsea|hull city",
+    "winOrDraw|2026-09-12|glentoran|bangor",
+    "winOrDraw|2026-09-12|twente|ado den haag",
+    "winOrDraw|2026-09-12|borussia dortmund|paderborn",
+    "winOrDraw|2026-09-12|levanger fk|follo",
+    "winOrDraw|2026-09-12|chippa united|mamelodi sundowns",
+    "winOrDraw|2026-09-12|portadown|larne",
+    "winOrDraw|2026-09-12|hammarby talang ff|sollentuna fk",
+    "winOrDraw|2026-09-12|cska 1948 sofia|dunav ruse",
+    "winOrDraw|2026-09-12|sotra|il sandviken",
+    "winOrDraw|2026-09-12|zenit sankt peterburg|lokomotiv moskva",
+    "winOrDraw|2026-09-12|boluspor|pendikspor",
+    "winOrDraw|2026-09-12|ha noi|song lam nghe an",
+    "winOrDraw|2026-09-12|ifk goteborg|halmstads",
+    "winOrDraw|2026-09-12|dunfermline athletic|queen s park",
+    "winOrDraw|2026-09-12|liverpool|fulham",
+    "winOrDraw|2026-09-12|nk osijek|dinamo zagreb",
+    "winOrDraw|2026-09-12|ross county|hibernian"
   ],
   "history": [
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Differdange FC v Etzella Ettelbruck",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "FCI Levadia Tallinn v Parnu Vaprus",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Olympiacos Piraeus v OFI Crete",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Chelsea v Hull City",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Glentoran v Bangor FC",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Twente v ADO Den Haag",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Borussia Dortmund v Paderborn",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Levanger FK v Follo",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Chippa United v Mamelodi Sundowns",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Hammarby Talang FF v Sollentuna FK",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Sotra SK v IL Sandviken",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Portadown v Larne",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "CSKA 1948 Sofia v Dunav Ruse",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Zenit Sankt Peterburg v Lokomotiv Moskva",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Boluspor v Pendikspor",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Ha Noi FC v Song Lam Nghe An",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Liverpool v Fulham",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "IFK Goteborg v Halmstads",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "NK Osijek v Dinamo Zagreb",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Ross County v Hibernian",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Dunfermline Athletic v Queen's Park",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "straightWin",
+      "fixture": "Forest Green v Gateshead",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Differdange FC v Etzella Ettelbruck",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "FCI Levadia Tallinn v Parnu Vaprus",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Olympiacos Piraeus v OFI Crete",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Chelsea v Hull City",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Glentoran v Bangor FC",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Twente v ADO Den Haag",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Borussia Dortmund v Paderborn",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Levanger FK v Follo",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Chippa United v Mamelodi Sundowns",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Portadown v Larne",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Hammarby Talang FF v Sollentuna FK",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "CSKA 1948 Sofia v Dunav Ruse",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Sotra SK v IL Sandviken",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Zenit Sankt Peterburg v Lokomotiv Moskva",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Boluspor v Pendikspor",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Ha Noi FC v Song Lam Nghe An",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "IFK Goteborg v Halmstads",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Dunfermline Athletic v Queen's Park",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Liverpool v Fulham",
+      "hit": true
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "NK Osijek v Dinamo Zagreb",
+      "hit": false
+    },
+    {
+      "date": "2026-09-12",
+      "market": "winOrDraw",
+      "fixture": "Ross County v Hibernian",
+      "hit": true
+    },
     {
       "date": "2026-09-11",
       "market": "straightWin",
