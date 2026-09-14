@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T04:40:03.959Z",
+  "updatedAt": "2026-09-14T04:48:23.318Z",
   "markets": {
     "over1_5": {
       "hits": 0,
@@ -1048,6 +1048,6 @@
     }
   ],
   "apiFootballCallsUsed": 2,
-  "apiFootballQuotaUsed": 2,
-  "apiFootballQuotaRemaining": 98
+  "apiFootballQuotaUsed": 1,
+  "apiFootballQuotaRemaining": 99
 }
