@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-09-17T04:46:35.621Z",
-  "gameDate": "20260917",
+  "generatedAt": "2026-09-18T04:35:54.624Z",
+  "gameDate": "20260918",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 23,
-  "quotaRemaining": 977,
+  "quotaUsed": 24,
+  "quotaRemaining": 976,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Detroit Lions v Buffalo Bills",
-      "gameDate": "2026-09-17",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
