@@ -1,173 +1,29 @@
 {
-  "generatedAt": "2026-09-21T04:48:38.706Z",
+  "generatedAt": "2026-09-22T04:46:50.362Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 27,
-  "quotaRemaining": 73,
+  "quotaUsed": 28,
+  "quotaRemaining": 72,
   "winOrDraw": [
     {
-      "fixture": "Sportist Svoge v Vihren Sandanski",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T15:00:00",
-      "favoriteTeam": "Vihren Sandanski",
-      "fairProbability": 0.898,
-      "quotedDoubleChanceOdds": 1.045
-    },
-    {
-      "fixture": "Petrzalka Bratislava v Pohronie Dolna Zdana",
-      "competition": "Slovakia — 2. Liga",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T16:00:00",
-      "favoriteTeam": "Petrzalka Bratislava",
-      "fairProbability": 0.827,
-      "quotedDoubleChanceOdds": 1.102
-    },
-    {
-      "fixture": "Viktoriya Sumy v Nyva Ternopil",
-      "competition": "Ukraine — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T09:00:00",
-      "favoriteTeam": "Viktoriya Sumy",
-      "fairProbability": 0.79,
-      "quotedDoubleChanceOdds": 1.165
-    },
-    {
-      "fixture": "Dobrudzha Dobrich v CSKA Sofia II",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T17:00:00",
-      "favoriteTeam": "CSKA Sofia II",
-      "fairProbability": 0.759,
-      "quotedDoubleChanceOdds": 1.197
-    },
-    {
-      "fixture": "Montana v Hebar Pazardzhik",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T17:30:00",
-      "favoriteTeam": "Montana",
-      "fairProbability": 0.753,
-      "quotedDoubleChanceOdds": 1.2
-    },
-    {
-      "fixture": "Xorazm Urganch v PFK Qizilqum",
-      "competition": "Uzbekistan — Super League",
-      "federation": "AFC",
-      "commenceTime": "2026-09-21T16:15:00",
-      "favoriteTeam": "Xorazm Urganch",
-      "fairProbability": 0.744,
-      "quotedDoubleChanceOdds": 1.207
-    },
-    {
-      "fixture": "PAOK Thessaloniki B v Nestos Chrysoupoli",
-      "competition": "Greece — Super League 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T15:00:00",
-      "favoriteTeam": "PAOK Thessaloniki B",
-      "fairProbability": 0.744,
-      "quotedDoubleChanceOdds": 1.223
-    },
-    {
-      "fixture": "Otelul Galati v Corvinul Hunedoara",
-      "competition": "Romania — Liga I",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T16:00:00",
-      "favoriteTeam": "Otelul Galati",
-      "fairProbability": 0.696,
-      "quotedDoubleChanceOdds": 1.328
-    },
-    {
-      "fixture": "Spartak Pleven v Ludogorets Razgrad II",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T17:00:00",
-      "favoriteTeam": "Spartak Pleven",
-      "fairProbability": 0.683,
-      "quotedDoubleChanceOdds": 1.325
+      "fixture": "US Biskra v JS Saoura",
+      "competition": "Algeria — Championnat National",
+      "federation": "CAF",
+      "commenceTime": "2026-09-22T17:00:00",
+      "favoriteTeam": "US Biskra",
+      "fairProbability": 0.684,
+      "quotedDoubleChanceOdds": 1.336
     }
   ],
   "winOrDraw_excluded": [],
   "straightWin": [
     {
-      "fixture": "Sportist Svoge v Vihren Sandanski",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T15:00:00",
-      "favoriteTeam": "Vihren Sandanski",
-      "fairProbability": 0.667,
-      "quotedOdds": 1.345
-    },
-    {
-      "fixture": "Petrzalka Bratislava v Pohronie Dolna Zdana",
-      "competition": "Slovakia — 2. Liga",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T16:00:00",
-      "favoriteTeam": "Petrzalka Bratislava",
-      "fairProbability": 0.606,
-      "quotedOdds": 1.48
-    },
-    {
-      "fixture": "Viktoriya Sumy v Nyva Ternopil",
-      "competition": "Ukraine — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T09:00:00",
-      "favoriteTeam": "Viktoriya Sumy",
-      "fairProbability": 0.51,
-      "quotedOdds": 1.755
-    },
-    {
-      "fixture": "Dobrudzha Dobrich v CSKA Sofia II",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T17:00:00",
-      "favoriteTeam": "CSKA Sofia II",
-      "fairProbability": 0.5,
-      "quotedOdds": 1.788
-    },
-    {
-      "fixture": "Montana v Hebar Pazardzhik",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T17:30:00",
-      "favoriteTeam": "Montana",
-      "fairProbability": 0.494,
-      "quotedOdds": 1.808
-    },
-    {
-      "fixture": "PAOK Thessaloniki B v Nestos Chrysoupoli",
-      "competition": "Greece — Super League 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T15:00:00",
-      "favoriteTeam": "PAOK Thessaloniki B",
-      "fairProbability": 0.452,
-      "quotedOdds": 1.983
-    },
-    {
-      "fixture": "Xorazm Urganch v PFK Qizilqum",
-      "competition": "Uzbekistan — Super League",
-      "federation": "AFC",
-      "commenceTime": "2026-09-21T16:15:00",
-      "favoriteTeam": "Xorazm Urganch",
-      "fairProbability": 0.451,
-      "quotedOdds": 2.01
-    },
-    {
-      "fixture": "Otelul Galati v Corvinul Hunedoara",
-      "competition": "Romania — Liga I",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T16:00:00",
-      "favoriteTeam": "Otelul Galati",
-      "fairProbability": 0.399,
-      "quotedOdds": 2.3
-    },
-    {
-      "fixture": "Spartak Pleven v Ludogorets Razgrad II",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-21T17:00:00",
-      "favoriteTeam": "Spartak Pleven",
-      "fairProbability": 0.399,
-      "quotedOdds": 2.237
+      "fixture": "US Biskra v JS Saoura",
+      "competition": "Algeria — Championnat National",
+      "federation": "CAF",
+      "commenceTime": "2026-09-22T17:00:00",
+      "favoriteTeam": "US Biskra",
+      "fairProbability": 0.363,
+      "quotedOdds": 2.466
     }
   ],
   "straightWin_excluded": []
