@@ -1,30 +1,10 @@
 {
-  "generatedAt": "2026-09-22T04:46:50.362Z",
+  "generatedAt": "2026-09-23T04:38:58.852Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 28,
-  "quotaRemaining": 72,
-  "winOrDraw": [
-    {
-      "fixture": "US Biskra v JS Saoura",
-      "competition": "Algeria — Championnat National",
-      "federation": "CAF",
-      "commenceTime": "2026-09-22T17:00:00",
-      "favoriteTeam": "US Biskra",
-      "fairProbability": 0.684,
-      "quotedDoubleChanceOdds": 1.336
-    }
-  ],
+  "quotaUsed": 29,
+  "quotaRemaining": 71,
+  "winOrDraw": [],
   "winOrDraw_excluded": [],
-  "straightWin": [
-    {
-      "fixture": "US Biskra v JS Saoura",
-      "competition": "Algeria — Championnat National",
-      "federation": "CAF",
-      "commenceTime": "2026-09-22T17:00:00",
-      "favoriteTeam": "US Biskra",
-      "fairProbability": 0.363,
-      "quotedOdds": 2.466
-    }
-  ],
+  "straightWin": [],
   "straightWin_excluded": []
 }
