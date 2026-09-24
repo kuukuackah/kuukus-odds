@@ -1,10 +1,84 @@
 {
-  "generatedAt": "2026-09-23T04:38:58.852Z",
+  "generatedAt": "2026-09-24T04:39:35.161Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 29,
-  "quotaRemaining": 71,
-  "winOrDraw": [],
+  "quotaUsed": 30,
+  "quotaRemaining": 70,
+  "winOrDraw": [
+    {
+      "fixture": "Hapoel Rishon LeZion v Maccabi Ahi Nazareth",
+      "competition": "Israel — Liga Leumit",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-24T17:00:00",
+      "favoriteTeam": "Hapoel Rishon LeZion",
+      "fairProbability": 0.799,
+      "quotedDoubleChanceOdds": 1.135
+    },
+    {
+      "fixture": "Ironi Modi'in v M.S. Ashdod",
+      "competition": "Israel — Liga Leumit",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-24T17:00:00",
+      "favoriteTeam": "M.S. Ashdod",
+      "fairProbability": 0.782,
+      "quotedDoubleChanceOdds": 1.163
+    },
+    {
+      "fixture": "Hapoel Acre v Hapoel Afula",
+      "competition": "Israel — Liga Leumit",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-24T17:00:00",
+      "favoriteTeam": "Hapoel Afula",
+      "fairProbability": 0.763,
+      "quotedDoubleChanceOdds": 1.192
+    },
+    {
+      "fixture": "Maccabi Herzliya v Kiryat Yam",
+      "competition": "Israel — Liga Leumit",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-24T17:00:00",
+      "favoriteTeam": "Kiryat Yam",
+      "fairProbability": 0.646,
+      "quotedDoubleChanceOdds": 1.398
+    }
+  ],
   "winOrDraw_excluded": [],
-  "straightWin": [],
+  "straightWin": [
+    {
+      "fixture": "Hapoel Rishon LeZion v Maccabi Ahi Nazareth",
+      "competition": "Israel — Liga Leumit",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-24T17:00:00",
+      "favoriteTeam": "Hapoel Rishon LeZion",
+      "fairProbability": 0.566,
+      "quotedOdds": 1.587
+    },
+    {
+      "fixture": "Ironi Modi'in v M.S. Ashdod",
+      "competition": "Israel — Liga Leumit",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-24T17:00:00",
+      "favoriteTeam": "M.S. Ashdod",
+      "fairProbability": 0.532,
+      "quotedOdds": 1.69
+    },
+    {
+      "fixture": "Hapoel Acre v Hapoel Afula",
+      "competition": "Israel — Liga Leumit",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-24T17:00:00",
+      "favoriteTeam": "Hapoel Afula",
+      "fairProbability": 0.503,
+      "quotedOdds": 1.783
+    },
+    {
+      "fixture": "Maccabi Herzliya v Kiryat Yam",
+      "competition": "Israel — Liga Leumit",
+      "federation": "UEFA",
+      "commenceTime": "2026-09-24T17:00:00",
+      "favoriteTeam": "Kiryat Yam",
+      "fairProbability": 0.378,
+      "quotedOdds": 2.362
+    }
+  ],
   "straightWin_excluded": []
 }
