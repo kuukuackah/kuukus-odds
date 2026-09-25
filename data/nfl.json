@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-09-24T04:39:35.831Z",
-  "gameDate": "20260924",
+  "generatedAt": "2026-09-25T04:49:45.895Z",
+  "gameDate": "20260925",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 32,
-  "quotaRemaining": 968,
+  "quotaUsed": 33,
+  "quotaRemaining": 967,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Atlanta Falcons v Green Bay Packers",
-      "gameDate": "2026-09-24",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
