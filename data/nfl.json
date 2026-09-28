@@ -1,79 +1,14 @@
 {
-  "generatedAt": "2026-09-27T05:12:11.215Z",
-  "gameDate": "20260927",
+  "generatedAt": "2026-09-28T05:15:50.907Z",
+  "gameDate": "20260928",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 33,
-  "quotaRemaining": 967,
+  "quotaUsed": 34,
+  "quotaRemaining": 966,
   "moneyline": [],
   "moneyline_excluded": [
     {
-      "fixture": "Arizona Cardinals v San Francisco 49ers",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Baltimore Ravens v Dallas Cowboys",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Carolina Panthers v Cleveland Browns",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Cincinnati Bengals v Pittsburgh Steelers",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Houston Texans v Indianapolis Colts",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Kansas City Chiefs v Miami Dolphins",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Los Angeles Chargers v Buffalo Bills",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Los Angeles Rams v Denver Broncos",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Las Vegas Raiders v New Orleans Saints",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Minnesota Vikings v Tampa Bay Buccaneers",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "New England Patriots v Jacksonville Jaguars",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "New York Jets v Detroit Lions",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Seattle Seahawks v Washington Commanders",
-      "gameDate": "2026-09-27",
-      "reason": "no usable moneyline price"
-    },
-    {
-      "fixture": "Tennessee Titans v New York Giants",
-      "gameDate": "2026-09-27",
+      "fixture": "Philadelphia Eagles v Chicago Bears",
+      "gameDate": "2026-09-28",
       "reason": "no usable moneyline price"
     }
   ]
