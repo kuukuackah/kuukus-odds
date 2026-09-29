@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-09-28T05:15:50.907Z",
-  "gameDate": "20260928",
+  "generatedAt": "2026-09-29T05:37:41.028Z",
+  "gameDate": "20260929",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
   "quotaUsed": 34,
   "quotaRemaining": 966,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Philadelphia Eagles v Chicago Bears",
-      "gameDate": "2026-09-28",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }

@@ -1,102 +1,10 @@
 {
-  "generatedAt": "2026-09-28T05:15:50.153Z",
+  "generatedAt": "2026-09-29T05:37:40.389Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 34,
-  "quotaRemaining": 66,
-  "winOrDraw": [
-    {
-      "fixture": "Hapoel Kfar Saba v Bnei Yehuda",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-28T17:00:00",
-      "favoriteTeam": "Bnei Yehuda",
-      "fairProbability": 0.82,
-      "quotedDoubleChanceOdds": 1.102
-    },
-    {
-      "fixture": "Hapoel Kfar Shalem v Maccabi Jaffa",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-28T17:00:00",
-      "favoriteTeam": "Hapoel Kfar Shalem",
-      "fairProbability": 0.748,
-      "quotedDoubleChanceOdds": 1.212
-    },
-    {
-      "fixture": "MSK Zilina B v FK Humenne",
-      "competition": "Slovakia — 2. Liga",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-28T16:00:00",
-      "favoriteTeam": "MSK Zilina B",
-      "fairProbability": 0.738,
-      "quotedDoubleChanceOdds": 1.234
-    },
-    {
-      "fixture": "Maccabi Bnei Reineh v Hapoel Raanana",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-28T17:45:00",
-      "favoriteTeam": "Maccabi Bnei Reineh",
-      "fairProbability": 0.686,
-      "quotedDoubleChanceOdds": 1.314
-    },
-    {
-      "fixture": "Maccabi Kiryat Gat v Kafr Qasim",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-28T17:00:00",
-      "favoriteTeam": "Maccabi Kiryat Gat",
-      "fairProbability": 0.675,
-      "quotedDoubleChanceOdds": 1.355
-    }
-  ],
+  "quotaUsed": 35,
+  "quotaRemaining": 65,
+  "winOrDraw": [],
   "winOrDraw_excluded": [],
-  "straightWin": [
-    {
-      "fixture": "Hapoel Kfar Saba v Bnei Yehuda",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-28T17:00:00",
-      "favoriteTeam": "Bnei Yehuda",
-      "fairProbability": 0.602,
-      "quotedOdds": 1.49
-    },
-    {
-      "fixture": "Hapoel Kfar Shalem v Maccabi Jaffa",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-28T17:00:00",
-      "favoriteTeam": "Hapoel Kfar Shalem",
-      "fairProbability": 0.502,
-      "quotedOdds": 1.79
-    },
-    {
-      "fixture": "MSK Zilina B v FK Humenne",
-      "competition": "Slovakia — 2. Liga",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-28T16:00:00",
-      "favoriteTeam": "MSK Zilina B",
-      "fairProbability": 0.489,
-      "quotedOdds": 1.814
-    },
-    {
-      "fixture": "Maccabi Bnei Reineh v Hapoel Raanana",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-28T17:45:00",
-      "favoriteTeam": "Maccabi Bnei Reineh",
-      "fairProbability": 0.421,
-      "quotedOdds": 2.132
-    },
-    {
-      "fixture": "Maccabi Kiryat Gat v Kafr Qasim",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-09-28T17:00:00",
-      "favoriteTeam": "Maccabi Kiryat Gat",
-      "fairProbability": 0.389,
-      "quotedOdds": 2.3
-    }
-  ],
+  "straightWin": [],
   "straightWin_excluded": []
 }
