@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-29T05:37:40.389Z",
+  "generatedAt": "2026-09-30T05:25:37.709Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 35,
-  "quotaRemaining": 65,
+  "quotaUsed": 36,
+  "quotaRemaining": 64,
   "winOrDraw": [],
   "winOrDraw_excluded": [],
   "straightWin": [],
