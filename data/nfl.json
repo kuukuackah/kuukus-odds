@@ -1,9 +1,15 @@
 {
-  "generatedAt": "2026-09-30T05:25:38.299Z",
-  "gameDate": "20260930",
+  "generatedAt": "2026-10-01T05:43:37.444Z",
+  "gameDate": "20261001",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 35,
-  "quotaRemaining": 965,
+  "quotaUsed": 36,
+  "quotaRemaining": 964,
   "moneyline": [],
-  "moneyline_excluded": []
+  "moneyline_excluded": [
+    {
+      "fixture": "Pittsburgh Steelers v Cleveland Browns",
+      "gameDate": "2026-10-01",
+      "reason": "no usable moneyline price"
+    }
+  ]
 }
