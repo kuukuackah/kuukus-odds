@@ -1,173 +1,101 @@
 {
-  "generatedAt": "2026-10-01T05:43:36.917Z",
+  "generatedAt": "2026-10-02T05:27:45.419Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 37,
-  "quotaRemaining": 63,
+  "quotaUsed": 38,
+  "quotaRemaining": 62,
   "winOrDraw": [
     {
-      "fixture": "Baerum v Lillestrom",
-      "competition": "Norway — Norwegian Cup",
+      "fixture": "Lunds v Laholms",
+      "competition": "Sweden — Division 1",
       "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Lillestrom",
-      "fairProbability": 0.931,
-      "quotedDoubleChanceOdds": 1.03
+      "commenceTime": "2026-10-02T18:00:00",
+      "favoriteTeam": "Lunds",
+      "fairProbability": 0.847,
+      "quotedDoubleChanceOdds": 1.075
     },
     {
-      "fixture": "Bnei Yehuda v Maccabi Kiryat Gat",
-      "competition": "Israel — Liga Leumit",
+      "fixture": "SC Poltava v FC Chernihiv",
+      "competition": "Ukraine — First League",
       "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Bnei Yehuda",
-      "fairProbability": 0.886,
-      "quotedDoubleChanceOdds": 1.053
+      "commenceTime": "2026-10-02T12:00:00",
+      "favoriteTeam": "SC Poltava",
+      "fairProbability": 0.725,
+      "quotedDoubleChanceOdds": 1.27
     },
     {
-      "fixture": "M.S. Ashdod v Maccabi Herzliya",
-      "competition": "Israel — Liga Leumit",
+      "fixture": "Karlbergs BK v Sollentuna FK",
+      "competition": "Sweden — Division 1",
       "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "M.S. Ashdod",
-      "fairProbability": 0.827,
-      "quotedDoubleChanceOdds": 1.097
+      "commenceTime": "2026-10-02T18:00:00",
+      "favoriteTeam": "Karlbergs BK",
+      "fairProbability": 0.69,
+      "quotedDoubleChanceOdds": 1.31
     },
     {
-      "fixture": "Kiryat Yam v Hapoel Kfar Saba",
-      "competition": "Israel — Liga Leumit",
+      "fixture": "Ranheim v Egersunds",
+      "competition": "Norway — 1. Division",
       "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Kiryat Yam",
-      "fairProbability": 0.765,
-      "quotedDoubleChanceOdds": 1.18
+      "commenceTime": "2026-10-02T18:00:00",
+      "favoriteTeam": "Ranheim",
+      "fairProbability": 0.686,
+      "quotedDoubleChanceOdds": 1.33
     },
     {
-      "fixture": "Maccabi Jaffa v Hapoel Acre",
-      "competition": "Israel — Liga Leumit",
+      "fixture": "Real Aviles v Lugo",
+      "competition": "Spain — Primera Division RFEF Group 1",
       "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Maccabi Jaffa",
-      "fairProbability": 0.759,
-      "quotedDoubleChanceOdds": 1.21
-    },
-    {
-      "fixture": "Hapoel Raanana v Kafr Qasim",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Hapoel Raanana",
-      "fairProbability": 0.708,
-      "quotedDoubleChanceOdds": 1.283
-    },
-    {
-      "fixture": "Maccabi Bnei Reineh v Hapoel Kfar Shalem",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Maccabi Bnei Reineh",
-      "fairProbability": 0.697,
-      "quotedDoubleChanceOdds": 1.295
-    },
-    {
-      "fixture": "Hapoel Afula v Hapoel Rishon LeZion",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Hapoel Rishon LeZion",
-      "fairProbability": 0.689,
-      "quotedDoubleChanceOdds": 1.332
-    },
-    {
-      "fixture": "Maccabi Ahi Nazareth v Ironi Modi'in",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Maccabi Ahi Nazareth",
+      "commenceTime": "2026-10-02T18:00:00",
+      "favoriteTeam": "Real Aviles",
       "fairProbability": 0.673,
-      "quotedDoubleChanceOdds": 1.337
+      "quotedDoubleChanceOdds": 1.37
     }
   ],
   "winOrDraw_excluded": [],
   "straightWin": [
     {
-      "fixture": "Baerum v Lillestrom",
-      "competition": "Norway — Norwegian Cup",
+      "fixture": "Lunds v Laholms",
+      "competition": "Sweden — Division 1",
       "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Lillestrom",
-      "fairProbability": 0.822,
-      "quotedOdds": 1.116
+      "commenceTime": "2026-10-02T18:00:00",
+      "favoriteTeam": "Lunds",
+      "fairProbability": 0.649,
+      "quotedOdds": 1.398
     },
     {
-      "fixture": "Bnei Yehuda v Maccabi Kiryat Gat",
-      "competition": "Israel — Liga Leumit",
+      "fixture": "Ranheim v Egersunds",
+      "competition": "Norway — 1. Division",
       "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Bnei Yehuda",
-      "fairProbability": 0.711,
-      "quotedOdds": 1.283
+      "commenceTime": "2026-10-02T18:00:00",
+      "favoriteTeam": "Ranheim",
+      "fairProbability": 0.46,
+      "quotedOdds": 1.996
     },
     {
-      "fixture": "M.S. Ashdod v Maccabi Herzliya",
-      "competition": "Israel — Liga Leumit",
+      "fixture": "Karlbergs BK v Sollentuna FK",
+      "competition": "Sweden — Division 1",
       "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "M.S. Ashdod",
-      "fairProbability": 0.611,
-      "quotedOdds": 1.487
+      "commenceTime": "2026-10-02T18:00:00",
+      "favoriteTeam": "Karlbergs BK",
+      "fairProbability": 0.431,
+      "quotedOdds": 2.11
     },
     {
-      "fixture": "Kiryat Yam v Hapoel Kfar Saba",
-      "competition": "Israel — Liga Leumit",
+      "fixture": "SC Poltava v FC Chernihiv",
+      "competition": "Ukraine — First League",
       "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Kiryat Yam",
-      "fairProbability": 0.543,
-      "quotedOdds": 1.68
+      "commenceTime": "2026-10-02T12:00:00",
+      "favoriteTeam": "SC Poltava",
+      "fairProbability": 0.428,
+      "quotedOdds": 2.114
     },
     {
-      "fixture": "Maccabi Jaffa v Hapoel Acre",
-      "competition": "Israel — Liga Leumit",
+      "fixture": "Real Aviles v Lugo",
+      "competition": "Spain — Primera Division RFEF Group 1",
       "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Maccabi Jaffa",
-      "fairProbability": 0.52,
-      "quotedOdds": 1.753
-    },
-    {
-      "fixture": "Maccabi Bnei Reineh v Hapoel Kfar Shalem",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Maccabi Bnei Reineh",
-      "fairProbability": 0.458,
-      "quotedOdds": 1.98
-    },
-    {
-      "fixture": "Hapoel Raanana v Kafr Qasim",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Hapoel Raanana",
-      "fairProbability": 0.449,
-      "quotedOdds": 2.023
-    },
-    {
-      "fixture": "Hapoel Afula v Hapoel Rishon LeZion",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Hapoel Rishon LeZion",
-      "fairProbability": 0.439,
-      "quotedOdds": 2.072
-    },
-    {
-      "fixture": "Maccabi Ahi Nazareth v Ironi Modi'in",
-      "competition": "Israel — Liga Leumit",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-01T17:00:00",
-      "favoriteTeam": "Maccabi Ahi Nazareth",
-      "fairProbability": 0.416,
-      "quotedOdds": 2.188
+      "commenceTime": "2026-10-02T18:00:00",
+      "favoriteTeam": "Real Aviles",
+      "fairProbability": 0.396,
+      "quotedOdds": 2.297
     }
   ],
   "straightWin_excluded": []
