@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-02T05:27:46.180Z",
-  "gameDate": "20261002",
+  "generatedAt": "2026-10-03T05:11:00.434Z",
+  "gameDate": "20261003",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 35,
-  "quotaRemaining": 965,
+  "quotaUsed": 37,
+  "quotaRemaining": 963,
   "moneyline": [],
   "moneyline_excluded": []
 }
