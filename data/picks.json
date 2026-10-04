@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-10-03T05:10:57.844Z",
+  "generatedAt": "2026-10-04T05:43:59.835Z",
   "apiCallsUsed": 29,
-  "apiQuotaUsed": 86,
-  "apiQuotaRemaining": 414,
+  "apiQuotaUsed": 115,
+  "apiQuotaRemaining": 385,
   "fh05ApiCallsUsed": 20,
-  "fh05ApiQuotaUsed": 49,
-  "fh05ApiQuotaRemaining": 451,
+  "fh05ApiQuotaUsed": 67,
+  "fh05ApiQuotaRemaining": 433,
   "over1_5": [
     {
       "fixture": "Augsburg v Bayern Munich",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-10-10T13:30:00Z",
-      "fairProbability": 0.923,
-      "bookCount": 4,
+      "fairProbability": 0.921,
+      "bookCount": 5,
       "books": [
+        "LeoVegas",
         "William Hill",
         "Coral",
         "Ladbrokes",
@@ -24,10 +25,11 @@
       "fixture": "Inter Milan v Parma",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-10-10T16:00:00Z",
-      "fairProbability": 0.863,
-      "bookCount": 5,
+      "fairProbability": 0.86,
+      "bookCount": 6,
       "books": [
         "Virgin Bet",
+        "LeoVegas",
         "William Hill",
         "Ladbrokes",
         "Coral",
@@ -68,8 +70,9 @@
       "sport": "soccer_epl",
       "commenceTime": "2026-10-10T14:00:00Z",
       "fairProbability": 0.831,
-      "bookCount": 6,
+      "bookCount": 7,
       "books": [
+        "LeoVegas",
         "Paddy Power",
         "William Hill",
         "Betfair",
@@ -93,32 +96,31 @@
       ]
     },
     {
+      "fixture": "RC Lens v Lyon",
+      "sport": "soccer_france_ligue_one",
+      "commenceTime": "2026-10-09T18:45:00Z",
+      "fairProbability": 0.812,
+      "bookCount": 6,
+      "books": [
+        "LeoVegas",
+        "William Hill",
+        "Virgin Bet",
+        "Coral",
+        "Ladbrokes",
+        "Paddy Power"
+      ]
+    },
+    {
       "fixture": "1. FC Heidenheim v 1. FC Kaiserslautern",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-10-09T16:30:00Z",
-      "fairProbability": 0.813,
+      "fairProbability": 0.809,
       "bookCount": 4,
       "books": [
         "Ladbrokes",
         "Coral",
         "Virgin Bet",
         "LiveScore Bet"
-      ]
-    },
-    {
-      "fixture": "RC Lens v Lyon",
-      "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-09T18:45:00Z",
-      "fairProbability": 0.813,
-      "bookCount": 7,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Virgin Bet",
-        "LiveScore Bet",
-        "Coral",
-        "Ladbrokes",
-        "Paddy Power"
       ]
     },
     {
@@ -150,10 +152,26 @@
       ]
     },
     {
+      "fixture": "Lille v Le Havre",
+      "sport": "soccer_france_ligue_one",
+      "commenceTime": "2026-10-10T15:15:00Z",
+      "fairProbability": 0.781,
+      "bookCount": 7,
+      "books": [
+        "LeoVegas",
+        "William Hill",
+        "Virgin Bet",
+        "LiveScore Bet",
+        "Coral",
+        "Ladbrokes",
+        "Paddy Power"
+      ]
+    },
+    {
       "fixture": "Aston Villa v Brentford",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-10T14:00:00Z",
-      "fairProbability": 0.779,
+      "fairProbability": 0.78,
       "bookCount": 8,
       "books": [
         "LeoVegas",
@@ -164,22 +182,6 @@
         "LiveScore Bet",
         "Coral",
         "Ladbrokes"
-      ]
-    },
-    {
-      "fixture": "Lille v Le Havre",
-      "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-10T15:15:00Z",
-      "fairProbability": 0.769,
-      "bookCount": 7,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Virgin Bet",
-        "LiveScore Bet",
-        "Coral",
-        "Ladbrokes",
-        "Paddy Power"
       ]
     },
     {
@@ -210,6 +212,18 @@
         "William Hill",
         "Virgin Bet",
         "LiveScore Bet",
+        "Ladbrokes",
+        "Coral"
+      ]
+    },
+    {
+      "fixture": "USL Dunkerque v Annecy FC",
+      "sport": "soccer_france_ligue_two",
+      "commenceTime": "2026-10-09T18:00:00Z",
+      "fairProbability": 0.752,
+      "bookCount": 3,
+      "books": [
+        "William Hill",
         "Ladbrokes",
         "Coral"
       ]
@@ -249,7 +263,7 @@
       "fixture": "Málaga v Espanyol",
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-10-09T19:00:00Z",
-      "fairProbability": 0.71,
+      "fairProbability": 0.706,
       "bookCount": 7,
       "books": [
         "LeoVegas",
@@ -265,7 +279,7 @@
       "fixture": "Charlton Athletic v Bristol City",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T11:30:00Z",
-      "fairProbability": 0.704,
+      "fairProbability": 0.703,
       "bookCount": 4,
       "books": [
         "LeoVegas",
@@ -288,13 +302,6 @@
     }
   ],
   "over1_5_excluded": [
-    {
-      "fixture": "USL Dunkerque v Annecy FC",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
-      "excluded": true,
-      "reason": "lookup failed: 429 Too Many Requests — /v4/sports/soccer_france_ligue_two/events/a51469305cf10ec897551514656c6659/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Requests are too frequent\",\"error_code\":\"EXCEEDED_FREQ_LIMIT\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.html#exceeded-freq-limit\"}\n"
-    },
     {
       "fixture": "FSV Mainz 05 v Bayer Leverkusen",
       "sport": "soccer_germany_bundesliga",
@@ -1197,25 +1204,25 @@
       ]
     },
     {
-      "fixture": "Toronto FC v CF Montreal",
-      "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-10T17:00:00Z",
-      "fairProbability": 0.744,
-      "bookCount": 2,
-      "books": [
-        "LiveScore Bet",
-        "Virgin Bet"
-      ]
-    },
-    {
       "fixture": "RC Lens v Lyon",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-10-09T18:45:00Z",
-      "fairProbability": 0.741,
+      "fairProbability": 0.745,
       "bookCount": 2,
       "books": [
         "Virgin Bet",
         "LiveScore Bet"
+      ]
+    },
+    {
+      "fixture": "Toronto FC v CF Montreal",
+      "sport": "soccer_usa_mls",
+      "commenceTime": "2026-10-10T17:00:00Z",
+      "fairProbability": 0.742,
+      "bookCount": 2,
+      "books": [
+        "LiveScore Bet",
+        "Virgin Bet"
       ]
     },
     {
@@ -1300,10 +1307,11 @@
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-10-10T13:00:00Z",
       "fairProbability": 0.67,
-      "bookCount": 2,
+      "bookCount": 3,
       "books": [
         "LiveScore Bet",
-        "Virgin Bet"
+        "Virgin Bet",
+        "LeoVegas"
       ]
     },
     {
@@ -1311,8 +1319,9 @@
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T11:30:00Z",
       "fairProbability": 0.659,
-      "bookCount": 2,
+      "bookCount": 3,
       "books": [
+        "LeoVegas",
         "Virgin Bet",
         "LiveScore Bet"
       ]
