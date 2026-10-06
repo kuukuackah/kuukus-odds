@@ -1,65 +1,101 @@
 {
-  "generatedAt": "2026-10-05T05:28:39.385Z",
+  "generatedAt": "2026-10-06T06:12:45.801Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 1,
-  "quotaRemaining": 99,
+  "quotaUsed": 2,
+  "quotaRemaining": 98,
   "winOrDraw": [
     {
-      "fixture": "FSC Mariupol v Nyva Ternopil",
-      "competition": "Ukraine — First League",
+      "fixture": "Blackpool v Crewe",
+      "competition": "England — EFL Trophy",
       "federation": "UEFA",
-      "commenceTime": "2026-10-05T13:30:00",
-      "favoriteTeam": "FSC Mariupol",
+      "commenceTime": "2026-10-06T19:00:00",
+      "favoriteTeam": "Blackpool",
       "fairProbability": 0.777,
-      "quotedDoubleChanceOdds": 1.173
+      "quotedDoubleChanceOdds": 1.176
     },
     {
-      "fixture": "Moss FK v Kongsvinger",
-      "competition": "Norway — 1. Division",
+      "fixture": "Wycombe v Bristol Rovers",
+      "competition": "England — EFL Trophy",
       "federation": "UEFA",
-      "commenceTime": "2026-10-05T18:00:00",
-      "favoriteTeam": "Kongsvinger",
+      "commenceTime": "2026-10-06T19:00:00",
+      "favoriteTeam": "Wycombe",
       "fairProbability": 0.757,
       "quotedDoubleChanceOdds": 1.21
     },
     {
-      "fixture": "Tatran Liptovsky Mikulas v STK 1914 Samorin",
-      "competition": "Slovakia — 2. Liga",
+      "fixture": "Exeter v Oxford United",
+      "competition": "England — EFL Trophy",
       "federation": "UEFA",
-      "commenceTime": "2026-10-05T16:00:00",
-      "favoriteTeam": "Tatran Liptovsky Mikulas",
-      "fairProbability": 0.676,
-      "quotedDoubleChanceOdds": 1.33
+      "commenceTime": "2026-10-06T19:00:00",
+      "favoriteTeam": "Oxford United",
+      "fairProbability": 0.74,
+      "quotedDoubleChanceOdds": 1.24
+    },
+    {
+      "fixture": "Grimsby v Burton Albion",
+      "competition": "England — EFL Trophy",
+      "federation": "UEFA",
+      "commenceTime": "2026-10-06T19:00:00",
+      "favoriteTeam": "Grimsby",
+      "fairProbability": 0.653,
+      "quotedDoubleChanceOdds": 1.396
+    },
+    {
+      "fixture": "Port Vale v Mansfield",
+      "competition": "England — EFL Trophy",
+      "federation": "UEFA",
+      "commenceTime": "2026-10-06T19:00:00",
+      "favoriteTeam": "Mansfield",
+      "fairProbability": 0.641,
+      "quotedDoubleChanceOdds": 1.418
     }
   ],
   "winOrDraw_excluded": [],
   "straightWin": [
     {
-      "fixture": "Moss FK v Kongsvinger",
-      "competition": "Norway — 1. Division",
+      "fixture": "Blackpool v Crewe",
+      "competition": "England — EFL Trophy",
       "federation": "UEFA",
-      "commenceTime": "2026-10-05T18:00:00",
-      "favoriteTeam": "Kongsvinger",
-      "fairProbability": 0.555,
-      "quotedOdds": 1.65
+      "commenceTime": "2026-10-06T19:00:00",
+      "favoriteTeam": "Blackpool",
+      "fairProbability": 0.554,
+      "quotedOdds": 1.626
     },
     {
-      "fixture": "FSC Mariupol v Nyva Ternopil",
-      "competition": "Ukraine — First League",
+      "fixture": "Wycombe v Bristol Rovers",
+      "competition": "England — EFL Trophy",
       "federation": "UEFA",
-      "commenceTime": "2026-10-05T13:30:00",
-      "favoriteTeam": "FSC Mariupol",
-      "fairProbability": 0.501,
-      "quotedOdds": 1.827
+      "commenceTime": "2026-10-06T19:00:00",
+      "favoriteTeam": "Wycombe",
+      "fairProbability": 0.517,
+      "quotedOdds": 1.74
     },
     {
-      "fixture": "Tatran Liptovsky Mikulas v STK 1914 Samorin",
-      "competition": "Slovakia — 2. Liga",
+      "fixture": "Exeter v Oxford United",
+      "competition": "England — EFL Trophy",
       "federation": "UEFA",
-      "commenceTime": "2026-10-05T16:00:00",
-      "favoriteTeam": "Tatran Liptovsky Mikulas",
-      "fairProbability": 0.427,
-      "quotedOdds": 2.126
+      "commenceTime": "2026-10-06T19:00:00",
+      "favoriteTeam": "Oxford United",
+      "fairProbability": 0.487,
+      "quotedOdds": 1.85
+    },
+    {
+      "fixture": "Grimsby v Burton Albion",
+      "competition": "England — EFL Trophy",
+      "federation": "UEFA",
+      "commenceTime": "2026-10-06T19:00:00",
+      "favoriteTeam": "Grimsby",
+      "fairProbability": 0.394,
+      "quotedOdds": 2.27
+    },
+    {
+      "fixture": "Port Vale v Mansfield",
+      "competition": "England — EFL Trophy",
+      "federation": "UEFA",
+      "commenceTime": "2026-10-06T19:00:00",
+      "favoriteTeam": "Mansfield",
+      "fairProbability": 0.372,
+      "quotedOdds": 2.406
     }
   ],
   "straightWin_excluded": []

@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-10-05T05:28:40.440Z",
-  "gameDate": "20261005",
+  "generatedAt": "2026-10-06T06:12:46.298Z",
+  "gameDate": "20261006",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 1,
-  "quotaRemaining": 999,
+  "quotaUsed": 2,
+  "quotaRemaining": 998,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Atlanta Falcons v New Orleans Saints",
-      "gameDate": "2026-10-05",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
