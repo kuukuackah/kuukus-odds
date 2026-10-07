@@ -1,101 +1,65 @@
 {
-  "generatedAt": "2026-10-06T06:12:45.801Z",
+  "generatedAt": "2026-10-07T05:49:23.596Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 2,
-  "quotaRemaining": 98,
+  "quotaUsed": 3,
+  "quotaRemaining": 97,
   "winOrDraw": [
     {
-      "fixture": "Blackpool v Crewe",
-      "competition": "England — EFL Trophy",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-06T19:00:00",
-      "favoriteTeam": "Blackpool",
-      "fairProbability": 0.777,
-      "quotedDoubleChanceOdds": 1.176
+      "fixture": "Neftchi Fergana v Xorazm Urganch",
+      "competition": "Uzbekistan — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-07T15:00:00",
+      "favoriteTeam": "Neftchi Fergana",
+      "fairProbability": 0.919,
+      "quotedDoubleChanceOdds": 1.015
     },
     {
-      "fixture": "Wycombe v Bristol Rovers",
-      "competition": "England — EFL Trophy",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-06T19:00:00",
-      "favoriteTeam": "Wycombe",
-      "fairProbability": 0.757,
-      "quotedDoubleChanceOdds": 1.21
+      "fixture": "CS Constantine v US Biskra",
+      "competition": "Algeria — Championnat National",
+      "federation": "CAF",
+      "commenceTime": "2026-10-07T18:00:00",
+      "favoriteTeam": "CS Constantine",
+      "fairProbability": 0.836,
+      "quotedDoubleChanceOdds": 1.1
     },
     {
-      "fixture": "Exeter v Oxford United",
-      "competition": "England — EFL Trophy",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-06T19:00:00",
-      "favoriteTeam": "Oxford United",
-      "fairProbability": 0.74,
-      "quotedDoubleChanceOdds": 1.24
-    },
-    {
-      "fixture": "Grimsby v Burton Albion",
-      "competition": "England — EFL Trophy",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-06T19:00:00",
-      "favoriteTeam": "Grimsby",
-      "fairProbability": 0.653,
-      "quotedDoubleChanceOdds": 1.396
-    },
-    {
-      "fixture": "Port Vale v Mansfield",
-      "competition": "England — EFL Trophy",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-06T19:00:00",
-      "favoriteTeam": "Mansfield",
-      "fairProbability": 0.641,
-      "quotedDoubleChanceOdds": 1.418
+      "fixture": "Inter Toronto v Supra du Quebec",
+      "competition": "Canada — Premier League",
+      "federation": "CONCACAF",
+      "commenceTime": "2026-10-07T16:00:00",
+      "favoriteTeam": "Supra du Quebec",
+      "fairProbability": 0.658,
+      "quotedDoubleChanceOdds": 1.386
     }
   ],
   "winOrDraw_excluded": [],
   "straightWin": [
     {
-      "fixture": "Blackpool v Crewe",
-      "competition": "England — EFL Trophy",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-06T19:00:00",
-      "favoriteTeam": "Blackpool",
-      "fairProbability": 0.554,
-      "quotedOdds": 1.626
+      "fixture": "Neftchi Fergana v Xorazm Urganch",
+      "competition": "Uzbekistan — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-07T15:00:00",
+      "favoriteTeam": "Neftchi Fergana",
+      "fairProbability": 0.765,
+      "quotedOdds": 1.183
     },
     {
-      "fixture": "Wycombe v Bristol Rovers",
-      "competition": "England — EFL Trophy",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-06T19:00:00",
-      "favoriteTeam": "Wycombe",
-      "fairProbability": 0.517,
-      "quotedOdds": 1.74
+      "fixture": "CS Constantine v US Biskra",
+      "competition": "Algeria — Championnat National",
+      "federation": "CAF",
+      "commenceTime": "2026-10-07T18:00:00",
+      "favoriteTeam": "CS Constantine",
+      "fairProbability": 0.559,
+      "quotedOdds": 1.607
     },
     {
-      "fixture": "Exeter v Oxford United",
-      "competition": "England — EFL Trophy",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-06T19:00:00",
-      "favoriteTeam": "Oxford United",
-      "fairProbability": 0.487,
-      "quotedOdds": 1.85
-    },
-    {
-      "fixture": "Grimsby v Burton Albion",
-      "competition": "England — EFL Trophy",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-06T19:00:00",
-      "favoriteTeam": "Grimsby",
-      "fairProbability": 0.394,
-      "quotedOdds": 2.27
-    },
-    {
-      "fixture": "Port Vale v Mansfield",
-      "competition": "England — EFL Trophy",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-06T19:00:00",
-      "favoriteTeam": "Mansfield",
-      "fairProbability": 0.372,
-      "quotedOdds": 2.406
+      "fixture": "Inter Toronto v Supra du Quebec",
+      "competition": "Canada — Premier League",
+      "federation": "CONCACAF",
+      "commenceTime": "2026-10-07T16:00:00",
+      "favoriteTeam": "Supra du Quebec",
+      "fairProbability": 0.411,
+      "quotedOdds": 2.182
     }
   ],
   "straightWin_excluded": []

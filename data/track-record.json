@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T06:12:38.962Z",
+  "updatedAt": "2026-10-07T05:49:18.048Z",
   "markets": {
     "over1_5": {
       "hits": 0,
@@ -164,7 +164,7 @@
     "winOrDraw|2026-09-12|ross county|hibernian"
   ],
   "history": [],
-  "apiFootballCallsUsed": 2,
+  "apiFootballCallsUsed": 3,
   "apiFootballQuotaUsed": 1,
   "apiFootballQuotaRemaining": 99
 }
