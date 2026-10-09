@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-10-08T05:54:31.873Z",
-  "gameDate": "20261008",
+  "generatedAt": "2026-10-09T06:01:01.411Z",
+  "gameDate": "20261009",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 4,
-  "quotaRemaining": 996,
+  "quotaUsed": 2,
+  "quotaRemaining": 998,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Tampa Bay Buccaneers v Dallas Cowboys",
-      "gameDate": "2026-10-08",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
