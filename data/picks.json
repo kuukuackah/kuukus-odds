@@ -1,40 +1,23 @@
 {
-  "generatedAt": "2026-10-09T06:00:54.391Z",
+  "generatedAt": "2026-10-10T05:43:43.502Z",
   "apiCallsUsed": 29,
-  "apiQuotaUsed": 260,
-  "apiQuotaRemaining": 240,
+  "apiQuotaUsed": 288,
+  "apiQuotaRemaining": 212,
   "fh05ApiCallsUsed": 20,
-  "fh05ApiQuotaUsed": 167,
-  "fh05ApiQuotaRemaining": 333,
+  "fh05ApiQuotaUsed": 187,
+  "fh05ApiQuotaRemaining": 313,
   "over1_5": [
     {
       "fixture": "Augsburg v Bayern Munich",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-10-10T13:30:00Z",
-      "fairProbability": 0.927,
+      "fairProbability": 0.924,
       "bookCount": 6,
       "books": [
         "LeoVegas",
         "William Hill",
         "Coral",
         "Ladbrokes",
-        "Paddy Power",
-        "Betfair"
-      ]
-    },
-    {
-      "fixture": "Borussia Dortmund v Werder Bremen",
-      "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-09T18:30:00Z",
-      "fairProbability": 0.859,
-      "bookCount": 8,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Coral",
-        "Ladbrokes",
-        "Virgin Bet",
-        "LiveScore Bet",
         "Paddy Power",
         "Betfair"
       ]
@@ -43,9 +26,11 @@
       "fixture": "Inter Milan v Parma",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-10-10T16:00:00Z",
-      "fairProbability": 0.856,
-      "bookCount": 6,
+      "fairProbability": 0.857,
+      "bookCount": 8,
       "books": [
+        "LiveScore Bet",
+        "Virgin Bet",
         "LeoVegas",
         "William Hill",
         "Ladbrokes",
@@ -55,17 +40,48 @@
       ]
     },
     {
+      "fixture": "1. FC Magdeburg v Hannover 96",
+      "sport": "soccer_germany_bundesliga2",
+      "commenceTime": "2026-10-10T11:00:00Z",
+      "fairProbability": 0.854,
+      "bookCount": 6,
+      "books": [
+        "LeoVegas",
+        "Ladbrokes",
+        "Coral",
+        "William Hill",
+        "LiveScore Bet",
+        "Virgin Bet"
+      ]
+    },
+    {
+      "fixture": "FSV Mainz 05 v Bayer Leverkusen",
+      "sport": "soccer_germany_bundesliga",
+      "commenceTime": "2026-10-10T13:30:00Z",
+      "fairProbability": 0.837,
+      "bookCount": 6,
+      "books": [
+        "LeoVegas",
+        "William Hill",
+        "Coral",
+        "Ladbrokes",
+        "Paddy Power",
+        "Betfair"
+      ]
+    },
+    {
       "fixture": "Chelsea v Bournemouth",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-10T14:00:00Z",
-      "fairProbability": 0.823,
-      "bookCount": 7,
+      "fairProbability": 0.822,
+      "bookCount": 8,
       "books": [
         "LeoVegas",
         "Paddy Power",
         "William Hill",
         "Betfair",
         "Virgin Bet",
+        "LiveScore Bet",
         "Coral",
         "Ladbrokes"
       ]
@@ -84,66 +100,6 @@
       ]
     },
     {
-      "fixture": "RC Lens v Lyon",
-      "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-09T18:45:00Z",
-      "fairProbability": 0.814,
-      "bookCount": 6,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Coral",
-        "Ladbrokes",
-        "Paddy Power",
-        "Betfair"
-      ]
-    },
-    {
-      "fixture": "Eintracht Braunschweig v Holstein Kiel",
-      "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-09T16:30:00Z",
-      "fairProbability": 0.814,
-      "bookCount": 6,
-      "books": [
-        "LeoVegas",
-        "Ladbrokes",
-        "Coral",
-        "Virgin Bet",
-        "LiveScore Bet",
-        "William Hill"
-      ]
-    },
-    {
-      "fixture": "West Ham United v Queens Park Rangers",
-      "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-09T19:00:00Z",
-      "fairProbability": 0.813,
-      "bookCount": 6,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Virgin Bet",
-        "LiveScore Bet",
-        "Coral",
-        "Ladbrokes"
-      ]
-    },
-    {
-      "fixture": "1. FC Heidenheim v 1. FC Kaiserslautern",
-      "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-09T16:30:00Z",
-      "fairProbability": 0.813,
-      "bookCount": 6,
-      "books": [
-        "LeoVegas",
-        "Ladbrokes",
-        "Coral",
-        "Virgin Bet",
-        "LiveScore Bet",
-        "William Hill"
-      ]
-    },
-    {
       "fixture": "Chicago Fire v New York City FC",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-10-10T18:30:00Z",
@@ -159,14 +115,46 @@
       ]
     },
     {
-      "fixture": "Lille v Le Havre",
+      "fixture": "VfL Osnabrück v Dynamo Dresden",
+      "sport": "soccer_germany_bundesliga2",
+      "commenceTime": "2026-10-10T11:00:00Z",
+      "fairProbability": 0.804,
+      "bookCount": 6,
+      "books": [
+        "LeoVegas",
+        "Ladbrokes",
+        "Coral",
+        "LiveScore Bet",
+        "Virgin Bet",
+        "William Hill"
+      ]
+    },
+    {
+      "fixture": "AS Monaco v Toulouse",
       "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-10T15:15:00Z",
-      "fairProbability": 0.792,
+      "commenceTime": "2026-10-10T18:45:00Z",
+      "fairProbability": 0.803,
       "bookCount": 7,
       "books": [
         "LeoVegas",
         "William Hill",
+        "Virgin Bet",
+        "Coral",
+        "Ladbrokes",
+        "Paddy Power",
+        "Betfair"
+      ]
+    },
+    {
+      "fixture": "Lille v Le Havre",
+      "sport": "soccer_france_ligue_one",
+      "commenceTime": "2026-10-10T15:15:00Z",
+      "fairProbability": 0.788,
+      "bookCount": 8,
+      "books": [
+        "LeoVegas",
+        "William Hill",
+        "Virgin Bet",
         "LiveScore Bet",
         "Coral",
         "Ladbrokes",
@@ -178,67 +166,23 @@
       "fixture": "Aston Villa v Brentford",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-10T14:00:00Z",
-      "fairProbability": 0.786,
-      "bookCount": 8,
+      "fairProbability": 0.778,
+      "bookCount": 7,
       "books": [
         "LeoVegas",
         "William Hill",
         "Paddy Power",
         "Betfair",
         "Virgin Bet",
-        "LiveScore Bet",
         "Coral",
         "Ladbrokes"
       ]
     },
     {
-      "fixture": "Arsenal v Leeds United",
-      "sport": "soccer_epl",
-      "commenceTime": "2026-10-10T11:30:00Z",
-      "fairProbability": 0.755,
-      "bookCount": 6,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Paddy Power",
-        "Betfair",
-        "Ladbrokes",
-        "Coral"
-      ]
-    },
-    {
-      "fixture": "USL Dunkerque v Annecy FC",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
-      "fairProbability": 0.752,
-      "bookCount": 5,
-      "books": [
-        "William Hill",
-        "Ladbrokes",
-        "Coral",
-        "Virgin Bet",
-        "LiveScore Bet"
-      ]
-    },
-    {
-      "fixture": "Rayo Vallecano v Athletic Bilbao",
-      "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-10T12:00:00Z",
-      "fairProbability": 0.737,
-      "bookCount": 5,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Coral",
-        "Ladbrokes",
-        "Paddy Power"
-      ]
-    },
-    {
-      "fixture": "West Bromwich Albion v Birmingham City",
+      "fixture": "Swansea City v Norwich City",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T11:30:00Z",
-      "fairProbability": 0.719,
+      "fairProbability": 0.766,
       "bookCount": 4,
       "books": [
         "LeoVegas",
@@ -248,48 +192,16 @@
       ]
     },
     {
-      "fixture": "Genoa v Fiorentina",
-      "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-10T13:00:00Z",
-      "fairProbability": 0.716,
-      "bookCount": 8,
-      "books": [
-        "LiveScore Bet",
-        "Virgin Bet",
-        "LeoVegas",
-        "William Hill",
-        "Ladbrokes",
-        "Coral",
-        "Paddy Power",
-        "Betfair"
-      ]
-    },
-    {
-      "fixture": "Málaga v Espanyol",
-      "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-09T19:00:00Z",
-      "fairProbability": 0.71,
-      "bookCount": 8,
-      "books": [
-        "LeoVegas",
-        "LiveScore Bet",
-        "Virgin Bet",
-        "William Hill",
-        "Coral",
-        "Ladbrokes",
-        "Paddy Power",
-        "Betfair"
-      ]
-    },
-    {
-      "fixture": "Charlton Athletic v Bristol City",
-      "sport": "soccer_efl_champ",
+      "fixture": "Arsenal v Leeds United",
+      "sport": "soccer_epl",
       "commenceTime": "2026-10-10T11:30:00Z",
-      "fairProbability": 0.706,
-      "bookCount": 6,
+      "fairProbability": 0.754,
+      "bookCount": 8,
       "books": [
         "LeoVegas",
         "William Hill",
+        "Paddy Power",
+        "Betfair",
         "Virgin Bet",
         "LiveScore Bet",
         "Ladbrokes",
@@ -297,10 +209,42 @@
       ]
     },
     {
-      "fixture": "Sochaux v Boulogne",
+      "fixture": "Alavés v Atlético Madrid",
+      "sport": "soccer_spain_la_liga",
+      "commenceTime": "2026-10-10T14:15:00Z",
+      "fairProbability": 0.742,
+      "bookCount": 7,
+      "books": [
+        "LeoVegas",
+        "LiveScore Bet",
+        "William Hill",
+        "Coral",
+        "Ladbrokes",
+        "Paddy Power",
+        "Betfair"
+      ]
+    },
+    {
+      "fixture": "Rayo Vallecano v Athletic Bilbao",
+      "sport": "soccer_spain_la_liga",
+      "commenceTime": "2026-10-10T12:00:00Z",
+      "fairProbability": 0.732,
+      "bookCount": 7,
+      "books": [
+        "LeoVegas",
+        "Virgin Bet",
+        "LiveScore Bet",
+        "William Hill",
+        "Coral",
+        "Ladbrokes",
+        "Paddy Power"
+      ]
+    },
+    {
+      "fixture": "Nantes v Stade de Reims",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
-      "fairProbability": 0.671,
+      "commenceTime": "2026-10-10T12:00:00Z",
+      "fairProbability": 0.731,
       "bookCount": 5,
       "books": [
         "William Hill",
@@ -309,41 +253,90 @@
         "Virgin Bet",
         "LiveScore Bet"
       ]
+    },
+    {
+      "fixture": "Clermont v Red Star",
+      "sport": "soccer_france_ligue_two",
+      "commenceTime": "2026-10-10T12:00:00Z",
+      "fairProbability": 0.721,
+      "bookCount": 5,
+      "books": [
+        "William Hill",
+        "Ladbrokes",
+        "Coral",
+        "Virgin Bet",
+        "LiveScore Bet"
+      ]
+    },
+    {
+      "fixture": "West Bromwich Albion v Birmingham City",
+      "sport": "soccer_efl_champ",
+      "commenceTime": "2026-10-10T11:30:00Z",
+      "fairProbability": 0.714,
+      "bookCount": 5,
+      "books": [
+        "LeoVegas",
+        "William Hill",
+        "Virgin Bet",
+        "Ladbrokes",
+        "Coral"
+      ]
+    },
+    {
+      "fixture": "Charlton Athletic v Bristol City",
+      "sport": "soccer_efl_champ",
+      "commenceTime": "2026-10-10T11:30:00Z",
+      "fairProbability": 0.7,
+      "bookCount": 5,
+      "books": [
+        "LeoVegas",
+        "William Hill",
+        "LiveScore Bet",
+        "Ladbrokes",
+        "Coral"
+      ]
     }
   ],
   "over1_5_excluded": [
     {
-      "fixture": "FSV Mainz 05 v Bayer Leverkusen",
+      "fixture": "Genoa v Fiorentina",
+      "sport": "soccer_italy_serie_a",
+      "commenceTime": "2026-10-10T13:00:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 429 Too Many Requests — /v4/sports/soccer_italy_serie_a/events/2f8e871a0f7f66ae22938028645e1066/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Requests are too frequent\",\"error_code\":\"EXCEEDED_FREQ_LIMIT\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.html#exceeded-freq-limit\"}\n"
+    },
+    {
+      "fixture": "Union Berlin v Elversberg",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-10-10T13:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "1. FC Magdeburg v Hannover 96",
+      "fixture": "SV Darmstadt 98 v FC Energie Cottbus",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-10-10T11:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Alavés v Atlético Madrid",
+      "fixture": "Barcelona v Getafe",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-10T14:15:00Z",
+      "commenceTime": "2026-10-10T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "AS Monaco v Toulouse",
+      "fixture": "Brest v Angers",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-10-10T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Montpellier v Grenoble",
+      "fixture": "Saint Etienne v Rodez AF",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
+      "commenceTime": "2026-10-10T18:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -369,44 +362,44 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Swansea City v Norwich City",
+      "fixture": "Blackburn Rovers v Cardiff City",
       "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-10T11:30:00Z",
+      "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Union Berlin v Elversberg",
+      "fixture": "TSG Hoffenheim v Hamburger SV",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-10-10T13:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "VfL Osnabrück v Dynamo Dresden",
+      "fixture": "1. FC Nürnberg v VfL Wolfsburg",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-10T11:00:00Z",
+      "commenceTime": "2026-10-10T18:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Barcelona v Getafe",
+      "fixture": "Real Madrid v Villarreal",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-10T16:30:00Z",
+      "commenceTime": "2026-10-10T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Brest v Angers",
+      "fixture": "Paris Saint Germain v Le Mans FC",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-10-10T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Nancy v Guingamp",
+      "fixture": "Dijon v Metz",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
+      "commenceTime": "2026-10-12T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -432,44 +425,44 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Blackburn Rovers v Cardiff City",
+      "fixture": "Bolton Wanderers v Stoke City",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "TSG Hoffenheim v Hamburger SV",
+      "fixture": "SC Paderborn v VfB Stuttgart",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-10-10T13:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "SV Darmstadt 98 v FC Energie Cottbus",
+      "fixture": "VfL Bochum v Arminia Bielefeld",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-10T11:00:00Z",
+      "commenceTime": "2026-10-11T11:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Real Madrid v Villarreal",
+      "fixture": "Elche CF v Celta Vigo",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-10T19:00:00Z",
+      "commenceTime": "2026-10-11T12:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Paris Saint Germain v Le Mans FC",
+      "fixture": "Lorient v Paris FC",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-10-10T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Pau FC v Stade Lavallois",
+      "fixture": "Annecy FC v Nancy",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
+      "commenceTime": "2026-10-16T18:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -495,44 +488,44 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Bolton Wanderers v Stoke City",
+      "fixture": "Watford v Burnley",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "SC Paderborn v VfB Stuttgart",
+      "fixture": "RB Leipzig v Eintracht Frankfurt",
       "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-10T13:30:00Z",
+      "commenceTime": "2026-10-10T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "1. FC Nürnberg v VfL Wolfsburg",
+      "fixture": "FC St. Pauli v Karlsruher SC",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-10T18:30:00Z",
+      "commenceTime": "2026-10-11T11:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Elche CF v Celta Vigo",
+      "fixture": "Real Sociedad v Deportivo La Coruña",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-11T12:00:00Z",
+      "commenceTime": "2026-10-11T14:15:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Lorient v Paris FC",
+      "fixture": "Nice v Strasbourg",
       "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-10T18:45:00Z",
+      "commenceTime": "2026-10-11T13:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Clermont v Red Star",
+      "fixture": "Grenoble v Boulogne",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-10T12:00:00Z",
+      "commenceTime": "2026-10-16T18:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -558,44 +551,44 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Watford v Burnley",
+      "fixture": "Derby County v Wrexham AFC",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "RB Leipzig v Eintracht Frankfurt",
+      "fixture": "1. FC Köln v Borussia Monchengladbach",
       "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-10T16:30:00Z",
+      "commenceTime": "2026-10-11T13:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "VfL Bochum v Arminia Bielefeld",
+      "fixture": "Hertha Berlin v Greuther Fürth",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-10-11T11:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Real Sociedad v Deportivo La Coruña",
+      "fixture": "Real Betis v CA Osasuna",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-11T14:15:00Z",
+      "commenceTime": "2026-10-11T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Nice v Strasbourg",
+      "fixture": "Rennes v Auxerre",
       "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-11T13:00:00Z",
+      "commenceTime": "2026-10-11T15:15:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Nantes v Stade de Reims",
+      "fixture": "Guingamp v Pau FC",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-10T12:00:00Z",
+      "commenceTime": "2026-10-16T18:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -621,44 +614,37 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Derby County v Wrexham AFC",
+      "fixture": "Sheffield United v Lincoln City",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "1. FC Köln v Borussia Monchengladbach",
+      "fixture": "SC Freiburg v FC Schalke 04",
       "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-11T13:30:00Z",
+      "commenceTime": "2026-10-11T15:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "FC St. Pauli v Karlsruher SC",
+      "fixture": "FC Energie Cottbus v 1. FC Nürnberg",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-11T11:30:00Z",
+      "commenceTime": "2026-10-16T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Real Betis v CA Osasuna",
+      "fixture": "Real Racing Club de Santander v Valencia",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-11T16:30:00Z",
+      "commenceTime": "2026-10-11T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Rennes v Auxerre",
+      "fixture": "Troyes v Marseille",
       "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-11T15:15:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Saint Etienne v Rodez AF",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-10T18:00:00Z",
+      "commenceTime": "2026-10-11T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -684,44 +670,37 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Sheffield United v Lincoln City",
+      "fixture": "Middlesbrough v Wolverhampton Wanderers",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "SC Freiburg v FC Schalke 04",
+      "fixture": "Eintracht Frankfurt v 1. FC Köln",
       "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-11T15:30:00Z",
+      "commenceTime": "2026-10-16T18:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Hertha Berlin v Greuther Fürth",
+      "fixture": "Holstein Kiel v Hertha Berlin",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-11T11:30:00Z",
+      "commenceTime": "2026-10-16T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Real Racing Club de Santander v Valencia",
+      "fixture": "Levante v Sevilla",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-11T19:00:00Z",
+      "commenceTime": "2026-10-12T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Troyes v Marseille",
+      "fixture": "Le Mans FC v Toulouse",
       "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-11T18:45:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Dijon v Metz",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-12T18:45:00Z",
+      "commenceTime": "2026-10-16T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -743,55 +722,6 @@
       "fixture": "Coventry City v Newcastle United",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-12T19:00:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Middlesbrough v Wolverhampton Wanderers",
-      "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-10T14:00:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Eintracht Frankfurt v 1. FC Köln",
-      "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-16T18:30:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Levante v Sevilla",
-      "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-12T19:00:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Le Mans FC v Toulouse",
-      "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-16T18:45:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Torino v Udinese",
-      "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-12T18:45:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Austin FC v Nashville SC",
-      "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-11T00:30:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Everton v Chelsea",
-      "sport": "soccer_epl",
-      "commenceTime": "2026-10-17T11:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -824,23 +754,23 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Frosinone v Sassuolo",
+      "fixture": "Torino v Udinese",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-16T18:45:00Z",
+      "commenceTime": "2026-10-12T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Minnesota United FC v Houston Dynamo",
+      "fixture": "Austin FC v Nashville SC",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-10-11T00:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Brentford v Liverpool",
+      "fixture": "Everton v Chelsea",
       "sport": "soccer_epl",
-      "commenceTime": "2026-10-17T14:00:00Z",
+      "commenceTime": "2026-10-17T11:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -873,21 +803,21 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Venezia v Napoli",
+      "fixture": "Frosinone v Sassuolo",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-17T13:00:00Z",
+      "commenceTime": "2026-10-16T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Sporting Kansas City v Portland Timbers",
+      "fixture": "Minnesota United FC v Houston Dynamo",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-10-11T00:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Fulham v Hull City",
+      "fixture": "Brentford v Liverpool",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-17T14:00:00Z",
       "excluded": true,
@@ -922,21 +852,21 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Bologna v Inter Milan",
+      "fixture": "Venezia v Napoli",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-17T16:00:00Z",
+      "commenceTime": "2026-10-17T13:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Colorado Rapids v San Jose Earthquakes",
+      "fixture": "Sporting Kansas City v Portland Timbers",
       "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-11T01:30:00Z",
+      "commenceTime": "2026-10-11T00:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Manchester City v Ipswich Town",
+      "fixture": "Fulham v Hull City",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-17T14:00:00Z",
       "excluded": true,
@@ -971,23 +901,23 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "AS Roma v Genoa",
+      "fixture": "Bologna v Inter Milan",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-17T18:45:00Z",
+      "commenceTime": "2026-10-17T16:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Los Angeles FC v Vancouver Whitecaps FC",
+      "fixture": "Colorado Rapids v San Jose Earthquakes",
       "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-11T02:30:00Z",
+      "commenceTime": "2026-10-11T01:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Newcastle United v Aston Villa",
+      "fixture": "Manchester City v Ipswich Town",
       "sport": "soccer_epl",
-      "commenceTime": "2026-10-17T16:30:00Z",
+      "commenceTime": "2026-10-17T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1020,23 +950,23 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Udinese v Lecce",
+      "fixture": "AS Roma v Genoa",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-18T10:30:00Z",
+      "commenceTime": "2026-10-17T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "St. Louis City SC v LA Galaxy",
+      "fixture": "Los Angeles FC v Vancouver Whitecaps FC",
       "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-11T23:00:00Z",
+      "commenceTime": "2026-10-11T02:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Bournemouth v Sunderland",
+      "fixture": "Newcastle United v Aston Villa",
       "sport": "soccer_epl",
-      "commenceTime": "2026-10-18T13:00:00Z",
+      "commenceTime": "2026-10-17T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1069,21 +999,21 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Fiorentina v Como",
+      "fixture": "Udinese v Lecce",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-18T13:00:00Z",
+      "commenceTime": "2026-10-18T10:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "CF Montreal v Atlanta United FC",
+      "fixture": "St. Louis City SC v LA Galaxy",
       "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-14T23:30:00Z",
+      "commenceTime": "2026-10-11T23:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Brighton and Hove Albion v Crystal Palace",
+      "fixture": "Bournemouth v Sunderland",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-18T13:00:00Z",
       "excluded": true,
@@ -1118,21 +1048,21 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "AC Milan v Atalanta BC",
+      "fixture": "Fiorentina v Como",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-18T16:00:00Z",
+      "commenceTime": "2026-10-18T13:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Columbus Crew SC v Charlotte FC",
+      "fixture": "CF Montreal v Atlanta United FC",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-10-14T23:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Leeds United v Manchester United",
+      "fixture": "Brighton and Hove Albion v Crystal Palace",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-18T13:00:00Z",
       "excluded": true,
@@ -1167,6 +1097,41 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
+      "fixture": "AC Milan v Atalanta BC",
+      "sport": "soccer_italy_serie_a",
+      "commenceTime": "2026-10-18T16:00:00Z",
+      "excluded": true,
+      "reason": "lookup budget exhausted for this run"
+    },
+    {
+      "fixture": "Columbus Crew SC v Charlotte FC",
+      "sport": "soccer_usa_mls",
+      "commenceTime": "2026-10-14T23:30:00Z",
+      "excluded": true,
+      "reason": "lookup budget exhausted for this run"
+    },
+    {
+      "fixture": "Leeds United v Manchester United",
+      "sport": "soccer_epl",
+      "commenceTime": "2026-10-18T13:00:00Z",
+      "excluded": true,
+      "reason": "lookup budget exhausted for this run"
+    },
+    {
+      "fixture": "Birmingham City v Preston North End",
+      "sport": "soccer_efl_champ",
+      "commenceTime": "2026-10-13T19:00:00Z",
+      "excluded": true,
+      "reason": "lookup budget exhausted for this run"
+    },
+    {
+      "fixture": "Real Madrid v Sevilla",
+      "sport": "soccer_spain_la_liga",
+      "commenceTime": "2026-10-18T19:00:00Z",
+      "excluded": true,
+      "reason": "lookup budget exhausted for this run"
+    },
+    {
       "fixture": "Juventus v Lazio",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-10-18T18:45:00Z",
@@ -1188,16 +1153,16 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Birmingham City v Preston North End",
+      "fixture": "Stoke City v Middlesbrough",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-13T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Real Madrid v Sevilla",
+      "fixture": "Getafe v Rayo Vallecano",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-18T19:00:00Z",
+      "commenceTime": "2026-10-19T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1223,16 +1188,9 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Stoke City v Middlesbrough",
+      "fixture": "Queens Park Rangers v Derby County",
       "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-13T19:00:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Getafe v Rayo Vallecano",
-      "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-19T19:00:00Z",
+      "commenceTime": "2026-10-14T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1251,7 +1209,7 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Queens Park Rangers v Derby County",
+      "fixture": "Norwich City v Southampton",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-14T18:45:00Z",
       "excluded": true,
@@ -1265,7 +1223,7 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Norwich City v Southampton",
+      "fixture": "Portsmouth v Sheffield United",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-14T18:45:00Z",
       "excluded": true,
@@ -1279,9 +1237,9 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Portsmouth v Sheffield United",
+      "fixture": "Lincoln City v West Ham United",
       "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-14T18:45:00Z",
+      "commenceTime": "2026-10-14T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1293,9 +1251,9 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Lincoln City v West Ham United",
+      "fixture": "Burnley v Wolverhampton Wanderers",
       "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-14T19:00:00Z",
+      "commenceTime": "2026-10-16T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1354,12 +1312,10 @@
       "fixture": "Augsburg v Bayern Munich",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-10-10T13:30:00Z",
-      "fairProbability": 0.846,
-      "bookCount": 5,
+      "fairProbability": 0.858,
+      "bookCount": 3,
       "books": [
         "LeoVegas",
-        "Virgin Bet",
-        "LiveScore Bet",
         "Paddy Power",
         "Betfair"
       ]
@@ -1379,10 +1335,20 @@
       ]
     },
     {
-      "fixture": "Borussia Dortmund v Werder Bremen",
+      "fixture": "1. FC Magdeburg v Hannover 96",
+      "sport": "soccer_germany_bundesliga2",
+      "commenceTime": "2026-10-10T11:00:00Z",
+      "fairProbability": 0.77,
+      "bookCount": 1,
+      "books": [
+        "LeoVegas"
+      ]
+    },
+    {
+      "fixture": "FSV Mainz 05 v Bayer Leverkusen",
       "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-09T18:30:00Z",
-      "fairProbability": 0.781,
+      "commenceTime": "2026-10-10T13:30:00Z",
+      "fairProbability": 0.758,
       "bookCount": 5,
       "books": [
         "LeoVegas",
@@ -1396,22 +1362,12 @@
       "fixture": "Chelsea v Bournemouth",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-10T14:00:00Z",
-      "fairProbability": 0.769,
-      "bookCount": 3,
+      "fairProbability": 0.745,
+      "bookCount": 5,
       "books": [
         "LeoVegas",
         "Paddy Power",
-        "Betfair"
-      ]
-    },
-    {
-      "fixture": "West Ham United v Queens Park Rangers",
-      "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-09T19:00:00Z",
-      "fairProbability": 0.745,
-      "bookCount": 3,
-      "books": [
-        "LeoVegas",
+        "Betfair",
         "Virgin Bet",
         "LiveScore Bet"
       ]
@@ -1420,26 +1376,12 @@
       "fixture": "Toronto FC v CF Montreal",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-10-10T17:00:00Z",
-      "fairProbability": 0.744,
+      "fairProbability": 0.742,
       "bookCount": 3,
       "books": [
         "LeoVegas",
         "LiveScore Bet",
         "Virgin Bet"
-      ]
-    },
-    {
-      "fixture": "RC Lens v Lyon",
-      "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-09T18:45:00Z",
-      "fairProbability": 0.741,
-      "bookCount": 5,
-      "books": [
-        "LeoVegas",
-        "Virgin Bet",
-        "LiveScore Bet",
-        "Paddy Power",
-        "Betfair"
       ]
     },
     {
@@ -1455,23 +1397,41 @@
       ]
     },
     {
-      "fixture": "Eintracht Braunschweig v Holstein Kiel",
+      "fixture": "AS Monaco v Toulouse",
+      "sport": "soccer_france_ligue_one",
+      "commenceTime": "2026-10-10T18:45:00Z",
+      "fairProbability": 0.734,
+      "bookCount": 5,
+      "books": [
+        "LeoVegas",
+        "LiveScore Bet",
+        "Virgin Bet",
+        "Paddy Power",
+        "Betfair"
+      ]
+    },
+    {
+      "fixture": "VfL Osnabrück v Dynamo Dresden",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-09T16:30:00Z",
-      "fairProbability": 0.737,
+      "commenceTime": "2026-10-10T11:00:00Z",
+      "fairProbability": 0.733,
       "bookCount": 1,
       "books": [
         "LeoVegas"
       ]
     },
     {
-      "fixture": "1. FC Heidenheim v 1. FC Kaiserslautern",
-      "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-09T16:30:00Z",
-      "fairProbability": 0.733,
-      "bookCount": 1,
+      "fixture": "Lille v Le Havre",
+      "sport": "soccer_france_ligue_one",
+      "commenceTime": "2026-10-10T15:15:00Z",
+      "fairProbability": 0.722,
+      "bookCount": 5,
       "books": [
-        "LeoVegas"
+        "LeoVegas",
+        "Virgin Bet",
+        "LiveScore Bet",
+        "Paddy Power",
+        "Betfair"
       ]
     },
     {
@@ -1489,24 +1449,22 @@
       ]
     },
     {
-      "fixture": "Lille v Le Havre",
-      "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-10T15:15:00Z",
-      "fairProbability": 0.717,
-      "bookCount": 5,
+      "fixture": "Swansea City v Norwich City",
+      "sport": "soccer_efl_champ",
+      "commenceTime": "2026-10-10T11:30:00Z",
+      "fairProbability": 0.708,
+      "bookCount": 3,
       "books": [
         "LeoVegas",
         "Virgin Bet",
-        "LiveScore Bet",
-        "Paddy Power",
-        "Betfair"
+        "LiveScore Bet"
       ]
     },
     {
       "fixture": "Arsenal v Leeds United",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-10T11:30:00Z",
-      "fairProbability": 0.698,
+      "fairProbability": 0.7,
       "bookCount": 5,
       "books": [
         "LeoVegas",
@@ -1517,16 +1475,39 @@
       ]
     },
     {
-      "fixture": "Rayo Vallecano v Athletic Bilbao",
+      "fixture": "Alavés v Atlético Madrid",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-10T12:00:00Z",
-      "fairProbability": 0.682,
-      "bookCount": 4,
+      "commenceTime": "2026-10-10T14:15:00Z",
+      "fairProbability": 0.689,
+      "bookCount": 5,
       "books": [
         "LeoVegas",
-        "Virgin Bet",
         "LiveScore Bet",
-        "Paddy Power"
+        "Virgin Bet",
+        "Paddy Power",
+        "Betfair"
+      ]
+    },
+    {
+      "fixture": "Clermont v Red Star",
+      "sport": "soccer_france_ligue_two",
+      "commenceTime": "2026-10-10T12:00:00Z",
+      "fairProbability": 0.687,
+      "bookCount": 2,
+      "books": [
+        "Virgin Bet",
+        "LiveScore Bet"
+      ]
+    },
+    {
+      "fixture": "Nantes v Stade de Reims",
+      "sport": "soccer_france_ligue_two",
+      "commenceTime": "2026-10-10T12:00:00Z",
+      "fairProbability": 0.682,
+      "bookCount": 2,
+      "books": [
+        "Virgin Bet",
+        "LiveScore Bet"
       ]
     },
     {
@@ -1539,6 +1520,19 @@
         "LeoVegas",
         "Virgin Bet",
         "LiveScore Bet"
+      ]
+    },
+    {
+      "fixture": "Rayo Vallecano v Athletic Bilbao",
+      "sport": "soccer_spain_la_liga",
+      "commenceTime": "2026-10-10T12:00:00Z",
+      "fairProbability": 0.677,
+      "bookCount": 4,
+      "books": [
+        "LeoVegas",
+        "Virgin Bet",
+        "LiveScore Bet",
+        "Paddy Power"
       ]
     },
     {
@@ -1556,20 +1550,6 @@
       ]
     },
     {
-      "fixture": "Málaga v Espanyol",
-      "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-09T19:00:00Z",
-      "fairProbability": 0.662,
-      "bookCount": 5,
-      "books": [
-        "LeoVegas",
-        "LiveScore Bet",
-        "Virgin Bet",
-        "Paddy Power",
-        "Betfair"
-      ]
-    },
-    {
       "fixture": "Charlton Athletic v Bristol City",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T11:30:00Z",
@@ -1580,59 +1560,41 @@
         "Virgin Bet",
         "LiveScore Bet"
       ]
-    },
-    {
-      "fixture": "Sochaux v Boulogne",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
-      "fairProbability": 0.636,
-      "bookCount": 2,
-      "books": [
-        "Virgin Bet",
-        "LiveScore Bet"
-      ]
     }
   ],
   "firstHalfOver0_5_excluded": [
     {
-      "fixture": "USL Dunkerque v Annecy FC",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
-      "excluded": true,
-      "reason": "no first-half 0.5 line available"
-    },
-    {
-      "fixture": "FSV Mainz 05 v Bayer Leverkusen",
+      "fixture": "Union Berlin v Elversberg",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-10-10T13:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "1. FC Magdeburg v Hannover 96",
+      "fixture": "SV Darmstadt 98 v FC Energie Cottbus",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-10-10T11:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Alavés v Atlético Madrid",
+      "fixture": "Barcelona v Getafe",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-10T14:15:00Z",
+      "commenceTime": "2026-10-10T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "AS Monaco v Toulouse",
+      "fixture": "Brest v Angers",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-10-10T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Montpellier v Grenoble",
+      "fixture": "Saint Etienne v Rodez AF",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
+      "commenceTime": "2026-10-10T18:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1658,44 +1620,44 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Swansea City v Norwich City",
+      "fixture": "Blackburn Rovers v Cardiff City",
       "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-10T11:30:00Z",
+      "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Union Berlin v Elversberg",
+      "fixture": "TSG Hoffenheim v Hamburger SV",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-10-10T13:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "VfL Osnabrück v Dynamo Dresden",
+      "fixture": "1. FC Nürnberg v VfL Wolfsburg",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-10T11:00:00Z",
+      "commenceTime": "2026-10-10T18:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Barcelona v Getafe",
+      "fixture": "Real Madrid v Villarreal",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-10T16:30:00Z",
+      "commenceTime": "2026-10-10T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Brest v Angers",
+      "fixture": "Paris Saint Germain v Le Mans FC",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-10-10T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Nancy v Guingamp",
+      "fixture": "Dijon v Metz",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
+      "commenceTime": "2026-10-12T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1721,44 +1683,44 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Blackburn Rovers v Cardiff City",
+      "fixture": "Bolton Wanderers v Stoke City",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "TSG Hoffenheim v Hamburger SV",
+      "fixture": "SC Paderborn v VfB Stuttgart",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-10-10T13:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "SV Darmstadt 98 v FC Energie Cottbus",
+      "fixture": "VfL Bochum v Arminia Bielefeld",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-10T11:00:00Z",
+      "commenceTime": "2026-10-11T11:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Real Madrid v Villarreal",
+      "fixture": "Elche CF v Celta Vigo",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-10T19:00:00Z",
+      "commenceTime": "2026-10-11T12:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Paris Saint Germain v Le Mans FC",
+      "fixture": "Lorient v Paris FC",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-10-10T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Pau FC v Stade Lavallois",
+      "fixture": "Annecy FC v Nancy",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-09T18:00:00Z",
+      "commenceTime": "2026-10-16T18:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1784,44 +1746,44 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Bolton Wanderers v Stoke City",
+      "fixture": "Watford v Burnley",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "SC Paderborn v VfB Stuttgart",
+      "fixture": "RB Leipzig v Eintracht Frankfurt",
       "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-10T13:30:00Z",
+      "commenceTime": "2026-10-10T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "1. FC Nürnberg v VfL Wolfsburg",
+      "fixture": "FC St. Pauli v Karlsruher SC",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-10T18:30:00Z",
+      "commenceTime": "2026-10-11T11:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Elche CF v Celta Vigo",
+      "fixture": "Real Sociedad v Deportivo La Coruña",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-11T12:00:00Z",
+      "commenceTime": "2026-10-11T14:15:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Lorient v Paris FC",
+      "fixture": "Nice v Strasbourg",
       "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-10T18:45:00Z",
+      "commenceTime": "2026-10-11T13:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Clermont v Red Star",
+      "fixture": "Grenoble v Boulogne",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-10T12:00:00Z",
+      "commenceTime": "2026-10-16T18:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1847,44 +1809,44 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Watford v Burnley",
+      "fixture": "Derby County v Wrexham AFC",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "RB Leipzig v Eintracht Frankfurt",
+      "fixture": "1. FC Köln v Borussia Monchengladbach",
       "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-10T16:30:00Z",
+      "commenceTime": "2026-10-11T13:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "VfL Bochum v Arminia Bielefeld",
+      "fixture": "Hertha Berlin v Greuther Fürth",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-10-11T11:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Real Sociedad v Deportivo La Coruña",
+      "fixture": "Real Betis v CA Osasuna",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-11T14:15:00Z",
+      "commenceTime": "2026-10-11T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Nice v Strasbourg",
+      "fixture": "Rennes v Auxerre",
       "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-11T13:00:00Z",
+      "commenceTime": "2026-10-11T15:15:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Nantes v Stade de Reims",
+      "fixture": "Guingamp v Pau FC",
       "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-10T12:00:00Z",
+      "commenceTime": "2026-10-16T18:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1910,44 +1872,37 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Derby County v Wrexham AFC",
+      "fixture": "Sheffield United v Lincoln City",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "1. FC Köln v Borussia Monchengladbach",
+      "fixture": "SC Freiburg v FC Schalke 04",
       "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-11T13:30:00Z",
+      "commenceTime": "2026-10-11T15:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "FC St. Pauli v Karlsruher SC",
+      "fixture": "FC Energie Cottbus v 1. FC Nürnberg",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-11T11:30:00Z",
+      "commenceTime": "2026-10-16T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Real Betis v CA Osasuna",
+      "fixture": "Real Racing Club de Santander v Valencia",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-11T16:30:00Z",
+      "commenceTime": "2026-10-11T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Rennes v Auxerre",
+      "fixture": "Troyes v Marseille",
       "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-11T15:15:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Saint Etienne v Rodez AF",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-10T18:00:00Z",
+      "commenceTime": "2026-10-11T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -1973,44 +1928,37 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Sheffield United v Lincoln City",
+      "fixture": "Middlesbrough v Wolverhampton Wanderers",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-10T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "SC Freiburg v FC Schalke 04",
+      "fixture": "Eintracht Frankfurt v 1. FC Köln",
       "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-11T15:30:00Z",
+      "commenceTime": "2026-10-16T18:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Hertha Berlin v Greuther Fürth",
+      "fixture": "Holstein Kiel v Hertha Berlin",
       "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-10-11T11:30:00Z",
+      "commenceTime": "2026-10-16T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Real Racing Club de Santander v Valencia",
+      "fixture": "Levante v Sevilla",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-11T19:00:00Z",
+      "commenceTime": "2026-10-12T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Troyes v Marseille",
+      "fixture": "Le Mans FC v Toulouse",
       "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-11T18:45:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Dijon v Metz",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-10-12T18:45:00Z",
+      "commenceTime": "2026-10-16T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -2032,55 +1980,6 @@
       "fixture": "Coventry City v Newcastle United",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-12T19:00:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Middlesbrough v Wolverhampton Wanderers",
-      "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-10T14:00:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Eintracht Frankfurt v 1. FC Köln",
-      "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-10-16T18:30:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Levante v Sevilla",
-      "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-12T19:00:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Le Mans FC v Toulouse",
-      "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-10-16T18:45:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Torino v Udinese",
-      "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-12T18:45:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Austin FC v Nashville SC",
-      "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-11T00:30:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Everton v Chelsea",
-      "sport": "soccer_epl",
-      "commenceTime": "2026-10-17T11:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -2113,23 +2012,23 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Frosinone v Sassuolo",
+      "fixture": "Torino v Udinese",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-16T18:45:00Z",
+      "commenceTime": "2026-10-12T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Minnesota United FC v Houston Dynamo",
+      "fixture": "Austin FC v Nashville SC",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-10-11T00:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Brentford v Liverpool",
+      "fixture": "Everton v Chelsea",
       "sport": "soccer_epl",
-      "commenceTime": "2026-10-17T14:00:00Z",
+      "commenceTime": "2026-10-17T11:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -2162,21 +2061,21 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Venezia v Napoli",
+      "fixture": "Frosinone v Sassuolo",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-17T13:00:00Z",
+      "commenceTime": "2026-10-16T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Sporting Kansas City v Portland Timbers",
+      "fixture": "Minnesota United FC v Houston Dynamo",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-10-11T00:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Fulham v Hull City",
+      "fixture": "Brentford v Liverpool",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-17T14:00:00Z",
       "excluded": true,
@@ -2211,21 +2110,21 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Bologna v Inter Milan",
+      "fixture": "Venezia v Napoli",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-17T16:00:00Z",
+      "commenceTime": "2026-10-17T13:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Colorado Rapids v San Jose Earthquakes",
+      "fixture": "Sporting Kansas City v Portland Timbers",
       "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-11T01:30:00Z",
+      "commenceTime": "2026-10-11T00:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Manchester City v Ipswich Town",
+      "fixture": "Fulham v Hull City",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-17T14:00:00Z",
       "excluded": true,
@@ -2260,23 +2159,23 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "AS Roma v Genoa",
+      "fixture": "Bologna v Inter Milan",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-17T18:45:00Z",
+      "commenceTime": "2026-10-17T16:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Los Angeles FC v Vancouver Whitecaps FC",
+      "fixture": "Colorado Rapids v San Jose Earthquakes",
       "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-11T02:30:00Z",
+      "commenceTime": "2026-10-11T01:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Newcastle United v Aston Villa",
+      "fixture": "Manchester City v Ipswich Town",
       "sport": "soccer_epl",
-      "commenceTime": "2026-10-17T16:30:00Z",
+      "commenceTime": "2026-10-17T14:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -2309,23 +2208,23 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Udinese v Lecce",
+      "fixture": "AS Roma v Genoa",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-18T10:30:00Z",
+      "commenceTime": "2026-10-17T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "St. Louis City SC v LA Galaxy",
+      "fixture": "Los Angeles FC v Vancouver Whitecaps FC",
       "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-11T23:00:00Z",
+      "commenceTime": "2026-10-11T02:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Bournemouth v Sunderland",
+      "fixture": "Newcastle United v Aston Villa",
       "sport": "soccer_epl",
-      "commenceTime": "2026-10-18T13:00:00Z",
+      "commenceTime": "2026-10-17T16:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -2358,21 +2257,21 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Fiorentina v Como",
+      "fixture": "Udinese v Lecce",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-18T13:00:00Z",
+      "commenceTime": "2026-10-18T10:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "CF Montreal v Atlanta United FC",
+      "fixture": "St. Louis City SC v LA Galaxy",
       "sport": "soccer_usa_mls",
-      "commenceTime": "2026-10-14T23:30:00Z",
+      "commenceTime": "2026-10-11T23:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Brighton and Hove Albion v Crystal Palace",
+      "fixture": "Bournemouth v Sunderland",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-18T13:00:00Z",
       "excluded": true,
@@ -2407,21 +2306,21 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "AC Milan v Atalanta BC",
+      "fixture": "Fiorentina v Como",
       "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-10-18T16:00:00Z",
+      "commenceTime": "2026-10-18T13:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Columbus Crew SC v Charlotte FC",
+      "fixture": "CF Montreal v Atlanta United FC",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-10-14T23:30:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Leeds United v Manchester United",
+      "fixture": "Brighton and Hove Albion v Crystal Palace",
       "sport": "soccer_epl",
       "commenceTime": "2026-10-18T13:00:00Z",
       "excluded": true,
@@ -2456,6 +2355,41 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
+      "fixture": "AC Milan v Atalanta BC",
+      "sport": "soccer_italy_serie_a",
+      "commenceTime": "2026-10-18T16:00:00Z",
+      "excluded": true,
+      "reason": "lookup budget exhausted for this run"
+    },
+    {
+      "fixture": "Columbus Crew SC v Charlotte FC",
+      "sport": "soccer_usa_mls",
+      "commenceTime": "2026-10-14T23:30:00Z",
+      "excluded": true,
+      "reason": "lookup budget exhausted for this run"
+    },
+    {
+      "fixture": "Leeds United v Manchester United",
+      "sport": "soccer_epl",
+      "commenceTime": "2026-10-18T13:00:00Z",
+      "excluded": true,
+      "reason": "lookup budget exhausted for this run"
+    },
+    {
+      "fixture": "Birmingham City v Preston North End",
+      "sport": "soccer_efl_champ",
+      "commenceTime": "2026-10-13T19:00:00Z",
+      "excluded": true,
+      "reason": "lookup budget exhausted for this run"
+    },
+    {
+      "fixture": "Real Madrid v Sevilla",
+      "sport": "soccer_spain_la_liga",
+      "commenceTime": "2026-10-18T19:00:00Z",
+      "excluded": true,
+      "reason": "lookup budget exhausted for this run"
+    },
+    {
       "fixture": "Juventus v Lazio",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-10-18T18:45:00Z",
@@ -2477,16 +2411,16 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Birmingham City v Preston North End",
+      "fixture": "Stoke City v Middlesbrough",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-13T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Real Madrid v Sevilla",
+      "fixture": "Getafe v Rayo Vallecano",
       "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-18T19:00:00Z",
+      "commenceTime": "2026-10-19T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -2512,16 +2446,9 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Stoke City v Middlesbrough",
+      "fixture": "Queens Park Rangers v Derby County",
       "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-13T19:00:00Z",
-      "excluded": true,
-      "reason": "lookup budget exhausted for this run"
-    },
-    {
-      "fixture": "Getafe v Rayo Vallecano",
-      "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-10-19T19:00:00Z",
+      "commenceTime": "2026-10-14T18:45:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -2540,7 +2467,7 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Queens Park Rangers v Derby County",
+      "fixture": "Norwich City v Southampton",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-14T18:45:00Z",
       "excluded": true,
@@ -2554,7 +2481,7 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Norwich City v Southampton",
+      "fixture": "Portsmouth v Sheffield United",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-10-14T18:45:00Z",
       "excluded": true,
@@ -2568,9 +2495,9 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Portsmouth v Sheffield United",
+      "fixture": "Lincoln City v West Ham United",
       "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-14T18:45:00Z",
+      "commenceTime": "2026-10-14T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
@@ -2582,9 +2509,9 @@
       "reason": "lookup budget exhausted for this run"
     },
     {
-      "fixture": "Lincoln City v West Ham United",
+      "fixture": "Burnley v Wolverhampton Wanderers",
       "sport": "soccer_efl_champ",
-      "commenceTime": "2026-10-14T19:00:00Z",
+      "commenceTime": "2026-10-16T19:00:00Z",
       "excluded": true,
       "reason": "lookup budget exhausted for this run"
     },
