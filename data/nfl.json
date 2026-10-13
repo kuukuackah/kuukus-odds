@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-10-12T05:48:21.396Z",
-  "gameDate": "20261012",
+  "generatedAt": "2026-10-13T06:42:34.257Z",
+  "gameDate": "20261013",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 6,
-  "quotaRemaining": 994,
+  "quotaUsed": 7,
+  "quotaRemaining": 993,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Buffalo Bills v Los Angeles Rams",
-      "gameDate": "2026-10-12",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
