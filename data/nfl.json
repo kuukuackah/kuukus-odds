@@ -1,9 +1,15 @@
 {
-  "generatedAt": "2026-10-14T04:45:58.065Z",
-  "gameDate": "20261014",
+  "generatedAt": "2026-10-15T04:28:42.221Z",
+  "gameDate": "20261015",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 4,
-  "quotaRemaining": 996,
+  "quotaUsed": 8,
+  "quotaRemaining": 992,
   "moneyline": [],
-  "moneyline_excluded": []
+  "moneyline_excluded": [
+    {
+      "fixture": "Seattle Seahawks v Denver Broncos",
+      "gameDate": "2026-10-15",
+      "reason": "no usable moneyline price"
+    }
+  ]
 }
