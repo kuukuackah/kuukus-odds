@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-15T04:28:42.733Z",
-  "gameDate": "20261015",
+  "generatedAt": "2026-10-16T04:23:31.396Z",
+  "gameDate": "20261016",
   "source": "Tank01 MLB Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, Fanatics, Hard Rock, Rivers Casino, and others)",
-  "quotaUsed": 8,
-  "quotaRemaining": 992,
+  "quotaUsed": 12,
+  "quotaRemaining": 988,
   "moneyline": [],
   "moneyline_excluded": []
 }
