@@ -1,9 +1,70 @@
 {
-  "generatedAt": "2026-10-17T04:16:42.813Z",
-  "gameDate": "20261017",
+  "generatedAt": "2026-10-18T04:21:55.452Z",
+  "gameDate": "20261018",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 12,
-  "quotaRemaining": 988,
+  "quotaUsed": 13,
+  "quotaRemaining": 987,
   "moneyline": [],
-  "moneyline_excluded": []
+  "moneyline_excluded": [
+    {
+      "fixture": "Arizona Cardinals v Los Angeles Rams",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Baltimore Ravens v Cleveland Browns",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Buffalo Bills v Las Vegas Raiders",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Carolina Panthers v Philadelphia Eagles",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Chicago Bears v Atlanta Falcons",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Dallas Cowboys v Green Bay Packers",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Houston Texans v Jacksonville Jaguars",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Los Angeles Chargers v Kansas City Chiefs",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "New Orleans Saints v New York Giants",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "New York Jets v New England Patriots",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Pittsburgh Steelers v Tampa Bay Buccaneers",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Tennessee Titans v Indianapolis Colts",
+      "gameDate": "2026-10-18",
+      "reason": "no usable moneyline price"
+    }
+  ]
 }
