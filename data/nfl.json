@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-10-19T04:31:55.767Z",
-  "gameDate": "20261019",
+  "generatedAt": "2026-10-20T04:41:22.349Z",
+  "gameDate": "20261020",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 14,
-  "quotaRemaining": 986,
+  "quotaUsed": 13,
+  "quotaRemaining": 987,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Washington Commanders v San Francisco 49ers",
-      "gameDate": "2026-10-19",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
