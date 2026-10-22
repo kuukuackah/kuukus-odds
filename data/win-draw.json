@@ -1,425 +1,227 @@
 {
-  "generatedAt": "2026-10-21T04:35:29.881Z",
+  "generatedAt": "2026-10-22T04:34:24.665Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 17,
-  "quotaRemaining": 83,
+  "quotaUsed": 18,
+  "quotaRemaining": 82,
   "winOrDraw": [
     {
-      "fixture": "Persija Jakarta v Arema Malang",
-      "competition": "Indonesia — Super League",
+      "fixture": "Tractor Tabriz v Sanat Naft Abadan",
+      "competition": "Iran — Pro League",
       "federation": "AFC",
-      "commenceTime": "2026-10-21T13:00:00",
-      "favoriteTeam": "Persija Jakarta",
-      "fairProbability": 0.874,
-      "quotedDoubleChanceOdds": 1.055
+      "commenceTime": "2026-10-22T14:30:00",
+      "favoriteTeam": "Tractor Tabriz",
+      "fairProbability": 0.929,
+      "quotedDoubleChanceOdds": 1.015
     },
     {
-      "fixture": "V-Varen Nagasaki v Sanfrecce Hiroshima",
-      "competition": "Japan — J1 League",
+      "fixture": "Cong An Ha Noi v Thanh Hoa FC",
+      "competition": "Vietnam — V.League 1",
       "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Sanfrecce Hiroshima",
-      "fairProbability": 0.846,
-      "quotedDoubleChanceOdds": 1.094
+      "commenceTime": "2026-10-22T13:15:00",
+      "favoriteTeam": "Cong An Ha Noi",
+      "fairProbability": 0.902,
+      "quotedDoubleChanceOdds": 1.03
     },
     {
-      "fixture": "Birzebbuga St. Peter's v Marsaxlokk",
-      "competition": "Malta — Premier League",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-21T17:00:00",
-      "favoriteTeam": "Marsaxlokk",
+      "fixture": "Al-Shahania SC v Al-Sadd SC Doha",
+      "competition": "Qatar — Stars League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T15:30:00",
+      "favoriteTeam": "Al-Sadd SC Doha",
+      "fairProbability": 0.876,
+      "quotedDoubleChanceOdds": 1.054
+    },
+    {
+      "fixture": "Bunyodkor Tashkent v Mash'al Mubarek",
+      "competition": "Uzbekistan — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T14:30:00",
+      "favoriteTeam": "Bunyodkor Tashkent",
+      "fairProbability": 0.87,
+      "quotedDoubleChanceOdds": 1.06
+    },
+    {
+      "fixture": "Sitra Club v Al-Riffa",
+      "competition": "Bahrain — Premier League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T17:00:00",
+      "favoriteTeam": "Al-Riffa",
       "fairProbability": 0.835,
       "quotedDoubleChanceOdds": 1.085
     },
     {
-      "fixture": "Hamrun Spartans v Balzan",
+      "fixture": "Madura United v Persib Bandung",
+      "competition": "Indonesia — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T13:00:00",
+      "favoriteTeam": "Persib Bandung",
+      "fairProbability": 0.798,
+      "quotedDoubleChanceOdds": 1.152
+    },
+    {
+      "fixture": "Persik Kediri v PSS Sleman",
+      "competition": "Indonesia — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T09:30:00",
+      "favoriteTeam": "Persik Kediri",
+      "fairProbability": 0.76,
+      "quotedDoubleChanceOdds": 1.207
+    },
+    {
+      "fixture": "PSM Makassar v Persebaya Surabaya",
+      "competition": "Indonesia — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T09:30:00",
+      "favoriteTeam": "Persebaya Surabaya",
+      "fairProbability": 0.726,
+      "quotedDoubleChanceOdds": 1.26
+    },
+    {
+      "fixture": "Al-Najma Manama v A'Ali CSC",
+      "competition": "Bahrain — Premier League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T17:00:00",
+      "favoriteTeam": "Al-Najma Manama",
+      "fairProbability": 0.718,
+      "quotedDoubleChanceOdds": 1.25
+    },
+    {
+      "fixture": "Birkirkara v Floriana",
       "competition": "Malta — Premier League",
       "federation": "UEFA",
-      "commenceTime": "2026-10-21T17:00:00",
-      "favoriteTeam": "Hamrun Spartans",
-      "fairProbability": 0.824,
-      "quotedDoubleChanceOdds": 1.09
+      "commenceTime": "2026-10-22T17:00:00",
+      "favoriteTeam": "Floriana",
+      "fairProbability": 0.691,
+      "quotedDoubleChanceOdds": 1.275
     },
     {
-      "fixture": "Urawa Red Diamonds v JEF United Chiba",
-      "competition": "Japan — J1 League",
+      "fixture": "Al-Hazem v Al-Fayha",
+      "competition": "Saudi Arabia — Professional League",
       "federation": "AFC",
-      "commenceTime": "2026-10-21T11:30:00",
-      "favoriteTeam": "Urawa Red Diamonds",
-      "fairProbability": 0.802,
-      "quotedDoubleChanceOdds": 1.156
-    },
-    {
-      "fixture": "Ventforet Kofu v Yokohama FC",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Yokohama FC",
-      "fairProbability": 0.784,
-      "quotedDoubleChanceOdds": 1.168
-    },
-    {
-      "fixture": "Lion City Sailors v Tampines Rovers",
-      "competition": "Singapore — Premier League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T12:30:00",
-      "favoriteTeam": "Lion City Sailors",
-      "fairProbability": 0.781,
-      "quotedDoubleChanceOdds": 1.18
-    },
-    {
-      "fixture": "Yokohama F. Marinos v Tokyo Verdy",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Yokohama F. Marinos",
-      "fairProbability": 0.776,
-      "quotedDoubleChanceOdds": 1.186
-    },
-    {
-      "fixture": "Jubilo Iwata v Oita Trinita",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Jubilo Iwata",
-      "fairProbability": 0.766,
-      "quotedDoubleChanceOdds": 1.198
-    },
-    {
-      "fixture": "Tokushima Vortis v Vanraure Hachinohe",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Tokushima Vortis",
-      "fairProbability": 0.763,
-      "quotedDoubleChanceOdds": 1.2
-    },
-    {
-      "fixture": "Harju JK Laagri v Flora Tallinn",
-      "competition": "Estonia — Meistriliiga",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-21T16:00:00",
-      "favoriteTeam": "Flora Tallinn",
-      "fairProbability": 0.761,
-      "quotedDoubleChanceOdds": 1.205
-    },
-    {
-      "fixture": "Tegevajaro Miyazaki v Blaublitz Akita",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Tegevajaro Miyazaki",
-      "fairProbability": 0.755,
-      "quotedDoubleChanceOdds": 1.192
-    },
-    {
-      "fixture": "Kyoto Sanga FC v Kashima Antlers",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Kashima Antlers",
-      "fairProbability": 0.751,
-      "quotedDoubleChanceOdds": 1.222
-    },
-    {
-      "fixture": "Shimizu S-Pulse v Machida Zelvia",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Machida Zelvia",
-      "fairProbability": 0.728,
-      "quotedDoubleChanceOdds": 1.264
-    },
-    {
-      "fixture": "Albirex Niigata v Sagan Tosu",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Sagan Tosu",
-      "fairProbability": 0.724,
-      "quotedDoubleChanceOdds": 1.256
-    },
-    {
-      "fixture": "FC Tokyo v Kashiwa Reysol",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "FC Tokyo",
-      "fairProbability": 0.71,
-      "quotedDoubleChanceOdds": 1.296
-    },
-    {
-      "fixture": "Tochigi City v Fujieda MYFC",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Tochigi City",
-      "fairProbability": 0.703,
-      "quotedDoubleChanceOdds": 1.28
-    },
-    {
-      "fixture": "Shonan Bellmare v Iwaki FC",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Shonan Bellmare",
-      "fairProbability": 0.7,
-      "quotedDoubleChanceOdds": 1.312
-    },
-    {
-      "fixture": "Ghazl El Mahalla v Al Ittihad Alexandria",
-      "competition": "Egypt — Premier League",
-      "federation": "CAF",
-      "commenceTime": "2026-10-21T15:00:00",
-      "favoriteTeam": "Al Ittihad Alexandria",
-      "fairProbability": 0.682,
-      "quotedDoubleChanceOdds": 1.347
-    },
-    {
-      "fixture": "Omiya Ardija v Kataller Toyama",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Omiya Ardija",
-      "fairProbability": 0.678,
+      "commenceTime": "2026-10-22T14:40:00",
+      "favoriteTeam": "Al-Hazem",
+      "fairProbability": 0.688,
       "quotedDoubleChanceOdds": 1.35
     },
     {
-      "fixture": "Kawasaki Frontale v Vissel Kobe",
-      "competition": "Japan — J1 League",
+      "fixture": "Al-Fateh SC v Al-Shabab Riyadh",
+      "competition": "Saudi Arabia — Professional League",
       "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Kawasaki Frontale",
-      "fairProbability": 0.659,
-      "quotedDoubleChanceOdds": 1.426
-    },
-    {
-      "fixture": "Nagoya Grampus v Cerezo Osaka",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Nagoya Grampus",
-      "fairProbability": 0.657,
-      "quotedDoubleChanceOdds": 1.424
-    },
-    {
-      "fixture": "Avispa Fukuoka v Gamba Osaka",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Avispa Fukuoka",
-      "fairProbability": 0.648,
-      "quotedDoubleChanceOdds": 1.436
+      "commenceTime": "2026-10-22T15:45:00",
+      "favoriteTeam": "Al-Shabab Riyadh",
+      "fairProbability": 0.687,
+      "quotedDoubleChanceOdds": 1.35
     }
   ],
   "winOrDraw_excluded": [],
   "straightWin": [
     {
-      "fixture": "Persija Jakarta v Arema Malang",
+      "fixture": "Tractor Tabriz v Sanat Naft Abadan",
+      "competition": "Iran — Pro League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T14:30:00",
+      "favoriteTeam": "Tractor Tabriz",
+      "fairProbability": 0.756,
+      "quotedOdds": 1.203
+    },
+    {
+      "fixture": "Cong An Ha Noi v Thanh Hoa FC",
+      "competition": "Vietnam — V.League 1",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T13:15:00",
+      "favoriteTeam": "Cong An Ha Noi",
+      "fairProbability": 0.75,
+      "quotedOdds": 1.203
+    },
+    {
+      "fixture": "Al-Shahania SC v Al-Sadd SC Doha",
+      "competition": "Qatar — Stars League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T15:30:00",
+      "favoriteTeam": "Al-Sadd SC Doha",
+      "fairProbability": 0.711,
+      "quotedOdds": 1.264
+    },
+    {
+      "fixture": "Bunyodkor Tashkent v Mash'al Mubarek",
+      "competition": "Uzbekistan — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T14:30:00",
+      "favoriteTeam": "Bunyodkor Tashkent",
+      "fairProbability": 0.668,
+      "quotedOdds": 1.37
+    },
+    {
+      "fixture": "Sitra Club v Al-Riffa",
+      "competition": "Bahrain — Premier League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T17:00:00",
+      "favoriteTeam": "Al-Riffa",
+      "fairProbability": 0.583,
+      "quotedOdds": 1.535
+    },
+    {
+      "fixture": "Madura United v Persib Bandung",
       "competition": "Indonesia — Super League",
       "federation": "AFC",
-      "commenceTime": "2026-10-21T13:00:00",
-      "favoriteTeam": "Persija Jakarta",
-      "fairProbability": 0.684,
-      "quotedOdds": 1.315
+      "commenceTime": "2026-10-22T13:00:00",
+      "favoriteTeam": "Persib Bandung",
+      "fairProbability": 0.542,
+      "quotedOdds": 1.656
     },
     {
-      "fixture": "V-Varen Nagasaki v Sanfrecce Hiroshima",
-      "competition": "Japan — J1 League",
+      "fixture": "Persik Kediri v PSS Sleman",
+      "competition": "Indonesia — Super League",
       "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Sanfrecce Hiroshima",
-      "fairProbability": 0.644,
-      "quotedOdds": 1.454
+      "commenceTime": "2026-10-22T09:30:00",
+      "favoriteTeam": "Persik Kediri",
+      "fairProbability": 0.497,
+      "quotedOdds": 1.797
     },
     {
-      "fixture": "Birzebbuga St. Peter's v Marsaxlokk",
+      "fixture": "PSM Makassar v Persebaya Surabaya",
+      "competition": "Indonesia — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T09:30:00",
+      "favoriteTeam": "Persebaya Surabaya",
+      "fairProbability": 0.45,
+      "quotedOdds": 1.985
+    },
+    {
+      "fixture": "Al-Fateh SC v Al-Shabab Riyadh",
+      "competition": "Saudi Arabia — Professional League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T15:45:00",
+      "favoriteTeam": "Al-Shabab Riyadh",
+      "fairProbability": 0.437,
+      "quotedOdds": 2.12
+    },
+    {
+      "fixture": "Al-Najma Manama v A'Ali CSC",
+      "competition": "Bahrain — Premier League",
+      "federation": "AFC",
+      "commenceTime": "2026-10-22T17:00:00",
+      "favoriteTeam": "Al-Najma Manama",
+      "fairProbability": 0.418,
+      "quotedOdds": 2.13
+    },
+    {
+      "fixture": "Birkirkara v Floriana",
       "competition": "Malta — Premier League",
       "federation": "UEFA",
-      "commenceTime": "2026-10-21T17:00:00",
-      "favoriteTeam": "Marsaxlokk",
-      "fairProbability": 0.61,
-      "quotedOdds": 1.475
+      "commenceTime": "2026-10-22T17:00:00",
+      "favoriteTeam": "Floriana",
+      "fairProbability": 0.409,
+      "quotedOdds": 2.2
     },
     {
-      "fixture": "Hamrun Spartans v Balzan",
-      "competition": "Malta — Premier League",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-21T17:00:00",
-      "favoriteTeam": "Hamrun Spartans",
-      "fairProbability": 0.59,
-      "quotedOdds": 1.52
-    },
-    {
-      "fixture": "Urawa Red Diamonds v JEF United Chiba",
-      "competition": "Japan — J1 League",
+      "fixture": "Al-Hazem v Al-Fayha",
+      "competition": "Saudi Arabia — Professional League",
       "federation": "AFC",
-      "commenceTime": "2026-10-21T11:30:00",
-      "favoriteTeam": "Urawa Red Diamonds",
-      "fairProbability": 0.564,
-      "quotedOdds": 1.664
-    },
-    {
-      "fixture": "Lion City Sailors v Tampines Rovers",
-      "competition": "Singapore — Premier League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T12:30:00",
-      "favoriteTeam": "Lion City Sailors",
-      "fairProbability": 0.54,
-      "quotedOdds": 1.7
-    },
-    {
-      "fixture": "Ventforet Kofu v Yokohama FC",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Yokohama FC",
-      "fairProbability": 0.534,
-      "quotedOdds": 1.698
-    },
-    {
-      "fixture": "Harju JK Laagri v Flora Tallinn",
-      "competition": "Estonia — Meistriliiga",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-21T16:00:00",
-      "favoriteTeam": "Flora Tallinn",
-      "fairProbability": 0.526,
-      "quotedOdds": 1.715
-    },
-    {
-      "fixture": "Yokohama F. Marinos v Tokyo Verdy",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Yokohama F. Marinos",
-      "fairProbability": 0.504,
-      "quotedOdds": 1.86
-    },
-    {
-      "fixture": "Kyoto Sanga FC v Kashima Antlers",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Kashima Antlers",
-      "fairProbability": 0.492,
-      "quotedOdds": 1.906
-    },
-    {
-      "fixture": "Jubilo Iwata v Oita Trinita",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Jubilo Iwata",
-      "fairProbability": 0.484,
-      "quotedOdds": 1.868
-    },
-    {
-      "fixture": "Tokushima Vortis v Vanraure Hachinohe",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Tokushima Vortis",
-      "fairProbability": 0.48,
-      "quotedOdds": 1.888
-    },
-    {
-      "fixture": "Tegevajaro Miyazaki v Blaublitz Akita",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Tegevajaro Miyazaki",
-      "fairProbability": 0.466,
-      "quotedOdds": 1.946
-    },
-    {
-      "fixture": "Shimizu S-Pulse v Machida Zelvia",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Machida Zelvia",
-      "fairProbability": 0.447,
-      "quotedOdds": 2.098
-    },
-    {
-      "fixture": "FC Tokyo v Kashiwa Reysol",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "FC Tokyo",
-      "fairProbability": 0.446,
-      "quotedOdds": 2.098
-    },
-    {
-      "fixture": "Tochigi City v Fujieda MYFC",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Tochigi City",
-      "fairProbability": 0.444,
-      "quotedOdds": 2.036
-    },
-    {
-      "fixture": "Albirex Niigata v Sagan Tosu",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Sagan Tosu",
-      "fairProbability": 0.44,
-      "quotedOdds": 2.052
-    },
-    {
-      "fixture": "Omiya Ardija v Kataller Toyama",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Omiya Ardija",
-      "fairProbability": 0.432,
-      "quotedOdds": 2.096
-    },
-    {
-      "fixture": "Shonan Bellmare v Iwaki FC",
-      "competition": "Japan — J2 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Shonan Bellmare",
-      "fairProbability": 0.423,
-      "quotedOdds": 2.128
-    },
-    {
-      "fixture": "Kawasaki Frontale v Vissel Kobe",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Kawasaki Frontale",
-      "fairProbability": 0.401,
-      "quotedOdds": 2.338
-    },
-    {
-      "fixture": "Nagoya Grampus v Cerezo Osaka",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Nagoya Grampus",
-      "fairProbability": 0.395,
-      "quotedOdds": 2.378
-    },
-    {
-      "fixture": "Avispa Fukuoka v Gamba Osaka",
-      "competition": "Japan — J1 League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-21T11:00:00",
-      "favoriteTeam": "Avispa Fukuoka",
-      "fairProbability": 0.37,
-      "quotedOdds": 2.538
-    },
-    {
-      "fixture": "Ghazl El Mahalla v Al Ittihad Alexandria",
-      "competition": "Egypt — Premier League",
-      "federation": "CAF",
-      "commenceTime": "2026-10-21T15:00:00",
-      "favoriteTeam": "Al Ittihad Alexandria",
-      "fairProbability": 0.332,
-      "quotedOdds": 2.723
+      "commenceTime": "2026-10-22T14:40:00",
+      "favoriteTeam": "Al-Hazem",
+      "fairProbability": 0.407,
+      "quotedOdds": 2.285
     }
   ],
   "straightWin_excluded": []

@@ -1,9 +1,15 @@
 {
-  "generatedAt": "2026-10-21T04:35:30.360Z",
-  "gameDate": "20261021",
+  "generatedAt": "2026-10-22T04:34:26.146Z",
+  "gameDate": "20261022",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 14,
-  "quotaRemaining": 986,
+  "quotaUsed": 15,
+  "quotaRemaining": 985,
   "moneyline": [],
-  "moneyline_excluded": []
+  "moneyline_excluded": [
+    {
+      "fixture": "New England Patriots v Chicago Bears",
+      "gameDate": "2026-10-22",
+      "reason": "no usable moneyline price"
+    }
+  ]
 }
