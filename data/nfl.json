@@ -1,9 +1,70 @@
 {
-  "generatedAt": "2026-10-24T04:28:27.082Z",
-  "gameDate": "20261024",
+  "generatedAt": "2026-10-25T04:32:15.287Z",
+  "gameDate": "20261025",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
   "quotaUsed": 16,
   "quotaRemaining": 984,
   "moneyline": [],
-  "moneyline_excluded": []
+  "moneyline_excluded": [
+    {
+      "fixture": "Cincinnati Bengals v Baltimore Ravens",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Cleveland Browns v Tennessee Titans",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Denver Broncos v Arizona Cardinals",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Green Bay Packers v Detroit Lions",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Indianapolis Colts v Minnesota Vikings",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Kansas City Chiefs v Seattle Seahawks",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Los Angeles Rams v Las Vegas Raiders",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Miami Dolphins v New York Jets",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "New York Giants v Houston Texans",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Pittsburgh Steelers v New Orleans Saints",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "San Francisco 49ers v Atlanta Falcons",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    },
+    {
+      "fixture": "Tampa Bay Buccaneers v Carolina Panthers",
+      "gameDate": "2026-10-25",
+      "reason": "no usable moneyline price"
+    }
+  ]
 }
