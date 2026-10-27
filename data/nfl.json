@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-10-26T04:37:13.877Z",
-  "gameDate": "20261026",
+  "generatedAt": "2026-10-27T04:55:24.303Z",
+  "gameDate": "20261027",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
   "quotaUsed": 22,
   "quotaRemaining": 978,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Dallas Cowboys v Philadelphia Eagles",
-      "gameDate": "2026-10-26",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
