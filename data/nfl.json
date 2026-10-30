@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-10-29T05:38:57.970Z",
-  "gameDate": "20261029",
+  "generatedAt": "2026-10-30T05:37:48.229Z",
+  "gameDate": "20261030",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 23,
-  "quotaRemaining": 977,
+  "quotaUsed": 24,
+  "quotaRemaining": 976,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Carolina Panthers v Green Bay Packers",
-      "gameDate": "2026-10-29",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
