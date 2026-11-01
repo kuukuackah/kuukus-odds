@@ -1,551 +1,551 @@
 {
-  "generatedAt": "2026-10-31T05:28:24.790Z",
+  "generatedAt": "2026-11-01T05:53:57.170Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 27,
-  "quotaRemaining": 73,
+  "quotaUsed": 28,
+  "quotaRemaining": 72,
   "winOrDraw": [
     {
-      "fixture": "Progres Niedercorn v Swift Hesperange",
-      "competition": "Luxembourg — National Division",
+      "fixture": "RFS Riga v FK Grobina",
+      "competition": "Latvia — Virsliga",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:00:00",
-      "favoriteTeam": "Progres Niedercorn",
-      "fairProbability": 0.97,
-      "quotedDoubleChanceOdds": 1.005
+      "commenceTime": "2026-11-01T11:00:00",
+      "favoriteTeam": "RFS Riga",
+      "fairProbability": 0.95,
+      "quotedDoubleChanceOdds": 1.015
     },
     {
-      "fixture": "Feyenoord v Fortuna Sittard",
-      "competition": "Netherlands — Eredivisie",
+      "fixture": "Ogre United v Riga FC",
+      "competition": "Latvia — Virsliga",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:30:00",
-      "favoriteTeam": "Feyenoord",
-      "fairProbability": 0.935,
-      "quotedDoubleChanceOdds": 1.018
+      "commenceTime": "2026-11-01T11:00:00",
+      "favoriteTeam": "Riga FC",
+      "fairProbability": 0.95,
+      "quotedDoubleChanceOdds": 1.013
     },
     {
-      "fixture": "Macva Sabac v Crvena zvezda Belgrade",
-      "competition": "Serbia — SuperLiga",
+      "fixture": "Ararat-Armenia v Gandzasar",
+      "competition": "Armenia — Premier League",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T16:00:00",
-      "favoriteTeam": "Crvena zvezda Belgrade",
-      "fairProbability": 0.929,
+      "commenceTime": "2026-11-01T15:00:00",
+      "favoriteTeam": "Ararat-Armenia",
+      "fairProbability": 0.941,
       "quotedDoubleChanceOdds": 1.017
     },
     {
-      "fixture": "Partick Thistle v Greenock Morton",
-      "competition": "Scotland — Championship",
+      "fixture": "Inter Club d'Escaldes v Penya Encarnada",
+      "competition": "Andorra — Primera Divisio",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Partick Thistle",
-      "fairProbability": 0.914,
-      "quotedDoubleChanceOdds": 1.038
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "Inter Club d'Escaldes",
+      "fairProbability": 0.941,
+      "quotedDoubleChanceOdds": 1.02
     },
     {
-      "fixture": "Grorud v Ullensaker Kisa",
-      "competition": "Norway — 2. Division",
+      "fixture": "Partizan Belgrade v FK Zemun",
+      "competition": "Serbia — SuperLiga",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T12:00:00",
-      "favoriteTeam": "Grorud",
-      "fairProbability": 0.911,
-      "quotedDoubleChanceOdds": 1.025
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "Partizan Belgrade",
+      "fairProbability": 0.931,
+      "quotedDoubleChanceOdds": 1.02
     },
     {
-      "fixture": "Dunav Ruse v Levski Sofia",
-      "competition": "Bulgaria — First PFL",
+      "fixture": "Atvidabergs v Utsiktens",
+      "competition": "Sweden — Division 1",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T14:30:00",
-      "favoriteTeam": "Levski Sofia",
-      "fairProbability": 0.911,
-      "quotedDoubleChanceOdds": 1.026
+      "commenceTime": "2026-11-01T15:00:00",
+      "favoriteTeam": "Atvidabergs",
+      "fairProbability": 0.93,
+      "quotedDoubleChanceOdds": 1.023
     },
     {
-      "fixture": "Manama Club v Al-Khalidiya",
-      "competition": "Bahrain — Premier League",
+      "fixture": "Red Bull Salzburg v Austria Lustenau",
+      "competition": "Austria — Bundesliga",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T13:30:00",
+      "favoriteTeam": "Red Bull Salzburg",
+      "fairProbability": 0.92,
+      "quotedDoubleChanceOdds": 1.024
+    },
+    {
+      "fixture": "Flora Tallinn v Narva Trans",
+      "competition": "Estonia — Meistriliiga",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T12:30:00",
+      "favoriteTeam": "Flora Tallinn",
+      "fairProbability": 0.92,
+      "quotedDoubleChanceOdds": 1.03
+    },
+    {
+      "fixture": "ML Vitebsk v FC Minsk",
+      "competition": "Belarus — Premier League",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "ML Vitebsk",
+      "fairProbability": 0.917,
+      "quotedDoubleChanceOdds": 1.02
+    },
+    {
+      "fixture": "Balestier Khalsa v Lion City Sailors",
+      "competition": "Singapore — Premier League",
       "federation": "AFC",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Al-Khalidiya",
-      "fairProbability": 0.91,
-      "quotedDoubleChanceOdds": 1.033
+      "commenceTime": "2026-11-01T11:30:00",
+      "favoriteTeam": "Lion City Sailors",
+      "fairProbability": 0.915,
+      "quotedDoubleChanceOdds": 1.028
     },
     {
-      "fixture": "Jerv Grimstad v Eik Tonsberg",
-      "competition": "Norway — 2. Division",
+      "fixture": "Racing Santander v Real Madrid",
+      "competition": "Spain — Primera Division",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T12:00:00",
-      "favoriteTeam": "Jerv Grimstad",
-      "fairProbability": 0.91,
-      "quotedDoubleChanceOdds": 1.03
-    },
-    {
-      "fixture": "Rudes Zagreb v Dinamo Zagreb",
-      "competition": "Croatia — Prva HNL",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:00:00",
-      "favoriteTeam": "Dinamo Zagreb",
-      "fairProbability": 0.906,
-      "quotedDoubleChanceOdds": 1.035
-    },
-    {
-      "fixture": "Middlesbrough v Charlton",
-      "competition": "England — Championship",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Middlesbrough",
-      "fairProbability": 0.904,
-      "quotedDoubleChanceOdds": 1.042
-    },
-    {
-      "fixture": "Stockport v Wimbledon",
-      "competition": "England — League One",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Stockport",
-      "fairProbability": 0.903,
-      "quotedDoubleChanceOdds": 1.044
-    },
-    {
-      "fixture": "Jeunesse Esch v Differdange FC",
-      "competition": "Luxembourg — National Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Differdange FC",
-      "fairProbability": 0.902,
-      "quotedDoubleChanceOdds": 1.03
-    },
-    {
-      "fixture": "Omonia Nicosia v AEL Limassol",
-      "competition": "Cyprus — First Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:00:00",
-      "favoriteTeam": "Omonia Nicosia",
-      "fairProbability": 0.901,
-      "quotedDoubleChanceOdds": 1.033
-    },
-    {
-      "fixture": "MC Alger v USM Khenchela",
-      "competition": "Algeria — Championnat National",
-      "federation": "CAF",
-      "commenceTime": "2026-10-31T14:00:00",
-      "favoriteTeam": "MC Alger",
-      "fairProbability": 0.892,
-      "quotedDoubleChanceOdds": 1.05
-    },
-    {
-      "fixture": "Hajduk Split v HNK Gorica",
-      "competition": "Croatia — Prva HNL",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T14:00:00",
-      "favoriteTeam": "Hajduk Split",
-      "fairProbability": 0.89,
-      "quotedDoubleChanceOdds": 1.044
-    },
-    {
-      "fixture": "Hegelmann Kaunas v Kauno Zalgiris",
-      "competition": "Lithuania — TOPLYGA",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T16:30:00",
-      "favoriteTeam": "Kauno Zalgiris",
-      "fairProbability": 0.889,
-      "quotedDoubleChanceOdds": 1.033
-    },
-    {
-      "fixture": "B68 Toftir v NSI Runavik",
-      "competition": "Faroe Islands — Premier League",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T14:00:00",
-      "favoriteTeam": "NSI Runavik",
-      "fairProbability": 0.889,
-      "quotedDoubleChanceOdds": 1.035
-    },
-    {
-      "fixture": "The New Saints v Connah's Quay Nomads",
-      "competition": "Wales — Premier League",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:15:00",
-      "favoriteTeam": "The New Saints",
-      "fairProbability": 0.884,
+      "commenceTime": "2026-11-01T15:15:00",
+      "favoriteTeam": "Real Madrid",
+      "fairProbability": 0.908,
       "quotedDoubleChanceOdds": 1.046
     },
     {
-      "fixture": "Beitar Jerusalem v Ironi Kiryat Shmona",
-      "competition": "Israel — Premier League",
+      "fixture": "PAOK Thessaloniki v Asteras Tripolis",
+      "competition": "Greece — Super League",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T13:00:00",
-      "favoriteTeam": "Beitar Jerusalem",
-      "fairProbability": 0.883,
-      "quotedDoubleChanceOdds": 1.053
+      "commenceTime": "2026-11-01T17:00:00",
+      "favoriteTeam": "PAOK Thessaloniki",
+      "fairProbability": 0.901,
+      "quotedDoubleChanceOdds": 1.042
     },
     {
-      "fixture": "Brattvag IL v Traeff",
-      "competition": "Norway — 2. Division",
+      "fixture": "Djurgardens v Degerfors",
+      "competition": "Sweden — Allsvenskan",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T12:00:00",
-      "favoriteTeam": "Brattvag IL",
-      "fairProbability": 0.881,
-      "quotedDoubleChanceOdds": 1.025
+      "commenceTime": "2026-11-01T13:00:00",
+      "favoriteTeam": "Djurgardens",
+      "fairProbability": 0.898,
+      "quotedDoubleChanceOdds": 1.048
     },
     {
-      "fixture": "Boreham Wood v Hartlepool",
-      "competition": "England — National League",
+      "fixture": "Stromsgodset v Moss FK",
+      "competition": "Norway — 1. Division",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Boreham Wood",
-      "fairProbability": 0.879,
-      "quotedDoubleChanceOdds": 1.056
-    },
-    {
-      "fixture": "Fenerbahce v Goztepe",
-      "competition": "Turkey — Super Lig",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T16:00:00",
-      "favoriteTeam": "Fenerbahce",
-      "fairProbability": 0.879,
-      "quotedDoubleChanceOdds": 1.076
-    },
-    {
-      "fixture": "Gabala SC v Qarabag Agdam",
-      "competition": "Azerbaijan — Premier League",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T13:30:00",
-      "favoriteTeam": "Qarabag Agdam",
-      "fairProbability": 0.876,
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "Stromsgodset",
+      "fairProbability": 0.896,
       "quotedDoubleChanceOdds": 1.04
     },
     {
-      "fixture": "Navbahor Namangan v PFK Andijan",
-      "competition": "Uzbekistan — Super League",
-      "federation": "AFC",
-      "commenceTime": "2026-10-31T14:00:00",
-      "favoriteTeam": "Navbahor Namangan",
-      "fairProbability": 0.875,
+      "fixture": "Como v Venezia",
+      "competition": "Italy — Serie A",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T11:30:00",
+      "favoriteTeam": "Como",
+      "fairProbability": 0.893,
+      "quotedDoubleChanceOdds": 1.06
+    },
+    {
+      "fixture": "Young Boys v Zurich",
+      "competition": "Switzerland — Swiss Super League",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T13:00:00",
+      "favoriteTeam": "Young Boys",
+      "fairProbability": 0.89,
+      "quotedDoubleChanceOdds": 1.05
+    },
+    {
+      "fixture": "Trabzonspor v Gaziantep FK",
+      "competition": "Turkey — Super Lig",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T13:00:00",
+      "favoriteTeam": "Trabzonspor",
+      "fairProbability": 0.887,
       "quotedDoubleChanceOdds": 1.07
     },
     {
-      "fixture": "FC Domagnano v SS Virtus",
-      "competition": "San Marino — Campionato Sammarinese",
+      "fixture": "Universitatea Craiova v FC Botosani",
+      "competition": "Romania — Liga I",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T14:00:00",
-      "favoriteTeam": "SS Virtus",
-      "fairProbability": 0.874,
-      "quotedDoubleChanceOdds": 1.025
+      "commenceTime": "2026-11-01T15:30:00",
+      "favoriteTeam": "Universitatea Craiova",
+      "fairProbability": 0.878,
+      "quotedDoubleChanceOdds": 1.062
     },
     {
-      "fixture": "IL Sandviken v Bjarg",
-      "competition": "Norway — 2. Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T12:00:00",
-      "favoriteTeam": "Bjarg",
-      "fairProbability": 0.872,
-      "quotedDoubleChanceOdds": 1.025
-    },
-    {
-      "fixture": "Atert Bissen v Etzella Ettelbruck",
-      "competition": "Luxembourg — National Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:00:00",
-      "favoriteTeam": "Atert Bissen",
-      "fairProbability": 0.871,
-      "quotedDoubleChanceOdds": 1.045
-    },
-    {
-      "fixture": "US Rumelange v Racing FC Union",
-      "competition": "Luxembourg — National Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:00:00",
-      "favoriteTeam": "Racing FC Union",
-      "fairProbability": 0.87,
-      "quotedDoubleChanceOdds": 1.043
-    },
-    {
-      "fixture": "Ararat v Alashkert",
-      "competition": "Armenia — Premier League",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T16:00:00",
-      "favoriteTeam": "Alashkert",
-      "fairProbability": 0.867,
-      "quotedDoubleChanceOdds": 1.053
-    },
-    {
-      "fixture": "Mash'al Mubarek v Dinamo Samarqand",
-      "competition": "Uzbekistan — Super League",
+      "fixture": "Hang Yuen v Taichung Rock",
+      "competition": "Taiwan — Premier League",
       "federation": "AFC",
-      "commenceTime": "2026-10-31T12:00:00",
-      "favoriteTeam": "Dinamo Samarqand",
+      "commenceTime": "2026-11-01T08:00:00",
+      "favoriteTeam": "Hang Yuen",
+      "fairProbability": 0.875,
+      "quotedDoubleChanceOdds": 1.05
+    },
+    {
+      "fixture": "Elfsborg v Orgryte",
+      "competition": "Sweden — Allsvenskan",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T15:30:00",
+      "favoriteTeam": "Elfsborg",
+      "fairProbability": 0.872,
+      "quotedDoubleChanceOdds": 1.076
+    },
+    {
+      "fixture": "Lazio v Cagliari",
+      "competition": "Italy — Serie A",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T14:00:00",
+      "favoriteTeam": "Lazio",
+      "fairProbability": 0.869,
+      "quotedDoubleChanceOdds": 1.09
+    },
+    {
+      "fixture": "Al-Muharraq v Sitra Club",
+      "competition": "Bahrain — Premier League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-01T15:00:00",
+      "favoriteTeam": "Al-Muharraq",
       "fairProbability": 0.867,
-      "quotedDoubleChanceOdds": 1.073
+      "quotedDoubleChanceOdds": 1.057
+    },
+    {
+      "fixture": "Lyonnais v Angers",
+      "competition": "France — Ligue 1",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T16:15:00",
+      "favoriteTeam": "Lyonnais",
+      "fairProbability": 0.867,
+      "quotedDoubleChanceOdds": 1.084
+    },
+    {
+      "fixture": "Spezia v Atalanta U23",
+      "competition": "Italy — Serie C",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T14:00:00",
+      "favoriteTeam": "Spezia",
+      "fairProbability": 0.863,
+      "quotedDoubleChanceOdds": 1.066
+    },
+    {
+      "fixture": "Dinamo Batumi v Meshakhte Tkibuli",
+      "competition": "Georgia — Premier Liga",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T15:00:00",
+      "favoriteTeam": "Dinamo Batumi",
+      "fairProbability": 0.863,
+      "quotedDoubleChanceOdds": 1.03
+    },
+    {
+      "fixture": "Ravenna v Pineto",
+      "competition": "Italy — Serie C",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T13:30:00",
+      "favoriteTeam": "Ravenna",
+      "fairProbability": 0.858,
+      "quotedDoubleChanceOdds": 1.072
+    },
+    {
+      "fixture": "Lyn Oslo v Raufoss IL",
+      "competition": "Norway — 1. Division",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "Lyn Oslo",
+      "fairProbability": 0.858,
+      "quotedDoubleChanceOdds": 1.072
+    },
+    {
+      "fixture": "AEL Larissa v Olympiacos Piraeus B",
+      "competition": "Greece — Super League 2",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T10:30:00",
+      "favoriteTeam": "AEL Larissa",
+      "fairProbability": 0.857,
+      "quotedDoubleChanceOdds": 1.075
+    },
+    {
+      "fixture": "Hammarby Talang FF v Gefle",
+      "competition": "Sweden — Division 1",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T15:00:00",
+      "favoriteTeam": "Hammarby Talang FF",
+      "fairProbability": 0.855,
+      "quotedDoubleChanceOdds": 1.062
+    },
+    {
+      "fixture": "Pitea IF v IFK Stocksund",
+      "competition": "Sweden — Division 1",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T14:00:00",
+      "favoriteTeam": "Pitea IF",
+      "fairProbability": 0.851,
+      "quotedDoubleChanceOdds": 1.082
     }
   ],
   "winOrDraw_excluded": [],
   "straightWin": [
     {
-      "fixture": "Progres Niedercorn v Swift Hesperange",
-      "competition": "Luxembourg — National Division",
+      "fixture": "Ogre United v Riga FC",
+      "competition": "Latvia — Virsliga",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:00:00",
-      "favoriteTeam": "Progres Niedercorn",
-      "fairProbability": 0.892,
-      "quotedOdds": 1.03
+      "commenceTime": "2026-11-01T11:00:00",
+      "favoriteTeam": "Riga FC",
+      "fairProbability": 0.851,
+      "quotedOdds": 1.068
     },
     {
-      "fixture": "Feyenoord v Fortuna Sittard",
-      "competition": "Netherlands — Eredivisie",
+      "fixture": "RFS Riga v FK Grobina",
+      "competition": "Latvia — Virsliga",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:30:00",
-      "favoriteTeam": "Feyenoord",
-      "fairProbability": 0.821,
+      "commenceTime": "2026-11-01T11:00:00",
+      "favoriteTeam": "RFS Riga",
+      "fairProbability": 0.845,
+      "quotedOdds": 1.076
+    },
+    {
+      "fixture": "Ararat-Armenia v Gandzasar",
+      "competition": "Armenia — Premier League",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T15:00:00",
+      "favoriteTeam": "Ararat-Armenia",
+      "fairProbability": 0.825,
+      "quotedOdds": 1.102
+    },
+    {
+      "fixture": "Inter Club d'Escaldes v Penya Encarnada",
+      "competition": "Andorra — Primera Divisio",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "Inter Club d'Escaldes",
+      "fairProbability": 0.817,
+      "quotedOdds": 1.1
+    },
+    {
+      "fixture": "Partizan Belgrade v FK Zemun",
+      "competition": "Serbia — SuperLiga",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "Partizan Belgrade",
+      "fairProbability": 0.805,
+      "quotedOdds": 1.143
+    },
+    {
+      "fixture": "Red Bull Salzburg v Austria Lustenau",
+      "competition": "Austria — Bundesliga",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T13:30:00",
+      "favoriteTeam": "Red Bull Salzburg",
+      "fairProbability": 0.796,
+      "quotedOdds": 1.182
+    },
+    {
+      "fixture": "Atvidabergs v Utsiktens",
+      "competition": "Sweden — Division 1",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T15:00:00",
+      "favoriteTeam": "Atvidabergs",
+      "fairProbability": 0.794,
+      "quotedOdds": 1.127
+    },
+    {
+      "fixture": "Flora Tallinn v Narva Trans",
+      "competition": "Estonia — Meistriliiga",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T12:30:00",
+      "favoriteTeam": "Flora Tallinn",
+      "fairProbability": 0.782,
       "quotedOdds": 1.156
     },
     {
-      "fixture": "Macva Sabac v Crvena zvezda Belgrade",
-      "competition": "Serbia — SuperLiga",
+      "fixture": "Racing Santander v Real Madrid",
+      "competition": "Spain — Primera Division",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T16:00:00",
-      "favoriteTeam": "Crvena zvezda Belgrade",
-      "fairProbability": 0.801,
-      "quotedOdds": 1.148
-    },
-    {
-      "fixture": "Grorud v Ullensaker Kisa",
-      "competition": "Norway — 2. Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T12:00:00",
-      "favoriteTeam": "Grorud",
+      "commenceTime": "2026-11-01T15:15:00",
+      "favoriteTeam": "Real Madrid",
       "fairProbability": 0.78,
-      "quotedOdds": 1.145
+      "quotedOdds": 1.228
     },
     {
-      "fixture": "Jerv Grimstad v Eik Tonsberg",
-      "competition": "Norway — 2. Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T12:00:00",
-      "favoriteTeam": "Jerv Grimstad",
-      "fairProbability": 0.772,
-      "quotedOdds": 1.16
-    },
-    {
-      "fixture": "Partick Thistle v Greenock Morton",
-      "competition": "Scotland — Championship",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Partick Thistle",
-      "fairProbability": 0.762,
-      "quotedOdds": 1.196
-    },
-    {
-      "fixture": "Rudes Zagreb v Dinamo Zagreb",
-      "competition": "Croatia — Prva HNL",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:00:00",
-      "favoriteTeam": "Dinamo Zagreb",
-      "fairProbability": 0.759,
-      "quotedOdds": 1.212
-    },
-    {
-      "fixture": "Manama Club v Al-Khalidiya",
-      "competition": "Bahrain — Premier League",
+      "fixture": "Balestier Khalsa v Lion City Sailors",
+      "competition": "Singapore — Premier League",
       "federation": "AFC",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Al-Khalidiya",
-      "fairProbability": 0.754,
-      "quotedOdds": 1.183
+      "commenceTime": "2026-11-01T11:30:00",
+      "favoriteTeam": "Lion City Sailors",
+      "fairProbability": 0.777,
+      "quotedOdds": 1.166
     },
     {
-      "fixture": "Middlesbrough v Charlton",
-      "competition": "England — Championship",
+      "fixture": "Stromsgodset v Moss FK",
+      "competition": "Norway — 1. Division",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Middlesbrough",
-      "fairProbability": 0.749,
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "Stromsgodset",
+      "fairProbability": 0.756,
+      "quotedOdds": 1.206
+    },
+    {
+      "fixture": "Young Boys v Zurich",
+      "competition": "Switzerland — Swiss Super League",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T13:00:00",
+      "favoriteTeam": "Young Boys",
+      "fairProbability": 0.747,
       "quotedOdds": 1.254
     },
     {
-      "fixture": "Stockport v Wimbledon",
-      "competition": "England — League One",
+      "fixture": "ML Vitebsk v FC Minsk",
+      "competition": "Belarus — Premier League",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Stockport",
-      "fairProbability": 0.743,
-      "quotedOdds": 1.254
-    },
-    {
-      "fixture": "Dunav Ruse v Levski Sofia",
-      "competition": "Bulgaria — First PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T14:30:00",
-      "favoriteTeam": "Levski Sofia",
-      "fairProbability": 0.74,
-      "quotedOdds": 1.24
-    },
-    {
-      "fixture": "Jeunesse Esch v Differdange FC",
-      "competition": "Luxembourg — National Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Differdange FC",
-      "fairProbability": 0.736,
-      "quotedOdds": 1.207
-    },
-    {
-      "fixture": "Omonia Nicosia v AEL Limassol",
-      "competition": "Cyprus — First Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:00:00",
-      "favoriteTeam": "Omonia Nicosia",
-      "fairProbability": 0.725,
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "ML Vitebsk",
+      "fairProbability": 0.732,
       "quotedOdds": 1.25
     },
     {
-      "fixture": "B68 Toftir v NSI Runavik",
-      "competition": "Faroe Islands — Premier League",
+      "fixture": "Como v Venezia",
+      "competition": "Italy — Serie A",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T14:00:00",
-      "favoriteTeam": "NSI Runavik",
-      "fairProbability": 0.718,
-      "quotedOdds": 1.245
-    },
-    {
-      "fixture": "Brattvag IL v Traeff",
-      "competition": "Norway — 2. Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T12:00:00",
-      "favoriteTeam": "Brattvag IL",
-      "fairProbability": 0.714,
-      "quotedOdds": 1.255
-    },
-    {
-      "fixture": "Beitar Jerusalem v Ironi Kiryat Shmona",
-      "competition": "Israel — Premier League",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T13:00:00",
-      "favoriteTeam": "Beitar Jerusalem",
-      "fairProbability": 0.709,
-      "quotedOdds": 1.288
-    },
-    {
-      "fixture": "Hajduk Split v HNK Gorica",
-      "competition": "Croatia — Prva HNL",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T14:00:00",
-      "favoriteTeam": "Hajduk Split",
-      "fairProbability": 0.706,
-      "quotedOdds": 1.304
-    },
-    {
-      "fixture": "Boreham Wood v Hartlepool",
-      "competition": "England — National League",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T15:00:00",
-      "favoriteTeam": "Boreham Wood",
-      "fairProbability": 0.705,
-      "quotedOdds": 1.282
-    },
-    {
-      "fixture": "Hegelmann Kaunas v Kauno Zalgiris",
-      "competition": "Lithuania — TOPLYGA",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T16:30:00",
-      "favoriteTeam": "Kauno Zalgiris",
-      "fairProbability": 0.704,
-      "quotedOdds": 1.278
-    },
-    {
-      "fixture": "Fenerbahce v Goztepe",
-      "competition": "Turkey — Super Lig",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T16:00:00",
-      "favoriteTeam": "Fenerbahce",
-      "fairProbability": 0.703,
-      "quotedOdds": 1.342
-    },
-    {
-      "fixture": "The New Saints v Connah's Quay Nomads",
-      "competition": "Wales — Premier League",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:15:00",
-      "favoriteTeam": "The New Saints",
-      "fairProbability": 0.698,
-      "quotedOdds": 1.293
-    },
-    {
-      "fixture": "IL Sandviken v Bjarg",
-      "competition": "Norway — 2. Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T12:00:00",
-      "favoriteTeam": "Bjarg",
-      "fairProbability": 0.695,
-      "quotedOdds": 1.295
-    },
-    {
-      "fixture": "US Rumelange v Racing FC Union",
-      "competition": "Luxembourg — National Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:00:00",
-      "favoriteTeam": "Racing FC Union",
-      "fairProbability": 0.687,
-      "quotedOdds": 1.303
-    },
-    {
-      "fixture": "Atert Bissen v Etzella Ettelbruck",
-      "competition": "Luxembourg — National Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-10-31T17:00:00",
-      "favoriteTeam": "Atert Bissen",
-      "fairProbability": 0.686,
+      "commenceTime": "2026-11-01T11:30:00",
+      "favoriteTeam": "Como",
+      "fairProbability": 0.731,
       "quotedOdds": 1.308
     },
     {
-      "fixture": "Gabala SC v Qarabag Agdam",
-      "competition": "Azerbaijan — Premier League",
+      "fixture": "Djurgardens v Degerfors",
+      "competition": "Sweden — Allsvenskan",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T13:30:00",
-      "favoriteTeam": "Qarabag Agdam",
-      "fairProbability": 0.676,
-      "quotedOdds": 1.32
+      "commenceTime": "2026-11-01T13:00:00",
+      "favoriteTeam": "Djurgardens",
+      "fairProbability": 0.729,
+      "quotedOdds": 1.276
     },
     {
-      "fixture": "FC Domagnano v SS Virtus",
-      "competition": "San Marino — Campionato Sammarinese",
+      "fixture": "PAOK Thessaloniki v Asteras Tripolis",
+      "competition": "Greece — Super League",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T14:00:00",
-      "favoriteTeam": "SS Virtus",
-      "fairProbability": 0.671,
-      "quotedOdds": 1.33
+      "commenceTime": "2026-11-01T17:00:00",
+      "favoriteTeam": "PAOK Thessaloniki",
+      "fairProbability": 0.726,
+      "quotedOdds": 1.286
     },
     {
-      "fixture": "Navbahor Namangan v PFK Andijan",
-      "competition": "Uzbekistan — Super League",
+      "fixture": "Trabzonspor v Gaziantep FK",
+      "competition": "Turkey — Super Lig",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T13:00:00",
+      "favoriteTeam": "Trabzonspor",
+      "fairProbability": 0.724,
+      "quotedOdds": 1.308
+    },
+    {
+      "fixture": "Universitatea Craiova v FC Botosani",
+      "competition": "Romania — Liga I",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T15:30:00",
+      "favoriteTeam": "Universitatea Craiova",
+      "fairProbability": 0.696,
+      "quotedOdds": 1.326
+    },
+    {
+      "fixture": "Hang Yuen v Taichung Rock",
+      "competition": "Taiwan — Premier League",
       "federation": "AFC",
-      "commenceTime": "2026-10-31T14:00:00",
-      "favoriteTeam": "Navbahor Namangan",
+      "commenceTime": "2026-11-01T08:00:00",
+      "favoriteTeam": "Hang Yuen",
+      "fairProbability": 0.688,
+      "quotedOdds": 1.303
+    },
+    {
+      "fixture": "Elfsborg v Orgryte",
+      "competition": "Sweden — Allsvenskan",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T15:30:00",
+      "favoriteTeam": "Elfsborg",
+      "fairProbability": 0.683,
+      "quotedOdds": 1.36
+    },
+    {
+      "fixture": "Lyonnais v Angers",
+      "competition": "France — Ligue 1",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T16:15:00",
+      "favoriteTeam": "Lyonnais",
+      "fairProbability": 0.677,
+      "quotedOdds": 1.408
+    },
+    {
+      "fixture": "Lyn Oslo v Raufoss IL",
+      "competition": "Norway — 1. Division",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "Lyn Oslo",
+      "fairProbability": 0.673,
+      "quotedOdds": 1.36
+    },
+    {
+      "fixture": "Pitea IF v IFK Stocksund",
+      "competition": "Sweden — Division 1",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T14:00:00",
+      "favoriteTeam": "Pitea IF",
+      "fairProbability": 0.668,
+      "quotedOdds": 1.342
+    },
+    {
+      "fixture": "Asane v Haugesund",
+      "competition": "Norway — 1. Division",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T16:00:00",
+      "favoriteTeam": "Haugesund",
       "fairProbability": 0.667,
-      "quotedOdds": 1.367
+      "quotedOdds": 1.362
     },
     {
-      "fixture": "Nomme United v FCI Levadia Tallinn",
-      "competition": "Estonia — Meistriliiga",
+      "fixture": "Lazio v Cagliari",
+      "competition": "Italy — Serie A",
       "federation": "UEFA",
-      "commenceTime": "2026-10-31T13:00:00",
-      "favoriteTeam": "FCI Levadia Tallinn",
-      "fairProbability": 0.666,
-      "quotedOdds": 1.352
+      "commenceTime": "2026-11-01T14:00:00",
+      "favoriteTeam": "Lazio",
+      "fairProbability": 0.658,
+      "quotedOdds": 1.45
     },
     {
-      "fixture": "Mash'al Mubarek v Dinamo Samarqand",
-      "competition": "Uzbekistan — Super League",
+      "fixture": "Falkirk v Celtic",
+      "competition": "Scotland — Premiership",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T13:00:00",
+      "favoriteTeam": "Celtic",
+      "fairProbability": 0.657,
+      "quotedOdds": 1.418
+    },
+    {
+      "fixture": "Dinamo Batumi v Meshakhte Tkibuli",
+      "competition": "Georgia — Premier Liga",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T15:00:00",
+      "favoriteTeam": "Dinamo Batumi",
+      "fairProbability": 0.657,
+      "quotedOdds": 1.365
+    },
+    {
+      "fixture": "Al-Muharraq v Sitra Club",
+      "competition": "Bahrain — Premier League",
       "federation": "AFC",
-      "commenceTime": "2026-10-31T12:00:00",
-      "favoriteTeam": "Dinamo Samarqand",
-      "fairProbability": 0.664,
-      "quotedOdds": 1.367
+      "commenceTime": "2026-11-01T15:00:00",
+      "favoriteTeam": "Al-Muharraq",
+      "fairProbability": 0.656,
+      "quotedOdds": 1.373
     },
     {
-      "fixture": "MC Alger v USM Khenchela",
-      "competition": "Algeria — Championnat National",
-      "federation": "CAF",
-      "commenceTime": "2026-10-31T14:00:00",
-      "favoriteTeam": "MC Alger",
-      "fairProbability": 0.664,
-      "quotedOdds": 1.357
+      "fixture": "Tampines Rovers v Geylang International",
+      "competition": "Singapore — Premier League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-01T11:30:00",
+      "favoriteTeam": "Tampines Rovers",
+      "fairProbability": 0.655,
+      "quotedOdds": 1.378
+    },
+    {
+      "fixture": "Hammarby Talang FF v Gefle",
+      "competition": "Sweden — Division 1",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-01T15:00:00",
+      "favoriteTeam": "Hammarby Talang FF",
+      "fairProbability": 0.649,
+      "quotedOdds": 1.383
     }
   ],
   "straightWin_excluded": []
