@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-11-02T05:53:49.792Z",
-  "gameDate": "20261102",
+  "generatedAt": "2026-11-03T06:38:48.058Z",
+  "gameDate": "20261103",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 27,
-  "quotaRemaining": 973,
+  "quotaUsed": 28,
+  "quotaRemaining": 972,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Chicago Bears v Seattle Seahawks",
-      "gameDate": "2026-11-02",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
