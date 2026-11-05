@@ -1,191 +1,191 @@
 {
-  "generatedAt": "2026-11-04T06:06:13.584Z",
+  "generatedAt": "2026-11-05T06:35:02.878Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 31,
-  "quotaRemaining": 69,
+  "quotaUsed": 1,
+  "quotaRemaining": 99,
   "winOrDraw": [
     {
-      "fixture": "MC Alger v MC Oran",
-      "competition": "Algeria — Championnat National",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T16:00:00",
-      "favoriteTeam": "MC Alger",
-      "fairProbability": 0.86,
+      "fixture": "Al-Qadsiah Khobar v Al-Fayha",
+      "competition": "Saudi Arabia — Professional League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T17:30:00",
+      "favoriteTeam": "Al-Qadsiah Khobar",
+      "fairProbability": 0.914,
+      "quotedDoubleChanceOdds": 1.017
+    },
+    {
+      "fixture": "Milan v Ferencvarosi",
+      "competition": "Europa League — Group",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-05T17:45:00",
+      "favoriteTeam": "Milan",
+      "fairProbability": 0.89,
+      "quotedDoubleChanceOdds": 1.068
+    },
+    {
+      "fixture": "Aldosivi Mar del Plata v River Plate",
+      "competition": "Argentina — Liga Profesional",
+      "federation": "CONMEBOL",
+      "commenceTime": "2026-11-05T18:00:00",
+      "favoriteTeam": "River Plate",
+      "fairProbability": 0.87,
+      "quotedDoubleChanceOdds": 1.086
+    },
+    {
+      "fixture": "Mohun Bagan AC v Odisha FC",
+      "competition": "India — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T14:00:00",
+      "favoriteTeam": "Mohun Bagan AC",
+      "fairProbability": 0.865,
       "quotedDoubleChanceOdds": 1.07
     },
     {
-      "fixture": "Kaizer Chiefs v AmaZulu Durban",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "Kaizer Chiefs",
-      "fairProbability": 0.798,
-      "quotedDoubleChanceOdds": 1.15
+      "fixture": "Abha Club v Al-Shabab Riyadh",
+      "competition": "Saudi Arabia — Professional League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T15:10:00",
+      "favoriteTeam": "Al-Shabab Riyadh",
+      "fairProbability": 0.781,
+      "quotedDoubleChanceOdds": 1.187
     },
     {
-      "fixture": "ZED FC v Tala'ea El-Gaish",
-      "competition": "Egypt — League Cup",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T15:00:00",
-      "favoriteTeam": "ZED FC",
-      "fairProbability": 0.776,
-      "quotedDoubleChanceOdds": 1.17
-    },
-    {
-      "fixture": "Lamontville Golden Arrows v Marumo Gallants",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "Lamontville Golden Arrows",
-      "fairProbability": 0.772,
-      "quotedDoubleChanceOdds": 1.19
-    },
-    {
-      "fixture": "Al Masry Port Said v Petrojet Suez",
-      "competition": "Egypt — League Cup",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T18:00:00",
-      "favoriteTeam": "Al Masry Port Said",
-      "fairProbability": 0.771,
-      "quotedDoubleChanceOdds": 1.18
-    },
-    {
-      "fixture": "Polokwane City v Kruger United",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "Polokwane City",
-      "fairProbability": 0.741,
-      "quotedDoubleChanceOdds": 1.23
-    },
-    {
-      "fixture": "Chippa United v Sekhukhune United",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "Sekhukhune United",
-      "fairProbability": 0.728,
-      "quotedDoubleChanceOdds": 1.26
-    },
-    {
-      "fixture": "Richards Bay v Stellenbosch",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "Stellenbosch",
-      "fairProbability": 0.706,
-      "quotedDoubleChanceOdds": 1.3
-    },
-    {
-      "fixture": "Rennais v Olympiacos Piraeus",
+      "fixture": "Real Sociedad v Lyonnais",
       "competition": "Europa League — Group",
       "federation": "UEFA",
-      "commenceTime": "2026-11-04T15:30:00",
-      "favoriteTeam": "Rennais",
-      "fairProbability": 0.692,
-      "quotedDoubleChanceOdds": 1.362
+      "commenceTime": "2026-11-05T17:45:00",
+      "favoriteTeam": "Real Sociedad",
+      "fairProbability": 0.767,
+      "quotedDoubleChanceOdds": 1.226
     },
     {
-      "fixture": "TS Galaxy v Durban City",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "TS Galaxy",
-      "fairProbability": 0.656,
-      "quotedDoubleChanceOdds": 1.38
+      "fixture": "Anderlecht v Red Bull Salzburg",
+      "competition": "Europa League — Group",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-05T17:45:00",
+      "favoriteTeam": "Anderlecht",
+      "fairProbability": 0.737,
+      "quotedDoubleChanceOdds": 1.288
+    },
+    {
+      "fixture": "Al-Kholood Club v Al-Khaleej Saihat",
+      "competition": "Saudi Arabia — Professional League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T13:25:00",
+      "favoriteTeam": "Al-Kholood Club",
+      "fairProbability": 0.701,
+      "quotedDoubleChanceOdds": 1.322
+    },
+    {
+      "fixture": "Shams Azar Qazvin v Sanat Naft Abadan",
+      "competition": "Iran — Pro League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T13:00:00",
+      "favoriteTeam": "Shams Azar Qazvin",
+      "fairProbability": 0.657,
+      "quotedDoubleChanceOdds": 1.34
+    },
+    {
+      "fixture": "Bunyodkor Tashkent v Xorazm Urganch",
+      "competition": "Uzbekistan — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T13:30:00",
+      "favoriteTeam": "Bunyodkor Tashkent",
+      "fairProbability": 0.649,
+      "quotedDoubleChanceOdds": 1.423
     }
   ],
   "winOrDraw_excluded": [],
   "straightWin": [
     {
-      "fixture": "MC Alger v MC Oran",
-      "competition": "Algeria — Championnat National",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T16:00:00",
-      "favoriteTeam": "MC Alger",
-      "fairProbability": 0.593,
-      "quotedOdds": 1.514
+      "fixture": "Al-Qadsiah Khobar v Al-Fayha",
+      "competition": "Saudi Arabia — Professional League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T17:30:00",
+      "favoriteTeam": "Al-Qadsiah Khobar",
+      "fairProbability": 0.767,
+      "quotedOdds": 1.243
     },
     {
-      "fixture": "Kaizer Chiefs v AmaZulu Durban",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "Kaizer Chiefs",
-      "fairProbability": 0.522,
+      "fixture": "Milan v Ferencvarosi",
+      "competition": "Europa League — Group",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-05T17:45:00",
+      "favoriteTeam": "Milan",
+      "fairProbability": 0.713,
+      "quotedOdds": 1.336
+    },
+    {
+      "fixture": "Mohun Bagan AC v Odisha FC",
+      "competition": "India — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T14:00:00",
+      "favoriteTeam": "Mohun Bagan AC",
+      "fairProbability": 0.673,
+      "quotedOdds": 1.348
+    },
+    {
+      "fixture": "Aldosivi Mar del Plata v River Plate",
+      "competition": "Argentina — Liga Profesional",
+      "federation": "CONMEBOL",
+      "commenceTime": "2026-11-05T18:00:00",
+      "favoriteTeam": "River Plate",
+      "fairProbability": 0.657,
+      "quotedOdds": 1.434
+    },
+    {
+      "fixture": "Abha Club v Al-Shabab Riyadh",
+      "competition": "Saudi Arabia — Professional League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T15:10:00",
+      "favoriteTeam": "Al-Shabab Riyadh",
+      "fairProbability": 0.532,
       "quotedOdds": 1.74
     },
     {
-      "fixture": "Lamontville Golden Arrows v Marumo Gallants",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "Lamontville Golden Arrows",
-      "fairProbability": 0.488,
-      "quotedOdds": 1.92
-    },
-    {
-      "fixture": "Al Masry Port Said v Petrojet Suez",
-      "competition": "Egypt — League Cup",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T18:00:00",
-      "favoriteTeam": "Al Masry Port Said",
-      "fairProbability": 0.472,
-      "quotedOdds": 1.9
-    },
-    {
-      "fixture": "ZED FC v Tala'ea El-Gaish",
-      "competition": "Egypt — League Cup",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T15:00:00",
-      "favoriteTeam": "ZED FC",
-      "fairProbability": 0.465,
-      "quotedOdds": 1.93
-    },
-    {
-      "fixture": "Chippa United v Sekhukhune United",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "Sekhukhune United",
-      "fairProbability": 0.43,
-      "quotedOdds": 2.18
-    },
-    {
-      "fixture": "Polokwane City v Kruger United",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "Polokwane City",
-      "fairProbability": 0.428,
-      "quotedOdds": 2.12
-    },
-    {
-      "fixture": "Rennais v Olympiacos Piraeus",
+      "fixture": "Real Sociedad v Lyonnais",
       "competition": "Europa League — Group",
       "federation": "UEFA",
-      "commenceTime": "2026-11-04T15:30:00",
-      "favoriteTeam": "Rennais",
-      "fairProbability": 0.425,
-      "quotedOdds": 2.233
+      "commenceTime": "2026-11-05T17:45:00",
+      "favoriteTeam": "Real Sociedad",
+      "fairProbability": 0.529,
+      "quotedOdds": 1.798
     },
     {
-      "fixture": "Richards Bay v Stellenbosch",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "Stellenbosch",
-      "fairProbability": 0.391,
-      "quotedOdds": 2.33
+      "fixture": "Anderlecht v Red Bull Salzburg",
+      "competition": "Europa League — Group",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-05T17:45:00",
+      "favoriteTeam": "Anderlecht",
+      "fairProbability": 0.482,
+      "quotedOdds": 1.97
     },
     {
-      "fixture": "TS Galaxy v Durban City",
-      "competition": "South Africa — Premier Soccer League",
-      "federation": "CAF",
-      "commenceTime": "2026-11-04T17:30:00",
-      "favoriteTeam": "TS Galaxy",
-      "fairProbability": 0.347,
-      "quotedOdds": 2.63
+      "fixture": "Al-Kholood Club v Al-Khaleej Saihat",
+      "competition": "Saudi Arabia — Professional League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T13:25:00",
+      "favoriteTeam": "Al-Kholood Club",
+      "fairProbability": 0.422,
+      "quotedOdds": 2.195
+    },
+    {
+      "fixture": "Bunyodkor Tashkent v Xorazm Urganch",
+      "competition": "Uzbekistan — Super League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T13:30:00",
+      "favoriteTeam": "Bunyodkor Tashkent",
+      "fairProbability": 0.377,
+      "quotedOdds": 2.423
+    },
+    {
+      "fixture": "Shams Azar Qazvin v Sanat Naft Abadan",
+      "competition": "Iran — Pro League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-05T13:00:00",
+      "favoriteTeam": "Shams Azar Qazvin",
+      "fairProbability": 0.366,
+      "quotedOdds": 2.44
     }
   ],
   "straightWin_excluded": []
