@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-11-05T06:35:01.019Z",
+  "generatedAt": "2026-11-06T06:30:10.918Z",
   "apiCallsUsed": 29,
-  "apiQuotaUsed": 145,
-  "apiQuotaRemaining": 355,
+  "apiQuotaUsed": 174,
+  "apiQuotaRemaining": 326,
   "fh05ApiCallsUsed": 20,
-  "fh05ApiQuotaUsed": 100,
-  "fh05ApiQuotaRemaining": 400,
+  "fh05ApiQuotaUsed": 120,
+  "fh05ApiQuotaRemaining": 380,
   "over1_5": [
     {
       "fixture": "RB Leipzig v Augsburg",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-11-07T14:30:00Z",
-      "fairProbability": 0.889,
-      "bookCount": 7,
+      "fairProbability": 0.896,
+      "bookCount": 9,
       "books": [
         "LeoVegas",
         "William Hill",
@@ -20,18 +20,35 @@
         "Ladbrokes",
         "Paddy Power",
         "Sky Bet",
-        "Betfair"
+        "Betfair",
+        "Virgin Bet",
+        "LiveScore Bet"
       ]
     },
     {
       "fixture": "New York Red Bulls v Atlanta United FC",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-11-07T21:00:00Z",
-      "fairProbability": 0.855,
-      "bookCount": 5,
+      "fairProbability": 0.856,
+      "bookCount": 6,
       "books": [
         "Virgin Bet",
         "LiveScore Bet",
+        "LeoVegas",
+        "Coral",
+        "Ladbrokes",
+        "William Hill"
+      ]
+    },
+    {
+      "fixture": "CF Montreal v Vancouver Whitecaps FC",
+      "sport": "soccer_usa_mls",
+      "commenceTime": "2026-11-07T21:00:00Z",
+      "fairProbability": 0.844,
+      "bookCount": 5,
+      "books": [
+        "Virgin Bet",
+        "LeoVegas",
         "Coral",
         "Ladbrokes",
         "William Hill"
@@ -41,7 +58,7 @@
       "fixture": "Eintracht Braunschweig v FC Energie Cottbus",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-11-06T17:30:00Z",
-      "fairProbability": 0.841,
+      "fairProbability": 0.831,
       "bookCount": 6,
       "books": [
         "Virgin Bet",
@@ -53,23 +70,10 @@
       ]
     },
     {
-      "fixture": "CF Montreal v Vancouver Whitecaps FC",
-      "sport": "soccer_usa_mls",
-      "commenceTime": "2026-11-07T21:00:00Z",
-      "fairProbability": 0.84,
-      "bookCount": 4,
-      "books": [
-        "Virgin Bet",
-        "Coral",
-        "Ladbrokes",
-        "William Hill"
-      ]
-    },
-    {
       "fixture": "Arsenal v Hull City",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-07T15:00:00Z",
-      "fairProbability": 0.831,
+      "fairProbability": 0.816,
       "bookCount": 9,
       "books": [
         "LeoVegas",
@@ -87,14 +91,11 @@
       "fixture": "Cagliari v Frosinone",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-11-07T14:00:00Z",
-      "fairProbability": 0.811,
-      "bookCount": 9,
+      "fairProbability": 0.812,
+      "bookCount": 6,
       "books": [
         "LeoVegas",
-        "Virgin Bet",
-        "LiveScore Bet",
         "Paddy Power",
-        "Sky Bet",
         "William Hill",
         "Ladbrokes",
         "Coral",
@@ -105,25 +106,41 @@
       "fixture": "Toulouse v Strasbourg",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-11-06T19:45:00Z",
-      "fairProbability": 0.808,
-      "bookCount": 9,
+      "fairProbability": 0.795,
+      "bookCount": 8,
       "books": [
         "William Hill",
         "LeoVegas",
         "Paddy Power",
         "Sky Bet",
         "Betfair",
-        "Virgin Bet",
         "LiveScore Bet",
         "Coral",
         "Ladbrokes"
       ]
     },
     {
+      "fixture": "Málaga v Real Racing Club de Santander",
+      "sport": "soccer_spain_la_liga",
+      "commenceTime": "2026-11-07T13:00:00Z",
+      "fairProbability": 0.791,
+      "bookCount": 8,
+      "books": [
+        "LeoVegas",
+        "William Hill",
+        "Paddy Power",
+        "Virgin Bet",
+        "LiveScore Bet",
+        "Betfair",
+        "Ladbrokes",
+        "Coral"
+      ]
+    },
+    {
       "fixture": "Dynamo Dresden v Greuther Fürth",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-11-06T17:30:00Z",
-      "fairProbability": 0.804,
+      "fairProbability": 0.787,
       "bookCount": 6,
       "books": [
         "Virgin Bet",
@@ -138,8 +155,8 @@
       "fixture": "Hamburger SV v Borussia Monchengladbach",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-11-06T19:30:00Z",
-      "fairProbability": 0.797,
-      "bookCount": 9,
+      "fairProbability": 0.786,
+      "bookCount": 7,
       "books": [
         "LeoVegas",
         "William Hill",
@@ -147,50 +164,45 @@
         "Coral",
         "Paddy Power",
         "Betfair",
-        "Sky Bet",
-        "LiveScore Bet",
-        "Virgin Bet"
-      ]
-    },
-    {
-      "fixture": "Málaga v Real Racing Club de Santander",
-      "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-11-07T13:00:00Z",
-      "fairProbability": 0.789,
-      "bookCount": 7,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Paddy Power",
-        "Sky Bet",
-        "Betfair",
-        "Ladbrokes",
-        "Coral"
+        "Sky Bet"
       ]
     },
     {
       "fixture": "Auxerre v Paris FC",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-11-07T18:00:00Z",
-      "fairProbability": 0.783,
-      "bookCount": 9,
+      "fairProbability": 0.778,
+      "bookCount": 7,
       "books": [
         "William Hill",
         "LeoVegas",
         "Paddy Power",
         "Betfair",
         "Sky Bet",
-        "Virgin Bet",
-        "LiveScore Bet",
         "Coral",
         "Ladbrokes"
+      ]
+    },
+    {
+      "fixture": "Derby County v Bolton Wanderers",
+      "sport": "soccer_efl_champ",
+      "commenceTime": "2026-11-06T20:00:00Z",
+      "fairProbability": 0.774,
+      "bookCount": 6,
+      "books": [
+        "LeoVegas",
+        "LiveScore Bet",
+        "Virgin Bet",
+        "Ladbrokes",
+        "Coral",
+        "William Hill"
       ]
     },
     {
       "fixture": "Dijon v Red Star",
       "sport": "soccer_france_ligue_two",
       "commenceTime": "2026-11-06T19:00:00Z",
-      "fairProbability": 0.782,
+      "fairProbability": 0.772,
       "bookCount": 5,
       "books": [
         "LiveScore Bet",
@@ -204,8 +216,8 @@
       "fixture": "Everton v Coventry City",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-06T20:00:00Z",
-      "fairProbability": 0.781,
-      "bookCount": 9,
+      "fairProbability": 0.769,
+      "bookCount": 7,
       "books": [
         "LeoVegas",
         "Paddy Power",
@@ -213,23 +225,21 @@
         "Betfair",
         "William Hill",
         "Ladbrokes",
-        "Coral",
-        "Virgin Bet",
-        "LiveScore Bet"
+        "Coral"
       ]
     },
     {
-      "fixture": "Derby County v Bolton Wanderers",
+      "fixture": "Bristol City v Norwich City",
       "sport": "soccer_efl_champ",
-      "commenceTime": "2026-11-06T20:00:00Z",
-      "fairProbability": 0.78,
+      "commenceTime": "2026-11-07T12:30:00Z",
+      "fairProbability": 0.769,
       "bookCount": 6,
       "books": [
-        "LeoVegas",
         "LiveScore Bet",
         "Virgin Bet",
-        "Ladbrokes",
+        "LeoVegas",
         "Coral",
+        "Ladbrokes",
         "William Hill"
       ]
     },
@@ -237,13 +247,11 @@
       "fixture": "Venezia v Udinese",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-11-06T19:45:00Z",
-      "fairProbability": 0.768,
-      "bookCount": 8,
+      "fairProbability": 0.756,
+      "bookCount": 6,
       "books": [
         "LeoVegas",
         "Paddy Power",
-        "Sky Bet",
-        "LiveScore Bet",
         "William Hill",
         "Coral",
         "Ladbrokes",
@@ -251,26 +259,11 @@
       ]
     },
     {
-      "fixture": "Bristol City v Norwich City",
-      "sport": "soccer_efl_champ",
-      "commenceTime": "2026-11-07T12:30:00Z",
-      "fairProbability": 0.766,
-      "bookCount": 6,
-      "books": [
-        "LiveScore Bet",
-        "Virgin Bet",
-        "LeoVegas",
-        "Coral",
-        "Ladbrokes",
-        "William Hill"
-      ]
-    },
-    {
       "fixture": "Leeds United v Tottenham Hotspur",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-07T12:30:00Z",
-      "fairProbability": 0.731,
-      "bookCount": 9,
+      "fairProbability": 0.726,
+      "bookCount": 7,
       "books": [
         "LeoVegas",
         "Paddy Power",
@@ -278,42 +271,37 @@
         "Betfair",
         "William Hill",
         "Coral",
-        "Ladbrokes",
-        "Virgin Bet",
-        "LiveScore Bet"
-      ]
-    },
-    {
-      "fixture": "Portsmouth v Stoke City",
-      "sport": "soccer_efl_champ",
-      "commenceTime": "2026-11-07T12:30:00Z",
-      "fairProbability": 0.7,
-      "bookCount": 6,
-      "books": [
-        "Virgin Bet",
-        "LiveScore Bet",
-        "LeoVegas",
-        "Ladbrokes",
-        "Coral",
-        "William Hill"
+        "Ladbrokes"
       ]
     },
     {
       "fixture": "Sevilla v Alavés",
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-11-06T20:00:00Z",
-      "fairProbability": 0.681,
-      "bookCount": 9,
+      "fairProbability": 0.69,
+      "bookCount": 6,
       "books": [
         "LeoVegas",
         "William Hill",
         "Paddy Power",
-        "Sky Bet",
-        "LiveScore Bet",
-        "Virgin Bet",
         "Betfair",
         "Ladbrokes",
         "Coral"
+      ]
+    },
+    {
+      "fixture": "Portsmouth v Stoke City",
+      "sport": "soccer_efl_champ",
+      "commenceTime": "2026-11-07T12:30:00Z",
+      "fairProbability": 0.681,
+      "bookCount": 6,
+      "books": [
+        "Virgin Bet",
+        "LiveScore Bet",
+        "LeoVegas",
+        "Ladbrokes",
+        "Coral",
+        "William Hill"
       ]
     },
     {
@@ -1185,10 +1173,12 @@
       "fixture": "RB Leipzig v Augsburg",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-11-07T14:30:00Z",
-      "fairProbability": 0.817,
-      "bookCount": 3,
+      "fairProbability": 0.816,
+      "bookCount": 5,
       "books": [
         "LeoVegas",
+        "Paddy Power",
+        "Betfair",
         "Virgin Bet",
         "LiveScore Bet"
       ]
@@ -1203,18 +1193,6 @@
         "Virgin Bet",
         "LiveScore Bet",
         "LeoVegas"
-      ]
-    },
-    {
-      "fixture": "Arsenal v Hull City",
-      "sport": "soccer_epl",
-      "commenceTime": "2026-11-07T15:00:00Z",
-      "fairProbability": 0.765,
-      "bookCount": 3,
-      "books": [
-        "LeoVegas",
-        "Virgin Bet",
-        "LiveScore Bet"
       ]
     },
     {
@@ -1233,17 +1211,58 @@
       "fixture": "Eintracht Braunschweig v FC Energie Cottbus",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-11-06T17:30:00Z",
-      "fairProbability": 0.758,
+      "fairProbability": 0.754,
       "bookCount": 1,
       "books": [
         "LeoVegas"
       ]
     },
     {
+      "fixture": "Arsenal v Hull City",
+      "sport": "soccer_epl",
+      "commenceTime": "2026-11-07T15:00:00Z",
+      "fairProbability": 0.752,
+      "bookCount": 5,
+      "books": [
+        "LeoVegas",
+        "Paddy Power",
+        "Betfair",
+        "Virgin Bet",
+        "LiveScore Bet"
+      ]
+    },
+    {
+      "fixture": "Cagliari v Frosinone",
+      "sport": "soccer_italy_serie_a",
+      "commenceTime": "2026-11-07T14:00:00Z",
+      "fairProbability": 0.746,
+      "bookCount": 4,
+      "books": [
+        "LeoVegas",
+        "Virgin Bet",
+        "Paddy Power",
+        "Betfair"
+      ]
+    },
+    {
+      "fixture": "Toulouse v Strasbourg",
+      "sport": "soccer_france_ligue_one",
+      "commenceTime": "2026-11-06T19:45:00Z",
+      "fairProbability": 0.731,
+      "bookCount": 5,
+      "books": [
+        "LeoVegas",
+        "Paddy Power",
+        "Betfair",
+        "Virgin Bet",
+        "LiveScore Bet"
+      ]
+    },
+    {
       "fixture": "Hamburger SV v Borussia Monchengladbach",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-11-06T19:30:00Z",
-      "fairProbability": 0.735,
+      "fairProbability": 0.724,
       "bookCount": 5,
       "books": [
         "LeoVegas",
@@ -1254,22 +1273,32 @@
       ]
     },
     {
-      "fixture": "Cagliari v Frosinone",
-      "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-11-07T14:00:00Z",
-      "fairProbability": 0.735,
-      "bookCount": 3,
+      "fixture": "Dynamo Dresden v Greuther Fürth",
+      "sport": "soccer_germany_bundesliga2",
+      "commenceTime": "2026-11-06T17:30:00Z",
+      "fairProbability": 0.716,
+      "bookCount": 1,
       "books": [
-        "LeoVegas",
-        "Virgin Bet",
-        "LiveScore Bet"
+        "LeoVegas"
       ]
     },
     {
-      "fixture": "Toulouse v Strasbourg",
+      "fixture": "Málaga v Real Racing Club de Santander",
+      "sport": "soccer_spain_la_liga",
+      "commenceTime": "2026-11-07T13:00:00Z",
+      "fairProbability": 0.716,
+      "bookCount": 3,
+      "books": [
+        "LeoVegas",
+        "Paddy Power",
+        "Betfair"
+      ]
+    },
+    {
+      "fixture": "Auxerre v Paris FC",
       "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-11-06T19:45:00Z",
-      "fairProbability": 0.734,
+      "commenceTime": "2026-11-07T18:00:00Z",
+      "fairProbability": 0.714,
       "bookCount": 5,
       "books": [
         "LeoVegas",
@@ -1280,32 +1309,10 @@
       ]
     },
     {
-      "fixture": "Dynamo Dresden v Greuther Fürth",
-      "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-11-06T17:30:00Z",
-      "fairProbability": 0.733,
-      "bookCount": 1,
-      "books": [
-        "LeoVegas"
-      ]
-    },
-    {
-      "fixture": "Málaga v Real Racing Club de Santander",
-      "sport": "soccer_spain_la_liga",
-      "commenceTime": "2026-11-07T13:00:00Z",
-      "fairProbability": 0.719,
-      "bookCount": 3,
-      "books": [
-        "LeoVegas",
-        "Virgin Bet",
-        "LiveScore Bet"
-      ]
-    },
-    {
       "fixture": "Bristol City v Norwich City",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-11-07T12:30:00Z",
-      "fairProbability": 0.717,
+      "fairProbability": 0.713,
       "bookCount": 3,
       "books": [
         "LiveScore Bet",
@@ -1317,33 +1324,19 @@
       "fixture": "Everton v Coventry City",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-06T20:00:00Z",
-      "fairProbability": 0.713,
-      "bookCount": 5,
-      "books": [
-        "LeoVegas",
-        "Paddy Power",
-        "Betfair",
-        "Virgin Bet",
-        "LiveScore Bet"
-      ]
-    },
-    {
-      "fixture": "Auxerre v Paris FC",
-      "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-11-07T18:00:00Z",
-      "fairProbability": 0.713,
+      "fairProbability": 0.711,
       "bookCount": 3,
       "books": [
         "LeoVegas",
-        "Virgin Bet",
-        "LiveScore Bet"
+        "Paddy Power",
+        "Betfair"
       ]
     },
     {
       "fixture": "Venezia v Udinese",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-11-06T19:45:00Z",
-      "fairProbability": 0.711,
+      "fairProbability": 0.708,
       "bookCount": 5,
       "books": [
         "LeoVegas",
@@ -1369,10 +1362,12 @@
       "fixture": "Leeds United v Tottenham Hotspur",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-07T12:30:00Z",
-      "fairProbability": 0.686,
-      "bookCount": 3,
+      "fairProbability": 0.679,
+      "bookCount": 5,
       "books": [
         "LeoVegas",
+        "Paddy Power",
+        "Betfair",
         "Virgin Bet",
         "LiveScore Bet"
       ]
@@ -1393,7 +1388,7 @@
       "fixture": "Sevilla v Alavés",
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-11-06T20:00:00Z",
-      "fairProbability": 0.642,
+      "fairProbability": 0.649,
       "bookCount": 5,
       "books": [
         "LeoVegas",

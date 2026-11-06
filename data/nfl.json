@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-11-05T06:35:04.193Z",
-  "gameDate": "20261105",
+  "generatedAt": "2026-11-06T06:30:13.758Z",
+  "gameDate": "20261106",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 1,
-  "quotaRemaining": 999,
+  "quotaUsed": 2,
+  "quotaRemaining": 998,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Jacksonville Jaguars v Baltimore Ravens",
-      "gameDate": "2026-11-05",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
