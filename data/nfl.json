@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-11-09T06:11:32.273Z",
-  "gameDate": "20261109",
+  "generatedAt": "2026-11-10T07:08:17.555Z",
+  "gameDate": "20261110",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 2,
-  "quotaRemaining": 998,
+  "quotaUsed": 3,
+  "quotaRemaining": 997,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Buffalo Bills v Minnesota Vikings",
-      "gameDate": "2026-11-09",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
