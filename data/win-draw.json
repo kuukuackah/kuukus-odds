@@ -1,10 +1,30 @@
 {
-  "generatedAt": "2026-11-10T07:08:17.036Z",
+  "generatedAt": "2026-11-11T06:01:33.522Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 6,
-  "quotaRemaining": 94,
-  "winOrDraw": [],
+  "quotaUsed": 7,
+  "quotaRemaining": 93,
+  "winOrDraw": [
+    {
+      "fixture": "FC Chernihiv v Inhulets Petrove",
+      "competition": "Ukraine — First League",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-11T09:30:00",
+      "favoriteTeam": "FC Chernihiv",
+      "fairProbability": 0.734,
+      "quotedDoubleChanceOdds": 1.24
+    }
+  ],
   "winOrDraw_excluded": [],
-  "straightWin": [],
+  "straightWin": [
+    {
+      "fixture": "FC Chernihiv v Inhulets Petrove",
+      "competition": "Ukraine — First League",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-11T09:30:00",
+      "favoriteTeam": "FC Chernihiv",
+      "fairProbability": 0.466,
+      "quotedOdds": 1.908
+    }
+  ],
   "straightWin_excluded": []
 }
