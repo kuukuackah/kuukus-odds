@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-11T06:01:31.743Z",
+  "generatedAt": "2026-11-12T07:01:52.244Z",
   "apiCallsUsed": 29,
-  "apiQuotaUsed": 314,
-  "apiQuotaRemaining": 186,
+  "apiQuotaUsed": 343,
+  "apiQuotaRemaining": 157,
   "fh05ApiCallsUsed": 20,
-  "fh05ApiQuotaUsed": 195,
-  "fh05ApiQuotaRemaining": 305,
+  "fh05ApiQuotaUsed": 211,
+  "fh05ApiQuotaRemaining": 289,
   "over1_5": [
     {
       "fixture": "Bayern Munich v 1. FC Köln",
@@ -99,11 +99,13 @@
       "fixture": "SV Darmstadt 98 v 1. FC Heidenheim",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-11-20T17:30:00Z",
-      "fairProbability": 0.813,
-      "bookCount": 2,
+      "fairProbability": 0.82,
+      "bookCount": 4,
       "books": [
         "Coral",
-        "Ladbrokes"
+        "Ladbrokes",
+        "Virgin Bet",
+        "LiveScore Bet"
       ]
     },
     {
@@ -150,9 +152,10 @@
       "fixture": "Lazio v Lecce",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-11-21T14:00:00Z",
-      "fairProbability": 0.806,
-      "bookCount": 7,
+      "fairProbability": 0.805,
+      "bookCount": 8,
       "books": [
+        "LeoVegas",
         "William Hill",
         "Ladbrokes",
         "Coral",
@@ -166,11 +169,13 @@
       "fixture": "Arminia Bielefeld v 1. FC Magdeburg",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-11-20T17:30:00Z",
-      "fairProbability": 0.785,
-      "bookCount": 2,
+      "fairProbability": 0.781,
+      "bookCount": 4,
       "books": [
         "Coral",
-        "Ladbrokes"
+        "Ladbrokes",
+        "Virgin Bet",
+        "LiveScore Bet"
       ]
     },
     {
@@ -178,10 +183,11 @@
       "sport": "soccer_epl",
       "commenceTime": "2026-11-21T15:00:00Z",
       "fairProbability": 0.766,
-      "bookCount": 6,
+      "bookCount": 7,
       "books": [
         "Virgin Bet",
         "William Hill",
+        "LeoVegas",
         "Paddy Power",
         "Ladbrokes",
         "Coral",
@@ -193,8 +199,9 @@
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-11-21T12:30:00Z",
       "fairProbability": 0.766,
-      "bookCount": 4,
+      "bookCount": 5,
       "books": [
+        "LeoVegas",
         "William Hill",
         "Virgin Bet",
         "Coral",
@@ -219,35 +226,34 @@
       ]
     },
     {
-      "fixture": "Bournemouth v Nottingham Forest",
-      "sport": "soccer_epl",
-      "commenceTime": "2026-11-21T15:00:00Z",
-      "fairProbability": 0.762,
-      "bookCount": 6,
-      "books": [
-        "LiveScore Bet",
-        "William Hill",
-        "Paddy Power",
-        "Sky Bet",
-        "Coral",
-        "Ladbrokes"
-      ]
-    },
-    {
       "fixture": "Athletic Bilbao v Espanyol",
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-11-20T20:00:00Z",
-      "fairProbability": 0.751,
-      "bookCount": 8,
+      "fairProbability": 0.75,
+      "bookCount": 6,
       "books": [
         "William Hill",
         "LeoVegas",
         "Paddy Power",
         "Sky Bet",
         "Ladbrokes",
+        "Coral"
+      ]
+    },
+    {
+      "fixture": "Bournemouth v Nottingham Forest",
+      "sport": "soccer_epl",
+      "commenceTime": "2026-11-21T15:00:00Z",
+      "fairProbability": 0.75,
+      "bookCount": 7,
+      "books": [
+        "LiveScore Bet",
+        "William Hill",
+        "LeoVegas",
+        "Paddy Power",
+        "Sky Bet",
         "Coral",
-        "Virgin Bet",
-        "LiveScore Bet"
+        "Ladbrokes"
       ]
     },
     {
@@ -275,9 +281,10 @@
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-11-21T13:00:00Z",
       "fairProbability": 0.688,
-      "bookCount": 7,
+      "bookCount": 8,
       "books": [
         "William Hill",
+        "LeoVegas",
         "Paddy Power",
         "Sky Bet",
         "Ladbrokes",
@@ -1212,7 +1219,7 @@
       "fixture": "Athletic Bilbao v Espanyol",
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-11-20T20:00:00Z",
-      "fairProbability": 0.697,
+      "fairProbability": 0.693,
       "bookCount": 2,
       "books": [
         "Virgin Bet",
@@ -1234,7 +1241,7 @@
       "fixture": "Alavés v Deportivo La Coruña",
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-11-21T13:00:00Z",
-      "fairProbability": 0.639,
+      "fairProbability": 0.631,
       "bookCount": 2,
       "books": [
         "Virgin Bet",

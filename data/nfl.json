@@ -1,9 +1,15 @@
 {
-  "generatedAt": "2026-11-11T06:01:34.187Z",
-  "gameDate": "20261111",
+  "generatedAt": "2026-11-12T07:01:54.651Z",
+  "gameDate": "20261112",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 4,
-  "quotaRemaining": 996,
+  "quotaUsed": 5,
+  "quotaRemaining": 995,
   "moneyline": [],
-  "moneyline_excluded": []
+  "moneyline_excluded": [
+    {
+      "fixture": "Washington Commanders v New York Giants",
+      "gameDate": "2026-11-12",
+      "reason": "no usable moneyline price"
+    }
+  ]
 }

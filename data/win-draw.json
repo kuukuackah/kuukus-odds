@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-11-11T06:01:33.522Z",
+  "generatedAt": "2026-11-12T07:01:54.011Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 7,
-  "quotaRemaining": 93,
+  "quotaUsed": 8,
+  "quotaRemaining": 92,
   "winOrDraw": [
     {
-      "fixture": "FC Chernihiv v Inhulets Petrove",
-      "competition": "Ukraine — First League",
+      "fixture": "Navalcarnero v Real Betis",
+      "competition": "Spain — Copa del Rey",
       "federation": "UEFA",
-      "commenceTime": "2026-11-11T09:30:00",
-      "favoriteTeam": "FC Chernihiv",
-      "fairProbability": 0.734,
-      "quotedDoubleChanceOdds": 1.24
+      "commenceTime": "2026-11-12T18:00:00",
+      "favoriteTeam": "Real Betis",
+      "fairProbability": 0.936,
+      "quotedDoubleChanceOdds": 1.02
     }
   ],
   "winOrDraw_excluded": [],
   "straightWin": [
     {
-      "fixture": "FC Chernihiv v Inhulets Petrove",
-      "competition": "Ukraine — First League",
+      "fixture": "Navalcarnero v Real Betis",
+      "competition": "Spain — Copa del Rey",
       "federation": "UEFA",
-      "commenceTime": "2026-11-11T09:30:00",
-      "favoriteTeam": "FC Chernihiv",
-      "fairProbability": 0.466,
-      "quotedOdds": 1.908
+      "commenceTime": "2026-11-12T18:00:00",
+      "favoriteTeam": "Real Betis",
+      "fairProbability": 0.83,
+      "quotedOdds": 1.12
     }
   ],
   "straightWin_excluded": []
