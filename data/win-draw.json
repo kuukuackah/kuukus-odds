@@ -1,29 +1,83 @@
 {
-  "generatedAt": "2026-11-12T07:01:54.011Z",
+  "generatedAt": "2026-11-13T06:30:31.440Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 8,
-  "quotaRemaining": 92,
+  "quotaUsed": 9,
+  "quotaRemaining": 91,
   "winOrDraw": [
     {
-      "fixture": "Navalcarnero v Real Betis",
-      "competition": "Spain — Copa del Rey",
+      "fixture": "JS Saoura v USM Khenchela",
+      "competition": "Algeria — Championnat National",
+      "federation": "CAF",
+      "commenceTime": "2026-11-13T17:00:00",
+      "favoriteTeam": "JS Saoura",
+      "fairProbability": 0.787,
+      "quotedDoubleChanceOdds": 1.173
+    },
+    {
+      "fixture": "Ponferradina v Cacereno",
+      "competition": "Spain — Primera Division RFEF Group 1",
       "federation": "UEFA",
-      "commenceTime": "2026-11-12T18:00:00",
-      "favoriteTeam": "Real Betis",
-      "fairProbability": 0.936,
-      "quotedDoubleChanceOdds": 1.02
+      "commenceTime": "2026-11-13T18:00:00",
+      "favoriteTeam": "Ponferradina",
+      "fairProbability": 0.764,
+      "quotedDoubleChanceOdds": 1.198
+    },
+    {
+      "fixture": "Shillong Lajong FC v Sreenidi Deccan FC",
+      "competition": "India — I-League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-13T13:00:00",
+      "favoriteTeam": "Shillong Lajong FC",
+      "fairProbability": 0.687,
+      "quotedDoubleChanceOdds": 1.313
+    },
+    {
+      "fixture": "Jezero Plav v Buducnost Podgorica",
+      "competition": "Montenegro — Prva Liga",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-13T15:00:00",
+      "favoriteTeam": "Buducnost Podgorica",
+      "fairProbability": 0.665,
+      "quotedDoubleChanceOdds": 1.377
     }
   ],
   "winOrDraw_excluded": [],
   "straightWin": [
     {
-      "fixture": "Navalcarnero v Real Betis",
-      "competition": "Spain — Copa del Rey",
+      "fixture": "JS Saoura v USM Khenchela",
+      "competition": "Algeria — Championnat National",
+      "federation": "CAF",
+      "commenceTime": "2026-11-13T17:00:00",
+      "favoriteTeam": "JS Saoura",
+      "fairProbability": 0.485,
+      "quotedOdds": 1.865
+    },
+    {
+      "fixture": "Ponferradina v Cacereno",
+      "competition": "Spain — Primera Division RFEF Group 1",
       "federation": "UEFA",
-      "commenceTime": "2026-11-12T18:00:00",
-      "favoriteTeam": "Real Betis",
-      "fairProbability": 0.83,
-      "quotedOdds": 1.12
+      "commenceTime": "2026-11-13T18:00:00",
+      "favoriteTeam": "Ponferradina",
+      "fairProbability": 0.465,
+      "quotedOdds": 1.94
+    },
+    {
+      "fixture": "Shillong Lajong FC v Sreenidi Deccan FC",
+      "competition": "India — I-League",
+      "federation": "AFC",
+      "commenceTime": "2026-11-13T13:00:00",
+      "favoriteTeam": "Shillong Lajong FC",
+      "fairProbability": 0.416,
+      "quotedOdds": 2.137
+    },
+    {
+      "fixture": "Jezero Plav v Buducnost Podgorica",
+      "competition": "Montenegro — Prva Liga",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-13T15:00:00",
+      "favoriteTeam": "Buducnost Podgorica",
+      "fairProbability": 0.377,
+      "quotedOdds": 2.38
     }
   ],
   "straightWin_excluded": []

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-12T07:01:52.244Z",
+  "generatedAt": "2026-11-13T06:30:29.614Z",
   "apiCallsUsed": 29,
-  "apiQuotaUsed": 343,
-  "apiQuotaRemaining": 157,
+  "apiQuotaUsed": 372,
+  "apiQuotaRemaining": 128,
   "fh05ApiCallsUsed": 20,
-  "fh05ApiQuotaUsed": 211,
-  "fh05ApiQuotaRemaining": 289,
+  "fh05ApiQuotaUsed": 229,
+  "fh05ApiQuotaRemaining": 271,
   "over1_5": [
     {
       "fixture": "Bayern Munich v 1. FC Köln",
@@ -25,12 +25,13 @@
       "fixture": "Orlando City SC v FC Cincinnati",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-11-20T00:30:00Z",
-      "fairProbability": 0.889,
-      "bookCount": 3,
+      "fairProbability": 0.888,
+      "bookCount": 4,
       "books": [
         "William Hill",
         "Ladbrokes",
-        "Coral"
+        "Coral",
+        "LiveScore Bet"
       ]
     },
     {
@@ -113,11 +114,12 @@
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-11-20T03:00:00Z",
       "fairProbability": 0.813,
-      "bookCount": 3,
+      "bookCount": 4,
       "books": [
         "William Hill",
         "Ladbrokes",
-        "Coral"
+        "Coral",
+        "Virgin Bet"
       ]
     },
     {
@@ -183,8 +185,9 @@
       "sport": "soccer_epl",
       "commenceTime": "2026-11-21T15:00:00Z",
       "fairProbability": 0.766,
-      "bookCount": 7,
+      "bookCount": 8,
       "books": [
+        "LiveScore Bet",
         "Virgin Bet",
         "William Hill",
         "LeoVegas",
@@ -1107,6 +1110,17 @@
       ]
     },
     {
+      "fixture": "Orlando City SC v FC Cincinnati",
+      "sport": "soccer_usa_mls",
+      "commenceTime": "2026-11-20T00:30:00Z",
+      "fairProbability": 0.811,
+      "bookCount": 2,
+      "books": [
+        "LiveScore Bet",
+        "Virgin Bet"
+      ]
+    },
+    {
       "fixture": "Norwich City v Cardiff City",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-11-21T12:30:00Z",
@@ -1150,6 +1164,16 @@
       ]
     },
     {
+      "fixture": "Seattle Sounders FC v Real Salt Lake",
+      "sport": "soccer_usa_mls",
+      "commenceTime": "2026-11-20T03:00:00Z",
+      "fairProbability": 0.752,
+      "bookCount": 1,
+      "books": [
+        "Virgin Bet"
+      ]
+    },
+    {
       "fixture": "Southampton v Derby County",
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-11-21T12:30:00Z",
@@ -1183,10 +1207,10 @@
       ]
     },
     {
-      "fixture": "Aston Villa v Sunderland",
-      "sport": "soccer_epl",
-      "commenceTime": "2026-11-21T15:00:00Z",
-      "fairProbability": 0.713,
+      "fixture": "Troyes v Le Havre",
+      "sport": "soccer_france_ligue_one",
+      "commenceTime": "2026-11-20T19:45:00Z",
+      "fairProbability": 0.708,
       "bookCount": 2,
       "books": [
         "LiveScore Bet",
@@ -1194,9 +1218,9 @@
       ]
     },
     {
-      "fixture": "Troyes v Le Havre",
-      "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-11-20T19:45:00Z",
+      "fixture": "Aston Villa v Sunderland",
+      "sport": "soccer_epl",
+      "commenceTime": "2026-11-21T15:00:00Z",
       "fairProbability": 0.708,
       "bookCount": 2,
       "books": [
@@ -1265,13 +1289,6 @@
       "reason": "no first-half 0.5 line available"
     },
     {
-      "fixture": "Orlando City SC v FC Cincinnati",
-      "sport": "soccer_usa_mls",
-      "commenceTime": "2026-11-20T00:30:00Z",
-      "excluded": true,
-      "reason": "no first-half 0.5 line available"
-    },
-    {
       "fixture": "Arminia Bielefeld v 1. FC Magdeburg",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-11-20T17:30:00Z",
@@ -1282,13 +1299,6 @@
       "fixture": "Metz v Boulogne",
       "sport": "soccer_france_ligue_two",
       "commenceTime": "2026-11-20T19:00:00Z",
-      "excluded": true,
-      "reason": "no first-half 0.5 line available"
-    },
-    {
-      "fixture": "Seattle Sounders FC v Real Salt Lake",
-      "sport": "soccer_usa_mls",
-      "commenceTime": "2026-11-20T03:00:00Z",
       "excluded": true,
       "reason": "no first-half 0.5 line available"
     },
