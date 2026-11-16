@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-15T06:17:51.693Z",
+  "generatedAt": "2026-11-16T06:16:09.665Z",
   "apiCallsUsed": 29,
-  "apiQuotaUsed": 425,
-  "apiQuotaRemaining": 75,
+  "apiQuotaUsed": 454,
+  "apiQuotaRemaining": 46,
   "fh05ApiCallsUsed": 20,
-  "fh05ApiQuotaUsed": 265,
-  "fh05ApiQuotaRemaining": 235,
+  "fh05ApiQuotaUsed": 285,
+  "fh05ApiQuotaRemaining": 215,
   "over1_5": [
     {
       "fixture": "Bayern Munich v 1. FC Köln",
@@ -20,6 +20,19 @@
         "Coral",
         "Paddy Power",
         "Sky Bet"
+      ]
+    },
+    {
+      "fixture": "Orlando City SC v FC Cincinnati",
+      "sport": "soccer_usa_mls",
+      "commenceTime": "2026-11-20T00:30:00Z",
+      "fairProbability": 0.888,
+      "bookCount": 4,
+      "books": [
+        "William Hill",
+        "Ladbrokes",
+        "Coral",
+        "LiveScore Bet"
       ]
     },
     {
@@ -75,9 +88,11 @@
       "fixture": "Manchester City v Fulham",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-21T12:30:00Z",
-      "fairProbability": 0.822,
-      "bookCount": 6,
+      "fairProbability": 0.826,
+      "bookCount": 8,
       "books": [
+        "LiveScore Bet",
+        "Virgin Bet",
         "William Hill",
         "LeoVegas",
         "Paddy Power",
@@ -90,11 +105,29 @@
       "fixture": "SV Darmstadt 98 v 1. FC Heidenheim",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-11-20T17:30:00Z",
-      "fairProbability": 0.82,
-      "bookCount": 4,
+      "fairProbability": 0.814,
+      "bookCount": 5,
       "books": [
         "Coral",
         "Ladbrokes",
+        "Virgin Bet",
+        "LiveScore Bet",
+        "William Hill"
+      ]
+    },
+    {
+      "fixture": "Como v Cagliari",
+      "sport": "soccer_italy_serie_a",
+      "commenceTime": "2026-11-21T14:00:00Z",
+      "fairProbability": 0.813,
+      "bookCount": 8,
+      "books": [
+        "LeoVegas",
+        "William Hill",
+        "Coral",
+        "Ladbrokes",
+        "Paddy Power",
+        "Sky Bet",
         "Virgin Bet",
         "LiveScore Bet"
       ]
@@ -148,7 +181,7 @@
       "fixture": "Arminia Bielefeld v 1. FC Magdeburg",
       "sport": "soccer_germany_bundesliga2",
       "commenceTime": "2026-11-20T17:30:00Z",
-      "fairProbability": 0.789,
+      "fairProbability": 0.781,
       "bookCount": 6,
       "books": [
         "LeoVegas",
@@ -164,11 +197,10 @@
       "sport": "soccer_efl_champ",
       "commenceTime": "2026-11-21T12:30:00Z",
       "fairProbability": 0.766,
-      "bookCount": 5,
+      "bookCount": 4,
       "books": [
         "LeoVegas",
         "William Hill",
-        "Virgin Bet",
         "Coral",
         "Ladbrokes"
       ]
@@ -187,6 +219,21 @@
         "Coral",
         "Ladbrokes",
         "Paddy Power",
+        "Sky Bet"
+      ]
+    },
+    {
+      "fixture": "Aston Villa v Sunderland",
+      "sport": "soccer_epl",
+      "commenceTime": "2026-11-21T15:00:00Z",
+      "fairProbability": 0.764,
+      "bookCount": 6,
+      "books": [
+        "William Hill",
+        "LeoVegas",
+        "Paddy Power",
+        "Ladbrokes",
+        "Coral",
         "Sky Bet"
       ]
     },
@@ -211,9 +258,8 @@
       "sport": "soccer_epl",
       "commenceTime": "2026-11-21T15:00:00Z",
       "fairProbability": 0.75,
-      "bookCount": 7,
+      "bookCount": 6,
       "books": [
-        "LiveScore Bet",
         "William Hill",
         "LeoVegas",
         "Paddy Power",
@@ -226,20 +272,28 @@
       "fixture": "Metz v Boulogne",
       "sport": "soccer_france_ligue_two",
       "commenceTime": "2026-11-20T19:00:00Z",
-      "fairProbability": 0.737,
-      "bookCount": 1,
+      "fairProbability": 0.731,
+      "bookCount": 5,
       "books": [
-        "William Hill"
+        "William Hill",
+        "Coral",
+        "Ladbrokes",
+        "LiveScore Bet",
+        "Virgin Bet"
       ]
     },
     {
       "fixture": "Annecy FC v Clermont",
       "sport": "soccer_france_ligue_two",
       "commenceTime": "2026-11-20T19:00:00Z",
-      "fairProbability": 0.7,
-      "bookCount": 1,
+      "fairProbability": 0.717,
+      "bookCount": 5,
       "books": [
-        "William Hill"
+        "William Hill",
+        "Coral",
+        "Ladbrokes",
+        "LiveScore Bet",
+        "Virgin Bet"
       ]
     },
     {
@@ -261,27 +315,6 @@
     }
   ],
   "over1_5_excluded": [
-    {
-      "fixture": "Como v Cagliari",
-      "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-11-21T14:00:00Z",
-      "excluded": true,
-      "reason": "lookup failed: 429 Too Many Requests — /v4/sports/soccer_italy_serie_a/events/9e8d72c6c27c1667be7b88416a36ca80/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Requests are too frequent\",\"error_code\":\"EXCEEDED_FREQ_LIMIT\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.html#exceeded-freq-limit\"}\n"
-    },
-    {
-      "fixture": "Orlando City SC v FC Cincinnati",
-      "sport": "soccer_usa_mls",
-      "commenceTime": "2026-11-20T00:30:00Z",
-      "excluded": true,
-      "reason": "lookup failed: 429 Too Many Requests — /v4/sports/soccer_usa_mls/events/ec0a3056ce896bd73059bffab79fc261/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Requests are too frequent\",\"error_code\":\"EXCEEDED_FREQ_LIMIT\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.html#exceeded-freq-limit\"}\n"
-    },
-    {
-      "fixture": "Aston Villa v Sunderland",
-      "sport": "soccer_epl",
-      "commenceTime": "2026-11-21T15:00:00Z",
-      "excluded": true,
-      "reason": "lookup failed: 429 Too Many Requests — /v4/sports/soccer_epl/events/b8d6ab6ecc8bb356c6335d3f417d0ecf/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Requests are too frequent\",\"error_code\":\"EXCEEDED_FREQ_LIMIT\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.html#exceeded-freq-limit\"}\n"
-    },
     {
       "fixture": "Borussia Monchengladbach v Borussia Dortmund",
       "sport": "soccer_germany_bundesliga",
@@ -1086,9 +1119,10 @@
       "fixture": "Bayern Munich v 1. FC Köln",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-11-20T19:30:00Z",
-      "fairProbability": 0.832,
-      "bookCount": 2,
+      "fairProbability": 0.841,
+      "bookCount": 3,
       "books": [
+        "LeoVegas",
         "LiveScore Bet",
         "Virgin Bet"
       ]
@@ -1142,11 +1176,10 @@
       "fixture": "Manchester City v Fulham",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-21T12:30:00Z",
-      "fairProbability": 0.755,
-      "bookCount": 2,
+      "fairProbability": 0.758,
+      "bookCount": 1,
       "books": [
-        "LiveScore Bet",
-        "Virgin Bet"
+        "LiveScore Bet"
       ]
     },
     {
@@ -1173,6 +1206,16 @@
       ]
     },
     {
+      "fixture": "SV Darmstadt 98 v 1. FC Heidenheim",
+      "sport": "soccer_germany_bundesliga2",
+      "commenceTime": "2026-11-20T17:30:00Z",
+      "fairProbability": 0.74,
+      "bookCount": 1,
+      "books": [
+        "LeoVegas"
+      ]
+    },
+    {
       "fixture": "Como v Cagliari",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-11-21T14:00:00Z",
@@ -1195,14 +1238,25 @@
       ]
     },
     {
+      "fixture": "Arminia Bielefeld v 1. FC Magdeburg",
+      "sport": "soccer_germany_bundesliga2",
+      "commenceTime": "2026-11-20T17:30:00Z",
+      "fairProbability": 0.721,
+      "bookCount": 1,
+      "books": [
+        "LeoVegas"
+      ]
+    },
+    {
       "fixture": "Troyes v Le Havre",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-11-20T19:45:00Z",
       "fairProbability": 0.708,
-      "bookCount": 2,
+      "bookCount": 3,
       "books": [
         "LiveScore Bet",
-        "Virgin Bet"
+        "Virgin Bet",
+        "LeoVegas"
       ]
     },
     {
@@ -1220,9 +1274,10 @@
       "fixture": "Athletic Bilbao v Espanyol",
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-11-20T20:00:00Z",
-      "fairProbability": 0.697,
-      "bookCount": 2,
+      "fairProbability": 0.698,
+      "bookCount": 3,
       "books": [
+        "LeoVegas",
         "Virgin Bet",
         "LiveScore Bet"
       ]
@@ -1231,7 +1286,7 @@
       "fixture": "Aston Villa v Sunderland",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-21T15:00:00Z",
-      "fairProbability": 0.697,
+      "fairProbability": 0.693,
       "bookCount": 2,
       "books": [
         "LiveScore Bet",
@@ -1243,6 +1298,28 @@
       "sport": "soccer_epl",
       "commenceTime": "2026-11-21T15:00:00Z",
       "fairProbability": 0.693,
+      "bookCount": 2,
+      "books": [
+        "LiveScore Bet",
+        "Virgin Bet"
+      ]
+    },
+    {
+      "fixture": "Metz v Boulogne",
+      "sport": "soccer_france_ligue_two",
+      "commenceTime": "2026-11-20T19:00:00Z",
+      "fairProbability": 0.676,
+      "bookCount": 2,
+      "books": [
+        "LiveScore Bet",
+        "Virgin Bet"
+      ]
+    },
+    {
+      "fixture": "Annecy FC v Clermont",
+      "sport": "soccer_france_ligue_two",
+      "commenceTime": "2026-11-20T19:00:00Z",
+      "fairProbability": 0.671,
       "bookCount": 2,
       "books": [
         "LiveScore Bet",
@@ -1263,34 +1340,6 @@
     }
   ],
   "firstHalfOver0_5_excluded": [
-    {
-      "fixture": "SV Darmstadt 98 v 1. FC Heidenheim",
-      "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-11-20T17:30:00Z",
-      "excluded": true,
-      "reason": "no first-half 0.5 line available"
-    },
-    {
-      "fixture": "Annecy FC v Clermont",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-11-20T19:00:00Z",
-      "excluded": true,
-      "reason": "no first-half 0.5 line available"
-    },
-    {
-      "fixture": "Arminia Bielefeld v 1. FC Magdeburg",
-      "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-11-20T17:30:00Z",
-      "excluded": true,
-      "reason": "no first-half 0.5 line available"
-    },
-    {
-      "fixture": "Metz v Boulogne",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-11-20T19:00:00Z",
-      "excluded": true,
-      "reason": "no first-half 0.5 line available"
-    },
     {
       "fixture": "Borussia Monchengladbach v Borussia Dortmund",
       "sport": "soccer_germany_bundesliga",

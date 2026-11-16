@@ -1,551 +1,101 @@
 {
-  "generatedAt": "2026-11-15T06:17:53.224Z",
+  "generatedAt": "2026-11-16T06:16:11.418Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 11,
-  "quotaRemaining": 89,
+  "quotaUsed": 12,
+  "quotaRemaining": 88,
   "winOrDraw": [
     {
-      "fixture": "Ravenna v Forli",
-      "competition": "Italy — Serie C",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T16:30:00",
-      "favoriteTeam": "Ravenna",
-      "fairProbability": 0.863,
-      "quotedDoubleChanceOdds": 1.072
-    },
-    {
-      "fixture": "Atletico Madrid B v Teruel",
-      "competition": "Spain — Primera Division RFEF Group 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T11:00:00",
-      "favoriteTeam": "Atletico Madrid B",
-      "fairProbability": 0.848,
-      "quotedDoubleChanceOdds": 1.096
-    },
-    {
-      "fixture": "Pescara v Sambenedettese",
-      "competition": "Italy — Serie C",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:30:00",
-      "favoriteTeam": "Pescara",
-      "fairProbability": 0.833,
-      "quotedDoubleChanceOdds": 1.104
-    },
-    {
-      "fixture": "UD Logrones v Arenas Club de Getxo",
-      "competition": "Spain — Primera Division RFEF Group 1",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T15:30:00",
-      "favoriteTeam": "UD Logrones",
-      "fairProbability": 0.816,
-      "quotedDoubleChanceOdds": 1.112
-    },
-    {
-      "fixture": "Eibar v Cadiz",
-      "competition": "Spain — Segunda Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T17:30:00",
-      "favoriteTeam": "Eibar",
-      "fairProbability": 0.81,
-      "quotedDoubleChanceOdds": 1.154
-    },
-    {
-      "fixture": "Pirin Blagoevgrad v Montana",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T12:30:00",
-      "favoriteTeam": "Montana",
-      "fairProbability": 0.8,
-      "quotedDoubleChanceOdds": 1.117
-    },
-    {
-      "fixture": "Yantra Gabrovo v Ludogorets Razgrad II",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T12:30:00",
-      "favoriteTeam": "Yantra Gabrovo",
-      "fairProbability": 0.8,
-      "quotedDoubleChanceOdds": 1.138
-    },
-    {
-      "fixture": "FC Sochi v Shinnik Yaroslavl",
-      "competition": "Russia — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T14:00:00",
-      "favoriteTeam": "FC Sochi",
-      "fairProbability": 0.798,
-      "quotedDoubleChanceOdds": 1.17
-    },
-    {
-      "fixture": "Tenerife v Ceuta",
-      "competition": "Spain — Segunda Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:00:00",
-      "favoriteTeam": "Tenerife",
-      "fairProbability": 0.779,
-      "quotedDoubleChanceOdds": 1.194
-    },
-    {
-      "fixture": "Barletta v Team Altamura",
-      "competition": "Italy — Serie C",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T16:30:00",
-      "favoriteTeam": "Barletta",
-      "fairProbability": 0.77,
-      "quotedDoubleChanceOdds": 1.168
-    },
-    {
-      "fixture": "Guidonia Montecelio v Ostia Mare Lido",
-      "competition": "Italy — Serie C",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:30:00",
-      "favoriteTeam": "Guidonia Montecelio",
-      "fairProbability": 0.768,
-      "quotedDoubleChanceOdds": 1.178
-    },
-    {
-      "fixture": "Nesebar v Fratria Varna",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T12:30:00",
-      "favoriteTeam": "Fratria Varna",
-      "fairProbability": 0.76,
-      "quotedDoubleChanceOdds": 1.19
-    },
-    {
-      "fixture": "Comerciantes Unidos v Sport Boys",
-      "competition": "Peru — Liga 1",
-      "federation": "CONMEBOL",
-      "commenceTime": "2026-11-15T18:00:00",
-      "favoriteTeam": "Comerciantes Unidos",
-      "fairProbability": 0.757,
-      "quotedDoubleChanceOdds": 1.207
-    },
-    {
-      "fixture": "Zamora CF v Real Aviles",
-      "competition": "Spain — Primera Division RFEF Group 1",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:15:00",
-      "favoriteTeam": "Zamora CF",
-      "fairProbability": 0.755,
-      "quotedDoubleChanceOdds": 1.216
-    },
-    {
-      "fixture": "Dempo Goa v Chanmari FC",
-      "competition": "India — I-League",
-      "federation": "AFC",
-      "commenceTime": "2026-11-15T10:30:00",
-      "favoriteTeam": "Dempo Goa",
-      "fairProbability": 0.755,
-      "quotedDoubleChanceOdds": 1.21
-    },
-    {
-      "fixture": "Extremadura v Pontevedra",
-      "competition": "Spain — Primera Division RFEF Group 1",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T11:00:00",
-      "favoriteTeam": "Extremadura",
-      "fairProbability": 0.746,
-      "quotedDoubleChanceOdds": 1.208
-    },
-    {
-      "fixture": "Slovan Bratislava B v OFK Malzenice",
+      "fixture": "Tatran Presov v MFK Zvolen",
       "competition": "Slovakia — 2. Liga",
       "federation": "UEFA",
-      "commenceTime": "2026-11-15T09:30:00",
-      "favoriteTeam": "Slovan Bratislava B",
-      "fairProbability": 0.745,
-      "quotedDoubleChanceOdds": 1.222
+      "commenceTime": "2026-11-16T16:00:00",
+      "favoriteTeam": "Tatran Presov",
+      "fairProbability": 0.839,
+      "quotedDoubleChanceOdds": 1.086
     },
     {
-      "fixture": "Granada CF v Las Palmas",
-      "competition": "Spain — Segunda Division",
+      "fixture": "Inhulets Petrove v Probiy Horodenka",
+      "competition": "Ukraine — First League",
       "federation": "UEFA",
-      "commenceTime": "2026-11-15T15:15:00",
-      "favoriteTeam": "Granada CF",
-      "fairProbability": 0.744,
-      "quotedDoubleChanceOdds": 1.244
+      "commenceTime": "2026-11-16T09:00:00",
+      "favoriteTeam": "Inhulets Petrove",
+      "fairProbability": 0.735,
+      "quotedDoubleChanceOdds": 1.268
     },
     {
-      "fixture": "Spaeri v Iberia 1999 Tbilisi",
-      "competition": "Georgia — Premier Liga",
+      "fixture": "UCSA Tarasivka v Polissya-2 Zhytomyr",
+      "competition": "Ukraine — First League",
       "federation": "UEFA",
-      "commenceTime": "2026-11-15T15:00:00",
-      "favoriteTeam": "Iberia 1999 Tbilisi",
-      "fairProbability": 0.743,
-      "quotedDoubleChanceOdds": 1.205
+      "commenceTime": "2026-11-16T10:00:00",
+      "favoriteTeam": "UCSA Tarasivka",
+      "fairProbability": 0.727,
+      "quotedDoubleChanceOdds": 1.263
     },
     {
-      "fixture": "Leixoes v Chaves",
-      "competition": "Portugal — Liga Portugal 2",
+      "fixture": "Universidad de Cajamarca v Los Chankas CYC",
+      "competition": "Peru — Liga 1",
+      "federation": "CONMEBOL",
+      "commenceTime": "2026-11-16T18:00:00",
+      "favoriteTeam": "Los Chankas CYC",
+      "fairProbability": 0.678,
+      "quotedDoubleChanceOdds": 1.37
+    },
+    {
+      "fixture": "FC Chernihiv v Lokomotyv Kyiv",
+      "competition": "Ukraine — First League",
       "federation": "UEFA",
-      "commenceTime": "2026-11-15T18:00:00",
-      "favoriteTeam": "Leixoes",
-      "fairProbability": 0.741,
-      "quotedDoubleChanceOdds": 1.24
-    },
-    {
-      "fixture": "Tondela v Farense",
-      "competition": "Portugal — Liga Portugal 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T11:00:00",
-      "favoriteTeam": "Tondela",
-      "fairProbability": 0.736,
-      "quotedDoubleChanceOdds": 1.25
-    },
-    {
-      "fixture": "Kashiwa Reysol v Kawasaki Frontale",
-      "competition": "Japan — J. League Cup",
-      "federation": "AFC",
-      "commenceTime": "2026-11-15T08:00:00",
-      "favoriteTeam": "Kashiwa Reysol",
-      "fairProbability": 0.733,
-      "quotedDoubleChanceOdds": 1.235
-    },
-    {
-      "fixture": "FC Chelyabinsk v Veles Moskva",
-      "competition": "Russia — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T10:00:00",
-      "favoriteTeam": "FC Chelyabinsk",
-      "fairProbability": 0.732,
-      "quotedDoubleChanceOdds": 1.265
-    },
-    {
-      "fixture": "Cavese 1919 v Crotone",
-      "competition": "Italy — Serie C",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:30:00",
-      "favoriteTeam": "Cavese 1919",
-      "fairProbability": 0.722,
-      "quotedDoubleChanceOdds": 1.238
-    },
-    {
-      "fixture": "Dobrudzha Dobrich v Etar Veliko Tarnovo",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T11:30:00",
-      "favoriteTeam": "Etar Veliko Tarnovo",
-      "fairProbability": 0.717,
-      "quotedDoubleChanceOdds": 1.26
-    },
-    {
-      "fixture": "Penafiel v Lusitania",
-      "competition": "Portugal — Liga Portugal 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T15:30:00",
-      "favoriteTeam": "Penafiel",
-      "fairProbability": 0.712,
-      "quotedDoubleChanceOdds": 1.296
-    },
-    {
-      "fixture": "Sportist Svoge v Spartak Pleven",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T12:30:00",
-      "favoriteTeam": "Sportist Svoge",
-      "fairProbability": 0.708,
-      "quotedDoubleChanceOdds": 1.26
-    },
-    {
-      "fixture": "Algeciras CF v Antequera",
-      "competition": "Spain — Primera Division RFEF Group 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T15:30:00",
-      "favoriteTeam": "Algeciras CF",
-      "fairProbability": 0.704,
-      "quotedDoubleChanceOdds": 1.282
-    },
-    {
-      "fixture": "Eldense v Sabadell",
-      "competition": "Spain — Segunda Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T17:30:00",
-      "favoriteTeam": "Eldense",
-      "fairProbability": 0.704,
-      "quotedDoubleChanceOdds": 1.326
-    },
-    {
-      "fixture": "MVV Maastricht v Vitesse Arnhem",
-      "competition": "Netherlands — Eerste Divisie",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:30:00",
-      "favoriteTeam": "Vitesse Arnhem",
-      "fairProbability": 0.699,
-      "quotedDoubleChanceOdds": 1.324
+      "commenceTime": "2026-11-16T10:30:00",
+      "favoriteTeam": "Lokomotyv Kyiv",
+      "fairProbability": 0.663,
+      "quotedDoubleChanceOdds": 1.388
     }
   ],
   "winOrDraw_excluded": [],
   "straightWin": [
     {
-      "fixture": "Ravenna v Forli",
-      "competition": "Italy — Serie C",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T16:30:00",
-      "favoriteTeam": "Ravenna",
-      "fairProbability": 0.65,
-      "quotedOdds": 1.382
-    },
-    {
-      "fixture": "Atletico Madrid B v Teruel",
-      "competition": "Spain — Primera Division RFEF Group 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T11:00:00",
-      "favoriteTeam": "Atletico Madrid B",
-      "fairProbability": 0.638,
-      "quotedOdds": 1.414
-    },
-    {
-      "fixture": "Pescara v Sambenedettese",
-      "competition": "Italy — Serie C",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:30:00",
-      "favoriteTeam": "Pescara",
-      "fairProbability": 0.612,
-      "quotedOdds": 1.47
-    },
-    {
-      "fixture": "UD Logrones v Arenas Club de Getxo",
-      "competition": "Spain — Primera Division RFEF Group 1",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T15:30:00",
-      "favoriteTeam": "UD Logrones",
-      "fairProbability": 0.596,
-      "quotedOdds": 1.51
-    },
-    {
-      "fixture": "Eibar v Cadiz",
-      "competition": "Spain — Segunda Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T17:30:00",
-      "favoriteTeam": "Eibar",
-      "fairProbability": 0.575,
-      "quotedOdds": 1.598
-    },
-    {
-      "fixture": "Yantra Gabrovo v Ludogorets Razgrad II",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T12:30:00",
-      "favoriteTeam": "Yantra Gabrovo",
-      "fairProbability": 0.557,
-      "quotedOdds": 1.6
-    },
-    {
-      "fixture": "Pirin Blagoevgrad v Montana",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T12:30:00",
-      "favoriteTeam": "Montana",
-      "fairProbability": 0.545,
-      "quotedOdds": 1.64
-    },
-    {
-      "fixture": "FC Sochi v Shinnik Yaroslavl",
-      "competition": "Russia — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T14:00:00",
-      "favoriteTeam": "FC Sochi",
-      "fairProbability": 0.542,
-      "quotedOdds": 1.71
-    },
-    {
-      "fixture": "Tenerife v Ceuta",
-      "competition": "Spain — Segunda Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:00:00",
-      "favoriteTeam": "Tenerife",
-      "fairProbability": 0.52,
-      "quotedOdds": 1.764
-    },
-    {
-      "fixture": "Nesebar v Fratria Varna",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T12:30:00",
-      "favoriteTeam": "Fratria Varna",
-      "fairProbability": 0.503,
-      "quotedOdds": 1.783
-    },
-    {
-      "fixture": "Guidonia Montecelio v Ostia Mare Lido",
-      "competition": "Italy — Serie C",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:30:00",
-      "favoriteTeam": "Guidonia Montecelio",
-      "fairProbability": 0.502,
-      "quotedOdds": 1.784
-    },
-    {
-      "fixture": "Dempo Goa v Chanmari FC",
-      "competition": "India — I-League",
-      "federation": "AFC",
-      "commenceTime": "2026-11-15T10:30:00",
-      "favoriteTeam": "Dempo Goa",
-      "fairProbability": 0.502,
-      "quotedOdds": 1.79
-    },
-    {
-      "fixture": "Comerciantes Unidos v Sport Boys",
-      "competition": "Peru — Liga 1",
-      "federation": "CONMEBOL",
-      "commenceTime": "2026-11-15T18:00:00",
-      "favoriteTeam": "Comerciantes Unidos",
-      "fairProbability": 0.496,
-      "quotedOdds": 1.842
-    },
-    {
-      "fixture": "Slovan Bratislava B v OFK Malzenice",
+      "fixture": "Tatran Presov v MFK Zvolen",
       "competition": "Slovakia — 2. Liga",
       "federation": "UEFA",
-      "commenceTime": "2026-11-15T09:30:00",
-      "favoriteTeam": "Slovan Bratislava B",
-      "fairProbability": 0.492,
-      "quotedOdds": 1.816
+      "commenceTime": "2026-11-16T16:00:00",
+      "favoriteTeam": "Tatran Presov",
+      "fairProbability": 0.631,
+      "quotedOdds": 1.418
     },
     {
-      "fixture": "Barletta v Team Altamura",
-      "competition": "Italy — Serie C",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T16:30:00",
-      "favoriteTeam": "Barletta",
-      "fairProbability": 0.491,
-      "quotedOdds": 1.822
-    },
-    {
-      "fixture": "Kashiwa Reysol v Kawasaki Frontale",
-      "competition": "Japan — J. League Cup",
-      "federation": "AFC",
-      "commenceTime": "2026-11-15T08:00:00",
-      "favoriteTeam": "Kashiwa Reysol",
-      "fairProbability": 0.491,
-      "quotedOdds": 1.852
-    },
-    {
-      "fixture": "Zamora CF v Real Aviles",
-      "competition": "Spain — Primera Division RFEF Group 1",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:15:00",
-      "favoriteTeam": "Zamora CF",
-      "fairProbability": 0.487,
-      "quotedOdds": 1.86
-    },
-    {
-      "fixture": "Spaeri v Iberia 1999 Tbilisi",
-      "competition": "Georgia — Premier Liga",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T15:00:00",
-      "favoriteTeam": "Iberia 1999 Tbilisi",
-      "fairProbability": 0.477,
-      "quotedOdds": 1.88
-    },
-    {
-      "fixture": "Granada CF v Las Palmas",
-      "competition": "Spain — Segunda Division",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T15:15:00",
-      "favoriteTeam": "Granada CF",
-      "fairProbability": 0.466,
-      "quotedOdds": 1.968
-    },
-    {
-      "fixture": "Leixoes v Chaves",
-      "competition": "Portugal — Liga Portugal 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T18:00:00",
-      "favoriteTeam": "Leixoes",
-      "fairProbability": 0.465,
-      "quotedOdds": 1.936
-    },
-    {
-      "fixture": "Extremadura v Pontevedra",
-      "competition": "Spain — Primera Division RFEF Group 1",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T11:00:00",
-      "favoriteTeam": "Extremadura",
-      "fairProbability": 0.464,
-      "quotedOdds": 1.94
-    },
-    {
-      "fixture": "Dobrudzha Dobrich v Etar Veliko Tarnovo",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T11:30:00",
-      "favoriteTeam": "Etar Veliko Tarnovo",
-      "fairProbability": 0.463,
-      "quotedOdds": 1.935
-    },
-    {
-      "fixture": "Tondela v Farense",
-      "competition": "Portugal — Liga Portugal 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T11:00:00",
-      "favoriteTeam": "Tondela",
-      "fairProbability": 0.45,
-      "quotedOdds": 2.004
-    },
-    {
-      "fixture": "FC Chelyabinsk v Veles Moskva",
-      "competition": "Russia — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T10:00:00",
-      "favoriteTeam": "FC Chelyabinsk",
-      "fairProbability": 0.447,
-      "quotedOdds": 2.075
-    },
-    {
-      "fixture": "Cavese 1919 v Crotone",
-      "competition": "Italy — Serie C",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:30:00",
-      "favoriteTeam": "Cavese 1919",
-      "fairProbability": 0.438,
-      "quotedOdds": 2.046
-    },
-    {
-      "fixture": "MVV Maastricht v Vitesse Arnhem",
-      "competition": "Netherlands — Eerste Divisie",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T13:30:00",
-      "favoriteTeam": "Vitesse Arnhem",
-      "fairProbability": 0.437,
-      "quotedOdds": 2.096
-    },
-    {
-      "fixture": "Sportist Svoge v Spartak Pleven",
-      "competition": "Bulgaria — Second PFL",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T12:30:00",
-      "favoriteTeam": "Sportist Svoge",
-      "fairProbability": 0.421,
-      "quotedOdds": 2.12
-    },
-    {
-      "fixture": "Portimonense v Academica Coimbra",
-      "competition": "Portugal — Liga Portugal 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T14:00:00",
-      "favoriteTeam": "Portimonense",
-      "fairProbability": 0.415,
-      "quotedOdds": 2.18
-    },
-    {
-      "fixture": "Algeciras CF v Antequera",
-      "competition": "Spain — Primera Division RFEF Group 2",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-15T15:30:00",
-      "favoriteTeam": "Algeciras CF",
-      "fairProbability": 0.414,
-      "quotedOdds": 2.168
-    },
-    {
-      "fixture": "Nyva Ternopil v PFC Oleksandria",
+      "fixture": "UCSA Tarasivka v Polissya-2 Zhytomyr",
       "competition": "Ukraine — First League",
       "federation": "UEFA",
-      "commenceTime": "2026-11-15T12:00:00",
-      "favoriteTeam": "PFC Oleksandria",
-      "fairProbability": 0.411,
-      "quotedOdds": 2.17
+      "commenceTime": "2026-11-16T10:00:00",
+      "favoriteTeam": "UCSA Tarasivka",
+      "fairProbability": 0.47,
+      "quotedOdds": 1.903
+    },
+    {
+      "fixture": "Inhulets Petrove v Probiy Horodenka",
+      "competition": "Ukraine — First League",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-16T09:00:00",
+      "favoriteTeam": "Inhulets Petrove",
+      "fairProbability": 0.469,
+      "quotedOdds": 1.913
+    },
+    {
+      "fixture": "FC Chernihiv v Lokomotyv Kyiv",
+      "competition": "Ukraine — First League",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-16T10:30:00",
+      "favoriteTeam": "Lokomotyv Kyiv",
+      "fairProbability": 0.394,
+      "quotedOdds": 2.267
+    },
+    {
+      "fixture": "Universidad de Cajamarca v Los Chankas CYC",
+      "competition": "Peru — Liga 1",
+      "federation": "CONMEBOL",
+      "commenceTime": "2026-11-16T18:00:00",
+      "favoriteTeam": "Los Chankas CYC",
+      "fairProbability": 0.386,
+      "quotedOdds": 2.362
     }
   ],
   "straightWin_excluded": []
