@@ -1,102 +1,10 @@
 {
-  "generatedAt": "2026-11-16T06:16:11.418Z",
+  "generatedAt": "2026-11-17T07:47:18.221Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 12,
-  "quotaRemaining": 88,
-  "winOrDraw": [
-    {
-      "fixture": "Tatran Presov v MFK Zvolen",
-      "competition": "Slovakia — 2. Liga",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-16T16:00:00",
-      "favoriteTeam": "Tatran Presov",
-      "fairProbability": 0.839,
-      "quotedDoubleChanceOdds": 1.086
-    },
-    {
-      "fixture": "Inhulets Petrove v Probiy Horodenka",
-      "competition": "Ukraine — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-16T09:00:00",
-      "favoriteTeam": "Inhulets Petrove",
-      "fairProbability": 0.735,
-      "quotedDoubleChanceOdds": 1.268
-    },
-    {
-      "fixture": "UCSA Tarasivka v Polissya-2 Zhytomyr",
-      "competition": "Ukraine — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-16T10:00:00",
-      "favoriteTeam": "UCSA Tarasivka",
-      "fairProbability": 0.727,
-      "quotedDoubleChanceOdds": 1.263
-    },
-    {
-      "fixture": "Universidad de Cajamarca v Los Chankas CYC",
-      "competition": "Peru — Liga 1",
-      "federation": "CONMEBOL",
-      "commenceTime": "2026-11-16T18:00:00",
-      "favoriteTeam": "Los Chankas CYC",
-      "fairProbability": 0.678,
-      "quotedDoubleChanceOdds": 1.37
-    },
-    {
-      "fixture": "FC Chernihiv v Lokomotyv Kyiv",
-      "competition": "Ukraine — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-16T10:30:00",
-      "favoriteTeam": "Lokomotyv Kyiv",
-      "fairProbability": 0.663,
-      "quotedDoubleChanceOdds": 1.388
-    }
-  ],
+  "quotaUsed": 13,
+  "quotaRemaining": 87,
+  "winOrDraw": [],
   "winOrDraw_excluded": [],
-  "straightWin": [
-    {
-      "fixture": "Tatran Presov v MFK Zvolen",
-      "competition": "Slovakia — 2. Liga",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-16T16:00:00",
-      "favoriteTeam": "Tatran Presov",
-      "fairProbability": 0.631,
-      "quotedOdds": 1.418
-    },
-    {
-      "fixture": "UCSA Tarasivka v Polissya-2 Zhytomyr",
-      "competition": "Ukraine — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-16T10:00:00",
-      "favoriteTeam": "UCSA Tarasivka",
-      "fairProbability": 0.47,
-      "quotedOdds": 1.903
-    },
-    {
-      "fixture": "Inhulets Petrove v Probiy Horodenka",
-      "competition": "Ukraine — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-16T09:00:00",
-      "favoriteTeam": "Inhulets Petrove",
-      "fairProbability": 0.469,
-      "quotedOdds": 1.913
-    },
-    {
-      "fixture": "FC Chernihiv v Lokomotyv Kyiv",
-      "competition": "Ukraine — First League",
-      "federation": "UEFA",
-      "commenceTime": "2026-11-16T10:30:00",
-      "favoriteTeam": "Lokomotyv Kyiv",
-      "fairProbability": 0.394,
-      "quotedOdds": 2.267
-    },
-    {
-      "fixture": "Universidad de Cajamarca v Los Chankas CYC",
-      "competition": "Peru — Liga 1",
-      "federation": "CONMEBOL",
-      "commenceTime": "2026-11-16T18:00:00",
-      "favoriteTeam": "Los Chankas CYC",
-      "fairProbability": 0.386,
-      "quotedOdds": 2.362
-    }
-  ],
+  "straightWin": [],
   "straightWin_excluded": []
 }

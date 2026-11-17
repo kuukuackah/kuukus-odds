@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-11-16T06:16:12.014Z",
-  "gameDate": "20261116",
+  "generatedAt": "2026-11-17T07:47:18.770Z",
+  "gameDate": "20261117",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
   "quotaUsed": 12,
   "quotaRemaining": 988,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Los Angeles Chargers v Baltimore Ravens",
-      "gameDate": "2026-11-16",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
