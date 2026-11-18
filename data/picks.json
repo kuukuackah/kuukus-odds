@@ -1,50 +1,39 @@
 {
-  "generatedAt": "2026-11-17T07:47:16.904Z",
+  "generatedAt": "2026-11-18T07:15:25.213Z",
   "apiCallsUsed": 29,
-  "apiQuotaUsed": 483,
-  "apiQuotaRemaining": 17,
+  "apiQuotaUsed": 500,
+  "apiQuotaRemaining": 0,
   "fh05ApiCallsUsed": 20,
-  "fh05ApiQuotaUsed": 305,
-  "fh05ApiQuotaRemaining": 195,
+  "fh05ApiQuotaUsed": 325,
+  "fh05ApiQuotaRemaining": 175,
   "over1_5": [
     {
       "fixture": "Bayern Munich v 1. FC Köln",
       "sport": "soccer_germany_bundesliga",
       "commenceTime": "2026-11-20T19:30:00Z",
-      "fairProbability": 0.906,
-      "bookCount": 4,
+      "fairProbability": 0.911,
+      "bookCount": 6,
       "books": [
         "LeoVegas",
         "Ladbrokes",
         "William Hill",
-        "Coral"
+        "Coral",
+        "Paddy Power",
+        "Sky Bet"
       ]
     },
     {
       "fixture": "Orlando City SC v FC Cincinnati",
       "sport": "soccer_usa_mls",
       "commenceTime": "2026-11-20T00:30:00Z",
-      "fairProbability": 0.887,
-      "bookCount": 5,
+      "fairProbability": 0.886,
+      "bookCount": 6,
       "books": [
+        "LeoVegas",
         "William Hill",
         "Ladbrokes",
         "Coral",
         "LiveScore Bet",
-        "Virgin Bet"
-      ]
-    },
-    {
-      "fixture": "Bayer Leverkusen v SC Paderborn",
-      "sport": "soccer_germany_bundesliga",
-      "commenceTime": "2026-11-21T14:30:00Z",
-      "fairProbability": 0.867,
-      "bookCount": 5,
-      "books": [
-        "LeoVegas",
-        "Ladbrokes",
-        "William Hill",
-        "Coral",
         "Virgin Bet"
       ]
     },
@@ -64,31 +53,17 @@
       ]
     },
     {
-      "fixture": "Nice v Paris Saint Germain",
-      "sport": "soccer_france_ligue_one",
-      "commenceTime": "2026-11-21T16:15:00Z",
-      "fairProbability": 0.85,
-      "bookCount": 6,
-      "books": [
-        "LiveScore Bet",
-        "LeoVegas",
-        "Virgin Bet",
-        "William Hill",
-        "Ladbrokes",
-        "Coral"
-      ]
-    },
-    {
       "fixture": "Manchester City v Fulham",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-21T12:30:00Z",
       "fairProbability": 0.822,
-      "bookCount": 6,
+      "bookCount": 7,
       "books": [
         "LiveScore Bet",
-        "Virgin Bet",
         "William Hill",
         "LeoVegas",
+        "Paddy Power",
+        "Sky Bet",
         "Coral",
         "Ladbrokes"
       ]
@@ -108,102 +83,18 @@
       ]
     },
     {
-      "fixture": "Como v Cagliari",
-      "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-11-21T14:00:00Z",
-      "fairProbability": 0.813,
-      "bookCount": 6,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Coral",
-        "Ladbrokes",
-        "Virgin Bet",
-        "LiveScore Bet"
-      ]
-    },
-    {
-      "fixture": "Seattle Sounders FC v Real Salt Lake",
-      "sport": "soccer_usa_mls",
-      "commenceTime": "2026-11-20T03:00:00Z",
-      "fairProbability": 0.813,
-      "bookCount": 5,
-      "books": [
-        "William Hill",
-        "Ladbrokes",
-        "Coral",
-        "LiveScore Bet",
-        "Virgin Bet"
-      ]
-    },
-    {
-      "fixture": "Southampton v Derby County",
-      "sport": "soccer_efl_champ",
-      "commenceTime": "2026-11-21T12:30:00Z",
-      "fairProbability": 0.81,
-      "bookCount": 5,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Coral",
-        "Ladbrokes",
-        "Virgin Bet"
-      ]
-    },
-    {
-      "fixture": "Lazio v Lecce",
-      "sport": "soccer_italy_serie_a",
-      "commenceTime": "2026-11-21T14:00:00Z",
-      "fairProbability": 0.799,
-      "bookCount": 6,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Ladbrokes",
-        "Coral",
-        "Virgin Bet",
-        "LiveScore Bet"
-      ]
-    },
-    {
-      "fixture": "Arminia Bielefeld v 1. FC Magdeburg",
-      "sport": "soccer_germany_bundesliga2",
-      "commenceTime": "2026-11-20T17:30:00Z",
-      "fairProbability": 0.779,
-      "bookCount": 6,
-      "books": [
-        "LeoVegas",
-        "Coral",
-        "Ladbrokes",
-        "Virgin Bet",
-        "LiveScore Bet",
-        "William Hill"
-      ]
-    },
-    {
-      "fixture": "Millwall v Queens Park Rangers",
-      "sport": "soccer_efl_champ",
-      "commenceTime": "2026-11-21T12:30:00Z",
-      "fairProbability": 0.766,
-      "bookCount": 4,
-      "books": [
-        "LeoVegas",
-        "William Hill",
-        "Coral",
-        "Ladbrokes"
-      ]
-    },
-    {
       "fixture": "Aston Villa v Sunderland",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-21T15:00:00Z",
-      "fairProbability": 0.762,
-      "bookCount": 4,
+      "fairProbability": 0.764,
+      "bookCount": 6,
       "books": [
         "William Hill",
         "LeoVegas",
+        "Paddy Power",
         "Ladbrokes",
-        "Coral"
+        "Coral",
+        "Sky Bet"
       ]
     },
     {
@@ -211,88 +102,121 @@
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-11-20T20:00:00Z",
       "fairProbability": 0.752,
-      "bookCount": 5,
+      "bookCount": 7,
       "books": [
         "William Hill",
         "LeoVegas",
+        "Paddy Power",
+        "Betfair",
+        "Sky Bet",
         "Ladbrokes",
-        "Coral",
-        "Virgin Bet"
-      ]
-    },
-    {
-      "fixture": "Bournemouth v Nottingham Forest",
-      "sport": "soccer_epl",
-      "commenceTime": "2026-11-21T15:00:00Z",
-      "fairProbability": 0.75,
-      "bookCount": 6,
-      "books": [
-        "LiveScore Bet",
-        "Virgin Bet",
-        "William Hill",
-        "LeoVegas",
-        "Coral",
-        "Ladbrokes"
+        "Coral"
       ]
     },
     {
       "fixture": "Troyes v Le Havre",
       "sport": "soccer_france_ligue_one",
       "commenceTime": "2026-11-20T19:45:00Z",
-      "fairProbability": 0.749,
-      "bookCount": 4,
+      "fairProbability": 0.752,
+      "bookCount": 9,
       "books": [
         "William Hill",
+        "LiveScore Bet",
+        "Virgin Bet",
         "LeoVegas",
         "Coral",
-        "Ladbrokes"
-      ]
-    },
-    {
-      "fixture": "Metz v Boulogne",
-      "sport": "soccer_france_ligue_two",
-      "commenceTime": "2026-11-20T19:00:00Z",
-      "fairProbability": 0.731,
-      "bookCount": 5,
-      "books": [
-        "William Hill",
-        "Coral",
         "Ladbrokes",
-        "LiveScore Bet",
-        "Virgin Bet"
+        "Paddy Power",
+        "Sky Bet",
+        "Betfair"
       ]
-    },
+    }
+  ],
+  "over1_5_excluded": [
     {
       "fixture": "Annecy FC v Clermont",
       "sport": "soccer_france_ligue_two",
       "commenceTime": "2026-11-20T19:00:00Z",
-      "fairProbability": 0.708,
-      "bookCount": 5,
-      "books": [
-        "William Hill",
-        "Coral",
-        "Ladbrokes",
-        "LiveScore Bet",
-        "Virgin Bet"
-      ]
+      "excluded": true,
+      "reason": "lookup failed: 429 Too Many Requests — /v4/sports/soccer_france_ligue_two/events/dade98555cab410e4b25cd4d29c1bee8/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Requests are too frequent\",\"error_code\":\"EXCEEDED_FREQ_LIMIT\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.html#exceeded-freq-limit\"}\n"
+    },
+    {
+      "fixture": "Como v Cagliari",
+      "sport": "soccer_italy_serie_a",
+      "commenceTime": "2026-11-21T14:00:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 429 Too Many Requests — /v4/sports/soccer_italy_serie_a/events/9e8d72c6c27c1667be7b88416a36ca80/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Requests are too frequent\",\"error_code\":\"EXCEEDED_FREQ_LIMIT\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.html#exceeded-freq-limit\"}\n"
+    },
+    {
+      "fixture": "Southampton v Derby County",
+      "sport": "soccer_efl_champ",
+      "commenceTime": "2026-11-21T12:30:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 401 Unauthorized — /v4/sports/soccer_efl_champ/events/5d3dbb358ea091830f570b92cee04c38/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Usage quota has been reached. See usage plans at https://the-odds-api.com\",\"error_code\":\"OUT_OF_USAGE_CREDITS\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.htm"
+    },
+    {
+      "fixture": "Bayer Leverkusen v SC Paderborn",
+      "sport": "soccer_germany_bundesliga",
+      "commenceTime": "2026-11-21T14:30:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 401 Unauthorized — /v4/sports/soccer_germany_bundesliga/events/c24cf629b4eaf0ebc4ca2c5beb73747c/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Usage quota has been reached. See usage plans at https://the-odds-api.com\",\"error_code\":\"OUT_OF_USAGE_CREDITS\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.htm"
+    },
+    {
+      "fixture": "Arminia Bielefeld v 1. FC Magdeburg",
+      "sport": "soccer_germany_bundesliga2",
+      "commenceTime": "2026-11-20T17:30:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 401 Unauthorized — /v4/sports/soccer_germany_bundesliga2/events/f742b5c50da25075d7f354d08e83dfa4/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Usage quota has been reached. See usage plans at https://the-odds-api.com\",\"error_code\":\"OUT_OF_USAGE_CREDITS\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.htm"
     },
     {
       "fixture": "Alavés v Deportivo La Coruña",
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-11-21T13:00:00Z",
-      "fairProbability": 0.688,
-      "bookCount": 6,
-      "books": [
-        "William Hill",
-        "LeoVegas",
-        "Ladbrokes",
-        "Coral",
-        "Virgin Bet",
-        "LiveScore Bet"
-      ]
-    }
-  ],
-  "over1_5_excluded": [
+      "excluded": true,
+      "reason": "lookup failed: 401 Unauthorized — /v4/sports/soccer_spain_la_liga/events/9881e56a732493272e688663b26cd37f/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Usage quota has been reached. See usage plans at https://the-odds-api.com\",\"error_code\":\"OUT_OF_USAGE_CREDITS\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.htm"
+    },
+    {
+      "fixture": "Nice v Paris Saint Germain",
+      "sport": "soccer_france_ligue_one",
+      "commenceTime": "2026-11-21T16:15:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 401 Unauthorized — /v4/sports/soccer_france_ligue_one/events/651c1847b5cdcc85e60a140edd2282c4/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Usage quota has been reached. See usage plans at https://the-odds-api.com\",\"error_code\":\"OUT_OF_USAGE_CREDITS\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.htm"
+    },
+    {
+      "fixture": "Metz v Boulogne",
+      "sport": "soccer_france_ligue_two",
+      "commenceTime": "2026-11-20T19:00:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 401 Unauthorized — /v4/sports/soccer_france_ligue_two/events/db03e2cc30f2c76d6db2065ddc81318c/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Usage quota has been reached. See usage plans at https://the-odds-api.com\",\"error_code\":\"OUT_OF_USAGE_CREDITS\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.htm"
+    },
+    {
+      "fixture": "Lazio v Lecce",
+      "sport": "soccer_italy_serie_a",
+      "commenceTime": "2026-11-21T14:00:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 401 Unauthorized — /v4/sports/soccer_italy_serie_a/events/bf921a2780e2a25201da8a3bfece84c4/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Usage quota has been reached. See usage plans at https://the-odds-api.com\",\"error_code\":\"OUT_OF_USAGE_CREDITS\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.htm"
+    },
+    {
+      "fixture": "Seattle Sounders FC v Real Salt Lake",
+      "sport": "soccer_usa_mls",
+      "commenceTime": "2026-11-20T03:00:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 401 Unauthorized — /v4/sports/soccer_usa_mls/events/d8eca71d848497deda0c022c1c27e3bc/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Usage quota has been reached. See usage plans at https://the-odds-api.com\",\"error_code\":\"OUT_OF_USAGE_CREDITS\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.htm"
+    },
+    {
+      "fixture": "Bournemouth v Nottingham Forest",
+      "sport": "soccer_epl",
+      "commenceTime": "2026-11-21T15:00:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 401 Unauthorized — /v4/sports/soccer_epl/events/cf68da11fa604c13fc9ef3219fad0314/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Usage quota has been reached. See usage plans at https://the-odds-api.com\",\"error_code\":\"OUT_OF_USAGE_CREDITS\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.htm"
+    },
+    {
+      "fixture": "Millwall v Queens Park Rangers",
+      "sport": "soccer_efl_champ",
+      "commenceTime": "2026-11-21T12:30:00Z",
+      "excluded": true,
+      "reason": "lookup failed: 401 Unauthorized — /v4/sports/soccer_efl_champ/events/063b1a482ff7c013b5c0e8e8af9a42ea/odds?apiKey=679f700125c71e46113e385becadceeb&oddsFormat=decimal&dateFormat=iso&regions=uk&markets=alternate_totals — {\"message\":\"Usage quota has been reached. See usage plans at https://the-odds-api.com\",\"error_code\":\"OUT_OF_USAGE_CREDITS\",\"details_url\":\"https://the-odds-api.com/liveapi/guides/v4/api-error-codes.htm"
+    },
     {
       "fixture": "Borussia Monchengladbach v Borussia Dortmund",
       "sport": "soccer_germany_bundesliga",
@@ -1248,12 +1172,23 @@
       "fixture": "Manchester City v Fulham",
       "sport": "soccer_epl",
       "commenceTime": "2026-11-21T12:30:00Z",
-      "fairProbability": 0.757,
-      "bookCount": 3,
+      "fairProbability": 0.755,
+      "bookCount": 2,
       "books": [
         "LiveScore Bet",
-        "Virgin Bet",
         "LeoVegas"
+      ]
+    },
+    {
+      "fixture": "Seattle Sounders FC v Real Salt Lake",
+      "sport": "soccer_usa_mls",
+      "commenceTime": "2026-11-20T03:00:00Z",
+      "fairProbability": 0.751,
+      "bookCount": 3,
+      "books": [
+        "LeoVegas",
+        "LiveScore Bet",
+        "Virgin Bet"
       ]
     },
     {
@@ -1279,16 +1214,6 @@
       ]
     },
     {
-      "fixture": "Seattle Sounders FC v Real Salt Lake",
-      "sport": "soccer_usa_mls",
-      "commenceTime": "2026-11-20T03:00:00Z",
-      "fairProbability": 0.736,
-      "bookCount": 1,
-      "books": [
-        "LeoVegas"
-      ]
-    },
-    {
       "fixture": "Como v Cagliari",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-11-21T14:00:00Z",
@@ -1304,12 +1229,10 @@
       "fixture": "Lazio v Lecce",
       "sport": "soccer_italy_serie_a",
       "commenceTime": "2026-11-21T14:00:00Z",
-      "fairProbability": 0.728,
-      "bookCount": 3,
+      "fairProbability": 0.734,
+      "bookCount": 1,
       "books": [
-        "LeoVegas",
-        "Virgin Bet",
-        "LiveScore Bet"
+        "LeoVegas"
       ]
     },
     {
@@ -1350,7 +1273,7 @@
       "fixture": "Athletic Bilbao v Espanyol",
       "sport": "soccer_spain_la_liga",
       "commenceTime": "2026-11-20T20:00:00Z",
-      "fairProbability": 0.698,
+      "fairProbability": 0.694,
       "bookCount": 3,
       "books": [
         "LeoVegas",

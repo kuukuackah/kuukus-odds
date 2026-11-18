@@ -1,10 +1,48 @@
 {
-  "generatedAt": "2026-11-17T07:47:18.221Z",
+  "generatedAt": "2026-11-18T07:15:27.202Z",
   "source": "Football Prediction API (boggio-analytics, via RapidAPI) — single-source model odds, not a multi-bookmaker median",
-  "quotaUsed": 13,
-  "quotaRemaining": 87,
-  "winOrDraw": [],
+  "quotaUsed": 14,
+  "quotaRemaining": 86,
+  "winOrDraw": [
+    {
+      "fixture": "CD Alcoyano v Mallorca",
+      "competition": "Spain — Copa del Rey",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-18T19:00:00",
+      "favoriteTeam": "Mallorca",
+      "fairProbability": 0.842,
+      "quotedDoubleChanceOdds": 1.09
+    },
+    {
+      "fixture": "CS Constantine v ES Ben Aknoun",
+      "competition": "Algeria — Championnat National",
+      "federation": "CAF",
+      "commenceTime": "2026-11-18T16:45:00",
+      "favoriteTeam": "CS Constantine",
+      "fairProbability": 0.746,
+      "quotedDoubleChanceOdds": 1.237
+    }
+  ],
   "winOrDraw_excluded": [],
-  "straightWin": [],
+  "straightWin": [
+    {
+      "fixture": "CD Alcoyano v Mallorca",
+      "competition": "Spain — Copa del Rey",
+      "federation": "UEFA",
+      "commenceTime": "2026-11-18T19:00:00",
+      "favoriteTeam": "Mallorca",
+      "fairProbability": 0.6,
+      "quotedOdds": 1.538
+    },
+    {
+      "fixture": "CS Constantine v ES Ben Aknoun",
+      "competition": "Algeria — Championnat National",
+      "federation": "CAF",
+      "commenceTime": "2026-11-18T16:45:00",
+      "favoriteTeam": "CS Constantine",
+      "fairProbability": 0.44,
+      "quotedOdds": 2.047
+    }
+  ],
   "straightWin_excluded": []
 }
