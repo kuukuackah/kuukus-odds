@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-11-19T07:14:23.746Z",
-  "gameDate": "20261119",
+  "generatedAt": "2026-11-20T07:03:16.980Z",
+  "gameDate": "20261120",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 13,
-  "quotaRemaining": 987,
+  "quotaUsed": 14,
+  "quotaRemaining": 986,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Indianapolis Colts v Houston Texans",
-      "gameDate": "2026-11-19",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
