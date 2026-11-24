@@ -1,15 +1,9 @@
 {
-  "generatedAt": "2026-11-23T07:25:24.780Z",
-  "gameDate": "20261123",
+  "generatedAt": "2026-11-24T09:45:05.826Z",
+  "gameDate": "20261124",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 17,
-  "quotaRemaining": 983,
+  "quotaUsed": 14,
+  "quotaRemaining": 986,
   "moneyline": [],
-  "moneyline_excluded": [
-    {
-      "fixture": "Cincinnati Bengals v Washington Commanders",
-      "gameDate": "2026-11-23",
-      "reason": "no usable moneyline price"
-    }
-  ]
+  "moneyline_excluded": []
 }
