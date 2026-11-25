@@ -1,9 +1,15 @@
 {
-  "generatedAt": "2026-11-24T09:45:05.826Z",
-  "gameDate": "20261124",
+  "generatedAt": "2026-11-25T08:20:16.876Z",
+  "gameDate": "20261125",
   "source": "Tank01 NFL Betting Odds (RapidAPI) — median across real sportsbooks (bet365, DraftKings, FanDuel, BetMGM, Caesars, ESPN BET, BetRivers, BallyBet, and others)",
-  "quotaUsed": 14,
-  "quotaRemaining": 986,
+  "quotaUsed": 15,
+  "quotaRemaining": 985,
   "moneyline": [],
-  "moneyline_excluded": []
+  "moneyline_excluded": [
+    {
+      "fixture": "Green Bay Packers v Los Angeles Rams",
+      "gameDate": "2026-11-25",
+      "reason": "no usable moneyline price"
+    }
+  ]
 }
